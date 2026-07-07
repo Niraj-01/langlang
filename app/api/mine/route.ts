@@ -2,7 +2,7 @@
 // reading, per-word gloss, grammar points, and a natural translation.
 
 import { NextRequest, NextResponse } from "next/server";
-import { claude, claudeErrorResponse, textOf, parseJson, MODEL } from "@/lib/claude";
+import { claude, claudeErrorResponse, textOf, parseJson, MODEL, think } from "@/lib/claude";
 
 export const maxDuration = 30;
 
@@ -40,7 +40,7 @@ Rules:
     const response = await claude().messages.create({
       model: MODEL,
       max_tokens: 1200,
-      thinking: { type: "adaptive" },
+      ...think("adaptive"),
       system,
       messages: [{ role: "user", content: sentence.trim() }],
     });

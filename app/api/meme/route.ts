@@ -3,7 +3,7 @@
 // feed never blocks on this.
 
 import { NextRequest, NextResponse } from "next/server";
-import { claude, claudeErrorResponse, textOf, MODEL } from "@/lib/claude";
+import { claude, claudeErrorResponse, textOf, MODEL, think } from "@/lib/claude";
 
 export const maxDuration = 15;
 
@@ -23,7 +23,7 @@ export async function POST(req: NextRequest) {
     const response = await claude().messages.create({
       model: MODEL,
       max_tokens: 120,
-      thinking: { type: "disabled" },
+      ...think("off"),
       output_config: { effort: "low" },
       system: `You write short Gen-Z brainrot memes that make a ${LANG_NAME[lang]} vocab word stick. Given the word and its meaning, output ONE meme in a known format (e.g. "nobody:\\nme at 3am:\\n「word」", "POV:", "my toxic trait:", "it's giving...", tier-list, etc). The target word MUST appear in the meme in ${LANG_NAME[lang]}. Keep it 2-4 short lines, genuinely funny, a little unhinged. No hashtags, no explanation, no quotes around the whole thing — just the meme text.`,
       messages: [

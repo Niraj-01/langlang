@@ -2,7 +2,7 @@
 // locally on the client — Claude only adds the human touch.
 
 import { NextRequest, NextResponse } from "next/server";
-import { claude, claudeErrorResponse, textOf, MODEL } from "@/lib/claude";
+import { claude, claudeErrorResponse, textOf, MODEL, think } from "@/lib/claude";
 
 export const maxDuration = 15;
 
@@ -23,7 +23,7 @@ export async function POST(req: NextRequest) {
     const response = await claude().messages.create({
       model: MODEL,
       max_tokens: 80,
-      thinking: { type: "disabled" },
+      ...think("off"),
       output_config: { effort: "low" },
       system: `A learner is shadowing ${LANG_NAME[lang]} sentences. You get the target sentence, the speech-to-text transcript of their attempt, and a similarity score (0-100). Reply with EXACTLY ONE short, punchy coaching line in English (max 15 words). Point at the one most useful fix (a missed word, wrong sound STT likely caught, pacing) — or pure hype if the attempt was clean. No preamble, no quotes.`,
       messages: [

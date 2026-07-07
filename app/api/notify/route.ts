@@ -3,7 +3,7 @@
 // passes the last one to avoid).
 
 import { NextRequest, NextResponse } from "next/server";
-import { claude, claudeErrorResponse, textOf, MODEL } from "@/lib/claude";
+import { claude, claudeErrorResponse, textOf, MODEL, think } from "@/lib/claude";
 
 export const maxDuration = 15;
 
@@ -23,7 +23,7 @@ export async function POST(req: NextRequest) {
     const response = await claude().messages.create({
       model: MODEL,
       max_tokens: 90,
-      thinking: { type: "disabled" },
+      ...think("off"),
       output_config: { effort: "low" },
       system: `You are the "menace mode" notification voice of a language-learning app — a Gen-Z bestie who roasts the user into studying. One line, max 22 words, genuinely funny, a little mean but affectionate. Reference their actual stats. No emoji spam (one max), no hashtags, no quotes. Just the roast.`,
       messages: [

@@ -2,7 +2,7 @@
 // the learner's level, and never corrects mid-session (flow > interruption).
 
 import { NextRequest, NextResponse } from "next/server";
-import { claude, claudeErrorResponse, textOf, MODEL } from "@/lib/claude";
+import { claude, claudeErrorResponse, textOf, MODEL, think } from "@/lib/claude";
 import { scenarioById } from "@/data/scenarios";
 
 export const maxDuration = 30;
@@ -41,7 +41,7 @@ Rules:
     const response = await claude().messages.create({
       model: MODEL,
       max_tokens: 200,
-      thinking: { type: "disabled" },
+      ...think("off"),
       output_config: { effort: "low" },
       system,
       // first message must be role "user" — the opener lives in the system

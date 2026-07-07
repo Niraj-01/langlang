@@ -2,7 +2,7 @@
 // Every mistake becomes an FSRS card on the client.
 
 import { NextRequest, NextResponse } from "next/server";
-import { claude, claudeErrorResponse, textOf, parseJson, MODEL } from "@/lib/claude";
+import { claude, claudeErrorResponse, textOf, parseJson, MODEL, think } from "@/lib/claude";
 import { scenarioById } from "@/data/scenarios";
 
 export const maxDuration = 60;
@@ -65,7 +65,7 @@ Rules:
     const response = await claude().messages.create({
       model: MODEL,
       max_tokens: 1500,
-      thinking: { type: "adaptive" },
+      ...think("adaptive"),
       system,
       messages: [{ role: "user", content: transcript }],
     });

@@ -5,8 +5,23 @@
 import Anthropic from "@anthropic-ai/sdk";
 import { NextResponse } from "next/server";
 
-// Spec pins claude-sonnet-4-6 for in-app AI; override via env if needed.
+// Spec pins claude-sonnet-4-6 for in-app AI; override via env (e.g.
+// LANGLANG_MODEL=claude-fable-5 or claude-opus-4-8) if desired.
 export const MODEL = process.env.LANGLANG_MODEL ?? "claude-sonnet-4-6";
+
+// Fable/Mythos always think — an explicit `thinking:{type:"disabled"}` 400s,
+// so "off" must omit the param entirely on those models.
+const ALWAYS_THINKS = /^claude-(fable|mythos)/.test(MODEL);
+
+/**
+ * Model-agnostic thinking config. Use `...think("off")` for latency-sensitive
+ * one-liners and `...think("adaptive")` for reasoning-heavy calls, so the app
+ * runs unchanged across Sonnet, Opus, and Fable.
+ */
+export function think(mode: "off" | "adaptive"): Record<string, unknown> {
+  if (mode === "adaptive") return { thinking: { type: "adaptive" } };
+  return ALWAYS_THINKS ? {} : { thinking: { type: "disabled" } };
+}
 
 let client: Anthropic | null = null;
 

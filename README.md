@@ -1,36 +1,105 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# langlang
 
-## Getting Started
+An addictive dual-language learning app (Japanese 🇯🇵 / German 🇩🇪) built around
+real acquisition science — FSRS spaced repetition, comprehensible input, and
+speaking-first practice — wrapped in TikTok-grade engagement mechanics.
 
-First, run the development server:
+**Live:** https://langlang-ashen.vercel.app
+
+> Core principle: **the feed IS the app.** No menu of study modes — reviews,
+> new words, quizzes, speaking, and memes all flow through one infinite vertical
+> feed (the "Doomscroll"). Learning happens because stopping feels harder than
+> continuing.
+
+## Features
+
+- **The Doomscroll** — full-screen snap feed of review / new-word / quiz / speak /
+  meme / status cards. Correct answers fire sound + haptic + confetti within 100ms.
+- **FSRS v5** spaced repetition engine (`lib/fsrs.ts`), reviews disguised as content.
+- **Speak cards** — shadow a sentence; Web Speech STT + offline Levenshtein scoring,
+  with an optional one-line Claude coaching note.
+- **AI Conversation Dojo** (`/dojo`) — roleplay scenarios at your level; corrections
+  come *after* the session, and every mistake becomes an FSRS card.
+- **Boss battles** (`/boss`) — survive N on-target exchanges (no English) to drain a
+  boss's health and unlock the next; playable offline.
+- **Sentence Mining Inbox** (`/mine`) — paste any real sentence, get furigana / glosses /
+  grammar, one-tap add the unknown words.
+- **Focus Mode** (`/focus`) — passive audio drill over a procedural visual loop.
+- **Test tracker** (`/progress`) — JLPT/Goethe target, FSRS-mastery coverage bars, and a
+  pace forecast ("N4-ready by 8 Mar 2027").
+- **Weekly Wrapped** (`/wrapped`) — Spotify-Wrapped-style story with 1080×1920 share export.
+- **Addiction layer** — daily quests, card packs with variable rewards, an evolving SVG
+  pet, meme cards, and opt-in "menace-mode" roast notifications.
+- **Local-first + PWA** — all progress lives in `localStorage`; installable and works
+  offline (the review path never touches the network).
+
+## Tech
+
+Next.js 16 (App Router) · TypeScript · Tailwind v4 · Framer Motion · Web Speech API ·
+Anthropic SDK · synthesized WebAudio/canvas (no asset files) · deployed on Vercel.
+
+## Local development
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev        # http://localhost:3000 (falls back to :3001 if busy)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The feed, SRS, quizzes, memes, and boss battles work with **no setup**. The
+Claude-powered features (Dojo, sentence mining, meme text, roasts, speak coaching)
+need an API key — see below.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Claude API key (optional but recommended)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Every AI feature degrades gracefully without a key. To enable them, copy the example
+and add your key:
 
-## Learn More
+```bash
+cp .env.local.example .env.local
+# then edit .env.local:
+ANTHROPIC_API_KEY=sk-ant-...
+```
 
-To learn more about Next.js, take a look at the following resources:
+Get a key at https://console.anthropic.com. Restart the dev server after adding it.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Switching models
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The in-app model is pinned to `claude-sonnet-4-6` (per spec) but overridable:
 
-## Deploy on Vercel
+```bash
+# .env.local
+LANGLANG_MODEL=claude-fable-5     # most capable; also claude-opus-4-8, etc.
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Thinking config is model-aware (`lib/claude.ts` → `think()`), so switching to
+Fable/Opus works without code changes. Note Fable is priced higher and requires
+30-day data retention on your Anthropic org.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Deploy (Vercel)
+
+```bash
+vercel                              # preview
+vercel --prod                       # production
+
+# set the key for the deployed functions:
+vercel env add ANTHROPIC_API_KEY production
+vercel --prod                       # redeploy so functions pick it up
+```
+
+The GitHub repo is connected to the Vercel project, so **pushing to `main`
+auto-deploys**. User data is browser-local, so there's no database to provision.
+
+## Android
+
+The app is already an installable PWA — on Android Chrome, "Add to Home Screen"
+runs it standalone. To ship it to the Play Store, wrap the PWA as a Trusted Web
+Activity with [Bubblewrap](https://github.com/GoogleChromeLabs/bubblewrap):
+
+```bash
+npx @bubblewrap/cli init --manifest https://langlang-ashen.vercel.app/manifest.json
+npx @bubblewrap/cli build
+```
+
+Then host `/.well-known/assetlinks.json` on the domain to verify ownership and
+upload the generated `.aab` to Google Play Console. (Requires a 512×512 maskable
+PNG icon in the manifest.)

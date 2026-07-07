@@ -1,0 +1,18 @@
+{
+  "name": "langlang",
+  "short_name": "langlang",
+  "description": "The doomscroll that makes you fluent.",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0b0b10",
+  "theme_color": "#0b0b10",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

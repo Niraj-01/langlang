@@ -1,26 +1,139 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-bg: #0b0b10;
+  --color-panel: #14141d;
+  --color-line: #2b2b3a;
+  --color-ink: #f2f2f5;
+  --color-der: #4da6ff;
+  --color-die: #ff5c7a;
+  --color-das: #4ade80;
+  --color-good: #4ade80;
+  --color-bad: #ff5c5c;
+  --font-display: var(--font-archivo), "Arial Black", sans-serif;
+  --font-body: var(--font-source), "Segoe UI", system-ui, sans-serif;
+  --font-jp: var(--font-noto-jp), "Hiragino Sans", "Yu Gothic", sans-serif;
+  --animate-flame: flame 1.6s ease-in-out infinite;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* one electric accent per language */
+.lang-ja {
+  --accent: #ff3b1f; /* hot red-orange */
+}
+.lang-de {
+  --accent: #d8f000; /* acid yellow */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html,
+body {
+  height: 100%;
+  overscroll-behavior: none;
+  background: var(--color-bg);
+  color: var(--color-ink);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: 0.02em;
+}
+
+.font-jp {
+  font-family: var(--font-jp);
+}
+
+/* ---- card chrome (arcade brutalism: thick lines, hard shadows) ---- */
+
+.card-shell {
+  @apply relative flex h-full w-full items-center justify-center p-4 pt-16 pb-8;
+}
+
+.card-panel {
+  @apply relative flex h-full max-h-[46rem] w-full max-w-md flex-col gap-4 border-4 border-line bg-panel p-6;
+  box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.6);
+}
+
+.card-panel.golden {
+  border-color: #ffd400;
+  background:
+    linear-gradient(120deg, transparent 30%, rgba(255, 212, 0, 0.12) 45%, rgba(255, 255, 255, 0.18) 50%, rgba(255, 212, 0, 0.12) 55%, transparent 70%),
+    var(--color-panel);
+  background-size: 250% 250%;
+  animation: foil 3.2s linear infinite;
+  box-shadow: 8px 8px 0 rgba(255, 212, 0, 0.25);
+}
+
+.tag {
+  @apply font-display text-xs uppercase tracking-[0.35em] opacity-70;
+  color: var(--accent);
+}
+
+.hud-chip {
+  @apply flex items-center gap-1 border-2 border-line bg-panel/90 px-2 py-1 text-base backdrop-blur;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.5);
+}
+
+.btn-grade {
+  @apply font-display border-4 bg-black/30 px-2 py-4 text-sm uppercase tracking-wider transition-transform active:scale-95;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.5);
+}
+
+.btn-primary {
+  @apply font-display border-4 border-black px-4 py-4 text-lg uppercase tracking-wider text-black transition-transform active:scale-95;
+  background: var(--accent);
+  box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.6);
+}
+
+.btn-ghost {
+  @apply font-display border-4 border-line px-4 py-4 text-sm uppercase tracking-wider opacity-70 transition-transform active:scale-95;
+}
+
+.btn-option {
+  @apply border-4 border-line bg-black/30 px-4 py-4 text-left text-lg transition-transform active:scale-[0.97];
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.5);
+}
+
+.btn-option.correct {
+  @apply border-good text-good;
+  box-shadow: 4px 4px 0 rgba(74, 222, 128, 0.35);
+}
+
+.btn-option.wrong {
+  @apply border-bad text-bad;
+}
+
+ruby rt {
+  ruby-align: center;
+}
+
+@keyframes foil {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -50% 0;
+  }
+}
+
+@keyframes flame {
+  0%,
+  100% {
+    transform: scale(1) rotate(-2deg);
+  }
+  50% {
+    transform: scale(1.12) rotate(2deg);
+  }
+}
+
+/* hide scrollbar — it's a feed, not a document */
+::-webkit-scrollbar {
+  display: none;
+}
+* {
+  scrollbar-width: none;
 }

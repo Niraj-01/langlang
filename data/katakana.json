@@ -1,0 +1,1056 @@
+[
+  {
+    "char": "ア",
+    "romaji": "a",
+    "type": "basic",
+    "row": "a",
+    "example": {
+      "word": "アイス",
+      "romaji": "aisu",
+      "meaning": "ice cream"
+    }
+  },
+  {
+    "char": "イ",
+    "romaji": "i",
+    "type": "basic",
+    "row": "a",
+    "example": {
+      "word": "イタリア",
+      "romaji": "Itaria",
+      "meaning": "Italy"
+    }
+  },
+  {
+    "char": "ウ",
+    "romaji": "u",
+    "type": "basic",
+    "row": "a",
+    "example": {
+      "word": "ウール",
+      "romaji": "ūru",
+      "meaning": "wool"
+    }
+  },
+  {
+    "char": "エ",
+    "romaji": "e",
+    "type": "basic",
+    "row": "a",
+    "example": {
+      "word": "エアコン",
+      "romaji": "eakon",
+      "meaning": "air conditioner"
+    }
+  },
+  {
+    "char": "オ",
+    "romaji": "o",
+    "type": "basic",
+    "row": "a",
+    "example": {
+      "word": "オレンジ",
+      "romaji": "orenji",
+      "meaning": "orange"
+    }
+  },
+  {
+    "char": "カ",
+    "romaji": "ka",
+    "type": "basic",
+    "row": "k",
+    "example": {
+      "word": "カメラ",
+      "romaji": "kamera",
+      "meaning": "camera"
+    }
+  },
+  {
+    "char": "キ",
+    "romaji": "ki",
+    "type": "basic",
+    "row": "k",
+    "example": {
+      "word": "キロ",
+      "romaji": "kiro",
+      "meaning": "kilo"
+    }
+  },
+  {
+    "char": "ク",
+    "romaji": "ku",
+    "type": "basic",
+    "row": "k",
+    "example": {
+      "word": "クラス",
+      "romaji": "kurasu",
+      "meaning": "class"
+    }
+  },
+  {
+    "char": "ケ",
+    "romaji": "ke",
+    "type": "basic",
+    "row": "k",
+    "example": {
+      "word": "ケーキ",
+      "romaji": "kēki",
+      "meaning": "cake"
+    }
+  },
+  {
+    "char": "コ",
+    "romaji": "ko",
+    "type": "basic",
+    "row": "k",
+    "example": {
+      "word": "コーヒー",
+      "romaji": "kōhī",
+      "meaning": "coffee"
+    }
+  },
+  {
+    "char": "サ",
+    "romaji": "sa",
+    "type": "basic",
+    "row": "s",
+    "example": {
+      "word": "サラダ",
+      "romaji": "sarada",
+      "meaning": "salad"
+    }
+  },
+  {
+    "char": "シ",
+    "romaji": "shi",
+    "type": "basic",
+    "row": "s",
+    "example": {
+      "word": "システム",
+      "romaji": "shisutemu",
+      "meaning": "system"
+    }
+  },
+  {
+    "char": "ス",
+    "romaji": "su",
+    "type": "basic",
+    "row": "s",
+    "example": {
+      "word": "スープ",
+      "romaji": "sūpu",
+      "meaning": "soup"
+    }
+  },
+  {
+    "char": "セ",
+    "romaji": "se",
+    "type": "basic",
+    "row": "s",
+    "example": {
+      "word": "セーター",
+      "romaji": "sētā",
+      "meaning": "sweater"
+    }
+  },
+  {
+    "char": "ソ",
+    "romaji": "so",
+    "type": "basic",
+    "row": "s",
+    "example": {
+      "word": "ソファ",
+      "romaji": "sofa",
+      "meaning": "sofa"
+    }
+  },
+  {
+    "char": "タ",
+    "romaji": "ta",
+    "type": "basic",
+    "row": "t",
+    "example": {
+      "word": "タクシー",
+      "romaji": "takushī",
+      "meaning": "taxi"
+    }
+  },
+  {
+    "char": "チ",
+    "romaji": "chi",
+    "type": "basic",
+    "row": "t",
+    "example": {
+      "word": "チーズ",
+      "romaji": "chīzu",
+      "meaning": "cheese"
+    }
+  },
+  {
+    "char": "ツ",
+    "romaji": "tsu",
+    "type": "basic",
+    "row": "t",
+    "example": {
+      "word": "ツアー",
+      "romaji": "tsuā",
+      "meaning": "tour"
+    }
+  },
+  {
+    "char": "テ",
+    "romaji": "te",
+    "type": "basic",
+    "row": "t",
+    "example": {
+      "word": "テレビ",
+      "romaji": "terebi",
+      "meaning": "TV"
+    }
+  },
+  {
+    "char": "ト",
+    "romaji": "to",
+    "type": "basic",
+    "row": "t",
+    "example": {
+      "word": "トマト",
+      "romaji": "tomato",
+      "meaning": "tomato"
+    }
+  },
+  {
+    "char": "ナ",
+    "romaji": "na",
+    "type": "basic",
+    "row": "n",
+    "example": {
+      "word": "ナイフ",
+      "romaji": "naifu",
+      "meaning": "knife"
+    }
+  },
+  {
+    "char": "ニ",
+    "romaji": "ni",
+    "type": "basic",
+    "row": "n",
+    "example": {
+      "word": "テニス",
+      "romaji": "tenisu",
+      "meaning": "tennis"
+    }
+  },
+  {
+    "char": "ヌ",
+    "romaji": "nu",
+    "type": "basic",
+    "row": "n",
+    "example": {
+      "word": "ヌードル",
+      "romaji": "nūdoru",
+      "meaning": "noodle"
+    }
+  },
+  {
+    "char": "ネ",
+    "romaji": "ne",
+    "type": "basic",
+    "row": "n",
+    "example": {
+      "word": "ネクタイ",
+      "romaji": "nekutai",
+      "meaning": "necktie"
+    }
+  },
+  {
+    "char": "ノ",
+    "romaji": "no",
+    "type": "basic",
+    "row": "n",
+    "example": {
+      "word": "ノート",
+      "romaji": "nōto",
+      "meaning": "notebook"
+    }
+  },
+  {
+    "char": "ハ",
+    "romaji": "ha",
+    "type": "basic",
+    "row": "h",
+    "example": {
+      "word": "ハム",
+      "romaji": "hamu",
+      "meaning": "ham"
+    }
+  },
+  {
+    "char": "ヒ",
+    "romaji": "hi",
+    "type": "basic",
+    "row": "h",
+    "example": {
+      "word": "ヒーター",
+      "romaji": "hītā",
+      "meaning": "heater"
+    }
+  },
+  {
+    "char": "フ",
+    "romaji": "fu",
+    "type": "basic",
+    "row": "h",
+    "example": {
+      "word": "フォーク",
+      "romaji": "fōku",
+      "meaning": "fork"
+    }
+  },
+  {
+    "char": "ヘ",
+    "romaji": "he",
+    "type": "basic",
+    "row": "h",
+    "example": {
+      "word": "ヘリコプター",
+      "romaji": "herikoputā",
+      "meaning": "helicopter"
+    }
+  },
+  {
+    "char": "ホ",
+    "romaji": "ho",
+    "type": "basic",
+    "row": "h",
+    "example": {
+      "word": "ホテル",
+      "romaji": "hoteru",
+      "meaning": "hotel"
+    }
+  },
+  {
+    "char": "マ",
+    "romaji": "ma",
+    "type": "basic",
+    "row": "m",
+    "example": {
+      "word": "マスク",
+      "romaji": "masuku",
+      "meaning": "mask"
+    }
+  },
+  {
+    "char": "ミ",
+    "romaji": "mi",
+    "type": "basic",
+    "row": "m",
+    "example": {
+      "word": "ミルク",
+      "romaji": "miruku",
+      "meaning": "milk"
+    }
+  },
+  {
+    "char": "ム",
+    "romaji": "mu",
+    "type": "basic",
+    "row": "m",
+    "example": {
+      "word": "ムード",
+      "romaji": "mūdo",
+      "meaning": "mood"
+    }
+  },
+  {
+    "char": "メ",
+    "romaji": "me",
+    "type": "basic",
+    "row": "m",
+    "example": {
+      "word": "メール",
+      "romaji": "mēru",
+      "meaning": "email"
+    }
+  },
+  {
+    "char": "モ",
+    "romaji": "mo",
+    "type": "basic",
+    "row": "m",
+    "example": {
+      "word": "メモ",
+      "romaji": "memo",
+      "meaning": "memo"
+    }
+  },
+  {
+    "char": "ヤ",
+    "romaji": "ya",
+    "type": "basic",
+    "row": "y",
+    "example": {
+      "word": "タイヤ",
+      "romaji": "taiya",
+      "meaning": "tire"
+    }
+  },
+  {
+    "char": "ユ",
+    "romaji": "yu",
+    "type": "basic",
+    "row": "y",
+    "example": {
+      "word": "ユーモア",
+      "romaji": "yūmoa",
+      "meaning": "humor"
+    }
+  },
+  {
+    "char": "ヨ",
+    "romaji": "yo",
+    "type": "basic",
+    "row": "y",
+    "example": {
+      "word": "ヨーグルト",
+      "romaji": "yōguruto",
+      "meaning": "yogurt"
+    }
+  },
+  {
+    "char": "ラ",
+    "romaji": "ra",
+    "type": "basic",
+    "row": "r",
+    "example": {
+      "word": "ラジオ",
+      "romaji": "rajio",
+      "meaning": "radio"
+    }
+  },
+  {
+    "char": "リ",
+    "romaji": "ri",
+    "type": "basic",
+    "row": "r",
+    "example": {
+      "word": "リボン",
+      "romaji": "ribon",
+      "meaning": "ribbon"
+    }
+  },
+  {
+    "char": "ル",
+    "romaji": "ru",
+    "type": "basic",
+    "row": "r",
+    "example": {
+      "word": "ルール",
+      "romaji": "rūru",
+      "meaning": "rule"
+    }
+  },
+  {
+    "char": "レ",
+    "romaji": "re",
+    "type": "basic",
+    "row": "r",
+    "example": {
+      "word": "レモン",
+      "romaji": "remon",
+      "meaning": "lemon"
+    }
+  },
+  {
+    "char": "ロ",
+    "romaji": "ro",
+    "type": "basic",
+    "row": "r",
+    "example": {
+      "word": "ロボット",
+      "romaji": "robotto",
+      "meaning": "robot"
+    }
+  },
+  {
+    "char": "ワ",
+    "romaji": "wa",
+    "type": "basic",
+    "row": "w",
+    "example": {
+      "word": "ワイン",
+      "romaji": "wain",
+      "meaning": "wine"
+    }
+  },
+  {
+    "char": "ヲ",
+    "romaji": "wo",
+    "type": "basic",
+    "row": "w"
+  },
+  {
+    "char": "ン",
+    "romaji": "n",
+    "type": "basic",
+    "row": "n2",
+    "example": {
+      "word": "ペン",
+      "romaji": "pen",
+      "meaning": "pen"
+    }
+  },
+  {
+    "char": "ガ",
+    "romaji": "ga",
+    "type": "dakuten",
+    "row": "g",
+    "example": {
+      "word": "ガス",
+      "romaji": "gasu",
+      "meaning": "gas"
+    }
+  },
+  {
+    "char": "ギ",
+    "romaji": "gi",
+    "type": "dakuten",
+    "row": "g",
+    "example": {
+      "word": "ギター",
+      "romaji": "gitā",
+      "meaning": "guitar"
+    }
+  },
+  {
+    "char": "グ",
+    "romaji": "gu",
+    "type": "dakuten",
+    "row": "g",
+    "example": {
+      "word": "グラス",
+      "romaji": "gurasu",
+      "meaning": "glass"
+    }
+  },
+  {
+    "char": "ゲ",
+    "romaji": "ge",
+    "type": "dakuten",
+    "row": "g",
+    "example": {
+      "word": "ゲーム",
+      "romaji": "gēmu",
+      "meaning": "game"
+    }
+  },
+  {
+    "char": "ゴ",
+    "romaji": "go",
+    "type": "dakuten",
+    "row": "g",
+    "example": {
+      "word": "ゴルフ",
+      "romaji": "gorufu",
+      "meaning": "golf"
+    }
+  },
+  {
+    "char": "ザ",
+    "romaji": "za",
+    "type": "dakuten",
+    "row": "z",
+    "example": {
+      "word": "デザート",
+      "romaji": "dezāto",
+      "meaning": "dessert"
+    }
+  },
+  {
+    "char": "ジ",
+    "romaji": "ji",
+    "type": "dakuten",
+    "row": "z",
+    "example": {
+      "word": "ジーンズ",
+      "romaji": "jīnzu",
+      "meaning": "jeans"
+    }
+  },
+  {
+    "char": "ズ",
+    "romaji": "zu",
+    "type": "dakuten",
+    "row": "z",
+    "example": {
+      "word": "ズボン",
+      "romaji": "zubon",
+      "meaning": "trousers"
+    }
+  },
+  {
+    "char": "ゼ",
+    "romaji": "ze",
+    "type": "dakuten",
+    "row": "z",
+    "example": {
+      "word": "ゼロ",
+      "romaji": "zero",
+      "meaning": "zero"
+    }
+  },
+  {
+    "char": "ゾ",
+    "romaji": "zo",
+    "type": "dakuten",
+    "row": "z",
+    "example": {
+      "word": "ゾーン",
+      "romaji": "zōn",
+      "meaning": "zone"
+    }
+  },
+  {
+    "char": "ダ",
+    "romaji": "da",
+    "type": "dakuten",
+    "row": "d",
+    "example": {
+      "word": "ダンス",
+      "romaji": "dansu",
+      "meaning": "dance"
+    }
+  },
+  {
+    "char": "ヂ",
+    "romaji": "ji",
+    "type": "dakuten",
+    "row": "d"
+  },
+  {
+    "char": "ヅ",
+    "romaji": "zu",
+    "type": "dakuten",
+    "row": "d"
+  },
+  {
+    "char": "デ",
+    "romaji": "de",
+    "type": "dakuten",
+    "row": "d",
+    "example": {
+      "word": "デパート",
+      "romaji": "depāto",
+      "meaning": "department store"
+    }
+  },
+  {
+    "char": "ド",
+    "romaji": "do",
+    "type": "dakuten",
+    "row": "d",
+    "example": {
+      "word": "ドア",
+      "romaji": "doa",
+      "meaning": "door"
+    }
+  },
+  {
+    "char": "バ",
+    "romaji": "ba",
+    "type": "dakuten",
+    "row": "b",
+    "example": {
+      "word": "バス",
+      "romaji": "basu",
+      "meaning": "bus"
+    }
+  },
+  {
+    "char": "ビ",
+    "romaji": "bi",
+    "type": "dakuten",
+    "row": "b",
+    "example": {
+      "word": "ビール",
+      "romaji": "bīru",
+      "meaning": "beer"
+    }
+  },
+  {
+    "char": "ブ",
+    "romaji": "bu",
+    "type": "dakuten",
+    "row": "b",
+    "example": {
+      "word": "ブラシ",
+      "romaji": "burashi",
+      "meaning": "brush"
+    }
+  },
+  {
+    "char": "ベ",
+    "romaji": "be",
+    "type": "dakuten",
+    "row": "b",
+    "example": {
+      "word": "ベッド",
+      "romaji": "beddo",
+      "meaning": "bed"
+    }
+  },
+  {
+    "char": "ボ",
+    "romaji": "bo",
+    "type": "dakuten",
+    "row": "b",
+    "example": {
+      "word": "ボタン",
+      "romaji": "botan",
+      "meaning": "button"
+    }
+  },
+  {
+    "char": "パ",
+    "romaji": "pa",
+    "type": "handakuten",
+    "row": "p",
+    "example": {
+      "word": "パン",
+      "romaji": "pan",
+      "meaning": "bread"
+    }
+  },
+  {
+    "char": "ピ",
+    "romaji": "pi",
+    "type": "handakuten",
+    "row": "p",
+    "example": {
+      "word": "ピアノ",
+      "romaji": "piano",
+      "meaning": "piano"
+    }
+  },
+  {
+    "char": "プ",
+    "romaji": "pu",
+    "type": "handakuten",
+    "row": "p",
+    "example": {
+      "word": "プール",
+      "romaji": "pūru",
+      "meaning": "swimming pool"
+    }
+  },
+  {
+    "char": "ペ",
+    "romaji": "pe",
+    "type": "handakuten",
+    "row": "p",
+    "example": {
+      "word": "ペン",
+      "romaji": "pen",
+      "meaning": "pen"
+    }
+  },
+  {
+    "char": "ポ",
+    "romaji": "po",
+    "type": "handakuten",
+    "row": "p",
+    "example": {
+      "word": "ポスト",
+      "romaji": "posuto",
+      "meaning": "mailbox"
+    }
+  },
+  {
+    "char": "キャ",
+    "romaji": "kya",
+    "type": "yoon",
+    "row": "k",
+    "example": {
+      "word": "キャンプ",
+      "romaji": "kyanpu",
+      "meaning": "camp"
+    }
+  },
+  {
+    "char": "キュ",
+    "romaji": "kyu",
+    "type": "yoon",
+    "row": "k",
+    "example": {
+      "word": "キュート",
+      "romaji": "kyūto",
+      "meaning": "cute"
+    }
+  },
+  {
+    "char": "キョ",
+    "romaji": "kyo",
+    "type": "yoon",
+    "row": "k"
+  },
+  {
+    "char": "シャ",
+    "romaji": "sha",
+    "type": "yoon",
+    "row": "s",
+    "example": {
+      "word": "シャツ",
+      "romaji": "shatsu",
+      "meaning": "shirt"
+    }
+  },
+  {
+    "char": "シュ",
+    "romaji": "shu",
+    "type": "yoon",
+    "row": "s",
+    "example": {
+      "word": "シュート",
+      "romaji": "shūto",
+      "meaning": "shoot"
+    }
+  },
+  {
+    "char": "ショ",
+    "romaji": "sho",
+    "type": "yoon",
+    "row": "s",
+    "example": {
+      "word": "ショップ",
+      "romaji": "shoppu",
+      "meaning": "shop"
+    }
+  },
+  {
+    "char": "チャ",
+    "romaji": "cha",
+    "type": "yoon",
+    "row": "t",
+    "example": {
+      "word": "チャンス",
+      "romaji": "chansu",
+      "meaning": "chance"
+    }
+  },
+  {
+    "char": "チュ",
+    "romaji": "chu",
+    "type": "yoon",
+    "row": "t",
+    "example": {
+      "word": "チューブ",
+      "romaji": "chūbu",
+      "meaning": "tube"
+    }
+  },
+  {
+    "char": "チョ",
+    "romaji": "cho",
+    "type": "yoon",
+    "row": "t",
+    "example": {
+      "word": "チョコ",
+      "romaji": "choko",
+      "meaning": "chocolate"
+    }
+  },
+  {
+    "char": "ニャ",
+    "romaji": "nya",
+    "type": "yoon",
+    "row": "n"
+  },
+  {
+    "char": "ニュ",
+    "romaji": "nyu",
+    "type": "yoon",
+    "row": "n",
+    "example": {
+      "word": "ニュース",
+      "romaji": "nyūsu",
+      "meaning": "news"
+    }
+  },
+  {
+    "char": "ニョ",
+    "romaji": "nyo",
+    "type": "yoon",
+    "row": "n"
+  },
+  {
+    "char": "ヒャ",
+    "romaji": "hya",
+    "type": "yoon",
+    "row": "h"
+  },
+  {
+    "char": "ヒュ",
+    "romaji": "hyu",
+    "type": "yoon",
+    "row": "h",
+    "example": {
+      "word": "ヒューズ",
+      "romaji": "hyūzu",
+      "meaning": "fuse"
+    }
+  },
+  {
+    "char": "ヒョ",
+    "romaji": "hyo",
+    "type": "yoon",
+    "row": "h"
+  },
+  {
+    "char": "ミャ",
+    "romaji": "mya",
+    "type": "yoon",
+    "row": "m"
+  },
+  {
+    "char": "ミュ",
+    "romaji": "myu",
+    "type": "yoon",
+    "row": "m",
+    "example": {
+      "word": "ミュージック",
+      "romaji": "myūjikku",
+      "meaning": "music"
+    }
+  },
+  {
+    "char": "ミョ",
+    "romaji": "myo",
+    "type": "yoon",
+    "row": "m"
+  },
+  {
+    "char": "リャ",
+    "romaji": "rya",
+    "type": "yoon",
+    "row": "r"
+  },
+  {
+    "char": "リュ",
+    "romaji": "ryu",
+    "type": "yoon",
+    "row": "r",
+    "example": {
+      "word": "リュック",
+      "romaji": "ryukku",
+      "meaning": "backpack"
+    }
+  },
+  {
+    "char": "リョ",
+    "romaji": "ryo",
+    "type": "yoon",
+    "row": "r"
+  },
+  {
+    "char": "ギャ",
+    "romaji": "gya",
+    "type": "yoon",
+    "row": "g",
+    "example": {
+      "word": "ギャラリー",
+      "romaji": "gyararī",
+      "meaning": "gallery"
+    }
+  },
+  {
+    "char": "ギュ",
+    "romaji": "gyu",
+    "type": "yoon",
+    "row": "g"
+  },
+  {
+    "char": "ギョ",
+    "romaji": "gyo",
+    "type": "yoon",
+    "row": "g"
+  },
+  {
+    "char": "ジャ",
+    "romaji": "ja",
+    "type": "yoon",
+    "row": "z",
+    "example": {
+      "word": "ジャケット",
+      "romaji": "jaketto",
+      "meaning": "jacket"
+    }
+  },
+  {
+    "char": "ジュ",
+    "romaji": "ju",
+    "type": "yoon",
+    "row": "z",
+    "example": {
+      "word": "ジュース",
+      "romaji": "jūsu",
+      "meaning": "juice"
+    }
+  },
+  {
+    "char": "ジョ",
+    "romaji": "jo",
+    "type": "yoon",
+    "row": "z",
+    "example": {
+      "word": "ジョギング",
+      "romaji": "jogingu",
+      "meaning": "jogging"
+    }
+  },
+  {
+    "char": "ビャ",
+    "romaji": "bya",
+    "type": "yoon",
+    "row": "b"
+  },
+  {
+    "char": "ビュ",
+    "romaji": "byu",
+    "type": "yoon",
+    "row": "b",
+    "example": {
+      "word": "インタビュー",
+      "romaji": "intabyū",
+      "meaning": "interview"
+    }
+  },
+  {
+    "char": "ビョ",
+    "romaji": "byo",
+    "type": "yoon",
+    "row": "b"
+  },
+  {
+    "char": "ピャ",
+    "romaji": "pya",
+    "type": "yoon",
+    "row": "p"
+  },
+  {
+    "char": "ピュ",
+    "romaji": "pyu",
+    "type": "yoon",
+    "row": "p",
+    "example": {
+      "word": "コンピューター",
+      "romaji": "konpyūtā",
+      "meaning": "computer"
+    }
+  },
+  {
+    "char": "ピョ",
+    "romaji": "pyo",
+    "type": "yoon",
+    "row": "p"
+  }
+]

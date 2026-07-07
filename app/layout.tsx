@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Archivo_Black, Source_Sans_3, Noto_Sans_JP } from "next/font/google";
+import { Archivo_Black, Source_Sans_3, Noto_Sans_JP, Inter } from "next/font/google";
 import "./globals.css";
 import { SwRegister } from "@/components/SwRegister";
 
@@ -18,6 +18,9 @@ const notoJp = Noto_Sans_JP({
   subsets: ["latin"],
   variable: "--font-noto-jp",
 });
+
+// UI font for the Learn (Japanese reference) zone
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
   title: "langlang",
@@ -47,7 +50,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${archivo.variable} ${source.variable} ${notoJp.variable} h-full antialiased`}
+      className={`${archivo.variable} ${source.variable} ${notoJp.variable} ${inter.variable} h-full antialiased`}
     >
       <body className="h-full">
         <SwRegister />

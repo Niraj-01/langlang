@@ -136,3 +136,37 @@ export interface SpeakTarget {
   reading?: string; // kana (ja)
   meaning?: string;
 }
+
+// ---- Japanese reference (Learn zone): kana / kanji / phrases ----
+
+export interface Example {
+  word: string;
+  romaji: string;
+  meaning: string;
+}
+
+export interface Kana {
+  char: string;
+  romaji: string;
+  type: "basic" | "dakuten" | "handakuten" | "yoon";
+  row: string;
+  example?: Example;
+}
+
+export interface Kanji {
+  kanji: string;
+  meaning: string;
+  onyomi: string[];
+  kunyomi: string[];
+  strokes: number;
+  category: string;
+  examples: Example[];
+}
+
+export interface Phrase {
+  japanese: string;
+  romaji: string;
+  english: string;
+  category: string;
+  pronunciation: string;
+}

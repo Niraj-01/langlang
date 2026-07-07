@@ -10,8 +10,15 @@
   --color-das: #4ade80;
   --color-good: #4ade80;
   --color-bad: #ff5c5c;
+  /* Learn zone (Japanese reference) tokens */
+  --color-surface: #171a21;
+  --color-surface2: #1f232c;
+  --color-muted: #9aa3b2;
+  --color-accent: #ff5a5f;
+  --color-accent2: #4aa8ff;
   --font-display: var(--font-archivo), "Arial Black", sans-serif;
   --font-body: var(--font-source), "Segoe UI", system-ui, sans-serif;
+  --font-ui: var(--font-inter), system-ui, sans-serif;
   --font-jp: var(--font-noto-jp), "Hiragino Sans", "Yu Gothic", sans-serif;
   --animate-flame: flame 1.6s ease-in-out infinite;
 }
@@ -45,6 +52,16 @@ body {
 
 .font-jp {
   font-family: var(--font-jp);
+}
+
+/* ---- Learn zone helpers ---- */
+.jp {
+  font-family: var(--font-jp);
+  font-feature-settings: "palt";
+}
+.romaji {
+  color: var(--color-accent2);
+  letter-spacing: 0.01em;
 }
 
 /* ---- card chrome (arcade brutalism: thick lines, hard shadows) ---- */

@@ -145,6 +145,7 @@ export function Profile() {
             { href: "/focus", emoji: "🌀", label: "Focus" },
             { href: "/progress", emoji: "📈", label: "Progress" },
             { href: "/wrapped", emoji: "🎁", label: "Wrapped" },
+            { href: "/hiragana", emoji: "📖", label: "Learn JP" },
           ].map((m) => (
             <Link
               key={m.href}

@@ -149,7 +149,7 @@ export function Dojo() {
     <div className={`${accentClass} flex h-dvh flex-col bg-bg`}>
       {/* header */}
       <div className="flex items-center justify-between border-b-2 border-line p-3">
-        <Link href="/" className="hud-chip">
+        <Link href="/reels" className="hud-chip">
           ← FEED
         </Link>
         <div className="font-display text-sm uppercase tracking-[0.3em] text-(--accent)">
@@ -317,7 +317,7 @@ export function Dojo() {
             <button className="btn-ghost" onClick={() => setPhase("pick")}>
               REMATCH
             </button>
-            <Link href="/" className="btn-primary text-center">
+            <Link href="/reels" className="btn-primary text-center">
               BACK TO FEED
             </Link>
           </div>

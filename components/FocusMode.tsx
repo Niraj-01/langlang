@@ -136,7 +136,7 @@ export function FocusMode() {
       {/* top: audio drill */}
       <div className="relative flex flex-1 flex-col">
         <div className="flex items-center justify-between p-3">
-          <Link href="/" className="hud-chip">
+          <Link href="/reels" className="hud-chip">
             ← FEED
           </Link>
           <div className="font-display text-xs uppercase tracking-[0.3em] text-(--accent)">

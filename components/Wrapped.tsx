@@ -107,7 +107,7 @@ export function Wrapped() {
       </div>
 
       <div className="absolute right-3 top-6 z-10">
-        <Link href="/" className="hud-chip">
+        <Link href="/reels" className="hud-chip">
           ✕
         </Link>
       </div>

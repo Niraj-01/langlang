@@ -45,7 +45,7 @@ export function Progress() {
   return (
     <div className={`${accent} min-h-dvh bg-bg pb-10`}>
       <div className="flex items-center justify-between border-b-2 border-line p-3">
-        <Link href="/" className="hud-chip">
+        <Link href="/reels" className="hud-chip">
           ← FEED
         </Link>
         <div className="font-display text-sm uppercase tracking-[0.3em] text-(--accent)">

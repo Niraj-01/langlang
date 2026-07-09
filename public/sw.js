@@ -6,6 +6,13 @@
 const CACHE = "langlang-v1";
 const SHELL = [
   "/",
+  "/reels",
+  "/hiragana",
+  "/katakana",
+  "/kanji",
+  "/phrases",
+  "/draw",
+  "/translate",
   "/dojo",
   "/profile",
   "/progress",

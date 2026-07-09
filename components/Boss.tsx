@@ -50,7 +50,7 @@ export function Boss() {
   return (
     <div className={`${accent} min-h-dvh bg-bg pb-10`}>
       <div className="flex items-center justify-between border-b-2 border-line p-3">
-        <Link href="/" className="hud-chip">
+        <Link href="/reels" className="hud-chip">
           ← FEED
         </Link>
         <div className="font-display text-sm uppercase tracking-[0.3em] text-(--accent)">
@@ -313,7 +313,7 @@ function Fight({ boss, onExit }: { boss: Scenario; onExit: () => void }) {
             <button className="btn-ghost" onClick={onExit}>
               CHOOSE NEXT
             </button>
-            <Link href="/" className="btn-primary text-center">
+            <Link href="/reels" className="btn-primary text-center">
               BACK TO FEED
             </Link>
           </div>

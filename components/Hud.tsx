@@ -37,6 +37,9 @@ export function Hud({ state, combo, multiplier }: { state: AppState; combo: numb
       </AnimatePresence>
 
       <div className="pointer-events-auto flex items-center gap-1.5">
+        <Link href="/" className="hud-chip font-jp" title="Back to Home dashboard">
+          ホ
+        </Link>
         <Link href="/dojo" className="hud-chip" title="Conversation Dojo">
           ⛩
         </Link>

@@ -137,9 +137,20 @@ export function Path() {
                   {sel.state === "done" ? "⚔ REMATCH" : "⚔ FIGHT THE BOSS"}
                 </Link>
               ) : (
-                <Link href="/reels" className="btn-primary mt-4 block w-full text-center">
-                  {sel.state === "done" ? "▶ REVIEW IN THE FEED" : "▶ LEARN IN THE FEED"}
-                </Link>
+                <div className="mt-4 grid grid-cols-1 gap-2">
+                  <Link
+                    href={`/lesson?unit=${sel.unitIndex}`}
+                    className="btn-primary block w-full text-center"
+                  >
+                    {sel.state === "done" ? "📖 REPLAY LESSON" : "📖 START LESSON"}
+                  </Link>
+                  <Link
+                    href="/reels"
+                    className="btn-ghost block w-full text-center !py-3 !text-xs"
+                  >
+                    ▶ or grind it in the feed
+                  </Link>
+                </div>
               )}
             </motion.div>
           </motion.div>

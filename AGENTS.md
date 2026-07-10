@@ -46,6 +46,18 @@ words, quizzes) is a card in one infinite vertical snap feed ("the Doomscroll").
   Sync is layered ON TOP of localStorage — the review path still never
   touches the network. Google provider must be enabled in the Supabase
   dashboard (needs Google OAuth client ID/secret).
+- **Phase 7 (done):** Duolingo/Kanji-Study parity — lessons (`/lesson`,
+  `lib/lesson.ts` + `components/Lesson.tsx`: 5 hearts, MC / reverse-MC /
+  type-the-meaning / match-pairs, end screen with XP·accuracy·time;
+  `?unit=N` deals that Path unit into the deck on clear, `?mode=mistakes`
+  rehab, `?mode=review` weakest-stability cards), mistakes inbox
+  (`/mistakes`, `mistakeLog` in store fed by lesson misses + failed feed
+  reviews), favorites (`favorites` in store, hearts on kanji modal +
+  phrases, `/saved` in the Learn zone), daily XP goal (`dailyGoal`,
+  10/20/50 picker in Profile), derived achievements (`lib/achievements.ts`,
+  badge grid in Profile), JLPT chip on kanji. Also fixed a signed-shift
+  bug in `dailyQuests` that minted "undefined" quest targets on dates
+  whose hash had the high bit set (self-heals on rollover).
 
 ## Architecture
 

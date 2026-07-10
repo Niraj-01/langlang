@@ -25,6 +25,7 @@ export interface PathNode {
   emoji: string;
   state: PathNodeState;
   /** unit nodes */
+  unitIndex?: number;
   words?: VocabEntry[];
   stars?: 0 | 1 | 2 | 3;
   /** boss nodes */
@@ -64,6 +65,7 @@ export function buildPath(s: AppState, lang: Lang): PathNode[] {
       title: `Unit ${u + 1}`,
       emoji: UNIT_EMOJI[lang][u % UNIT_EMOJI[lang].length],
       state,
+      unitIndex: u,
       words,
       stars,
     });

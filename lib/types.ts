@@ -98,6 +98,15 @@ export interface DayStats {
   speaks?: number; // shadowing attempts (added in phase 2)
 }
 
+// A wrong answer worth revisiting — filled from lessons and failed reviews.
+export interface MistakeEntry {
+  lang: Lang;
+  word: string;
+  meaning: string;
+  reading?: string;
+  ts: number;
+}
+
 export interface AppState {
   version: number;
   lang: Lang;
@@ -119,6 +128,10 @@ export interface AppState {
   targets: Partial<Record<Lang, Target>>;
   log: Record<string, DayStats>; // past-day snapshots, keyed by date
   bossesCleared: string[]; // boss scenario ids defeated
+  // phase 7 — lessons, goals & collections
+  favorites: string[]; // e.g. "kanji:食", "phrase:こんにちは", "ja:水"
+  mistakeLog: MistakeEntry[]; // most recent first, capped
+  dailyGoal: number; // XP target per day
 }
 
 // ---- Feed ----

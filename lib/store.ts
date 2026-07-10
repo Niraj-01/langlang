@@ -13,7 +13,7 @@ import type {
   Rating,
   VocabEntry,
 } from "./types";
-import type { DayStats, Exam, Target } from "./types";
+import type { DayStats, Exam, MistakeEntry, Target } from "./types";
 import { newFsrsState, schedule, MASTERY_STABILITY_DAYS } from "./fsrs";
 import { SEED } from "./seed";
 import { COSMETICS, type Cosmetic, dailyQuests } from "./quests";
@@ -47,6 +47,9 @@ function defaultState(): AppState {
     targets: {},
     log: {},
     bossesCleared: [],
+    favorites: [],
+    mistakeLog: [],
+    dailyGoal: 20,
   };
 }
 
@@ -148,8 +151,9 @@ function rolloverDay() {
       today: { date: today, reviews: 0, correct: 0, newWords: 0, xp: 0, speaks: 0 },
     };
   }
-  if (state.questDate !== today) {
-    // fresh quests each day; unopened packs carry over
+  if (state.questDate !== today || state.quests.some((q) => !q.target)) {
+    // fresh quests each day; also self-heal quests stored by the old signed-
+    // shift bug (undefined targets). Unopened packs carry over.
     state = { ...state, quests: dailyQuests(today), questDate: today };
   }
 }
@@ -313,8 +317,56 @@ export function rateCard(cardId: string, rating: Rating, multiplier: number): nu
   };
   applyQuest("reviews", 1);
   touchStreak();
+  // a failed review is a mistake worth revisiting
+  if (!correct) {
+    state = {
+      ...state,
+      mistakeLog: [
+        { lang: card.lang, word: card.word, meaning: card.meaning, reading: card.reading, ts: Date.now() },
+        ...state.mistakeLog.filter((m) => !(m.lang === card.lang && m.word === card.word)),
+      ].slice(0, MISTAKE_CAP),
+    };
+  }
   emit();
   return xp;
+}
+
+// ---- phase 7: favorites, mistakes, daily goal ----
+
+const MISTAKE_CAP = 60;
+
+export function toggleFavorite(id: string) {
+  const has = state.favorites.includes(id);
+  state = {
+    ...state,
+    favorites: has ? state.favorites.filter((f) => f !== id) : [...state.favorites, id],
+  };
+  emit();
+}
+
+/** Remember a wrong answer (deduped by word, newest first, capped). */
+export function logMistake(entry: Omit<MistakeEntry, "ts">) {
+  const rest = state.mistakeLog.filter(
+    (m) => !(m.lang === entry.lang && m.word === entry.word)
+  );
+  state = {
+    ...state,
+    mistakeLog: [{ ...entry, ts: Date.now() }, ...rest].slice(0, MISTAKE_CAP),
+  };
+  emit();
+}
+
+export function clearMistake(lang: Lang, word: string) {
+  state = {
+    ...state,
+    mistakeLog: state.mistakeLog.filter((m) => !(m.lang === lang && m.word === word)),
+  };
+  emit();
+}
+
+export function setDailyGoal(xp: number) {
+  state = { ...state, dailyGoal: xp };
+  emit();
 }
 
 /** Record a shadowing attempt and award XP. */

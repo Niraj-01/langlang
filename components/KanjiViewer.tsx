@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import Link from "next/link";
 import type { Kanji } from "@/lib/types";
 import { speakJa } from "@/lib/speak";
+import { useApp, toggleFavorite } from "@/lib/store";
 import { Modal } from "./Modal";
 
 const CATEGORIES: { id: string; label: string }[] = [
@@ -24,6 +25,7 @@ export function KanjiViewer({ data }: { data: Kanji[] }) {
   const [cat, setCat] = useState("all");
   const [q, setQ] = useState("");
   const [sel, setSel] = useState<Kanji | null>(null);
+  const favorites = useApp().favorites;
 
   const list = useMemo(() => {
     const query = q.trim().toLowerCase();
@@ -98,15 +100,31 @@ export function KanjiViewer({ data }: { data: Kanji[] }) {
               </button>
               <div className="flex-1 pt-1">
                 <div className="text-lg font-semibold">{sel.meaning}</div>
-                <div className="mt-1 text-xs uppercase tracking-widest text-muted">
+                <div className="mt-1 flex items-center gap-2 text-xs uppercase tracking-widest text-muted">
+                  <span className="rounded border border-accent/60 px-1.5 py-0.5 text-accent">
+                    JLPT N5
+                  </span>
                   {sel.strokes} strokes · {sel.category}
                 </div>
-                <Link
-                  href={`/draw?char=${encodeURIComponent(sel.kanji)}`}
-                  className="mt-2 inline-block rounded-lg bg-accent px-3 py-1.5 text-xs font-semibold text-white"
-                >
-                  ✎ Practice drawing
-                </Link>
+                <div className="mt-2 flex items-center gap-2">
+                  <Link
+                    href={`/draw?char=${encodeURIComponent(sel.kanji)}`}
+                    className="press inline-block rounded-lg bg-accent px-3 py-1.5 text-xs font-semibold text-white"
+                  >
+                    ✎ Practice drawing
+                  </Link>
+                  <button
+                    onClick={() => toggleFavorite(`kanji:${sel.kanji}`)}
+                    title={favorites.includes(`kanji:${sel.kanji}`) ? "Remove from saved" : "Save"}
+                    className={`press rounded-lg border px-2.5 py-1 text-base transition-colors ${
+                      favorites.includes(`kanji:${sel.kanji}`)
+                        ? "border-accent text-accent"
+                        : "border-line text-muted hover:text-accent"
+                    }`}
+                  >
+                    {favorites.includes(`kanji:${sel.kanji}`) ? "♥" : "♡"}
+                  </button>
+                </div>
               </div>
             </div>
 

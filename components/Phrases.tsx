@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import type { Phrase } from "@/lib/types";
 import { speakJa, canSpeak } from "@/lib/speak";
 import { useMounted } from "@/lib/useMounted";
+import { useApp, toggleFavorite } from "@/lib/store";
 
 const CATS: { id: string; label: string }[] = [
   { id: "greetings", label: "Greetings" },
@@ -18,6 +19,7 @@ export function Phrases({ data }: { data: Phrase[] }) {
   const [cat, setCat] = useState("greetings");
   const list = useMemo(() => data.filter((p) => p.category === cat), [data, cat]);
   const speech = useMounted() && canSpeak();
+  const favorites = useApp().favorites;
 
   return (
     <div>
@@ -38,27 +40,40 @@ export function Phrases({ data }: { data: Phrase[] }) {
       </div>
 
       <div key={cat} className="stagger space-y-2">
-        {list.map((p) => (
-          <button
-            key={p.japanese + p.english}
-            onClick={() => speakJa(p.japanese)}
-            className="tile-soft group flex w-full items-center gap-3 rounded-xl border border-line bg-surface p-4 text-left"
-          >
-            <div className="min-w-0 flex-1">
-              <div className="jp text-xl leading-snug">{p.japanese}</div>
-              <div className="romaji mt-0.5 text-sm">{p.romaji}</div>
-              <div className="text-sm text-muted">{p.english}</div>
-              <div className="mt-1 text-[11px] uppercase tracking-wide text-muted/70">
-                🗣 {p.pronunciation}
-              </div>
+        {list.map((p) => {
+          const fav = favorites.includes(`phrase:${p.japanese}`);
+          return (
+            <div
+              key={p.japanese + p.english}
+              className="tile-soft group flex w-full items-center gap-3 rounded-xl border border-line bg-surface p-4 text-left"
+            >
+              <button className="min-w-0 flex-1 text-left" onClick={() => speakJa(p.japanese)}>
+                <div className="jp text-xl leading-snug">
+                  {p.japanese}{" "}
+                  {speech && (
+                    <span className="text-base text-muted transition group-hover:text-accent">
+                      🔊
+                    </span>
+                  )}
+                </div>
+                <div className="romaji mt-0.5 text-sm">{p.romaji}</div>
+                <div className="text-sm text-muted">{p.english}</div>
+                <div className="mt-1 text-[11px] uppercase tracking-wide text-muted/70">
+                  🗣 {p.pronunciation}
+                </div>
+              </button>
+              <button
+                onClick={() => toggleFavorite(`phrase:${p.japanese}`)}
+                title={fav ? "Remove from saved" : "Save"}
+                className={`press shrink-0 text-xl transition-colors ${
+                  fav ? "text-accent" : "text-muted/50 hover:text-accent"
+                }`}
+              >
+                {fav ? "♥" : "♡"}
+              </button>
             </div>
-            {speech && (
-              <span className="shrink-0 text-xl text-muted transition group-hover:scale-110 group-hover:text-accent">
-                🔊
-              </span>
-            )}
-          </button>
-        ))}
+          );
+        })}
       </div>
     </div>
   );

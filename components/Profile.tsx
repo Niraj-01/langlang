@@ -13,8 +13,10 @@ import {
   toggleCosmetic,
   renamePet,
   setMenace,
+  setDailyGoal,
   dueCards,
 } from "@/lib/store";
+import { BADGES, DAILY_GOALS } from "@/lib/achievements";
 import { COSMETICS, petStageName, nextStageXp, petStage, PET_STAGES } from "@/lib/quests";
 import { fireRoast, notifyPermission, requestNotify } from "@/lib/notify";
 import { Pet } from "./Pet";
@@ -147,11 +149,50 @@ export function Profile() {
         <StreakPanel state={state} />
       </Section>
 
+      {/* daily goal */}
+      <Section title="Daily Goal">
+        <div className="border-2 border-line bg-panel p-4">
+          <div className="flex items-center justify-between">
+            <div className="text-sm opacity-70">
+              {state.today.xp >= state.dailyGoal
+                ? "✓ goal smashed today"
+                : `${state.dailyGoal - state.today.xp} XP to go today`}
+            </div>
+            <div className="flex border-2 border-line">
+              {DAILY_GOALS.map((g) => (
+                <button
+                  key={g}
+                  onClick={() => setDailyGoal(g)}
+                  className={`px-3 py-1 font-display text-xs ${
+                    state.dailyGoal === g ? "bg-(--accent) text-black" : "opacity-60"
+                  }`}
+                >
+                  {g}
+                </button>
+              ))}
+            </div>
+          </div>
+          <div className="mt-3 h-2 w-full border-2 border-line bg-black/40">
+            <div
+              className={`bar-anim h-full ${state.today.xp >= state.dailyGoal ? "bg-good" : "bg-(--accent)"}`}
+              style={{ width: `${Math.min(100, (state.today.xp / state.dailyGoal) * 100)}%` }}
+            />
+          </div>
+          <div className="mt-1 flex justify-between text-[10px] uppercase tracking-widest opacity-50">
+            <span>{state.today.xp} XP today</span>
+            <span>goal {state.dailyGoal}</span>
+          </div>
+        </div>
+      </Section>
+
       {/* modes hub */}
       <Section title="Modes">
         <div className="stagger grid grid-cols-3 gap-2">
           {[
             { href: "/path", emoji: "🗺", label: "Path" },
+            { href: "/lesson?mode=review", emoji: "🩹", label: "Practice" },
+            { href: "/mistakes", emoji: "📕", label: "Mistakes" },
+            { href: "/saved", emoji: "❤️", label: "Saved" },
             { href: "/dojo", emoji: "⛩", label: "Dojo" },
             { href: "/boss", emoji: "⚔️", label: "Bosses" },
             { href: "/mine", emoji: "⛏", label: "Mine" },
@@ -222,6 +263,32 @@ export function Profile() {
           <div className="text-center text-[10px] uppercase tracking-widest opacity-40">
             each cleared quest = 1 card pack
           </div>
+        </div>
+      </Section>
+
+      {/* badges */}
+      <Section title="Badges">
+        <div className="stagger grid grid-cols-4 gap-2">
+          {BADGES.map((b) => {
+            const got = b.earned(state);
+            return (
+              <div
+                key={b.id}
+                title={b.hint}
+                className={`flex flex-col items-center gap-1 border-2 p-2 text-center ${
+                  got ? "border-(--accent) bg-panel" : "border-line bg-black/20 opacity-35 grayscale"
+                }`}
+              >
+                <span className="text-2xl">{b.emoji}</span>
+                <span className="text-[8px] uppercase leading-tight tracking-wide opacity-70">
+                  {b.label}
+                </span>
+              </div>
+            );
+          })}
+        </div>
+        <div className="mt-2 text-center text-[10px] uppercase tracking-widest opacity-40">
+          {BADGES.filter((b) => b.earned(state)).length}/{BADGES.length} earned
         </div>
       </Section>
 

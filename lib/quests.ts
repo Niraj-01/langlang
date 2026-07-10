@@ -90,7 +90,9 @@ export function dailyQuests(date: string): Quest[] {
     .map((x) => x.def);
 
   return ordered.slice(0, 3).map((def, i) => {
-    const target = def.targets[(h >> (i * 4)) % def.targets.length];
+    // >>> keeps the hash unsigned — a signed shift can go negative and index
+    // targets[-1], yielding "Learn undefined new words" quests
+    const target = def.targets[(h >>> (i * 4)) % def.targets.length];
     return {
       key: def.key,
       label: def.label(target),

@@ -19,6 +19,7 @@ import { COSMETICS, petStageName, nextStageXp, petStage, PET_STAGES } from "@/li
 import { fireRoast, notifyPermission, requestNotify } from "@/lib/notify";
 import { Pet } from "./Pet";
 import { PackOpen } from "./PackOpen";
+import { StreakPanel } from "./StreakPanel";
 
 export function Profile() {
   const state = useApp();
@@ -65,7 +66,7 @@ export function Profile() {
       </div>
 
       {/* pet */}
-      <div className="flex flex-col items-center gap-3 p-6">
+      <div className="rise flex flex-col items-center gap-3 p-6">
         <Pet xp={state.xp} mood={mood} equipped={state.pet.equipped} size={180} />
         {editing ? (
           <form
@@ -108,7 +109,7 @@ export function Profile() {
             </div>
             <div className="h-2 w-full border-2 border-line bg-black/40">
               <div
-                className="h-full bg-(--accent)"
+                className="bar-anim h-full bg-(--accent)"
                 style={{
                   width: `${Math.min(100, ((state.xp - PET_STAGES[stage].min) / (next - PET_STAGES[stage].min)) * 100)}%`,
                 }}
@@ -119,7 +120,7 @@ export function Profile() {
       </div>
 
       {/* stat row */}
-      <div className="grid grid-cols-4 gap-2 px-4">
+      <div className="stagger grid grid-cols-4 gap-2 px-4">
         <Stat label="level" value={level} />
         <Stat label="streak" value={`${state.streak.current}🔥`} />
         <Stat label="due" value={due} />
@@ -131,28 +132,34 @@ export function Profile() {
           <span>{into}/{span} XP</span>
         </div>
         <div className="h-2 w-full border-2 border-line bg-black/40">
-          <div className="h-full bg-(--accent)" style={{ width: `${(into / span) * 100}%` }} />
+          <div className="bar-anim h-full bg-(--accent)" style={{ width: `${(into / span) * 100}%` }} />
         </div>
       </div>
 
+      {/* streak */}
+      <Section title="Streak">
+        <StreakPanel state={state} />
+      </Section>
+
       {/* modes hub */}
       <Section title="Modes">
-        <div className="grid grid-cols-3 gap-2">
+        <div className="stagger grid grid-cols-3 gap-2">
           {[
+            { href: "/path", emoji: "🗺", label: "Path" },
             { href: "/dojo", emoji: "⛩", label: "Dojo" },
             { href: "/boss", emoji: "⚔️", label: "Bosses" },
             { href: "/mine", emoji: "⛏", label: "Mine" },
             { href: "/focus", emoji: "🌀", label: "Focus" },
             { href: "/progress", emoji: "📈", label: "Progress" },
             { href: "/wrapped", emoji: "🎁", label: "Wrapped" },
-            { href: "/hiragana", emoji: "📖", label: "Learn JP" },
+            { href: "/learn", emoji: "📖", label: "Learn JP" },
           ].map((m) => (
             <Link
               key={m.href}
               href={m.href}
-              className="flex flex-col items-center gap-1 border-2 border-line bg-panel p-3"
+              className="tile group flex flex-col items-center gap-1 !border-2 p-3"
             >
-              <span className="text-2xl">{m.emoji}</span>
+              <span className="text-2xl transition-transform group-hover:scale-125">{m.emoji}</span>
               <span className="text-[10px] uppercase tracking-widest opacity-60">
                 {m.label}
               </span>
@@ -200,7 +207,7 @@ export function Profile() {
               </div>
               <div className="mt-2 h-2 w-full border-2 border-line bg-black/40">
                 <div
-                  className={`h-full ${q.done ? "bg-good" : "bg-(--accent)"}`}
+                  className={`bar-anim h-full ${q.done ? "bg-good" : "bg-(--accent)"}`}
                   style={{ width: `${(q.progress / q.target) * 100}%` }}
                 />
               </div>
@@ -281,7 +288,7 @@ export function Profile() {
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
-    <div className="px-4 pt-6">
+    <div className="rise px-4 pt-6" style={{ "--rise-delay": "0.15s" } as React.CSSProperties}>
       <div className="mb-2 font-display text-xs uppercase tracking-[0.3em] opacity-60">
         {title}
       </div>
@@ -292,7 +299,7 @@ function Section({ title, children }: { title: string; children: React.ReactNode
 
 function Stat({ label, value }: { label: string; value: number | string }) {
   return (
-    <div className="border-2 border-line bg-black/30 p-2 text-center">
+    <div className="border-2 border-line bg-black/30 p-2 text-center transition-colors hover:border-(--accent)">
       <div className="font-display text-2xl">{value}</div>
       <div className="text-[9px] uppercase tracking-widest opacity-50">{label}</div>
     </div>

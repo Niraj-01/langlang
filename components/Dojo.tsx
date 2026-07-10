@@ -166,21 +166,20 @@ export function Dojo() {
 
       {phase === "pick" && (
         <div className="flex-1 overflow-y-auto p-4">
-          <div className="mb-4 text-sm opacity-60">
+          <div className="rise mb-4 text-sm opacity-60">
             Survive a conversation in {lang === "ja" ? "Japanese" : "German"}. No corrections
             mid-fight — the debrief comes after. Your mistakes become your deck.
           </div>
-          <div className="grid grid-cols-1 gap-3">
+          <div className="stagger grid grid-cols-1 gap-3">
             {scenariosFor(lang).map((s) => (
               <motion.button
                 key={s.id}
                 whileTap={{ scale: 0.97 }}
-                className="border-4 border-line bg-panel p-4 text-left"
-                style={{ boxShadow: "5px 5px 0 rgba(0,0,0,0.5)" }}
+                className="tile group p-4 text-left"
                 onClick={() => start(s)}
               >
                 <div className="flex items-center gap-3">
-                  <span className="text-4xl">{s.emoji}</span>
+                  <span className="text-4xl transition-transform duration-200 group-hover:scale-125 group-hover:-rotate-6">{s.emoji}</span>
                   <div>
                     <div className="font-display text-lg">{s.title}</div>
                     <div className="mt-1 text-sm opacity-60">{s.setting}</div>
@@ -250,8 +249,8 @@ export function Dojo() {
 
       {phase === "report" && scenario && (
         <div className="flex-1 overflow-y-auto p-4">
-          <div className="mb-1 font-display text-2xl text-(--accent)">DEBRIEF</div>
-          <div className="mb-4 text-sm opacity-60">
+          <div className="rise mb-1 font-display text-2xl text-(--accent)">DEBRIEF</div>
+          <div className="rise mb-4 text-sm opacity-60" style={{ "--rise-delay": "0.08s" } as React.CSSProperties}>
             {exchanges} exchange{exchanges === 1 ? "" : "s"} · +{exchanges * 10} XP
           </div>
 
@@ -280,7 +279,11 @@ export function Dojo() {
 
           {report &&
             report.mistakes.map((m, i) => (
-              <div key={i} className="mb-3 border-2 border-line bg-panel p-3">
+              <div
+                key={i}
+                className="rise mb-3 border-2 border-line bg-panel p-3"
+                style={{ "--rise-delay": `${Math.min(i, 6) * 0.08}s` } as React.CSSProperties}
+              >
                 <div className="text-[10px] uppercase tracking-widest opacity-40">you said</div>
                 <div className={`text-lg line-through opacity-70 ${lang === "ja" ? "font-jp" : ""}`}>
                   {m.youSaid}
@@ -340,10 +343,15 @@ function Bubble({
 }) {
   const isUser = role === "user";
   return (
-    <div className={`flex ${isUser ? "justify-end" : "justify-start"}`}>
+    <motion.div
+      initial={{ opacity: 0, y: 12, x: isUser ? 16 : -16 }}
+      animate={{ opacity: 1, y: 0, x: 0 }}
+      transition={{ type: "spring", stiffness: 380, damping: 28 }}
+      className={`flex ${isUser ? "justify-end" : "justify-start"}`}
+    >
       <button
         onClick={() => !isUser && tts(text, lang)}
-        className={`max-w-[80%] border-2 p-3 text-left ${
+        className={`press max-w-[80%] border-2 p-3 text-left ${
           isUser ? "border-(--accent) bg-black/20" : "border-line bg-panel"
         }`}
         style={{ boxShadow: "3px 3px 0 rgba(0,0,0,0.4)" }}
@@ -351,6 +359,6 @@ function Bubble({
         <div className={`text-lg ${lang === "ja" ? "font-jp" : ""}`}>{text}</div>
         {sub && <div className="mt-1 text-xs italic opacity-50">{sub}</div>}
       </button>
-    </div>
+    </motion.div>
   );
 }

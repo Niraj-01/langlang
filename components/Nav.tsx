@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 
 // `short` keeps eight tabs legible at 390px; the full label returns on sm+.
 const TABS = [
-  { href: "/", label: "Home", short: "Home", jp: "ホ" },
+  { href: "/learn", label: "Home", short: "Home", jp: "ホ" },
   { href: "/hiragana", label: "Hiragana", short: "Hira", jp: "あ" },
   { href: "/katakana", label: "Katakana", short: "Kata", jp: "ア" },
   { href: "/kanji", label: "Kanji", short: "Kanji", jp: "水" },
@@ -29,7 +29,11 @@ export function Nav() {
                 active ? "text-accent" : "text-muted hover:text-ink"
               }`}
             >
-              <span className={`jp text-lg leading-none ${active ? "" : "opacity-80"}`}>
+              <span
+                className={`jp text-lg leading-none transition-transform duration-200 ${
+                  active ? "scale-125" : "opacity-80"
+                }`}
+              >
                 {t.jp}
               </span>
               <span className="w-full truncate text-center sm:hidden">{t.short}</span>

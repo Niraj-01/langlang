@@ -126,12 +126,38 @@ export function Wrapped() {
           className="flex flex-1 flex-col items-center justify-center gap-5 p-8 text-center"
           style={{ background: `linear-gradient(160deg, ${GRAD[lang][0]}22, ${GRAD[lang][1]}44)` }}
         >
-          <div className="text-7xl">{slide.emoji}</div>
-          <div className="text-sm uppercase tracking-[0.3em] opacity-70">{slide.label}</div>
-          <div className={`font-display text-6xl text-(--accent) ${lang === "ja" && slide.key === "hard" ? "font-jp" : ""}`}>
+          <motion.div
+            initial={{ scale: 0, rotate: -12 }}
+            animate={{ scale: 1, rotate: 0 }}
+            transition={{ type: "spring", stiffness: 260, damping: 16, delay: 0.05 }}
+            className="text-7xl"
+          >
+            {slide.emoji}
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.15 }}
+            className="text-sm uppercase tracking-[0.3em] opacity-70"
+          >
+            {slide.label}
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.6 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ type: "spring", stiffness: 300, damping: 18, delay: 0.25 }}
+            className={`font-display text-6xl text-(--accent) ${lang === "ja" && slide.key === "hard" ? "font-jp" : ""}`}
+          >
             {slide.big}
-          </div>
-          <div className="max-w-xs text-lg opacity-80">{slide.sub}</div>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4 }}
+            className="max-w-xs text-lg opacity-80"
+          >
+            {slide.sub}
+          </motion.div>
         </motion.div>
       </AnimatePresence>
 

@@ -55,7 +55,7 @@ export function KanaViewer({
   return (
     <div>
       {/* tabs */}
-      <div className="mb-4 flex gap-2">
+      <div className="rise mb-4 flex gap-2">
         {(
           [
             ["basic", "Basic", "46"],
@@ -66,10 +66,10 @@ export function KanaViewer({
           <button
             key={id}
             onClick={() => setTab(id)}
-            className={`flex-1 rounded-lg border px-3 py-2 text-sm font-medium transition ${
+            className={`press flex-1 rounded-lg border px-3 py-2 text-sm font-medium transition ${
               tab === id
-                ? "border-accent bg-accent/10 text-accent"
-                : "border-line bg-surface text-muted hover:text-ink"
+                ? "border-accent bg-accent/10 text-accent shadow-[0_4px_16px_-6px] shadow-accent/40"
+                : "border-line bg-surface text-muted hover:-translate-y-0.5 hover:text-ink"
             }`}
           >
             {label} <span className="opacity-50">{count}</span>
@@ -77,8 +77,8 @@ export function KanaViewer({
         ))}
       </div>
 
-      {/* grid */}
-      <div className="space-y-2">
+      {/* grid — re-staggers on tab change so switching feels alive */}
+      <div key={tab} className="stagger space-y-2">
         {grid.rows.map((row) => {
           const cells = grid.get(row);
           if (cells.every((c) => !c)) return null;
@@ -93,9 +93,9 @@ export function KanaViewer({
                   <button
                     key={k.char}
                     onClick={() => setSel(k)}
-                    className="flex flex-col items-center rounded-xl border border-line bg-surface py-2.5 transition hover:border-accent hover:bg-surface2"
+                    className="group press flex flex-col items-center rounded-xl border border-line bg-surface py-2.5 transition hover:-translate-y-0.5 hover:border-accent hover:bg-surface2 hover:shadow-[0_8px_20px_-10px] hover:shadow-accent/40"
                   >
-                    <span className="jp text-2xl leading-none sm:text-3xl">{k.char}</span>
+                    <span className="jp text-2xl leading-none transition-transform group-hover:scale-110 sm:text-3xl">{k.char}</span>
                     <span className="romaji mt-1 text-[11px]">{k.romaji}</span>
                   </button>
                 ) : (
@@ -108,7 +108,7 @@ export function KanaViewer({
       </div>
 
       {note && (
-        <div className="mt-6 rounded-xl border border-line bg-surface p-4 text-sm leading-relaxed text-muted">
+        <div className="rise mt-6 rounded-xl border border-line bg-surface p-4 text-sm leading-relaxed text-muted" style={{ "--rise-delay": "0.3s" } as React.CSSProperties}>
           {note}
         </div>
       )}

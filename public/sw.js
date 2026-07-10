@@ -3,9 +3,11 @@
 // cached the app is fully usable offline. API routes are never cached (they
 // need the network; the app already degrades gracefully without them).
 
-const CACHE = "langlang-v1";
+const CACHE = "langlang-v3";
 const SHELL = [
   "/",
+  "/learn",
+  "/path",
   "/reels",
   "/hiragana",
   "/katakana",

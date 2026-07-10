@@ -62,13 +62,13 @@ export function Boss() {
       </div>
 
       <div className="p-4">
-        <div className="mb-4 text-sm opacity-60">
+        <div className="rise mb-4 text-sm opacity-60">
           Each unit ends with a boss. Land {""}
           <span className="text-(--accent)">on-target exchanges</span> — no English — to
           drain their health and unlock the next fight. Winning earns a pack and a streak
           freeze.
         </div>
-        <div className="space-y-3">
+        <div className="stagger space-y-3">
           {list.map((b) => {
             const cleared = state.bossesCleared.includes(b.id);
             const locked = b.boss?.unlockAfter && !state.bossesCleared.includes(b.boss.unlockAfter);
@@ -77,12 +77,18 @@ export function Boss() {
                 key={b.id}
                 disabled={!!locked}
                 onClick={() => !locked && setBoss(b)}
-                className={`flex w-full items-center gap-3 border-4 p-4 text-left ${
-                  locked ? "border-line opacity-40" : cleared ? "border-good" : "border-line bg-panel"
+                className={`group flex w-full items-center gap-3 border-4 p-4 text-left ${
+                  locked
+                    ? "border-line opacity-40"
+                    : cleared
+                      ? "tile !border-good"
+                      : "tile"
                 }`}
-                style={locked ? {} : { boxShadow: "5px 5px 0 rgba(0,0,0,0.5)" }}
               >
-                <span className="text-5xl grayscale-0" style={{ filter: locked ? "grayscale(1)" : undefined }}>
+                <span
+                  className="text-5xl transition-transform duration-200 group-hover:scale-125 group-hover:-rotate-6"
+                  style={{ filter: locked ? "grayscale(1)" : undefined }}
+                >
                   {b.boss?.avatar}
                 </span>
                 <div className="flex-1">
@@ -336,10 +342,15 @@ function Bubble({
 }) {
   const isUser = role === "user";
   return (
-    <div className={`flex ${isUser ? "justify-end" : "justify-start"}`}>
+    <motion.div
+      initial={{ opacity: 0, y: 12, x: isUser ? 16 : -16 }}
+      animate={{ opacity: 1, y: 0, x: 0 }}
+      transition={{ type: "spring", stiffness: 380, damping: 28 }}
+      className={`flex ${isUser ? "justify-end" : "justify-start"}`}
+    >
       <button
         onClick={() => !isUser && tts(text, lang)}
-        className={`max-w-[80%] border-2 p-3 text-left ${
+        className={`press max-w-[80%] border-2 p-3 text-left ${
           isUser ? "border-(--accent) bg-black/20" : "border-line bg-panel"
         }`}
         style={{ boxShadow: "3px 3px 0 rgba(0,0,0,0.4)" }}
@@ -347,6 +358,6 @@ function Bubble({
         <div className={`text-lg ${lang === "ja" ? "font-jp" : ""}`}>{text}</div>
         {sub && <div className="mt-1 text-xs italic opacity-50">{sub}</div>}
       </button>
-    </div>
+    </motion.div>
   );
 }

@@ -57,7 +57,7 @@ export function Progress() {
       </div>
 
       {/* target picker */}
-      <div className="p-4">
+      <div className="rise p-4">
         <div className="mb-2 font-display text-xs uppercase tracking-[0.3em] opacity-60">
           Your Target
         </div>
@@ -104,7 +104,7 @@ export function Progress() {
       )}
 
       {/* coverage ladder */}
-      <div className="px-4 pt-2">
+      <div className="rise px-4 pt-2" style={{ "--rise-delay": "0.1s" } as React.CSSProperties}>
         <div className="mb-2 font-display text-xs uppercase tracking-[0.3em] opacity-60">
           Coverage
         </div>
@@ -126,7 +126,7 @@ export function Progress() {
                 </div>
                 <div className="h-3 w-full border-2 border-line bg-black/40">
                   <div
-                    className={`h-full ${isTarget ? "bg-(--accent)" : "bg-good/70"}`}
+                    className={`bar-anim h-full ${isTarget ? "bg-(--accent)" : "bg-good/70"}`}
                     style={{ width: `${pct}%` }}
                   />
                 </div>
@@ -140,16 +140,19 @@ export function Progress() {
       </div>
 
       {/* 7-day activity */}
-      <div className="px-4 pt-6">
+      <div className="rise px-4 pt-6" style={{ "--rise-delay": "0.18s" } as React.CSSProperties}>
         <div className="mb-2 font-display text-xs uppercase tracking-[0.3em] opacity-60">
           Last 7 Days
         </div>
         <div className="flex h-24 items-end justify-between gap-1 border-2 border-line bg-panel p-3">
-          {last7(state).map((d) => (
+          {last7(state).map((d, i) => (
             <div key={d.date} className="flex flex-1 flex-col items-center gap-1">
               <div
-                className="w-full bg-(--accent)"
-                style={{ height: `${Math.max(3, (d.xp / maxXp) * 60)}px` }}
+                className="bar-grow w-full bg-(--accent) transition-colors hover:bg-good"
+                style={{
+                  height: `${Math.max(3, (d.xp / maxXp) * 60)}px`,
+                  animationDelay: `${0.25 + i * 0.06}s`,
+                }}
                 title={`${d.xp} XP`}
               />
               <div className="text-[8px] uppercase opacity-40">{d.label}</div>
@@ -171,7 +174,7 @@ function Forecast({ state, lang }: { state: ReturnType<typeof useApp>; lang: "ja
   const onTrack = date && new Date(date) <= new Date(target.date + "T00:00:00");
 
   return (
-    <div className="px-4">
+    <div className="rise px-4" style={{ "--rise-delay": "0.06s" } as React.CSSProperties}>
       <div className="border-2 border-(--accent) bg-panel p-4">
         <div className="text-xs uppercase tracking-widest opacity-60">
           {EXAM_LABEL[target.exam]} · exam {fmtDate(target.date)} ({daysToExam}d)

@@ -21,15 +21,15 @@ export function Phrases({ data }: { data: Phrase[] }) {
 
   return (
     <div>
-      <div className="mb-4 flex flex-wrap gap-1.5">
+      <div className="rise mb-4 flex flex-wrap gap-1.5">
         {CATS.map((c) => (
           <button
             key={c.id}
             onClick={() => setCat(c.id)}
-            className={`rounded-full border px-3 py-1 text-xs font-medium transition ${
+            className={`press rounded-full border px-3 py-1 text-xs font-medium transition ${
               cat === c.id
                 ? "border-accent bg-accent/10 text-accent"
-                : "border-line bg-surface text-muted hover:text-ink"
+                : "border-line bg-surface text-muted hover:-translate-y-0.5 hover:text-ink"
             }`}
           >
             {c.label}
@@ -37,12 +37,12 @@ export function Phrases({ data }: { data: Phrase[] }) {
         ))}
       </div>
 
-      <div className="space-y-2">
+      <div key={cat} className="stagger space-y-2">
         {list.map((p) => (
           <button
             key={p.japanese + p.english}
             onClick={() => speakJa(p.japanese)}
-            className="flex w-full items-center gap-3 rounded-xl border border-line bg-surface p-4 text-left transition hover:border-accent"
+            className="tile-soft group flex w-full items-center gap-3 rounded-xl border border-line bg-surface p-4 text-left"
           >
             <div className="min-w-0 flex-1">
               <div className="jp text-xl leading-snug">{p.japanese}</div>
@@ -52,7 +52,11 @@ export function Phrases({ data }: { data: Phrase[] }) {
                 🗣 {p.pronunciation}
               </div>
             </div>
-            {speech && <span className="shrink-0 text-xl text-muted">🔊</span>}
+            {speech && (
+              <span className="shrink-0 text-xl text-muted transition group-hover:scale-110 group-hover:text-accent">
+                🔊
+              </span>
+            )}
           </button>
         ))}
       </div>

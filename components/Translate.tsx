@@ -62,24 +62,27 @@ export function Translate() {
           if (e.key === "Enter" && (e.metaKey || e.ctrlKey)) run();
         }}
         placeholder="Type English or Japanese…"
-        className="jp h-24 w-full rounded-xl border border-line bg-surface p-3 text-lg outline-none placeholder:font-sans placeholder:text-muted focus:border-accent"
+        className="jp rise h-24 w-full rounded-xl border border-line bg-surface p-3 text-lg outline-none transition-shadow placeholder:font-sans placeholder:text-muted focus:border-accent focus:shadow-[0_0_0_3px] focus:shadow-accent/20"
       />
       <button
         onClick={() => run()}
         disabled={busy || !text.trim()}
-        className="mt-2 w-full rounded-xl bg-accent py-3 font-semibold text-white disabled:opacity-40"
+        className={`press rise mt-2 w-full rounded-xl bg-accent py-3 font-semibold text-white shadow-[0_6px_20px_-6px] shadow-accent/50 transition hover:brightness-110 disabled:opacity-40 disabled:shadow-none ${
+          busy ? "animate-pulse" : ""
+        }`}
+        style={{ "--rise-delay": "0.06s" } as React.CSSProperties}
       >
         {busy ? "Translating…" : "Translate ⇄"}
       </button>
 
-      <div className="mt-3">
+      <div className="rise mt-3" style={{ "--rise-delay": "0.12s" } as React.CSSProperties}>
         <div className="mb-1.5 text-[11px] uppercase tracking-widest text-muted">Try one</div>
         <div className="flex flex-wrap gap-1.5">
           {EXAMPLES.map((e) => (
             <button
               key={e}
               onClick={() => run(e)}
-              className="rounded-full border border-line bg-surface px-3 py-1 text-xs text-muted transition hover:border-accent hover:text-ink"
+              className="press rounded-full border border-line bg-surface px-3 py-1 text-xs text-muted transition hover:-translate-y-0.5 hover:border-accent hover:text-ink"
             >
               {e}
             </button>

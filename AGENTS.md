@@ -29,6 +29,13 @@ words, quizzes) is a card in one infinite vertical snap feed ("the Doomscroll").
   opt-in, Notifications API when granted, local roast fallback). Profile page at `/profile`.
 - **Phase 4:** sentence mining inbox, Focus Mode, boss battles, test tracker,
   Weekly Wrapped, PWA offline reviews.
+- **Phase 5 (done):** marketing landing page at `/` (`components/Landing.tsx`;
+  the home dashboard moved to `/learn`), motion pass across inner pages (shared
+  `.rise`/`.stagger`/`.tile`/`.tile-soft`/`.press`/`.bar-anim` utilities in
+  `globals.css`), and The Path (`/path`) — Duolingo-style unit roadmap derived in
+  `lib/path.ts` from `newIndex` (units of 8 seed words, boss checkpoints every
+  4 units, mastery stars from FSRS stability ≥ 7d) plus streak features
+  (`StreakPanel.tsx`: 7-day strip, freezes, milestone bar; also in Profile).
 
 ## Architecture
 

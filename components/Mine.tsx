@@ -99,18 +99,23 @@ export function Mine() {
       </div>
 
       <div className="p-4">
-        <div className="mb-2 text-sm opacity-60">
+        <div className="rise mb-2 text-sm opacity-60">
           Paste a sentence from anything you&apos;re watching or reading. Get furigana,
           glosses, and grammar — then mine the words you don&apos;t know.
         </div>
         <textarea
-          className={`h-28 w-full border-4 border-line bg-black/30 p-3 text-lg outline-none focus:border-(--accent) ${lang === "ja" ? "font-jp" : ""}`}
+          className={`rise h-28 w-full border-4 border-line bg-black/30 p-3 text-lg outline-none transition-colors focus:border-(--accent) ${lang === "ja" ? "font-jp" : ""}`}
+          style={{ "--rise-delay": "0.08s" } as React.CSSProperties}
           placeholder={`e.g. ${SAMPLES[lang]}`}
           value={text}
           onChange={(e) => setText(e.target.value)}
         />
-        <div className="mt-2 flex gap-2">
-          <button className="btn-primary flex-1" onClick={analyze} disabled={busy || !text.trim()}>
+        <div className="rise mt-2 flex gap-2" style={{ "--rise-delay": "0.14s" } as React.CSSProperties}>
+          <button
+            className={`btn-primary flex-1 ${busy ? "animate-pulse" : ""}`}
+            onClick={analyze}
+            disabled={busy || !text.trim()}
+          >
             {busy ? "breaking it down…" : "⛏ MINE IT"}
           </button>
           <button className="btn-ghost" onClick={() => setText(SAMPLES[lang])}>
@@ -135,7 +140,7 @@ export function Mine() {
           </button>
 
           <div className="mb-1 text-[10px] uppercase tracking-[0.3em] opacity-40">words</div>
-          <div className="space-y-2">
+          <div className="stagger space-y-2">
             {data.words.map((w) => {
               const have = owned(w.word);
               const on = chosen.has(w.word);
@@ -143,12 +148,12 @@ export function Mine() {
                 <button
                   key={w.word}
                   onClick={() => !have && toggle(w.word)}
-                  className={`flex w-full items-center justify-between border-2 p-3 text-left ${
+                  className={`press flex w-full items-center justify-between border-2 p-3 text-left transition-colors ${
                     have
                       ? "border-line opacity-40"
                       : on
                         ? "border-(--accent)"
-                        : "border-line bg-panel"
+                        : "border-line bg-panel hover:border-(--accent)/60"
                   }`}
                 >
                   <div>

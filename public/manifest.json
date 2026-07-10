@@ -2,7 +2,7 @@
   "name": "langlang",
   "short_name": "langlang",
   "description": "The doomscroll that makes you fluent.",
-  "start_url": "/",
+  "start_url": "/learn",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#0b0b10",

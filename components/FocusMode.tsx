@@ -142,7 +142,7 @@ export function FocusMode() {
           <div className="font-display text-xs uppercase tracking-[0.3em] text-(--accent)">
             Focus Mode
           </div>
-          <button className="hud-chip" onClick={() => setPlaying((p) => !p)}>
+          <button className="hud-chip press" onClick={() => setPlaying((p) => !p)}>
             {playing ? "⏸" : "▶"}
           </button>
         </div>

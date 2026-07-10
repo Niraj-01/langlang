@@ -48,19 +48,19 @@ export function KanjiViewer({ data }: { data: Kanji[] }) {
         value={q}
         onChange={(e) => setQ(e.target.value)}
         placeholder="Search by meaning or romaji (e.g. 'water', 'taberu')…"
-        className="mb-3 w-full rounded-lg border border-line bg-surface px-3 py-2.5 text-sm outline-none placeholder:text-muted focus:border-accent"
+        className="rise mb-3 w-full rounded-lg border border-line bg-surface px-3 py-2.5 text-sm outline-none transition-shadow placeholder:text-muted focus:border-accent focus:shadow-[0_0_0_3px] focus:shadow-accent/20"
       />
 
       {/* category chips */}
-      <div className="mb-4 flex flex-wrap gap-1.5">
+      <div className="rise mb-4 flex flex-wrap gap-1.5" style={{ "--rise-delay": "0.06s" } as React.CSSProperties}>
         {CATEGORIES.map((c) => (
           <button
             key={c.id}
             onClick={() => setCat(c.id)}
-            className={`rounded-full border px-3 py-1 text-xs font-medium transition ${
+            className={`press rounded-full border px-3 py-1 text-xs font-medium transition ${
               cat === c.id
                 ? "border-accent bg-accent/10 text-accent"
-                : "border-line bg-surface text-muted hover:text-ink"
+                : "border-line bg-surface text-muted hover:-translate-y-0.5 hover:text-ink"
             }`}
           >
             {c.label}
@@ -73,14 +73,14 @@ export function KanjiViewer({ data }: { data: Kanji[] }) {
           No kanji match “{q}”.
         </div>
       ) : (
-        <div className="grid grid-cols-3 gap-2 sm:grid-cols-5">
+        <div key={`${cat}:${q}`} className="stagger grid grid-cols-3 gap-2 sm:grid-cols-5">
           {list.map((k) => (
             <button
               key={k.kanji}
               onClick={() => setSel(k)}
-              className="flex flex-col items-center rounded-xl border border-line bg-surface py-3 transition hover:border-accent hover:bg-surface2"
+              className="group press flex flex-col items-center rounded-xl border border-line bg-surface py-3 transition hover:-translate-y-0.5 hover:border-accent hover:bg-surface2 hover:shadow-[0_8px_20px_-10px] hover:shadow-accent/40"
             >
-              <span className="jp text-3xl leading-none sm:text-4xl">{k.kanji}</span>
+              <span className="jp text-3xl leading-none transition-transform group-hover:scale-110 sm:text-4xl">{k.kanji}</span>
               <span className="mt-1.5 line-clamp-1 px-1 text-[10px] text-muted">
                 {k.meaning.split(",")[0]}
               </span>

@@ -33,8 +33,7 @@ export interface DashPhrase {
 }
 
 const LABEL = "text-[10px] font-bold uppercase tracking-[2px] text-muted";
-const TILE =
-  "rounded-2xl border border-line bg-surface transition-colors hover:border-accent/60";
+const TILE = "tile-soft rounded-2xl border border-line bg-surface";
 
 export function Dashboard({
   hero,
@@ -57,7 +56,7 @@ export function Dashboard({
   return (
     <div className="px-4 pb-4">
       {/* header + Reels pill */}
-      <header className="flex items-center justify-between pb-5 pt-4">
+      <header className="rise flex items-center justify-between pb-5 pt-4">
         <div className="flex items-center gap-3.5">
           <span className="jp text-3xl font-bold text-accent">ホ</span>
           <div>
@@ -69,13 +68,13 @@ export function Dashboard({
         </div>
         <Link
           href="/reels"
-          className="flex shrink-0 items-center gap-1.5 rounded-full bg-accent px-4 py-2 text-[13px] font-semibold text-white transition hover:brightness-110"
+          className="press flex shrink-0 items-center gap-1.5 rounded-full bg-accent px-4 py-2 text-[13px] font-semibold text-white shadow-[0_4px_16px_-4px] shadow-accent/50 transition hover:brightness-110"
         >
           ▶ Reels
         </Link>
       </header>
 
-      <div className="grid auto-rows-min grid-cols-2 gap-3 md:auto-rows-[104px] md:grid-cols-4">
+      <div className="stagger grid auto-rows-min grid-cols-2 gap-3 md:auto-rows-[104px] md:grid-cols-4">
         {/* hero — kana of the day */}
         <button
           onClick={() => speakJa(hero.char)}
@@ -88,7 +87,7 @@ export function Dashboard({
               {speech ? "🔊 Hear it" : "Kana of the day"}
             </span>
           </div>
-          <div className="jp text-[84px] font-medium leading-none md:text-[104px]">
+          <div className="jp glyph-float text-[84px] font-medium leading-none md:text-[104px]" style={{ "--gf-t": "9s" } as React.CSSProperties}>
             {hero.char}
           </div>
         </button>
@@ -101,7 +100,7 @@ export function Dashboard({
               <button
                 key={k.char}
                 onClick={() => speakJa(k.char)}
-                className="rounded-[10px] border border-line py-1.5 text-center transition hover:border-accent hover:bg-surface2"
+                className="press rounded-[10px] border border-line py-1.5 text-center transition hover:-translate-y-0.5 hover:border-accent hover:bg-surface2"
               >
                 <div className="jp text-[22px] leading-tight">{k.char}</div>
                 <div className="romaji text-[10px] tracking-[1px]">{k.romaji}</div>
@@ -110,9 +109,9 @@ export function Dashboard({
           </div>
           <Link
             href="/hiragana"
-            className="mt-3 inline-block text-[11px] text-muted hover:text-accent"
+            className="group mt-3 inline-block text-[11px] text-muted hover:text-accent"
           >
-            See all 46 →
+            See all 46 <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
           </Link>
         </div>
 
@@ -124,7 +123,7 @@ export function Dashboard({
               <button
                 key={w.jp}
                 onClick={() => speakJa(w.jp)}
-                className="flex items-center justify-between rounded-[10px] bg-surface2 px-3.5 py-2.5 text-left transition hover:outline hover:outline-accent"
+                className="press flex items-center justify-between rounded-[10px] bg-surface2 px-3.5 py-2.5 text-left transition hover:translate-x-1 hover:outline hover:outline-accent"
               >
                 <span className="jp text-lg">
                   {w.jp} {speech && <span className="text-xs">🔊</span>}
@@ -193,13 +192,13 @@ export function Dashboard({
           <div className="flex gap-2">
             <button
               onClick={() => speakJa(phrase.japanese)}
-              className="shrink-0 whitespace-nowrap rounded-full border border-line px-3.5 py-1.5 text-xs transition hover:border-accent hover:text-accent"
+              className="press shrink-0 whitespace-nowrap rounded-full border border-line px-3.5 py-1.5 text-xs transition hover:border-accent hover:text-accent"
             >
               🔊 Listen
             </button>
             <button
               onClick={() => setPIdx((i) => (i + 1) % phrases.length)}
-              className="shrink-0 whitespace-nowrap rounded-full border border-line px-3.5 py-1.5 text-xs transition hover:border-accent hover:text-accent"
+              className="press shrink-0 whitespace-nowrap rounded-full border border-line px-3.5 py-1.5 text-xs transition hover:border-accent hover:text-accent"
             >
               Next →
             </button>

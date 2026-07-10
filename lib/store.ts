@@ -100,6 +100,20 @@ function subscribe(cb: () => void) {
   };
 }
 
+// ---- cloud sync hooks (used by lib/sync.ts; the store itself stays offline) ----
+
+/** Subscribe to store changes outside React. Returns an unsubscribe fn. */
+export function subscribeApp(cb: () => void) {
+  return subscribe(cb);
+}
+
+/** Replace the whole state (e.g. with a pulled cloud copy) and persist it. */
+export function replaceState(next: AppState) {
+  load();
+  state = { ...defaultState(), ...next };
+  emit();
+}
+
 const serverSnapshot = defaultState();
 
 export function useApp(): AppState {

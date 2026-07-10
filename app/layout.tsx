@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Archivo_Black, Source_Sans_3, Noto_Sans_JP, Inter } from "next/font/google";
 import "./globals.css";
 import { SwRegister } from "@/components/SwRegister";
+import { SyncBoot } from "@/components/SyncBoot";
 
 const archivo = Archivo_Black({
   weight: "400",
@@ -54,6 +55,7 @@ export default function RootLayout({
     >
       <body className="h-full">
         <SwRegister />
+        <SyncBoot />
         {children}
       </body>
     </html>

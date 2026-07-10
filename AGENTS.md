@@ -18,7 +18,7 @@ words, quizzes) is a card in one infinite vertical snap feed ("the Doomscroll").
   `lib/similarity.ts`, optional Claude one-liner via `/api/speak`), AI Conversation
   Dojo (`/dojo`, scenarios in `data/scenarios.ts`, turns via `/api/dojo`, post-session
   debrief via `/api/dojo/report`), mistake→card pipeline (`addMistakeCard` in store).
-  Supabase auth/sync deliberately deferred — still single-user local-first.
+  Supabase auth/sync deliberately deferred at the time — now shipped, see Phase 6.
 - **Phase 3 (done):** daily quests (`lib/quests.ts` deterministic per-day pool, progress
   bumped from store actions, each cleared quest mints a card pack), card packs with
   variable rewards (`openPack` — golden-rich vocab pulls + chance of a pet cosmetic,
@@ -36,6 +36,16 @@ words, quizzes) is a card in one infinite vertical snap feed ("the Doomscroll").
   `lib/path.ts` from `newIndex` (units of 8 seed words, boss checkpoints every
   4 units, mastery stars from FSRS stability ≥ 7d) plus streak features
   (`StreakPanel.tsx`: 7-day strip, freezes, milestone bar; also in Profile).
+- **Phase 6 (done):** Supabase backend — Google login + cross-device progress
+  sync. Project `ujbegotujvkyicbodacc` (ap-southeast-2), single `user_state`
+  table (user_id PK → auth.users, `state` jsonb, RLS owner-only). Client:
+  `lib/supabase.ts` (null without `NEXT_PUBLIC_SUPABASE_URL/_ANON_KEY` — app
+  stays local-only), `lib/sync.ts` (pull on login, conflict = higher-XP save
+  wins, debounced push on store changes; started by `SyncBoot` in the root
+  layout), `AuthButton.tsx` (chip on landing header, panel in Profile).
+  Sync is layered ON TOP of localStorage — the review path still never
+  touches the network. Google provider must be enabled in the Supabase
+  dashboard (needs Google OAuth client ID/secret).
 
 ## Architecture
 

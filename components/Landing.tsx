@@ -21,6 +21,7 @@ import { useMounted } from "@/lib/useMounted";
 import { burst } from "@/lib/confetti";
 import { sfxAdd, sfxCorrect, sfxFlip } from "@/lib/audio";
 import { DeNoun, JaWord } from "@/components/Lex";
+import { AuthButton } from "@/components/AuthButton";
 
 const JA = jaSeed as VocabEntry[];
 const DE = deSeed as VocabEntry[];
@@ -379,14 +380,7 @@ export function Landing() {
             ))}
           </div>
 
-          <button
-            type="button"
-            disabled
-            title="Accounts & sync are coming soon"
-            className="hidden border-2 border-line px-3 py-1.5 font-display text-xs uppercase opacity-40 sm:block"
-          >
-            Login soon
-          </button>
+          <AuthButton variant="chip" />
         </div>
       </header>
 
@@ -554,7 +548,7 @@ export function Landing() {
           </Link>
         </div>
         <p className="rv mt-6 text-xs uppercase tracking-[0.3em] opacity-40" style={{ "--rv-delay": "0.25s" } as React.CSSProperties}>
-          works offline · your data stays on your device · login &amp; sync soon
+          works offline · local-first · sign in with Google to sync across devices
         </p>
       </section>
 

@@ -20,6 +20,7 @@ import { fireRoast, notifyPermission, requestNotify } from "@/lib/notify";
 import { Pet } from "./Pet";
 import { PackOpen } from "./PackOpen";
 import { StreakPanel } from "./StreakPanel";
+import { AuthButton } from "./AuthButton";
 
 export function Profile() {
   const state = useApp();
@@ -135,6 +136,11 @@ export function Profile() {
           <div className="bar-anim h-full bg-(--accent)" style={{ width: `${(into / span) * 100}%` }} />
         </div>
       </div>
+
+      {/* account & sync */}
+      <Section title="Account">
+        <AuthButton variant="panel" />
+      </Section>
 
       {/* streak */}
       <Section title="Streak">

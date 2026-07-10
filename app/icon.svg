@@ -2,6 +2,7 @@
   <!-- sakura mark: five notched petals + one falling, on near-black -->
   <rect width="512" height="512" rx="116" fill="#0d0d12"/>
   <defs>
+    <!-- one petal pointing up from the flower's center, V-notch at the tip -->
     <path id="petal" d="M0-16 C-28-26 -40-62 -21-87 L0-71 L21-87 C40-62 28-26 0-16 Z"/>
   </defs>
   <g transform="translate(292 250) rotate(24)" fill="#f2555f">
@@ -11,5 +12,6 @@
     <use href="#petal" transform="rotate(216)"/>
     <use href="#petal" transform="rotate(288)"/>
   </g>
+  <!-- drifting petal -->
   <use href="#petal" transform="translate(158 422) rotate(210) scale(0.72)" fill="#f27d84"/>
 </svg>

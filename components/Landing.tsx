@@ -351,6 +351,8 @@ export function Landing() {
   const glyphs = GLYPHS[lang];
   const returning = mounted && app.xp > 0;
   const level = levelFromXp(app.xp).level;
+  // brand-new visitors go through onboarding; everyone else straight to the feed
+  const startHref = !mounted || app.onboarding.done || app.xp > 0 ? "/reels" : "/onboarding";
 
   return (
     <div
@@ -429,7 +431,7 @@ export function Landing() {
           </p>
 
           <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row">
-            <Link href="/reels" className="btn-primary px-8">
+            <Link href={startHref} className="btn-primary px-8">
               ▶ Start scrolling
             </Link>
             <Link href="/learn" className="btn-ghost px-8">
@@ -543,7 +545,7 @@ export function Landing() {
           <span className="text-(--accent)">STARTS NOW</span>
         </h2>
         <div className="rv mt-10" style={{ "--rv-delay": "0.15s" } as React.CSSProperties}>
-          <Link href="/reels" className="btn-primary inline-block px-10 text-xl">
+          <Link href={startHref} className="btn-primary inline-block px-10 text-xl">
             ▶ Open the feed
           </Link>
         </div>

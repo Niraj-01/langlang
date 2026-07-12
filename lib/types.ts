@@ -29,6 +29,8 @@ export interface Card {
   exampleReading?: string; // kana version (ja)
   exampleMeaning?: string;
   pos?: string;
+  tip?: string; // usage / grammar note (max 2 sentences)
+  mnemonic?: string; // memory hook (max 2 sentences)
   isGolden: boolean;
   createdAt: number;
   fsrs: FsrsState;
@@ -44,6 +46,8 @@ export interface VocabEntry {
   exampleReading?: string;
   exampleMeaning?: string;
   pos?: string;
+  tip?: string;
+  mnemonic?: string;
 }
 
 export interface StreakState {
@@ -98,6 +102,15 @@ export interface DayStats {
   speaks?: number; // shadowing attempts (added in phase 2)
 }
 
+// First-run onboarding answers (design: Onboarding & Lesson flow).
+export interface OnboardingState {
+  done: boolean;
+  why?: string; // "travel" | "fun" | "work" | "curious"
+  level?: string; // "new" | "kana" | "words" | "conversations"
+  minutes?: number; // daily goal in minutes (5/10/15/20)
+  start?: "scratch" | "placement";
+}
+
 // A wrong answer worth revisiting — filled from lessons and failed reviews.
 export interface MistakeEntry {
   lang: Lang;
@@ -132,6 +145,7 @@ export interface AppState {
   favorites: string[]; // e.g. "kanji:食", "phrase:こんにちは", "ja:水"
   mistakeLog: MistakeEntry[]; // most recent first, capped
   dailyGoal: number; // XP target per day
+  onboarding: OnboardingState;
 }
 
 // ---- Feed ----
@@ -174,6 +188,8 @@ export interface Kanji {
   strokes: number;
   category: string;
   examples: Example[];
+  components?: string; // visual parts, e.g. "亻 person + 木 tree"
+  mnemonic?: string; // WaniKani-style story (max 2 sentences)
 }
 
 export interface Phrase {

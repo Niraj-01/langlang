@@ -101,6 +101,11 @@ export function NewWordCard({
             </div>
           )}
           <Example entry={entry} lang={lang} furigana={furigana} />
+          {(entry.mnemonic ?? entry.tip) && (
+            <div className="mt-4 max-w-[30ch] rounded-xl border border-white/10 bg-white/5 px-4 py-2.5 text-sm leading-snug opacity-80">
+              {entry.mnemonic ? <>🧠 {entry.mnemonic}</> : <>💡 {entry.tip}</>}
+            </div>
+          )}
         </div>
 
         {!added && !skipped ? (

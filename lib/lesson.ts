@@ -8,6 +8,8 @@ export interface LessonWord {
   meaning: string;
   reading?: string;
   article?: "der" | "die" | "das";
+  tip?: string; // usage / grammar note, surfaced after a miss
+  mnemonic?: string; // memory hook, surfaced after a miss
 }
 
 export type Exercise =
@@ -72,6 +74,8 @@ export function toLessonWords(entries: VocabEntry[]): LessonWord[] {
     meaning: e.meaning,
     reading: e.reading,
     article: e.article,
+    tip: e.tip,
+    mnemonic: e.mnemonic,
   }));
 }
 

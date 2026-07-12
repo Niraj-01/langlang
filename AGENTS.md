@@ -58,6 +58,18 @@ words, quizzes) is a card in one infinite vertical snap feed ("the Doomscroll").
   badge grid in Profile), JLPT chip on kanji. Also fixed a signed-shift
   bug in `dailyQuests` that minted "undefined" quest targets on dates
   whose hash had the high bit set (self-heals on rollover).
+- **Content pass (done):** pedagogy upgrade modeled on WaniKani/Tofugu (ja)
+  and DW Nicos Weg (de). `data/kanji.json` carries `components` + `mnemonic`
+  (WaniKani-style stories, shown in the kanji modal's "remember it" block);
+  both vocab seeds carry optional `tip` (usage nuance / grammar notes —
+  irregular present forms, separable verbs, が-taking verbs, etc.) and grew
+  to 138 (ja) / 142 (de) entries. New seed words are APPEND-ONLY so users'
+  `newIndex` stays valid. Tips/mnemonics render on new-word cards and review
+  reveals, and are copied onto cards in `entryToCard`. `/lesson` also shows
+  the tip (💡, `coach` prop on `CheckBar`) inside the "Not quite" banner after
+  a wrong answer — `LessonWord` carries `tip`/`mnemonic`, threaded from the
+  unit seed, from card fields (review mode), or looked up in SEED by word
+  (mistake mode). Max 2 sentences per tip (hard rule).
 
 ## Architecture
 

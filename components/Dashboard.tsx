@@ -8,6 +8,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { speakJa, canSpeak } from "@/lib/speak";
 import { useMounted } from "@/lib/useMounted";
+import { Icon } from "./Icon";
 
 export interface DashKana {
   char: string;
@@ -84,7 +85,7 @@ export function Dashboard({
             <div className={`${LABEL} mb-2.5`}>Kana of the day</div>
             <div className="romaji mb-3.5 text-base tracking-[2px]">{hero.romaji}</div>
             <span className="inline-flex items-center gap-2 rounded-full bg-accent px-4 py-2 text-[13px] font-semibold text-white">
-              {speech ? "🔊 Hear it" : "Kana of the day"}
+              {speech ? <><Icon name="sound" size={14} /> Hear it</> : "Kana of the day"}
             </span>
           </div>
           <div className="jp glyph-float text-[84px] font-medium leading-none md:text-[104px]" style={{ "--gf-t": "9s" } as React.CSSProperties}>
@@ -125,8 +126,8 @@ export function Dashboard({
                 onClick={() => speakJa(w.jp)}
                 className="press flex items-center justify-between rounded-[10px] bg-surface2 px-3.5 py-2.5 text-left transition hover:translate-x-1 hover:outline hover:outline-accent"
               >
-                <span className="jp text-lg">
-                  {w.jp} {speech && <span className="text-xs">🔊</span>}
+                <span className="jp inline-flex items-center gap-1 text-lg">
+                  {w.jp} {speech && <Icon name="sound" size={12} className="text-muted" />}
                 </span>
                 <span className="text-xs text-muted">
                   <span className="romaji tracking-[1px]">{w.romaji}</span> · {w.en}
@@ -192,9 +193,9 @@ export function Dashboard({
           <div className="flex gap-2">
             <button
               onClick={() => speakJa(phrase.japanese)}
-              className="press shrink-0 whitespace-nowrap rounded-full border border-line px-3.5 py-1.5 text-xs transition hover:border-accent hover:text-accent"
+              className="press inline-flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-full border border-line px-3.5 py-1.5 text-xs transition hover:border-accent hover:text-accent"
             >
-              🔊 Listen
+              <Icon name="sound" size={13} /> Listen
             </button>
             <button
               onClick={() => setPIdx((i) => (i + 1) % phrases.length)}

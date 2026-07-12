@@ -10,6 +10,7 @@ import type { GrammarItem } from "@/lib/types";
 import { awardXp } from "@/lib/store";
 import { speak, sfxCorrect, sfxWrong } from "@/lib/audio";
 import { burst } from "@/lib/confetti";
+import { Icon } from "@/components/Icon";
 import { XpPop } from "./XpPop";
 
 const BLANK = "＿";
@@ -103,10 +104,10 @@ export function GrammarCard({
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="mt-3 rounded-lg border border-white/10 bg-white/5 px-4 py-2.5 text-center text-sm leading-snug opacity-80"
+            className="mt-3 flex items-start justify-center gap-2 rounded-lg border border-white/10 bg-white/5 px-4 py-2.5 text-center text-sm leading-snug opacity-80"
           >
-            {picked === item.answer ? "✓ " : "💡 "}
-            {item.note}
+            <Icon name={picked === item.answer ? "check" : "bulb"} size={15} className="mt-0.5 shrink-0 text-(--accent)" />
+            <span>{item.note}</span>
           </motion.div>
         )}
       </motion.div>

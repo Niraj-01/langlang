@@ -83,7 +83,7 @@ export async function fireRoast(
   let shown = false;
   if (notifyAvailable() && Notification.permission === "granted") {
     try {
-      new Notification("langlang 😈", { body: text, tag: "langlang-menace" });
+      new Notification("langlang", { body: text, tag: "langlang-menace" });
       shown = true;
     } catch {
       /* ignore */

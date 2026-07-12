@@ -11,7 +11,7 @@ import { getSyncStatus, subscribeSyncStatus, startSync } from "@/lib/sync";
 
 const STATUS_LABEL: Record<string, string> = {
   syncing: "syncing…",
-  synced: "✓ progress synced",
+  synced: "progress synced",
   error: "sync error — will retry on next change",
 };
 

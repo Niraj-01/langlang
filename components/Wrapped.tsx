@@ -9,11 +9,12 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { useApp, weeklyStats, hardestWord } from "@/lib/store";
 import { petStageName, petStage } from "@/lib/quests";
+import { Icon, type IconName } from "./Icon";
 import type { AppState, Lang } from "@/lib/types";
 
 interface Slide {
   key: string;
-  emoji: string;
+  icon: IconName;
   label: string;
   big: string;
   sub: string;
@@ -27,49 +28,49 @@ function buildSlides(state: AppState, lang: Lang): Slide[] {
   return [
     {
       key: "intro",
-      emoji: "📅",
+      icon: "calendar",
       label: "Your week in",
       big: langName,
       sub: `${w.activeDays} active day${w.activeDays === 1 ? "" : "s"} · let's recap`,
     },
     {
       key: "minutes",
-      emoji: "⏱️",
+      icon: "clock",
       label: "You practiced for",
       big: `${w.minutes} min`,
       sub: w.minutes >= 60 ? "over an hour. respect." : "every minute counts.",
     },
     {
       key: "words",
-      emoji: "🧠",
+      icon: "spark",
       label: "New words learned",
       big: `${w.newWords}`,
       sub: `and ${w.reviews} reviews cleared at ${acc}% accuracy`,
     },
     {
       key: "hard",
-      emoji: "😤",
+      icon: "target",
       label: "Your nemesis word",
       big: hard ? hard.word : "—",
       sub: hard ? `${hard.meaning} · ${hard.fsrs.lapses} lapse${hard.fsrs.lapses === 1 ? "" : "s"}` : "no villains this week",
     },
     {
       key: "combo",
-      emoji: "🔥",
+      icon: "flame",
       label: "Longest combo",
       big: `${state.bestCombo}x`,
       sub: "consecutive correct. unbroken.",
     },
     {
       key: "pet",
-      emoji: "🥚",
+      icon: "spark",
       label: `${state.pet.name} is now a`,
       big: petStageName(state.xp),
       sub: `stage ${petStage(state.xp) + 1}/5 · ${state.xp} total XP`,
     },
     {
       key: "outro",
-      emoji: "🏆",
+      icon: "trophy",
       label: "Weekly Wrapped",
       big: "Share it",
       sub: "flex your week. same time next Sunday.",
@@ -107,8 +108,8 @@ export function Wrapped() {
       </div>
 
       <div className="absolute right-3 top-6 z-10">
-        <Link href="/reels" className="hud-chip">
-          ✕
+        <Link href="/reels" className="hud-chip" aria-label="Close">
+          <Icon name="x" size={14} />
         </Link>
       </div>
 
@@ -130,9 +131,8 @@ export function Wrapped() {
             initial={{ scale: 0, rotate: -12 }}
             animate={{ scale: 1, rotate: 0 }}
             transition={{ type: "spring", stiffness: 260, damping: 16, delay: 0.05 }}
-            className="text-7xl"
           >
-            {slide.emoji}
+            <Icon name={slide.icon} size={72} className="text-(--accent)" />
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 10 }}
@@ -164,8 +164,8 @@ export function Wrapped() {
       {/* footer */}
       <div className="z-10 flex items-center justify-between p-4">
         <div className="font-display text-sm tracking-widest opacity-40">langlang</div>
-        <button className="btn-primary" onClick={share}>
-          ⬇ SHARE THIS CARD
+        <button className="btn-primary inline-flex items-center gap-2" onClick={share}>
+          <Icon name="share" size={16} /> SHARE THIS CARD
         </button>
       </div>
     </div>
@@ -198,12 +198,9 @@ function exportSlide(slide: Slide, petName: string, lang: Lang) {
   ctx.textAlign = "center";
   ctx.fillStyle = "#f2f2f5";
 
-  ctx.font = "200px sans-serif";
-  ctx.fillText(slide.emoji, W / 2, 620);
-
   ctx.font = "bold 46px sans-serif";
   ctx.fillStyle = "#f2f2f5cc";
-  ctx.fillText(slide.label.toUpperCase(), W / 2, 780);
+  ctx.fillText(slide.label.toUpperCase(), W / 2, 700);
 
   ctx.fillStyle = a;
   ctx.font = "900 150px sans-serif";

@@ -7,6 +7,7 @@ import type { Kanji } from "@/lib/types";
 import { speakJa } from "@/lib/speak";
 import { useApp, toggleFavorite } from "@/lib/store";
 import { Modal } from "./Modal";
+import { Icon } from "./Icon";
 
 const CATEGORIES: { id: string; label: string }[] = [
   { id: "all", label: "All" },
@@ -121,7 +122,7 @@ export function KanjiViewer({ data }: { data: Kanji[] }) {
                     href={`/draw?char=${encodeURIComponent(sel.kanji)}`}
                     className="press inline-block rounded-lg bg-accent px-3 py-1.5 text-xs font-semibold text-white"
                   >
-                    ✎ Practice drawing
+                    <span className="inline-flex items-center gap-1.5"><Icon name="pencil" size={13} /> Practice drawing</span>
                   </Link>
                   <button
                     onClick={() => toggleFavorite(`kanji:${sel.kanji}`)}

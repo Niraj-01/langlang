@@ -155,7 +155,7 @@ export function Feed() {
             className="fixed inset-x-0 top-16 z-30 mx-auto w-fit border-2 border-yellow-300 bg-panel px-4 py-2 font-display text-sm text-yellow-300"
             style={{ boxShadow: "4px 4px 0 rgba(0,0,0,0.6)" }}
           >
-            🎴 QUEST CLEARED — CARD PACK EARNED · tap to open
+            QUEST CLEARED — CARD PACK EARNED · tap to open
           </motion.a>
         )}
       </AnimatePresence>

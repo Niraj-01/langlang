@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { Icon } from "./Icon";
 
 // `short` keeps eight tabs legible at 390px; the full label returns on sm+.
 const TABS = [
@@ -47,7 +48,7 @@ export function Nav() {
           href="/reels"
           className="flex min-w-0 flex-1 flex-col items-center gap-0.5 py-2.5 text-[9px] font-bold uppercase tracking-tight text-accent transition hover:brightness-110 sm:tracking-wide"
         >
-          <span className="text-lg leading-none">▶</span>
+          <Icon name="play" size={18} />
           <span className="w-full truncate text-center">Reels</span>
         </Link>
       </div>

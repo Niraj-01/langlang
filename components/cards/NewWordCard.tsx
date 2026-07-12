@@ -12,6 +12,7 @@ import { speak, sfxAdd } from "@/lib/audio";
 import { burst } from "@/lib/confetti";
 import { JaWord, DeNoun, DePlural, Example } from "@/components/Lex";
 import { PitchAccent } from "@/components/PitchAccent";
+import { Icon } from "@/components/Icon";
 import { XpPop } from "./XpPop";
 
 export function NewWordCard({
@@ -110,8 +111,9 @@ export function NewWordCard({
           )}
           <Example entry={entry} lang={lang} furigana={furigana} />
           {(entry.mnemonic ?? entry.tip) && (
-            <div className="mt-4 max-w-[30ch] rounded-xl border border-white/10 bg-white/5 px-4 py-2.5 text-sm leading-snug opacity-80">
-              {entry.mnemonic ? <>🧠 {entry.mnemonic}</> : <>💡 {entry.tip}</>}
+            <div className="mt-4 flex max-w-[30ch] items-start gap-2 rounded-xl border border-white/10 bg-white/5 px-4 py-2.5 text-sm leading-snug opacity-80">
+              <Icon name={entry.mnemonic ? "spark" : "bulb"} size={15} className="mt-0.5 shrink-0 text-(--accent)" />
+              <span>{entry.mnemonic ?? entry.tip}</span>
             </div>
           )}
         </div>

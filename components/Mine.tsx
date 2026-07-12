@@ -6,6 +6,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { Icon } from "./Icon";
 import { motion } from "framer-motion";
 import type { MineBreakdown } from "@/app/api/mine/route";
 import { useApp, addMinedCards, cardIdFor } from "@/lib/store";
@@ -116,7 +117,7 @@ export function Mine() {
             onClick={analyze}
             disabled={busy || !text.trim()}
           >
-            {busy ? "breaking it down…" : "⛏ MINE IT"}
+            {busy ? "breaking it down…" : <span className="inline-flex items-center gap-2"><Icon name="pickaxe" size={16} /> MINE IT</span>}
           </button>
           <button className="btn-ghost" onClick={() => setText(SAMPLES[lang])}>
             SAMPLE

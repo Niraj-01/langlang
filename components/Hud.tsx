@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import type { AppState } from "@/lib/types";
 import { levelFromXp, petMood, setLang, toggleFurigana, toggleSound } from "@/lib/store";
 import { Pet } from "./Pet";
+import { Icon } from "./Icon";
 
 export function Hud({ state, combo, multiplier }: { state: AppState; combo: number; multiplier: number }) {
   const { level } = levelFromXp(state.xp);
@@ -22,10 +23,13 @@ export function Hud({ state, combo, multiplier }: { state: AppState; combo: numb
           </span>
           <span className="font-display text-xs opacity-60">LV</span>
           <span className="font-display">{level}</span>
-          <span className={state.streak.current > 0 ? "" : "grayscale opacity-50"}>🔥</span>
+          <Icon name="flame" size={15} className={state.streak.current > 0 ? "text-(--accent)" : "opacity-40"} />
           <span className="font-display">{state.streak.current}</span>
           {state.packs > 0 && (
-            <span className="ml-1 font-display text-yellow-300">🎴{state.packs}</span>
+            <span className="ml-1 flex items-center gap-0.5 font-display text-yellow-300">
+              <Icon name="layers" size={14} />
+              {state.packs}
+            </span>
           )}
         </Link>
 
@@ -41,7 +45,7 @@ export function Hud({ state, combo, multiplier }: { state: AppState; combo: numb
             aria-label="Learn Japanese"
             title="Learn Japanese"
           >
-            🇯🇵 JA
+            JA
           </button>
           <button
             className={`hud-chip -ml-0.5 font-display ${state.lang === "de" ? "border-(--accent) text-(--accent)" : "opacity-50"}`}
@@ -50,22 +54,22 @@ export function Hud({ state, combo, multiplier }: { state: AppState; combo: numb
             aria-label="Learn German"
             title="Learn German"
           >
-            🇩🇪 DE
+            DE
           </button>
         </div>
       </div>
 
       <nav className="pointer-events-auto flex items-center justify-end gap-1.5" aria-label="Feed menu">
         <Link href="/learn" className="hud-chip hud-chip-labeled" title="Home dashboard">
-          <span aria-hidden>🏠</span>
+          <Icon name="home" size={16} />
           <span className="hud-label">Home</span>
         </Link>
         <Link href="/dojo" className="hud-chip hud-chip-labeled" title="Conversation Dojo — AI chat practice">
-          <span aria-hidden>⛩️</span>
+          <Icon name="torii" size={16} />
           <span className="hud-label">Dojo</span>
         </Link>
         <Link href="/path" className="hud-chip hud-chip-labeled" title="The Path — units & streak">
-          <span aria-hidden>🗺️</span>
+          <Icon name="map" size={16} />
           <span className="hud-label">Path</span>
         </Link>
         {state.lang === "ja" && (
@@ -87,7 +91,7 @@ export function Hud({ state, combo, multiplier }: { state: AppState; combo: numb
           aria-label={`Sound ${state.sound ? "on" : "off"}`}
           title="Sound effects"
         >
-          <span aria-hidden>{state.sound ? "🔊" : "🔇"}</span>
+          <Icon name={state.sound ? "sound" : "volumeOff"} size={16} />
           <span className="hud-label">Sound</span>
         </button>
       </nav>

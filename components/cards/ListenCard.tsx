@@ -10,6 +10,7 @@ import { awardXp } from "@/lib/store";
 import { speak, sfxCorrect, sfxWrong } from "@/lib/audio";
 import { burst } from "@/lib/confetti";
 import { JaWord } from "@/components/Lex";
+import { Icon } from "@/components/Icon";
 
 export function ListenCard({
   card,
@@ -71,10 +72,10 @@ export function ListenCard({
         <div className="flex flex-1 flex-col items-center justify-center text-center">
           <button
             onClick={say}
-            className="press flex h-28 w-28 items-center justify-center rounded-full border-2 border-(--accent) text-6xl text-(--accent)"
+            className="press flex h-28 w-28 items-center justify-center rounded-full border-2 border-(--accent) text-(--accent)"
             aria-label="Play audio again"
           >
-            🔊
+            <Icon name="sound" size={52} strokeWidth={1.75} />
           </button>
           <div className="mt-4 text-xs uppercase tracking-[0.3em] opacity-40">
             tap to replay · pick what you heard
@@ -112,8 +113,8 @@ export function ListenCard({
         </div>
 
         {picked !== null && (
-          <div className="mt-3 text-center text-sm opacity-60">
-            {picked === answer ? "✓ " : "💡 "}
+          <div className="mt-3 flex items-center justify-center gap-1.5 text-center text-sm opacity-60">
+            <Icon name={picked === answer ? "check" : "bulb"} size={14} className="shrink-0" />
             <span className="font-semibold">{card.word}</span> — {card.meaning}
           </div>
         )}

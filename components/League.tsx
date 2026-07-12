@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useApp } from "@/lib/store";
 import { TIERS, standing, weekXp, fetchLeaderboard, type LeagueRow } from "@/lib/league";
+import { Icon } from "./Icon";
 
 export function League() {
   const state = useApp();
@@ -27,21 +28,21 @@ export function League() {
   return (
     <div className={`${accent} min-h-dvh bg-bg pb-10`}>
       <div className="flex items-center justify-between border-b-2 border-line p-3">
-        <Link href="/reels" className="hud-chip">
-          ← FEED
+        <Link href="/reels" className="hud-chip gap-1">
+          <Icon name="arrowLeft" size={14} /> FEED
         </Link>
         <div className="font-display text-sm uppercase tracking-[0.3em] text-(--accent)">
           Weekly League
         </div>
-        <Link href="/profile" className="hud-chip">
-          👤
+        <Link href="/profile" className="hud-chip" aria-label="Profile">
+          <Icon name="user" size={14} />
         </Link>
       </div>
 
       {/* current tier */}
       <div className="rise p-4">
         <div className="border-2 border-(--accent) bg-panel p-5 text-center">
-          <div className="text-6xl">{s.tier.emoji}</div>
+          <Icon name={s.tier.icon} size={64} className="mx-auto" style={{ color: s.tier.color }} />
           <div className="mt-2 font-display text-2xl uppercase tracking-widest text-(--accent)">
             {s.tier.name} League
           </div>
@@ -51,8 +52,9 @@ export function League() {
             <div className="mt-4">
               <div className="mb-1 flex justify-between text-xs uppercase tracking-widest opacity-60">
                 <span>{s.tier.name}</span>
-                <span>
-                  {s.toNext} XP to {s.next.name} {s.next.emoji}
+                <span className="inline-flex items-center gap-1">
+                  {s.toNext} XP to {s.next.name}
+                  <Icon name={s.next.icon} size={13} style={{ color: s.next.color }} />
                 </span>
               </div>
               <div className="h-3 w-full border-2 border-line bg-black/40">
@@ -60,7 +62,9 @@ export function League() {
               </div>
             </div>
           ) : (
-            <div className="mt-4 text-sm text-good">Top tier reached — you're Diamond. 🏆</div>
+            <div className="mt-4 flex items-center justify-center gap-2 text-sm text-good">
+              <Icon name="trophy" size={16} /> Top tier reached — you&apos;re Diamond.
+            </div>
           )}
         </div>
       </div>
@@ -80,7 +84,7 @@ export function League() {
                   here ? "border-(--accent) bg-panel" : "border-line bg-black/20 opacity-70"
                 }`}
               >
-                <span className="text-2xl">{t.emoji}</span>
+                <Icon name={t.icon} size={22} style={{ color: t.color }} />
                 <span className="font-display uppercase tracking-widest">{t.name}</span>
                 <span className="ml-auto text-xs opacity-60">{t.min}+ XP / week</span>
                 {here && <span className="text-xs font-bold text-(--accent)">YOU</span>}
@@ -107,7 +111,7 @@ export function League() {
           </div>
         ) : (
           <div className="border-2 border-dashed border-line bg-black/20 p-4 text-center text-sm opacity-70">
-            <div className="text-2xl">👥</div>
+            <Icon name="user" size={26} className="mx-auto" />
             <div className="mt-2">
               It&apos;s just you here for now. When friends join and sync, the weekly leaderboard fills in
               automatically.

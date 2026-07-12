@@ -99,6 +99,25 @@ words, quizzes) is a card in one infinite vertical snap feed ("the Doomscroll").
     `supabase/migrations/0002_leaderboard.sql` view (RLS stays owner-only;
     `fetchLeaderboard()` returns null → solo fallback until provisioned).
 
+- **Phase 9 (done):** professional visual pass + content depth.
+  - *De-emoji:* every decorative emoji across the app is replaced by a
+    monochrome line-icon system — `components/Icon.tsx` (`<Icon name=… />`,
+    currentColor stroke SVGs). Pet cosmetics are SVG line-art
+    (`components/CosmeticGlyph.tsx`); Path unit nodes show numbers (`label`)
+    with a lock/swords/flag icon; league tiers use medal/diamond icons +
+    `color`; achievements carry an `icon: IconName`; scenario emoji/avatars
+    dropped in favour of a `chat`/`swords` icon. Language chips are text
+    (JA/DE), not flags. Monochrome typographic marks (★ ♥ ✓ ⇄ ✦) are kept as
+    intentional typography. Wrapped slides use `icon` (the PNG export just
+    drops the glyph). If you add UI, use `<Icon>` — do not add emoji.
+  - *Grammar in lessons:* `buildLesson(words, pool, grammar?)` folds up to 2
+    fill-the-blank grammar drills into each lesson; `GrammarEx` in
+    `components/Lesson.tsx` shows the "why" note via the shared `CheckBar`
+    coach on a miss. `onChecked(ok, word?)` — grammar passes no word, so it
+    never mints a vocab mistake.
+  - *More content:* N4 → 68, A2 → 68 (append-only); confident Tokyo
+    pitch-accent subset grown to ~57 N5 words.
+
 ## Architecture
 
 - `lib/fsrs.ts` — FSRS v5 scheduler (19 default weights, desired retention 0.9).

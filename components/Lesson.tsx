@@ -15,6 +15,9 @@ import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { SEED } from "@/lib/seed";
+import grammarJa from "@/data/grammar_ja.json";
+import grammarDe from "@/data/grammar_de.json";
+import type { GrammarItem } from "@/lib/types";
 import {
   useApp,
   addNewWord,
@@ -38,6 +41,7 @@ import { useMounted } from "@/lib/useMounted";
 import { speak as tts, sfxCorrect, sfxWrong, sfxBonus } from "@/lib/audio";
 import { burst } from "@/lib/confetti";
 import { JaWord, DeNoun } from "@/components/Lex";
+import { Icon } from "@/components/Icon";
 import type { Lang } from "@/lib/types";
 
 type Phase = "play" | "win" | "fail";
@@ -130,8 +134,12 @@ export function Lesson() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [mounted, unitParam, mode, seedKey]);
 
+  const grammarPool = (lang === "ja" ? grammarJa : grammarDe) as GrammarItem[];
   const exercises = useMemo(
-    () => (session && session.words.length >= 4 ? buildLesson(session.words, toLessonWords(SEED[lang])) : []),
+    () =>
+      session && session.words.length >= 4
+        ? buildLesson(session.words, toLessonWords(SEED[lang]), grammarPool)
+        : [],
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [session]
   );
@@ -149,7 +157,7 @@ export function Lesson() {
     return (
       <Shell title={session.title}>
         <div className="flex flex-1 flex-col items-center justify-center gap-4 p-6 text-center">
-          <div className="text-5xl">🍃</div>
+          <Icon name="leaf" size={44} style={{ color: C.green }} />
           <div style={{ color: C.muted }}>
             Not enough words here yet —{" "}
             {mode === "mistakes" ? "no recent mistakes. Go make some." : "learn a few words in the feed first."}
@@ -186,15 +194,16 @@ export function Lesson() {
     setPhase("win");
   };
 
-  // called the moment an answer is checked (sound within 100ms of the tap)
-  const onChecked = (ok: boolean, word: LessonWord) => {
+  // called the moment an answer is checked (sound within 100ms of the tap).
+  // `word` is omitted for grammar drills — those don't mint a vocab mistake.
+  const onChecked = (ok: boolean, word?: LessonWord) => {
     if (ok) {
       sfxCorrect(correct);
       setCorrect((c) => c + 1);
-      tts(word.word, lang);
+      if (word) tts(word.word, lang);
     } else {
       sfxWrong();
-      logMistake({ lang, word: word.word, meaning: word.meaning, reading: word.reading });
+      if (word) logMistake({ lang, word: word.word, meaning: word.meaning, reading: word.reading });
       setHearts((h) => h - 1);
     }
   };
@@ -255,10 +264,10 @@ export function Lesson() {
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ type: "spring", stiffness: 260, damping: 14 }}
-              className={`text-[88px] leading-none font-medium ${lang === "ja" ? "font-jp" : ""}`}
+              className={`leading-none font-medium ${lang === "ja" ? "font-jp text-[88px]" : ""}`}
               style={{ color: C.green }}
             >
-              {lang === "ja" ? "完" : "✓"}
+              {lang === "ja" ? "完" : <Icon name="check" size={88} strokeWidth={2.5} />}
             </motion.span>
             <div className="text-2xl font-bold">Lesson complete</div>
             <div className="max-w-62 text-sm" style={{ color: C.muted }}>
@@ -295,7 +304,7 @@ export function Lesson() {
       {phase === "fail" && (
         <div className="flex flex-1 flex-col p-6">
           <div className="flex flex-1 flex-col items-center justify-center gap-4 text-center">
-            <span className="text-6xl">💔</span>
+            <Icon name="heartOff" size={60} style={{ color: C.red }} />
             <div className="text-2xl font-bold">Out of hearts</div>
             <div className="max-w-62 text-sm" style={{ color: C.muted }}>
               Every miss was filed into your mistakes. Take a breath and run it back.
@@ -340,8 +349,8 @@ function Shell({
     <div className="flex h-dvh flex-col" style={{ background: C.bg, color: C.text }}>
       <div className="mx-auto flex h-full w-full max-w-md flex-col px-6 pt-7 pb-10">
         <div className="mb-6 flex items-center gap-3.5">
-          <Link href="/path" className="text-lg" style={{ color: C.muted }} title="Quit lesson" aria-label="Quit lesson">
-            ✕
+          <Link href="/path" style={{ color: C.muted }} title="Quit lesson" aria-label="Quit lesson">
+            <Icon name="x" size={20} />
           </Link>
           {progress !== undefined ? (
             <div className="h-1.5 flex-1 rounded-full" style={{ background: C.line }}>
@@ -356,8 +365,8 @@ function Shell({
             </div>
           )}
           {hearts !== undefined && (
-            <div className="text-sm font-bold" style={{ color: hearts <= 1 ? C.red : C.muted }} title="Hearts">
-              <span style={{ color: C.red }}>♥</span> {hearts}
+            <div className="flex items-center gap-1 text-sm font-bold" style={{ color: hearts <= 1 ? C.red : C.muted }} title="Hearts">
+              <Icon name="heart" size={15} style={{ color: C.red }} /> {hearts}
             </div>
           )}
         </div>
@@ -390,7 +399,7 @@ function Heading({ children }: { children: React.ReactNode }) {
   return <div className="mb-4 text-[19px] font-bold">{children}</div>;
 }
 
-/** 🔊 word chip — the audio prompt from the design (S7). */
+/** Audio word chip — the audio prompt from the design (S7). */
 function AudioChip({ word, lang, furigana }: { word: LessonWord; lang: Lang; furigana: boolean }) {
   return (
     <button
@@ -400,7 +409,7 @@ function AudioChip({ word, lang, furigana }: { word: LessonWord; lang: Lang; fur
       onClick={() => tts(word.word, lang)}
       title="Hear it"
     >
-      <span className="text-[15px]">🔊</span>
+      <Icon name="sound" size={16} style={{ color: C.blue }} />
       {lang === "ja" ? (
         <JaWord word={word.word} reading={word.reading} furigana={furigana} className="text-[26px]" />
       ) : (
@@ -449,7 +458,7 @@ function CheckBar({
           {ok ? "Nicely done." : `Not quite — it’s ${answer}. You’ll see it again soon.`}
           {!ok && coach && (
             <div className="mt-2 flex gap-2 text-[13px] font-normal leading-snug" style={{ color: C.muted }}>
-              <span>💡</span>
+              <Icon name="bulb" size={15} className="mt-0.5 shrink-0" />
               <span>{coach}</span>
             </div>
           )}
@@ -475,7 +484,7 @@ function CheckBar({
 interface ExProps {
   lang: Lang;
   furigana: boolean;
-  onChecked: (ok: boolean, word: LessonWord) => void;
+  onChecked: (ok: boolean, word?: LessonWord) => void;
   onNext: (ok: boolean) => void;
 }
 
@@ -483,7 +492,67 @@ function ExerciseView({ ex, ...p }: ExProps & { ex: Exercise }) {
   if (ex.kind === "mc") return <Mc ex={ex} {...p} />;
   if (ex.kind === "rmc") return <Rmc ex={ex} {...p} />;
   if (ex.kind === "type") return <TypeIt ex={ex} {...p} />;
+  if (ex.kind === "grammar") return <GrammarEx ex={ex} {...p} />;
   return <Match ex={ex} {...p} />;
+}
+
+const BLANK = "＿";
+
+function GrammarEx({ ex, lang, furigana, onChecked, onNext }: ExProps & { ex: Extract<Exercise, { kind: "grammar" }> }) {
+  const { item } = ex;
+  const [picked, setPicked] = useState<number | null>(null);
+  const [checked, setChecked] = useState(false);
+  const ok = picked === item.answer;
+
+  const stateOf = (i: number) => {
+    if (!checked) return i === picked ? "picked" : "idle";
+    if (i === item.answer) return "correct";
+    if (i === picked) return "wrong";
+    return "faded";
+  };
+
+  const shown = (opt: string | null) =>
+    item.prompt.replace(BLANK, picked !== null ? item.options[picked] : (opt ?? "▢"));
+
+  return (
+    <>
+      <Kicker>Grammar · {item.lang === "ja" ? "particle" : "article"}</Kicker>
+      <Heading>Fill the blank</Heading>
+      <div className={`mb-2 font-bold ${item.lang === "ja" ? "text-2xl" : "text-xl"}`}>{shown(null)}</div>
+      {item.lang === "ja" && furigana && item.promptReading && (
+        <div className="mb-2 text-base" style={{ color: C.blue }}>
+          {item.promptReading.replace(BLANK, picked !== null ? item.options[picked] : "▢")}
+        </div>
+      )}
+      <div className="mb-5 text-sm" style={{ color: C.muted }}>{item.translation}</div>
+      <div className="grid grid-cols-2 gap-2.5">
+        {item.options.map((opt, i) => (
+          <button
+            key={i}
+            className="rounded-xl border px-4 py-4 text-center text-[15px] font-semibold transition-colors"
+            style={optionStyle(stateOf(i))}
+            disabled={checked}
+            onClick={() => setPicked(i)}
+          >
+            {opt}
+          </button>
+        ))}
+      </div>
+      <div className="flex-1" />
+      <CheckBar
+        picked={picked !== null}
+        checked={checked}
+        ok={ok}
+        answer={item.options[item.answer]}
+        coach={item.note}
+        onCheck={() => {
+          setChecked(true);
+          onChecked(ok);
+        }}
+        onNext={() => onNext(ok)}
+      />
+    </>
+  );
 }
 
 function Mc({ ex, lang, furigana, onChecked, onNext }: ExProps & { ex: Extract<Exercise, { kind: "mc" }> }) {

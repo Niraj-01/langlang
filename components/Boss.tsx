@@ -9,6 +9,7 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
+import { Icon } from "./Icon";
 import { bossesFor, scenarioById, type Scenario } from "@/data/scenarios";
 import { useApp, clearBoss } from "@/lib/store";
 import { speak as tts, sfxCorrect, sfxWrong, sfxBonus } from "@/lib/audio";
@@ -56,8 +57,8 @@ export function Boss() {
         <div className="font-display text-sm uppercase tracking-[0.3em] text-(--accent)">
           Boss Battles
         </div>
-        <Link href="/dojo" className="hud-chip">
-          ⛩ DOJO
+        <Link href="/dojo" className="hud-chip gap-1">
+          <Icon name="torii" size={14} /> DOJO
         </Link>
       </div>
 
@@ -86,22 +87,22 @@ export function Boss() {
                 }`}
               >
                 <span
-                  className="text-5xl transition-transform duration-200 group-hover:scale-125 group-hover:-rotate-6"
-                  style={{ filter: locked ? "grayscale(1)" : undefined }}
+                  className="text-(--accent) transition-transform duration-200 group-hover:scale-125 group-hover:-rotate-6"
+                  style={{ opacity: locked ? 0.5 : 1 }}
                 >
-                  {b.boss?.avatar}
+                  <Icon name="swords" size={44} />
                 </span>
                 <div className="flex-1">
-                  <div className="font-display text-lg">
-                    {b.title} {cleared && <span className="text-good">✓</span>}
+                  <div className="flex items-center gap-1.5 font-display text-lg">
+                    {b.title} {cleared && <Icon name="check" size={16} className="text-good" />}
                   </div>
                   <div className="text-xs opacity-60">{b.setting}</div>
                   <div className="mt-1 text-[10px] uppercase tracking-widest text-(--accent)">
                     {b.level} · {b.boss?.hp} HP
                   </div>
                 </div>
-                <span className="text-xs uppercase tracking-widest opacity-60">
-                  {locked ? "🔒" : cleared ? "rematch" : "fight"}
+                <span className="flex items-center text-xs uppercase tracking-widest opacity-60">
+                  {locked ? <Icon name="lock" size={14} /> : cleared ? "rematch" : "fight"}
                 </span>
               </button>
             );
@@ -231,11 +232,11 @@ function Fight({ boss, onExit }: { boss: Scenario; onExit: () => void }) {
         </div>
         <div className="mt-2 flex items-center gap-3">
           <motion.span
-            className="text-4xl"
+            className="text-bad"
             animate={busy ? {} : { rotate: [0, -4, 4, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
           >
-            {boss.boss?.avatar}
+            <Icon name="swords" size={36} />
           </motion.span>
           <div className="h-4 flex-1 border-2 border-line bg-black/40">
             <motion.div
@@ -288,8 +289,9 @@ function Fight({ boss, onExit }: { boss: Scenario; onExit: () => void }) {
                 onPointerUp={() => recognizer.current?.stop()}
                 onPointerLeave={() => recognizer.current?.stop()}
                 onContextMenu={(e) => e.preventDefault()}
+                aria-label="Hold to speak"
               >
-                🎙
+                <Icon name="mic" size={18} />
               </motion.button>
             )}
             <input
@@ -299,8 +301,8 @@ function Fight({ boss, onExit }: { boss: Scenario; onExit: () => void }) {
               onChange={(e) => setDraft(e.target.value)}
               disabled={busy}
             />
-            <button className="btn-ghost px-4! py-3!" disabled={busy || !draft.trim()}>
-              ⚔
+            <button className="btn-ghost px-4! py-3!" disabled={busy || !draft.trim()} aria-label="Strike">
+              <Icon name="swords" size={18} />
             </button>
           </form>
         </div>
@@ -310,10 +312,10 @@ function Fight({ boss, onExit }: { boss: Scenario; onExit: () => void }) {
           animate={{ y: 0, opacity: 1 }}
           className="border-t-4 border-(--accent) p-6 text-center"
         >
-          <div className="text-5xl">{boss.boss?.avatar}💥</div>
+          <Icon name="swords" size={52} className="mx-auto text-(--accent)" />
           <div className="mt-2 font-display text-2xl text-(--accent)">BOSS DEFEATED</div>
           <div className="mt-1 text-sm opacity-70">
-            +100 XP · 🎴 card pack · ❄️ streak freeze earned
+            +100 XP · card pack · streak freeze earned
           </div>
           <div className="mt-4 grid grid-cols-2 gap-3">
             <button className="btn-ghost" onClick={onExit}>

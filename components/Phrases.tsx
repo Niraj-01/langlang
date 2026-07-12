@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import type { Phrase } from "@/lib/types";
 import { speakJa, canSpeak } from "@/lib/speak";
 import { useMounted } from "@/lib/useMounted";
+import { Icon } from "./Icon";
 import { useApp, toggleFavorite } from "@/lib/store";
 
 const CATS: { id: string; label: string }[] = [
@@ -48,18 +49,16 @@ export function Phrases({ data }: { data: Phrase[] }) {
               className="tile-soft group flex w-full items-center gap-3 rounded-xl border border-line bg-surface p-4 text-left"
             >
               <button className="min-w-0 flex-1 text-left" onClick={() => speakJa(p.japanese)}>
-                <div className="jp text-xl leading-snug">
-                  {p.japanese}{" "}
+                <div className="jp inline-flex items-center gap-1.5 text-xl leading-snug">
+                  {p.japanese}
                   {speech && (
-                    <span className="text-base text-muted transition group-hover:text-accent">
-                      🔊
-                    </span>
+                    <Icon name="sound" size={15} className="text-muted transition group-hover:text-accent" />
                   )}
                 </div>
                 <div className="romaji mt-0.5 text-sm">{p.romaji}</div>
                 <div className="text-sm text-muted">{p.english}</div>
-                <div className="mt-1 text-[11px] uppercase tracking-wide text-muted/70">
-                  🗣 {p.pronunciation}
+                <div className="mt-1 flex items-center gap-1.5 text-[11px] uppercase tracking-wide text-muted/70">
+                  <Icon name="chat" size={12} /> {p.pronunciation}
                 </div>
               </button>
               <button

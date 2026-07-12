@@ -28,7 +28,7 @@ export default function DrawPage() {
     <>
       <PageHeader
         title="Draw"
-        jp="✎"
+        jp="筆"
         subtitle="Practice writing kana and kanji by tracing them stroke by stroke."
       />
       <div className="px-4">

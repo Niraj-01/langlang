@@ -36,18 +36,17 @@ export function nextStageXp(xp: number): number | null {
 export interface Cosmetic {
   id: string;
   label: string;
-  emoji: string;
-  /** where it sits on the pet */
+  /** where it sits on the pet (drawn by CosmeticGlyph) */
   slot: "head" | "face" | "neck";
 }
 
 export const COSMETICS: Cosmetic[] = [
-  { id: "beanie", label: "Beanie", emoji: "🧢", slot: "head" },
-  { id: "crown", label: "Crown", emoji: "👑", slot: "head" },
-  { id: "halo", label: "Halo", emoji: "😇", slot: "head" },
-  { id: "bow", label: "Bow", emoji: "🎀", slot: "head" },
-  { id: "shades", label: "Shades", emoji: "🕶️", slot: "face" },
-  { id: "scarf", label: "Scarf", emoji: "🧣", slot: "neck" },
+  { id: "beanie", label: "Beanie", slot: "head" },
+  { id: "crown", label: "Crown", slot: "head" },
+  { id: "halo", label: "Halo", slot: "head" },
+  { id: "bow", label: "Bow", slot: "head" },
+  { id: "shades", label: "Shades", slot: "face" },
+  { id: "scarf", label: "Scarf", slot: "neck" },
 ];
 
 export function cosmeticById(id: string): Cosmetic | undefined {

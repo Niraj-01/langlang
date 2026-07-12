@@ -5,6 +5,7 @@
 
 import Link from "next/link";
 import { useApp, clearMistake } from "@/lib/store";
+import { Icon } from "./Icon";
 import { useMounted } from "@/lib/useMounted";
 import { speak as tts } from "@/lib/audio";
 import { JaWord } from "@/components/Lex";
@@ -33,7 +34,7 @@ export function Mistakes() {
       <div className="mx-auto max-w-md p-4">
         {list.length === 0 ? (
           <div className="rise flex flex-col items-center gap-4 py-16 text-center">
-            <div className="text-6xl">🧘</div>
+            <Icon name="check" size={52} className="text-good" />
             <div className="opacity-60">
               No open wounds. Miss an answer anywhere — feed, lesson, quiz — and it
               shows up here for rehab.
@@ -71,13 +72,13 @@ export function Mistakes() {
                     title="Dismiss"
                     onClick={() => clearMistake(lang, m.word)}
                   >
-                    ✕
+                    <Icon name="x" size={14} />
                   </button>
                 </div>
               ))}
             </div>
-            <Link href="/lesson?mode=mistakes" className="btn-primary rise mt-6 block w-full text-center">
-              🩹 REHAB LESSON ({Math.min(8, list.length)} WORDS)
+            <Link href="/lesson?mode=mistakes" className="btn-primary rise mt-6 flex w-full items-center justify-center gap-2 text-center">
+              <Icon name="repeat" size={16} /> REHAB LESSON ({Math.min(8, list.length)} WORDS)
             </Link>
           </>
         )}

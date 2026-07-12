@@ -3,7 +3,6 @@ import type { Lang } from "@/lib/types";
 export interface Scenario {
   id: string;
   lang: Lang;
-  emoji: string;
   title: string;
   setting: string; // shown to the user
   aiRole: string; // who Claude plays
@@ -16,7 +15,6 @@ export interface Scenario {
 
 export interface BossMeta {
   hp: number; // on-target exchanges needed to win
-  avatar: string; // big emoji
   unlockAfter: string | null; // boss id that must be cleared first
 }
 
@@ -24,7 +22,6 @@ export const SCENARIOS: Scenario[] = [
   {
     id: "ja-ramen",
     lang: "ja",
-    emoji: "🍜",
     title: "Ramen Shop",
     setting: "A tiny late-night ramen counter in Tokyo.",
     aiRole: "the friendly but busy shop owner",
@@ -36,7 +33,6 @@ export const SCENARIOS: Scenario[] = [
   {
     id: "ja-konbini",
     lang: "ja",
-    emoji: "🏪",
     title: "Konbini Run",
     setting: "A convenience store at 2am. You need snacks and directions.",
     aiRole: "the night-shift clerk",
@@ -48,7 +44,6 @@ export const SCENARIOS: Scenario[] = [
   {
     id: "ja-friend",
     lang: "ja",
-    emoji: "📱",
     title: "Texting a Friend",
     setting: "Your Japanese friend texts you about weekend plans.",
     aiRole: "your friend Yuki, casual speech",
@@ -60,7 +55,6 @@ export const SCENARIOS: Scenario[] = [
   {
     id: "ja-lost",
     lang: "ja",
-    emoji: "🗺️",
     title: "Lost in Shibuya",
     setting: "You're lost and need to find the station before the last train.",
     aiRole: "a helpful stranger",
@@ -72,7 +66,6 @@ export const SCENARIOS: Scenario[] = [
   {
     id: "de-cafe",
     lang: "de",
-    emoji: "☕",
     title: "Berlin Café",
     setting: "A busy café in Kreuzberg. Order and make small talk.",
     aiRole: "the barista",
@@ -84,7 +77,6 @@ export const SCENARIOS: Scenario[] = [
   {
     id: "de-bahn",
     lang: "de",
-    emoji: "🚆",
     title: "Deutsche Bahn Chaos",
     setting: "Your train is cancelled. Figure out how to get to Munich.",
     aiRole: "a DB service desk employee",
@@ -96,7 +88,6 @@ export const SCENARIOS: Scenario[] = [
   {
     id: "de-wg",
     lang: "de",
-    emoji: "🛋️",
     title: "WG Interview",
     setting: "You're interviewing for a room in a Berlin flatshare.",
     aiRole: "Lena, one of the flatmates",
@@ -108,7 +99,6 @@ export const SCENARIOS: Scenario[] = [
   {
     id: "de-fussball",
     lang: "de",
-    emoji: "⚽",
     title: "Football Argument",
     setting: "At a kneipe, your friend claims Bayern will win everything. Again.",
     aiRole: "your stubborn Bayern-fan friend Jonas",
@@ -125,7 +115,6 @@ export const BOSSES: Scenario[] = [
   {
     id: "boss-ja-genji",
     lang: "ja",
-    emoji: "🍣",
     title: "Chef Genji",
     setting: "The counter of a Michelin sushi bar. Genji tests every gaijin.",
     aiRole: "Genji, a gruff master sushi chef who respects effort",
@@ -133,12 +122,11 @@ export const BOSSES: Scenario[] = [
     level: "JLPT N5 Boss",
     opener: "ほう、日本語ができるのか？まあ、座れ。",
     openerMeaning: "Oh, you can speak Japanese? Well, sit down.",
-    boss: { hp: 5, avatar: "🍣", unlockAfter: null },
+    boss: { hp: 5, unlockAfter: null },
   },
   {
     id: "boss-ja-kaiju",
     lang: "ja",
-    emoji: "🦖",
     title: "Konbini Kaiju",
     setting: "A giant monster has taken over the 7-Eleven. Only Japanese calms it.",
     aiRole: "a lonely kaiju who just wants to chat and be understood",
@@ -146,12 +134,11 @@ export const BOSSES: Scenario[] = [
     level: "JLPT N5 Boss II",
     opener: "グオオ…だ、誰か…話せる人…いないの？",
     openerMeaning: "Grooar… is… anyone… able to talk to me?",
-    boss: { hp: 6, avatar: "🦖", unlockAfter: "boss-ja-genji" },
+    boss: { hp: 6, unlockAfter: "boss-ja-genji" },
   },
   {
     id: "boss-de-fuchs",
     lang: "de",
-    emoji: "🦊",
     title: "Herr Fuchs",
     setting: "The landlord interview for the last affordable flat in Berlin.",
     aiRole: "Herr Fuchs, a sly landlord grilling applicants",
@@ -159,12 +146,11 @@ export const BOSSES: Scenario[] = [
     level: "Goethe A1 Boss",
     opener: "Also. Warum sollte ich ausgerechnet Ihnen die Wohnung geben?",
     openerMeaning: "So. Why should I give the flat to you of all people?",
-    boss: { hp: 5, avatar: "🦊", unlockAfter: null },
+    boss: { hp: 5, unlockAfter: null },
   },
   {
     id: "boss-de-kontrolleur",
     lang: "de",
-    emoji: "🎫",
     title: "Der Kontrolleur",
     setting: "You forgot your ticket. The BVG inspector has boarded.",
     aiRole: "a stern but fair ticket inspector",
@@ -172,7 +158,7 @@ export const BOSSES: Scenario[] = [
     level: "Goethe A1 Boss II",
     opener: "Fahrscheinkontrolle. Ihren Fahrschein, bitte.",
     openerMeaning: "Ticket check. Your ticket, please.",
-    boss: { hp: 6, avatar: "🎫", unlockAfter: "boss-de-fuchs" },
+    boss: { hp: 6, unlockAfter: "boss-de-fuchs" },
   },
 ];
 

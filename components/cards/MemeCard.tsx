@@ -2,7 +2,7 @@
 
 // Meme card — brainrot as pedagogy. Shows a local template instantly (feed
 // never blocks), then quietly swaps in a fresher Claude meme when reachable.
-// React with 💀😭🔥 to advance; save the word to your deck.
+// Tap a reaction to advance; save the word to your deck.
 
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
@@ -10,16 +10,17 @@ import type { Lang } from "@/lib/types";
 import { awardXp } from "@/lib/store";
 import { speak as tts, sfxAdd, sfxCorrect } from "@/lib/audio";
 import { burst } from "@/lib/confetti";
+import { Icon, type IconName } from "@/components/Icon";
 import { XpPop } from "./XpPop";
 
 function localMeme(word: string, meaning: string): string {
   const templates = [
     `nobody:\n\nme at 3am:\n「${word}」`,
     `POV: you finally get that\n${word} = "${meaning}"`,
-    `${word} living rent-free\nin my head rn 💀`,
+    `${word} living rent-free\nin my head rn`,
     `my toxic trait:\nusing ${word}\nin every sentence`,
     `it's giving...\n${word}`,
-    `not me flexing that\n${word} means "${meaning}" 😌`,
+    `not me flexing that\n${word} means "${meaning}"`,
   ];
   let h = 0;
   for (let i = 0; i < word.length; i++) h = (h * 31 + word.charCodeAt(i)) >>> 0;
@@ -115,14 +116,15 @@ export function MemeCard({
 
         {!reacted ? (
           <div className="grid grid-cols-3 gap-3">
-            {["💀", "😭", "🔥"].map((emoji) => (
+            {(["flame", "star", "bolt"] as IconName[]).map((icon) => (
               <motion.button
-                key={emoji}
+                key={icon}
                 whileTap={{ scale: 0.85 }}
-                className="border-4 border-line bg-black/30 py-4 text-3xl"
+                className="flex items-center justify-center border-4 border-line bg-black/30 py-4 text-(--accent)"
                 onClick={react}
+                aria-label="React"
               >
-                {emoji}
+                <Icon name={icon} size={28} />
               </motion.button>
             ))}
           </div>

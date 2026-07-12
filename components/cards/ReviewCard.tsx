@@ -103,6 +103,11 @@ export function ReviewCard({
               <div className="text-3xl">{card.meaning}</div>
               {card.lang === "de" && <DePlural entry={card} />}
               <Example entry={card} lang={card.lang} furigana={furigana} />
+              {card.tip && (
+                <div className="mx-auto mt-3 max-w-[32ch] text-sm leading-snug opacity-60">
+                  💡 {card.tip}
+                </div>
+              )}
             </motion.div>
           )}
         </div>

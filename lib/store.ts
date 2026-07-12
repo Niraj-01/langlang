@@ -13,7 +13,7 @@ import type {
   Rating,
   VocabEntry,
 } from "./types";
-import type { DayStats, Exam, MistakeEntry, Target } from "./types";
+import type { DayStats, Exam, MistakeEntry, OnboardingState, Target } from "./types";
 import { newFsrsState, schedule, MASTERY_STABILITY_DAYS } from "./fsrs";
 import { SEED } from "./seed";
 import { COSMETICS, type Cosmetic, dailyQuests } from "./quests";
@@ -50,6 +50,7 @@ function defaultState(): AppState {
     favorites: [],
     mistakeLog: [],
     dailyGoal: 20,
+    onboarding: { done: false },
   };
 }
 
@@ -246,6 +247,8 @@ export function entryToCard(lang: Lang, entry: VocabEntry): Card {
     exampleReading: entry.exampleReading,
     exampleMeaning: entry.exampleMeaning,
     pos: entry.pos,
+    tip: entry.tip,
+    mnemonic: entry.mnemonic,
     isGolden: Math.random() < 0.06, // rare golden pull
     createdAt: Date.now(),
     fsrs: newFsrsState(),
@@ -366,6 +369,18 @@ export function clearMistake(lang: Lang, word: string) {
 
 export function setDailyGoal(xp: number) {
   state = { ...state, dailyGoal: xp };
+  emit();
+}
+
+/** Save first-run onboarding answers; minutes map onto the daily XP goal. */
+export function completeOnboarding(answers: Omit<OnboardingState, "done">) {
+  load(); // the onboarding page renders without useApp — hydrate before writing
+  const goalByMinutes: Record<number, number> = { 5: 10, 10: 20, 15: 30, 20: 50 };
+  state = {
+    ...state,
+    onboarding: { ...answers, done: true },
+    dailyGoal: goalByMinutes[answers.minutes ?? 10] ?? state.dailyGoal,
+  };
   emit();
 }
 

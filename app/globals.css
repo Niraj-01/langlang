@@ -67,7 +67,7 @@ body {
 /* ---- card chrome (arcade brutalism: thick lines, hard shadows) ---- */
 
 .card-shell {
-  @apply relative flex h-full w-full items-center justify-center p-4 pt-16 pb-8;
+  @apply relative flex h-full w-full items-center justify-center p-4 pt-28 pb-8;
 }
 
 .card-panel {
@@ -93,6 +93,19 @@ body {
 .hud-chip {
   @apply flex items-center gap-1 border-2 border-line bg-panel/90 px-2 py-1 text-base backdrop-blur;
   box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.5);
+}
+
+.hud-chip:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.hud-chip-labeled {
+  @apply min-w-12 flex-col gap-0 px-1.5 py-0.5;
+}
+
+.hud-label {
+  @apply font-display text-[8px] uppercase tracking-widest opacity-70;
 }
 
 .btn-grade {

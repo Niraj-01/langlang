@@ -133,6 +133,15 @@ export function KanjiViewer({ data }: { data: Kanji[] }) {
               <Reading label="Kun'yomi" hint="Japanese-native" values={sel.kunyomi} className="jp" />
             </div>
 
+            {sel.mnemonic && (
+              <div className="mt-3 rounded-lg border border-accent/30 bg-accent/5 p-3">
+                <div className="text-[10px] uppercase tracking-widest text-muted">
+                  remember it {sel.components && <span className="opacity-60">· {sel.components}</span>}
+                </div>
+                <div className="mt-1 text-sm leading-snug">{sel.mnemonic}</div>
+              </div>
+            )}
+
             <div className="mt-4">
               <div className="mb-1 text-xs uppercase tracking-widest text-muted">example words</div>
               <div className="space-y-1.5">

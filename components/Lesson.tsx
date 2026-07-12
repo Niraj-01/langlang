@@ -1,8 +1,11 @@
 "use client";
 
-// Lesson mode — a Duolingo-style session with 5 hearts. Sources:
-//   ?unit=N       → that Path unit's 8 seed words (finishing it adds them
-//                   to the deck, which advances the Path frontier)
+// Lesson mode — a Duolingo-style session with 5 hearts, restyled to the
+// "Onboarding & Lesson" design: calm dark surface, red progress + primary
+// pill, blue readings, green success, and a two-stage Check → Continue flow
+// with a feedback banner. Sources:
+//   ?unit=N        → that Path unit's 8 seed words (finishing it adds them
+//                    to the deck, which advances the Path frontier)
 //   ?mode=mistakes → your mistake log
 //   ?mode=review   → your weakest FSRS cards
 // Exercises: multiple choice, reverse MC, type-the-meaning, match pairs.
@@ -39,6 +42,38 @@ import type { Lang } from "@/lib/types";
 
 type Phase = "play" | "win" | "fail";
 
+// Design palette (shared with Onboarding — calm zone, not the arcade feed)
+const C = {
+  bg: "#0f1115",
+  panel: "#171a21",
+  line: "#2b303b",
+  red: "#ff5a5f",
+  blue: "#4aa8ff",
+  green: "#48c78e",
+  muted: "#9aa3b2",
+  dim: "#5b6472",
+  disabled: "#1f232c",
+  text: "#f2f4f8",
+};
+
+const optionStyle = (state: "idle" | "picked" | "correct" | "wrong" | "faded" | "matched" | "selected") => {
+  switch (state) {
+    case "picked":
+      return { borderColor: C.red, background: "rgba(255,90,95,0.1)", color: C.red };
+    case "correct":
+    case "matched":
+      return { borderColor: C.green, background: "rgba(72,199,142,0.12)", color: C.green };
+    case "wrong":
+      return { borderColor: C.red, background: "rgba(255,90,95,0.1)", color: C.red };
+    case "faded":
+      return { borderColor: C.line, background: C.panel, color: C.muted };
+    case "selected":
+      return { borderColor: C.blue, background: "rgba(74,168,255,0.1)", color: C.blue };
+    default:
+      return { borderColor: C.line, background: C.panel, color: C.text };
+  }
+};
+
 export function Lesson() {
   const state = useApp();
   const mounted = useMounted();
@@ -60,11 +95,16 @@ export function Lesson() {
       const words = toLessonWords(SEED[l].slice(start, start + UNIT_SIZE));
       return { words, unit: u, title: `Unit ${u + 1}` };
     }
+    // seed lookup so mistake/review words can still surface their coaching tip
+    const seedByWord = new Map(SEED[l].map((e) => [e.word, e]));
     if (mode === "mistakes") {
       const words: LessonWord[] = s.mistakeLog
         .filter((m) => m.lang === l)
         .slice(0, 8)
-        .map((m) => ({ word: m.word, meaning: m.meaning, reading: m.reading }));
+        .map((m) => {
+          const e = seedByWord.get(m.word);
+          return { word: m.word, meaning: m.meaning, reading: m.reading, tip: e?.tip, mnemonic: e?.mnemonic };
+        });
       return { words, unit: null, title: "Mistake Rehab" };
     }
     // review: weakest cards first
@@ -77,6 +117,8 @@ export function Lesson() {
         meaning: c.meaning,
         reading: c.reading,
         article: c.article,
+        tip: c.tip ?? seedByWord.get(c.word)?.tip,
+        mnemonic: c.mnemonic ?? seedByWord.get(c.word)?.mnemonic,
       }));
     return { words, unit: null, title: "Weak Words" };
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -91,25 +133,27 @@ export function Lesson() {
   const [idx, setIdx] = useState(0);
   const [hearts, setHearts] = useState(HEARTS);
   const [correct, setCorrect] = useState(0);
-  const [wrongFlash, setWrongFlash] = useState<string | null>(null);
   const [phase, setPhase] = useState<Phase>("play");
   const [t0] = useState(() => Date.now());
   const [finishedAt, setFinishedAt] = useState(0);
 
-  if (!mounted || !session) return <div className="lang-ja h-dvh bg-bg" />;
-
-  const accent = lang === "ja" ? "lang-ja" : "lang-de";
+  if (!mounted || !session) return <div className="h-dvh" style={{ background: C.bg }} />;
 
   if (session.words.length < 4) {
     return (
-      <Shell accent={accent} title={session.title}>
+      <Shell title={session.title}>
         <div className="flex flex-1 flex-col items-center justify-center gap-4 p-6 text-center">
           <div className="text-5xl">🍃</div>
-          <div className="opacity-70">
-            Not enough words here yet — {mode === "mistakes" ? "no recent mistakes. Go make some." : "learn a few words in the feed first."}
+          <div style={{ color: C.muted }}>
+            Not enough words here yet —{" "}
+            {mode === "mistakes" ? "no recent mistakes. Go make some." : "learn a few words in the feed first."}
           </div>
-          <Link href={mode === "mistakes" ? "/path" : "/reels"} className="btn-primary">
-            {mode === "mistakes" ? "BACK TO PATH" : "▶ OPEN THE FEED"}
+          <Link
+            href={mode === "mistakes" ? "/path" : "/reels"}
+            className="rounded-full px-8 py-4 text-[15px] font-bold text-white"
+            style={{ background: C.red }}
+          >
+            {mode === "mistakes" ? "Back to path" : "Open the feed"}
           </Link>
         </div>
       </Shell>
@@ -136,29 +180,27 @@ export function Lesson() {
     setPhase("win");
   };
 
-  const advance = () => {
-    if (idx + 1 >= exercises.length) finishWin();
-    else setIdx(idx + 1);
-  };
-
-  const onResult = (ok: boolean, word: LessonWord, answerShown?: string) => {
+  // called the moment an answer is checked (sound within 100ms of the tap)
+  const onChecked = (ok: boolean, word: LessonWord) => {
     if (ok) {
       sfxCorrect(correct);
       setCorrect((c) => c + 1);
       tts(word.word, lang);
-      setTimeout(advance, 650);
     } else {
       sfxWrong();
       logMistake({ lang, word: word.word, meaning: word.meaning, reading: word.reading });
-      setWrongFlash(answerShown ?? `${word.word} — ${word.meaning}`);
-      const left = hearts - 1;
-      setHearts(left);
-      setTimeout(() => {
-        setWrongFlash(null);
-        if (left <= 0) setPhase("fail");
-        else advance();
-      }, 1600);
+      setHearts((h) => h - 1);
     }
+  };
+
+  // called when the user taps Continue after the feedback banner
+  const onNext = (ok: boolean) => {
+    if (!ok && hearts <= 0) {
+      setPhase("fail");
+      return;
+    }
+    if (idx + 1 >= exercises.length) finishWin();
+    else setIdx(idx + 1);
   };
 
   const retry = () => {
@@ -175,95 +217,99 @@ export function Lesson() {
 
   return (
     <Shell
-      accent={accent}
       title={session.title}
       hearts={phase === "play" ? hearts : undefined}
-      progress={phase === "play" ? idx / total : 1}
+      progress={phase === "play" ? idx / total : undefined}
     >
       {phase === "play" && (
-        <div className="relative flex flex-1 flex-col p-4">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={idx}
-              initial={{ opacity: 0, x: 40 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -40 }}
-              transition={{ duration: 0.22 }}
-              className="flex flex-1 flex-col"
-            >
-              <ExerciseView
-                ex={exercises[idx]}
-                lang={lang}
-                furigana={state.furigana}
-                onResult={onResult}
-              />
-            </motion.div>
-          </AnimatePresence>
-
-          <AnimatePresence>
-            {wrongFlash && (
-              <motion.div
-                initial={{ y: 60, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                exit={{ y: 60, opacity: 0 }}
-                className="absolute inset-x-4 bottom-4 border-4 border-bad bg-bg p-4"
-                style={{ boxShadow: "6px 6px 0 rgba(0,0,0,.6)" }}
-              >
-                <div className="text-[10px] uppercase tracking-widest text-bad">correct answer</div>
-                <div className={`mt-1 text-lg ${lang === "ja" ? "font-jp" : ""}`}>{wrongFlash}</div>
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </div>
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={idx}
+            initial={{ opacity: 0, x: 32 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -32 }}
+            transition={{ duration: 0.2 }}
+            className="flex flex-1 flex-col"
+          >
+            <ExerciseView
+              ex={exercises[idx]}
+              lang={lang}
+              furigana={state.furigana}
+              onChecked={onChecked}
+              onNext={onNext}
+            />
+          </motion.div>
+        </AnimatePresence>
       )}
 
       {phase === "win" && (
-        <div className="flex flex-1 flex-col items-center justify-center gap-5 p-6 text-center">
-          <motion.div
-            initial={{ scale: 0, rotate: -15 }}
-            animate={{ scale: 1, rotate: 0 }}
-            transition={{ type: "spring", stiffness: 260, damping: 14 }}
-            className="text-7xl"
-          >
-            🏅
-          </motion.div>
-          <div className="font-display text-3xl text-(--accent)">LESSON CLEAR</div>
-          <div className="grid w-full max-w-xs grid-cols-3 gap-2">
-            <EndStat label="xp" value={`+${correct * XP_PER_CORRECT}`} />
-            <EndStat label="accuracy" value={`${acc}%`} />
-            <EndStat label="time" value={`${secs}s`} />
-          </div>
-          <div className="text-sm opacity-60">{accuracyLabel(acc, lang)}</div>
-          {session.unit !== null && (
-            <div className="text-[10px] uppercase tracking-[0.3em] text-(--accent)">
-              unit words added to your deck — the feed takes it from here
+        <div className="flex flex-1 flex-col p-6">
+          <div className="flex flex-1 flex-col items-center justify-center gap-4 text-center">
+            <motion.span
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{ type: "spring", stiffness: 260, damping: 14 }}
+              className={`text-[88px] leading-none font-medium ${lang === "ja" ? "font-jp" : ""}`}
+              style={{ color: C.green }}
+            >
+              {lang === "ja" ? "完" : "✓"}
+            </motion.span>
+            <div className="text-2xl font-bold">Lesson complete</div>
+            <div className="max-w-62 text-sm" style={{ color: C.muted }}>
+              {accuracyLabel(acc, lang)}
+              {session.unit !== null && " Unit words were added to your deck — the feed takes it from here."}
             </div>
-          )}
-          <div className="grid w-full max-w-xs grid-cols-2 gap-3">
-            <Link href="/path" className="btn-ghost text-center">
-              THE PATH
+            <div className="mt-2 flex items-stretch gap-6">
+              <EndStat label="XP" value={`+${correct * XP_PER_CORRECT}`} />
+              <div className="w-px" style={{ background: C.line }} />
+              <EndStat label="Accuracy" value={`${acc}%`} />
+              <div className="w-px" style={{ background: C.line }} />
+              <EndStat label="Time" value={`${secs}s`} />
+            </div>
+          </div>
+          <div className="flex flex-col gap-3">
+            <Link
+              href="/reels"
+              className="w-full rounded-full py-4 text-center text-[15px] font-bold text-white"
+              style={{ background: C.red }}
+            >
+              Continue
             </Link>
-            <Link href="/reels" className="btn-primary text-center">
-              CONTINUE ▶
+            <Link
+              href="/path"
+              className="w-full rounded-full border py-4 text-center text-[15px] font-bold"
+              style={{ borderColor: C.line, color: C.muted }}
+            >
+              Back to path
             </Link>
           </div>
         </div>
       )}
 
       {phase === "fail" && (
-        <div className="flex flex-1 flex-col items-center justify-center gap-5 p-6 text-center">
-          <div className="text-7xl">💔</div>
-          <div className="font-display text-3xl text-bad">OUT OF HEARTS</div>
-          <div className="max-w-xs text-sm opacity-60">
-            Every miss was filed into your mistake log. Take a breath and run it back.
+        <div className="flex flex-1 flex-col p-6">
+          <div className="flex flex-1 flex-col items-center justify-center gap-4 text-center">
+            <span className="text-6xl">💔</span>
+            <div className="text-2xl font-bold">Out of hearts</div>
+            <div className="max-w-62 text-sm" style={{ color: C.muted }}>
+              Every miss was filed into your mistakes. Take a breath and run it back.
+            </div>
           </div>
-          <div className="grid w-full max-w-xs grid-cols-2 gap-3">
-            <Link href="/path" className="btn-ghost text-center">
-              RETREAT
-            </Link>
-            <button className="btn-primary" onClick={retry}>
-              ↻ RETRY
+          <div className="flex flex-col gap-3">
+            <button
+              className="w-full rounded-full py-4 text-[15px] font-bold text-white"
+              style={{ background: C.red }}
+              onClick={retry}
+            >
+              Retry
             </button>
+            <Link
+              href="/path"
+              className="w-full rounded-full border py-4 text-center text-[15px] font-bold"
+              style={{ borderColor: C.line, color: C.muted }}
+            >
+              Back to path
+            </Link>
           </div>
         </div>
       )}
@@ -274,244 +320,333 @@ export function Lesson() {
 // ---- chrome ----------------------------------------------------------------
 
 function Shell({
-  accent,
   title,
   hearts,
   progress,
   children,
 }: {
-  accent: string;
   title: string;
   hearts?: number;
   progress?: number;
   children: React.ReactNode;
 }) {
   return (
-    <div className={`${accent} flex h-dvh flex-col bg-bg`}>
-      <div className="border-b-2 border-line p-3">
-        <div className="flex items-center justify-between">
-          <Link href="/path" className="hud-chip" title="Quit lesson">
+    <div className="flex h-dvh flex-col" style={{ background: C.bg, color: C.text }}>
+      <div className="mx-auto flex h-full w-full max-w-md flex-col px-6 pt-7 pb-10">
+        <div className="mb-6 flex items-center gap-3.5">
+          <Link href="/path" className="text-lg" style={{ color: C.muted }} title="Quit lesson" aria-label="Quit lesson">
             ✕
           </Link>
-          <div className="font-display text-sm uppercase tracking-[0.3em] text-(--accent)">
-            {title}
-          </div>
-          <div className="hud-chip" title="Hearts">
-            {hearts === undefined ? "♥" : `${"♥".repeat(Math.max(0, hearts))}` || "💔"}
-          </div>
+          {progress !== undefined ? (
+            <div className="h-1.5 flex-1 rounded-full" style={{ background: C.line }}>
+              <div
+                className="h-1.5 rounded-full transition-all duration-300"
+                style={{ width: `${Math.max(4, progress * 100)}%`, background: C.red }}
+              />
+            </div>
+          ) : (
+            <div className="flex-1 text-center text-xs font-bold tracking-[2px] uppercase" style={{ color: C.dim }}>
+              {title}
+            </div>
+          )}
+          {hearts !== undefined && (
+            <div className="text-sm font-bold" style={{ color: hearts <= 1 ? C.red : C.muted }} title="Hearts">
+              <span style={{ color: C.red }}>♥</span> {hearts}
+            </div>
+          )}
         </div>
-        {progress !== undefined && (
-          <div className="mt-2 h-2 w-full border-2 border-line bg-black/40">
-            <div className="bar-anim h-full bg-(--accent)" style={{ width: `${progress * 100}%` }} />
-          </div>
-        )}
+        {children}
       </div>
-      {children}
     </div>
   );
 }
 
 function EndStat({ label, value }: { label: string; value: string }) {
   return (
-    <div className="border-2 border-line bg-panel p-2">
-      <div className="font-display text-xl">{value}</div>
-      <div className="text-[9px] uppercase tracking-widest opacity-50">{label}</div>
+    <div className="text-center">
+      <div className="text-[22px] font-bold">{value}</div>
+      <div className="mt-0.5 text-[10px] font-bold tracking-[2px] uppercase" style={{ color: C.muted }}>
+        {label}
+      </div>
     </div>
+  );
+}
+
+function Kicker({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="mb-2 text-[10px] font-bold tracking-[2px] uppercase" style={{ color: C.blue }}>
+      {children}
+    </div>
+  );
+}
+
+function Heading({ children }: { children: React.ReactNode }) {
+  return <div className="mb-4 text-[19px] font-bold">{children}</div>;
+}
+
+/** 🔊 word chip — the audio prompt from the design (S7). */
+function AudioChip({ word, lang, furigana }: { word: LessonWord; lang: Lang; furigana: boolean }) {
+  return (
+    <button
+      type="button"
+      className="mb-5 inline-flex items-center gap-2.5 self-start rounded-xl border px-4 py-2.5"
+      style={{ borderColor: C.line, background: C.panel }}
+      onClick={() => tts(word.word, lang)}
+      title="Hear it"
+    >
+      <span className="text-[15px]">🔊</span>
+      {lang === "ja" ? (
+        <JaWord word={word.word} reading={word.reading} furigana={furigana} className="text-[26px]" />
+      ) : (
+        <DeNoun entry={word} className="text-[22px] font-bold" />
+      )}
+      {lang === "ja" && !furigana && word.reading && word.reading !== word.word && (
+        <span className="text-[13px] tracking-wider" style={{ color: C.blue }}>
+          {word.reading}
+        </span>
+      )}
+    </button>
+  );
+}
+
+/** Feedback banner + Check/Continue pill (the two-stage flow from the design). */
+function CheckBar({
+  picked,
+  checked,
+  ok,
+  answer,
+  coach,
+  onCheck,
+  onNext,
+}: {
+  picked: boolean;
+  checked: boolean;
+  ok: boolean;
+  answer: string;
+  coach?: string; // tip / mnemonic shown after a miss
+  onCheck: () => void;
+  onNext: () => void;
+}) {
+  return (
+    <>
+      {checked && (
+        <motion.div
+          initial={{ y: 12, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          className="mb-3 rounded-xl px-4 py-3 text-sm font-semibold"
+          style={
+            ok
+              ? { background: "rgba(72,199,142,0.12)", color: C.green }
+              : { background: "rgba(255,90,95,0.1)", color: C.red }
+          }
+        >
+          {ok ? "Nicely done." : `Not quite — it’s ${answer}. You’ll see it again soon.`}
+          {!ok && coach && (
+            <div className="mt-2 flex gap-2 text-[13px] font-normal leading-snug" style={{ color: C.muted }}>
+              <span>💡</span>
+              <span>{coach}</span>
+            </div>
+          )}
+        </motion.div>
+      )}
+      <button
+        className="w-full rounded-full py-4 text-[15px] font-bold transition-colors"
+        style={{
+          background: picked ? C.red : C.disabled,
+          color: picked ? "#fff" : C.dim,
+        }}
+        disabled={!picked}
+        onClick={checked ? onNext : onCheck}
+      >
+        {checked ? "Continue" : "Check"}
+      </button>
+    </>
   );
 }
 
 // ---- exercises ---------------------------------------------------------------
 
-function Prompt({ word, lang, furigana }: { word: LessonWord; lang: Lang; furigana: boolean }) {
-  return (
-    <button
-      type="button"
-      className="press mx-auto my-6 block text-center"
-      onClick={() => tts(word.word, lang)}
-      title="Hear it"
-    >
-      {lang === "ja" ? (
-        <JaWord word={word.word} reading={word.reading} furigana={furigana} className="text-6xl" />
-      ) : (
-        <DeNoun entry={word} className="text-5xl font-bold" />
-      )}
-      <div className="mt-2 text-xs uppercase tracking-[0.3em] opacity-40">🔊 tap to hear</div>
-    </button>
-  );
-}
-
-function ExerciseView({
-  ex,
-  lang,
-  furigana,
-  onResult,
-}: {
-  ex: Exercise;
+interface ExProps {
   lang: Lang;
   furigana: boolean;
-  onResult: (ok: boolean, word: LessonWord, answerShown?: string) => void;
-}) {
-  if (ex.kind === "mc") return <Mc ex={ex} lang={lang} furigana={furigana} onResult={onResult} />;
-  if (ex.kind === "rmc") return <Rmc ex={ex} lang={lang} onResult={onResult} />;
-  if (ex.kind === "type") return <TypeIt ex={ex} lang={lang} furigana={furigana} onResult={onResult} />;
-  return <Match ex={ex} lang={lang} onResult={onResult} />;
+  onChecked: (ok: boolean, word: LessonWord) => void;
+  onNext: (ok: boolean) => void;
 }
 
-function Mc({
-  ex,
-  lang,
-  furigana,
-  onResult,
-}: {
-  ex: Extract<Exercise, { kind: "mc" }>;
-  lang: Lang;
-  furigana: boolean;
-  onResult: (ok: boolean, word: LessonWord) => void;
-}) {
+function ExerciseView({ ex, ...p }: ExProps & { ex: Exercise }) {
+  if (ex.kind === "mc") return <Mc ex={ex} {...p} />;
+  if (ex.kind === "rmc") return <Rmc ex={ex} {...p} />;
+  if (ex.kind === "type") return <TypeIt ex={ex} {...p} />;
+  return <Match ex={ex} {...p} />;
+}
+
+function Mc({ ex, lang, furigana, onChecked, onNext }: ExProps & { ex: Extract<Exercise, { kind: "mc" }> }) {
   const [picked, setPicked] = useState<number | null>(null);
-  return (
-    <>
-      <div className="tag text-center">what does it mean?</div>
-      <Prompt word={ex.word} lang={lang} furigana={furigana} />
-      <div className="mt-auto grid grid-cols-1 gap-2">
-        {ex.options.map((opt, i) => {
-          let cls = "btn-option";
-          if (picked !== null) {
-            if (i === ex.answer) cls += " correct";
-            else if (i === picked) cls += " wrong";
-            else cls += " opacity-40";
-          }
-          return (
-            <button
-              key={i}
-              className={cls}
-              disabled={picked !== null}
-              onClick={() => {
-                setPicked(i);
-                onResult(i === ex.answer, ex.word);
-              }}
-            >
-              {opt}
-            </button>
-          );
-        })}
-      </div>
-    </>
-  );
-}
+  const [checked, setChecked] = useState(false);
+  const ok = picked === ex.answer;
 
-function Rmc({
-  ex,
-  lang,
-  onResult,
-}: {
-  ex: Extract<Exercise, { kind: "rmc" }>;
-  lang: Lang;
-  onResult: (ok: boolean, word: LessonWord) => void;
-}) {
-  const [picked, setPicked] = useState<number | null>(null);
-  return (
-    <>
-      <div className="tag text-center">pick the word for</div>
-      <div className="my-8 text-center text-3xl font-bold">{ex.word.meaning}</div>
-      <div className="mt-auto grid grid-cols-2 gap-2">
-        {ex.options.map((opt, i) => {
-          let cls = "btn-option text-center";
-          if (picked !== null) {
-            if (i === ex.answer) cls += " correct";
-            else if (i === picked) cls += " wrong";
-            else cls += " opacity-40";
-          }
-          return (
-            <button
-              key={i}
-              className={`${cls} ${lang === "ja" ? "font-jp" : ""}`}
-              disabled={picked !== null}
-              onClick={() => {
-                setPicked(i);
-                onResult(i === ex.answer, ex.word);
-              }}
-            >
-              {opt.word}
-            </button>
-          );
-        })}
-      </div>
-    </>
-  );
-}
-
-function TypeIt({
-  ex,
-  lang,
-  furigana,
-  onResult,
-}: {
-  ex: Extract<Exercise, { kind: "type" }>;
-  lang: Lang;
-  furigana: boolean;
-  onResult: (ok: boolean, word: LessonWord) => void;
-}) {
-  const [val, setVal] = useState("");
-  const [done, setDone] = useState(false);
-  const submit = () => {
-    if (done || !val.trim()) return;
-    setDone(true);
-    onResult(typedCorrect(val, ex.word.meaning), ex.word);
+  const stateOf = (i: number) => {
+    if (!checked) return i === picked ? "picked" : "idle";
+    if (i === ex.answer) return "correct";
+    if (i === picked) return "wrong";
+    return "faded";
   };
+
   return (
     <>
-      <div className="tag text-center">type the meaning (english)</div>
-      <Prompt word={ex.word} lang={lang} furigana={furigana} />
+      <Kicker>New word</Kicker>
+      <Heading>Select the correct meaning</Heading>
+      <AudioChip word={ex.word} lang={lang} furigana={furigana} />
+      <div className="flex flex-col gap-2.5">
+        {ex.options.map((opt, i) => (
+          <button
+            key={i}
+            className="rounded-xl border px-4.5 py-4 text-left text-[15px] font-semibold transition-colors"
+            style={optionStyle(stateOf(i))}
+            disabled={checked}
+            onClick={() => setPicked(i)}
+          >
+            {opt}
+          </button>
+        ))}
+      </div>
+      <div className="flex-1" />
+      <CheckBar
+        picked={picked !== null}
+        checked={checked}
+        ok={ok}
+        answer={`${ex.word.meaning} ${ex.word.word}`}
+        coach={ex.word.tip ?? ex.word.mnemonic}
+        onCheck={() => {
+          setChecked(true);
+          onChecked(ok, ex.word);
+        }}
+        onNext={() => onNext(ok)}
+      />
+    </>
+  );
+}
+
+function Rmc({ ex, lang, onChecked, onNext }: ExProps & { ex: Extract<Exercise, { kind: "rmc" }> }) {
+  const [picked, setPicked] = useState<number | null>(null);
+  const [checked, setChecked] = useState(false);
+  const ok = picked === ex.answer;
+
+  const stateOf = (i: number) => {
+    if (!checked) return i === picked ? "picked" : "idle";
+    if (i === ex.answer) return "correct";
+    if (i === picked) return "wrong";
+    return "faded";
+  };
+
+  return (
+    <>
+      <Heading>How do you say “{ex.word.meaning}”?</Heading>
+      <div className="grid grid-cols-2 gap-2.5">
+        {ex.options.map((opt, i) => (
+          <button
+            key={i}
+            className="flex h-24 flex-col items-center justify-center gap-1 rounded-xl border transition-colors"
+            style={optionStyle(stateOf(i))}
+            disabled={checked}
+            onClick={() => {
+              setPicked(i);
+              if (!checked) tts(opt.word, lang);
+            }}
+          >
+            <span className={lang === "ja" ? "font-jp text-[28px]" : "text-xl font-bold"}>{opt.word}</span>
+            {lang === "ja" && opt.reading && opt.reading !== opt.word && (
+              <span className="text-xs tracking-wider" style={{ color: C.blue }}>
+                {opt.reading}
+              </span>
+            )}
+          </button>
+        ))}
+      </div>
+      <div className="flex-1" />
+      <CheckBar
+        picked={picked !== null}
+        checked={checked}
+        ok={ok}
+        answer={`${ex.word.word} ${ex.word.meaning}`}
+        coach={ex.word.tip ?? ex.word.mnemonic}
+        onCheck={() => {
+          setChecked(true);
+          onChecked(ok, ex.word);
+        }}
+        onNext={() => onNext(ok)}
+      />
+    </>
+  );
+}
+
+function TypeIt({ ex, lang, furigana, onChecked, onNext }: ExProps & { ex: Extract<Exercise, { kind: "type" }> }) {
+  const [val, setVal] = useState("");
+  const [checked, setChecked] = useState(false);
+  const [ok, setOk] = useState(false);
+
+  const check = () => {
+    if (checked || !val.trim()) return;
+    const good = typedCorrect(val, ex.word.meaning);
+    setOk(good);
+    setChecked(true);
+    onChecked(good, ex.word);
+  };
+
+  return (
+    <>
+      <Kicker>Type it</Kicker>
+      <Heading>What does this mean?</Heading>
+      <AudioChip word={ex.word} lang={lang} furigana={furigana} />
       <form
-        className="mt-auto flex gap-2"
         onSubmit={(e) => {
           e.preventDefault();
-          submit();
+          check();
         }}
       >
         <input
           autoFocus
-          className="min-w-0 flex-1 border-4 border-line bg-black/30 px-3 py-3 text-lg outline-none focus:border-(--accent)"
-          placeholder="meaning…"
+          className="w-full rounded-xl border px-4 py-3.5 text-[15px] outline-none"
+          style={{ borderColor: C.line, background: C.panel, color: C.text }}
+          placeholder="Type the meaning in English…"
           value={val}
-          disabled={done}
+          disabled={checked}
           onChange={(e) => setVal(e.target.value)}
         />
-        <button className="btn-primary !px-5 !py-3" disabled={done || !val.trim()}>
-          ✓
-        </button>
       </form>
+      <div className="flex-1" />
+      <CheckBar
+        picked={val.trim().length > 0}
+        checked={checked}
+        ok={ok}
+        answer={`${ex.word.meaning} ${ex.word.word}`}
+        coach={ex.word.tip ?? ex.word.mnemonic}
+        onCheck={check}
+        onNext={() => onNext(ok)}
+      />
     </>
   );
 }
 
-function Match({
-  ex,
-  lang,
-  onResult,
-}: {
-  ex: Extract<Exercise, { kind: "match" }>;
-  lang: Lang;
-  onResult: (ok: boolean, word: LessonWord) => void;
-}) {
-  // one aggregate "correct" when all pairs land; wrong taps shake but don't
-  // cost hearts (matching is a warm-up, like Duolingo's).
+function Match({ ex, lang, onChecked, onNext }: ExProps & { ex: Extract<Exercise, { kind: "match" }> }) {
+  // wrong taps deselect but don't cost hearts (matching is a warm-up)
   const [left] = useState(() => ex.pairs);
   const [right] = useState(() => [...ex.pairs].sort(() => Math.random() - 0.5));
   const [selL, setSelL] = useState<number | null>(null);
-  const [doneWords, setDoneWords] = useState<Set<string>>(new Set());
+  const [done, setDone] = useState<Set<string>>(new Set());
   const [shake, setShake] = useState<number | null>(null);
+  const complete = done.size === ex.pairs.length;
 
   const tryMatch = (ri: number) => {
-    if (selL === null) return;
+    if (selL === null || done.has(right[ri].word)) return;
     const w = left[selL];
     if (right[ri].word === w.word) {
-      const next = new Set(doneWords).add(w.word);
-      setDoneWords(next);
+      const next = new Set(done).add(w.word);
+      setDone(next);
       setSelL(null);
       sfxCorrect(next.size);
-      if (next.size === ex.pairs.length) onResult(true, ex.pairs[0]);
+      tts(w.word, lang);
+      if (next.size === ex.pairs.length) onChecked(true, ex.pairs[0]);
     } else {
       sfxWrong();
       setShake(ri);
@@ -520,40 +655,63 @@ function Match({
     }
   };
 
+  const styleOf = (word: string, selected: boolean) =>
+    optionStyle(done.has(word) ? "matched" : selected ? "selected" : "idle");
+
   return (
     <>
-      <div className="tag text-center">match the pairs</div>
-      <div className="mt-8 grid flex-1 grid-cols-2 content-start gap-2">
-        <div className="space-y-2">
+      <Heading>Tap the matching pairs</Heading>
+      <div className="-mt-2 mb-5 text-[13px]" style={{ color: C.muted }}>
+        Match each word to its meaning.
+      </div>
+      <div className="grid grid-cols-2 gap-2.5">
+        <div className="flex flex-col gap-2.5">
           {left.map((w, i) => (
             <button
               key={w.word}
-              disabled={doneWords.has(w.word)}
+              disabled={done.has(w.word)}
               onClick={() => setSelL(i)}
-              className={`btn-option w-full text-center ${lang === "ja" ? "font-jp" : ""} ${
-                doneWords.has(w.word) ? "correct opacity-40" : selL === i ? "!border-(--accent)" : ""
-              }`}
+              className={`rounded-xl border py-4 text-center transition-colors ${lang === "ja" ? "font-jp text-[22px]" : "text-base font-semibold"}`}
+              style={styleOf(w.word, selL === i)}
             >
               {w.word}
             </button>
           ))}
         </div>
-        <div className="space-y-2">
+        <div className="flex flex-col gap-2.5">
           {right.map((w, i) => (
             <motion.button
               key={w.word}
               animate={shake === i ? { x: [0, -6, 6, -4, 0] } : {}}
-              disabled={doneWords.has(w.word)}
+              disabled={done.has(w.word)}
               onClick={() => tryMatch(i)}
-              className={`btn-option w-full text-center text-base ${
-                doneWords.has(w.word) ? "correct opacity-40" : ""
-              }`}
+              className="rounded-xl border py-4 text-center text-[15px] font-semibold transition-colors"
+              style={styleOf(w.word, false)}
             >
               {w.meaning}
             </motion.button>
           ))}
         </div>
       </div>
+      <div className="flex-1" />
+      {complete && (
+        <motion.div
+          initial={{ y: 12, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          className="mb-3 rounded-xl px-4 py-3 text-sm font-semibold"
+          style={{ background: "rgba(72,199,142,0.12)", color: C.green }}
+        >
+          All matched — nicely done.
+        </motion.div>
+      )}
+      <button
+        className="w-full rounded-full py-4 text-[15px] font-bold transition-colors"
+        style={{ background: complete ? C.red : C.disabled, color: complete ? "#fff" : C.dim }}
+        disabled={!complete}
+        onClick={() => onNext(true)}
+      >
+        Continue
+      </button>
     </>
   );
 }

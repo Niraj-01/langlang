@@ -16,23 +16,46 @@ if (typeof window !== "undefined" && "speechSynthesis" in window) {
   window.speechSynthesis.onvoiceschanged = loadVoices;
 }
 
-function pickVoice(lang: Lang): SpeechSynthesisVoice | null {
-  const code = BCP47[lang];
-  const match = voices.filter((v) => v.lang.replace("_", "-").startsWith(code));
-  // prefer non-default enhanced voices when present
-  return (
-    match.find((v) => /premium|enhanced|siri/i.test(v.name)) ?? match[0] ?? null
-  );
+// Known good native voices per platform (Apple / Google / Microsoft), best first.
+const GOOD_NAMES: Record<Lang, RegExp> = {
+  ja: /kyoko|otoya|o-ren|hattori|google\s*日本語|nanami|ayumi|haruka|ichiro/i,
+  de: /anna|petra|markus|yannick|google\s*deutsch|katja|conrad|hedda|amala/i,
+};
+
+/** Score a voice for learner quality — higher is better. */
+function scoreVoice(v: SpeechSynthesisVoice, lang: Lang): number {
+  const name = v.name;
+  let s = 0;
+  if (GOOD_NAMES[lang].test(name)) s += 6;
+  if (/neural|natural|premium|enhanced|siri/i.test(name)) s += 4;
+  if (/google/i.test(name)) s += 3; // Google voices are consistently clear
+  if (/compact|espeak|festival|robo/i.test(name)) s -= 6; // tinny fallbacks
+  if (v.localService) s += 1; // no network hiccup mid-scroll
+  if (v.default) s += 1;
+  return s;
 }
 
-export function speak(text: string, lang: Lang, rate = 0.95) {
+function pickVoice(lang: Lang): SpeechSynthesisVoice | null {
+  const code = BCP47[lang];
+  const match = voices.filter((v) => v.lang.replace("_", "-").toLowerCase().startsWith(code.toLowerCase()));
+  if (match.length === 0) return null;
+  return [...match].sort((a, b) => scoreVoice(b, lang) - scoreVoice(a, lang))[0];
+}
+
+export { pickVoice };
+
+// Slightly slower for Japanese — dense kana benefits from a beat more space.
+const DEFAULT_RATE: Record<Lang, number> = { ja: 0.9, de: 0.95 };
+
+export function speak(text: string, lang: Lang, rate?: number) {
   if (typeof window === "undefined" || !("speechSynthesis" in window)) return;
   window.speechSynthesis.cancel();
   const u = new SpeechSynthesisUtterance(text);
   u.lang = BCP47[lang];
   const v = pickVoice(lang);
   if (v) u.voice = v;
-  u.rate = rate;
+  u.rate = rate ?? DEFAULT_RATE[lang];
+  u.pitch = 1;
   window.speechSynthesis.speak(u);
 }
 

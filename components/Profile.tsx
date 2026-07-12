@@ -198,6 +198,7 @@ export function Profile() {
             { href: "/mine", emoji: "⛏", label: "Mine" },
             { href: "/focus", emoji: "🌀", label: "Focus" },
             { href: "/progress", emoji: "📈", label: "Progress" },
+            { href: "/league", emoji: "🏆", label: "League" },
             { href: "/wrapped", emoji: "🎁", label: "Wrapped" },
             { href: "/learn", emoji: "📖", label: "Learn JP" },
           ].map((m) => (

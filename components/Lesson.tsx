@@ -103,7 +103,13 @@ export function Lesson() {
         .slice(0, 8)
         .map((m) => {
           const e = seedByWord.get(m.word);
-          return { word: m.word, meaning: m.meaning, reading: m.reading, tip: e?.tip, mnemonic: e?.mnemonic };
+          return {
+            word: m.word,
+            meaning: m.meaning,
+            reading: m.reading,
+            tip: m.tip ?? e?.tip,
+            mnemonic: m.mnemonic ?? e?.mnemonic,
+          };
         });
       return { words, unit: null, title: "Mistake Rehab" };
     }

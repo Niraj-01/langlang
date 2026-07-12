@@ -15,6 +15,7 @@ import {
   logRange,
 } from "@/lib/store";
 import { EXAMS_BY_LANG, EXAM_LABEL, EXAM_VOCAB_TOTAL } from "@/lib/exams";
+import { Heatmap } from "./Heatmap";
 import type { Exam } from "@/lib/types";
 
 function fmtDate(d: string): string {
@@ -136,6 +137,16 @@ export function Progress() {
         </div>
         <div className="mt-2 text-[10px] uppercase tracking-widest opacity-40">
           mastered = FSRS stability ≥ 21 days · {active} words in your {lang === "ja" ? "Japanese" : "German"} deck
+        </div>
+      </div>
+
+      {/* activity heatmap — last 12 weeks */}
+      <div className="rise px-4 pt-6" style={{ "--rise-delay": "0.14s" } as React.CSSProperties}>
+        <div className="mb-2 font-display text-xs uppercase tracking-[0.3em] opacity-60">
+          Activity
+        </div>
+        <div className="border-2 border-line bg-panel p-3">
+          <Heatmap state={state} />
         </div>
       </div>
 

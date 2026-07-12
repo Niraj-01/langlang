@@ -12,6 +12,8 @@ import { Hud } from "./Hud";
 import { ReviewCard } from "./cards/ReviewCard";
 import { NewWordCard } from "./cards/NewWordCard";
 import { QuizCard } from "./cards/QuizCard";
+import { GrammarCard } from "./cards/GrammarCard";
+import { ListenCard } from "./cards/ListenCard";
 import { SpeakCard } from "./cards/SpeakCard";
 import { MemeCard } from "./cards/MemeCard";
 import { StatusCard } from "./cards/StatusCard";
@@ -217,6 +219,31 @@ function FeedCard({
       if (!card) return <StatusCard state={state} />;
       return (
         <QuizCard
+          card={card}
+          options={item.options}
+          answer={item.answer}
+          furigana={state.furigana}
+          combo={combo}
+          multiplier={multiplier}
+          onAnswered={onAnswered}
+        />
+      );
+    }
+    case "grammar":
+      return (
+        <GrammarCard
+          item={item.item}
+          furigana={state.furigana}
+          combo={combo}
+          multiplier={multiplier}
+          onAnswered={onAnswered}
+        />
+      );
+    case "listen": {
+      const card = state.cards.find((c) => c.id === item.cardId);
+      if (!card) return <StatusCard state={state} />;
+      return (
+        <ListenCard
           card={card}
           options={item.options}
           answer={item.answer}

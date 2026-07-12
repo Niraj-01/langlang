@@ -1,0 +1,17 @@
+[
+{"lang":"ja","prompt":"パン＿食べる。","promptReading":"パン＿たべる。","options":["は","が","を","に"],"answer":2,"note":"を marks the direct object — the thing the action hits.","translation":"I eat bread."},
+{"lang":"ja","prompt":"学校＿行く。","promptReading":"がっこう＿いく。","options":["を","に","で","は"],"answer":1,"note":"に marks the destination of movement with 行く/来る.","translation":"I go to school."},
+{"lang":"ja","prompt":"駅＿友だちに会う。","promptReading":"えき＿ともだちにあう。","options":["を","に","で","が"],"answer":2,"note":"で marks where an action happens.","translation":"I meet a friend at the station."},
+{"lang":"ja","prompt":"私＿学生です。","promptReading":"わたし＿がくせいです。","options":["は","を","に","で"],"answer":0,"note":"は marks the topic — 'as for me, …'.","translation":"I am a student."},
+{"lang":"ja","prompt":"猫＿好きです。","promptReading":"ねこ＿すきです。","options":["を","が","に","で"],"answer":1,"note":"好き takes が, not を — literally 'cats are pleasing'.","translation":"I like cats."},
+{"lang":"ja","prompt":"電車＿行きます。","promptReading":"でんしゃ＿いきます。","options":["を","に","で","は"],"answer":2,"note":"で marks the means/method — by what you travel.","translation":"I go by train."},
+{"lang":"ja","prompt":"友だち＿話す。","promptReading":"ともだち＿はなす。","options":["を","に","と","で"],"answer":2,"note":"と marks the partner you do something together with.","translation":"I talk with a friend."},
+{"lang":"ja","prompt":"七時＿起きる。","promptReading":"しちじ＿おきる。","options":["に","で","を","は"],"answer":0,"note":"に pins an action to a specific clock time.","translation":"I wake up at seven."},
+{"lang":"ja","prompt":"日本＿来ました。","promptReading":"にほん＿きました。","options":["を","に","へ","が"],"answer":1,"note":"に (or へ) marks the destination you arrive at.","translation":"I came to Japan."},
+{"lang":"ja","prompt":"お茶＿飲みたい。","promptReading":"おちゃ＿のみたい。","options":["は","を","に","で"],"answer":1,"note":"を still marks the object even with the ～たい 'want to' form.","translation":"I want to drink tea."},
+{"lang":"ja","prompt":"部屋＿本があります。","promptReading":"へや＿ほんがあります。","options":["を","に","で","と"],"answer":1,"note":"に marks the place where something exists with ある/いる.","translation":"There's a book in the room."},
+{"lang":"ja","prompt":"これ＿私のかばんです。","promptReading":"これ＿わたしのかばんです。","options":["は","を","に","が"],"answer":0,"note":"は presents the topic 'this' before describing it.","translation":"This is my bag."},
+{"lang":"ja","prompt":"水＿ください。","promptReading":"みず＿ください。","options":["は","を","に","で"],"answer":1,"note":"を marks what you're requesting with ください.","translation":"Water, please."},
+{"lang":"ja","prompt":"九時＿五時まで働く。","promptReading":"くじ＿ごじまではたらく。","options":["に","から","を","で"],"answer":1,"note":"から marks a starting point (time or place).","translation":"I work from nine to five."},
+{"lang":"ja","prompt":"兄＿背が高い。","promptReading":"あに＿せがたかい。","options":["を","は","に","で"],"answer":1,"note":"は sets the topic; が then marks what's tall.","translation":"My brother is tall."}
+]

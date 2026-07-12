@@ -6,11 +6,12 @@
 import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import type { Lang, VocabEntry } from "@/lib/types";
-import { SEED, SEED_LABEL } from "@/lib/seed";
+import { SEED, seedLevelLabel } from "@/lib/seed";
 import { addNewWord, skipNewWord } from "@/lib/store";
 import { speak, sfxAdd } from "@/lib/audio";
 import { burst } from "@/lib/confetti";
 import { JaWord, DeNoun, DePlural, Example } from "@/components/Lex";
+import { PitchAccent } from "@/components/PitchAccent";
 import { XpPop } from "./XpPop";
 
 export function NewWordCard({
@@ -67,7 +68,7 @@ export function NewWordCard({
         }}
       >
         <div className="tag">
-          NEW WORD <span className="opacity-50">· {SEED_LABEL[lang]}</span>
+          NEW WORD <span className="opacity-50">· {seedLevelLabel(lang, entryIndex)}</span>
         </div>
 
         <div className="flex flex-1 flex-col items-center justify-center text-center">
@@ -92,6 +93,13 @@ export function NewWordCard({
               ▶ tap word for audio · hold card to replay
             </div>
           </button>
+
+          {lang === "ja" && entry.reading && entry.pitch !== undefined && (
+            <div className="mt-3 flex items-center gap-2 text-2xl">
+              <PitchAccent reading={entry.reading} pitch={entry.pitch} />
+              <span className="text-[10px] uppercase tracking-widest opacity-40">pitch {entry.pitch}</span>
+            </div>
+          )}
 
           <div className="mt-5 text-3xl">{entry.meaning}</div>
           {lang === "de" && <DePlural entry={entry} />}

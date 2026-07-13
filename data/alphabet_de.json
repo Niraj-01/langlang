@@ -1,0 +1,29 @@
+{
+  "special": [
+    {"char":"Ää","name":"A-Umlaut","ipa":"/ɛ/","desc":"Like the 'e' in 'bed'. Lips slightly rounded.","example":"Ärger","exampleMeaning":"anger"},
+    {"char":"Öö","name":"O-Umlaut","ipa":"/œ/","desc":"Say 'eh' with rounded lips. No English equivalent.","example":"Öffnen","exampleMeaning":"to open"},
+    {"char":"Üü","name":"U-Umlaut","ipa":"/y/","desc":"Say 'ee' with rounded lips. Like French 'u'.","example":"Über","exampleMeaning":"over, about"},
+    {"char":"ß","name":"Eszett / scharfes S","ipa":"/s/","desc":"Always an 's' sound (never 'z'). Appears after long vowels and diphthongs.","example":"Straße","exampleMeaning":"street"}
+  ],
+  "combos": [
+    {"combo":"ch","ipa":"/ç/ or /x/","desc":"After e/i: soft 'sh'-like hiss (ich). After a/o/u: throaty 'kh' (Bach).","example":"ich / Buch","exampleMeaning":"I / book"},
+    {"combo":"sch","ipa":"/ʃ/","desc":"Like English 'sh' in 'ship'. Always this sound.","example":"Schule","exampleMeaning":"school"},
+    {"combo":"ei","ipa":"/aɪ/","desc":"Sounds like English 'eye' or 'my'. Never 'ee'.","example":"Bier → nein","exampleMeaning":"beer → no"},
+    {"combo":"ie","ipa":"/iː/","desc":"Sounds like English 'ee' in 'see'. Long vowel.","example":"die / Bier","exampleMeaning":"the (f.) / beer"},
+    {"combo":"eu","ipa":"/ɔɪ/","desc":"Sounds like 'oy' in 'boy'.","example":"heute","exampleMeaning":"today"},
+    {"combo":"äu","ipa":"/ɔɪ/","desc":"Same sound as 'eu' — 'oy' in 'boy'. Often a plural marker.","example":"Häuser","exampleMeaning":"houses"},
+    {"combo":"sp","ipa":"/ʃp/","desc":"At the start of a word, pronounced 'shp' (not 'sp').","example":"spielen","exampleMeaning":"to play"},
+    {"combo":"st","ipa":"/ʃt/","desc":"At the start of a word, pronounced 'sht' (not 'st').","example":"Straße","exampleMeaning":"street"},
+    {"combo":"ck","ipa":"/k/","desc":"Like English 'ck'. Signals the vowel before it is short.","example":"Brücke","exampleMeaning":"bridge"},
+    {"combo":"pf","ipa":"/pf/","desc":"Both letters are pronounced — a quick 'p' then 'f'.","example":"Apfel","exampleMeaning":"apple"},
+    {"combo":"qu","ipa":"/kv/","desc":"Pronounced 'kv' — not 'kw' like English.","example":"Quelle","exampleMeaning":"source"},
+    {"combo":"z","ipa":"/ts/","desc":"Always 'ts' — like the end of 'cats'. Never a buzzy 'z'.","example":"Zeit","exampleMeaning":"time"}
+  ],
+  "tips": [
+    "German W is pronounced like English V: Wasser = 'Vasser'.",
+    "German V is usually pronounced like F: Vater = 'Fahter'.",
+    "German J sounds like English Y: ja = 'yah'.",
+    "Every letter is pronounced — no silent letters (unlike English).",
+    "The stress usually falls on the first syllable."
+  ]
+}

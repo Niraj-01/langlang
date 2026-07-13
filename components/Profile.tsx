@@ -215,6 +215,7 @@ export function Profile() {
             { href: "/league", icon: "trophy", label: "League" },
             { href: "/wrapped", icon: "gift", label: "Wrapped" },
             { href: "/learn", icon: "book", label: "Learn JP" },
+            { href: "/learn-de", icon: "book", label: "Learn DE" },
           ] as { href: string; icon: IconName; label: string }[]).map((m) => (
             <Link
               key={m.href}

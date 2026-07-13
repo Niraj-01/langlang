@@ -83,15 +83,18 @@ export function NewWordCard({
             {lang === "ja" ? (
               <JaWord
                 word={entry.word}
-                reading={entry.reading}
-                furigana={furigana}
-                className="text-7xl font-bold"
+                furigana={false}
+                className="glyph-float block text-8xl font-bold leading-none"
               />
             ) : (
               <DeNoun entry={entry} className="text-6xl font-bold" />
             )}
-            <div className="mt-2 text-xs uppercase tracking-[0.3em] opacity-40 group-active:opacity-90">
-              ▶ tap word for audio · hold card to replay
+            {/* reading as a distinct blue line (design), gated on the furigana toggle */}
+            {lang === "ja" && furigana && entry.reading && entry.reading !== entry.word && (
+              <div className="mt-3.5 text-lg tracking-[0.2em] text-[#4aa8ff]">{entry.reading}</div>
+            )}
+            <div className="mt-2 flex items-center justify-center gap-1.5 text-xs uppercase tracking-[0.3em] opacity-40 group-active:opacity-90">
+              <Icon name="play" size={11} /> tap word for audio · hold card to replay
             </div>
           </button>
 
@@ -122,13 +125,13 @@ export function NewWordCard({
           <div className="grid grid-cols-[1fr_auto] gap-3">
             <motion.button
               whileTap={{ scale: 0.94 }}
-              className="btn-primary"
+              className="btn-primary inline-flex items-center justify-center gap-1.5"
               onClick={(e) => {
                 e.stopPropagation();
                 add(e);
               }}
             >
-              ＋ ADD TO DECK
+              <Icon name="plus" size={16} /> ADD TO DECK
             </motion.button>
             <button
               className="btn-ghost"

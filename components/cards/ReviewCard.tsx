@@ -79,14 +79,17 @@ export function ReviewCard({
           {card.lang === "ja" ? (
             <JaWord
               word={card.word}
-              reading={revealed ? card.reading : undefined}
-              furigana={furigana}
-              className="text-7xl font-bold"
+              furigana={false}
+              className="glyph-float block text-8xl font-bold leading-none"
             />
           ) : (
             <div className="text-6xl font-bold">
               {revealed ? <DeNoun entry={card} /> : card.word}
             </div>
+          )}
+          {/* reading revealed on flip, as a blue line (design), honoring furigana */}
+          {card.lang === "ja" && revealed && furigana && card.reading && card.reading !== card.word && (
+            <div className="mt-3.5 text-lg tracking-[0.2em] text-[#4aa8ff]">{card.reading}</div>
           )}
 
           {!revealed && (
@@ -121,13 +124,13 @@ export function ReviewCard({
             className="grid grid-cols-3 gap-3"
           >
             <button
-              className="btn-grade border-bad text-bad"
+              className="btn-grade inline-flex items-center justify-center gap-1.5 border-bad text-bad"
               onClick={(e) => {
                 e.stopPropagation();
                 grade(1, e);
               }}
             >
-              AGAIN
+              <Icon name="repeat" size={14} /> AGAIN
             </button>
             <button
               className="btn-grade border-(--accent) text-(--accent)"
@@ -139,13 +142,13 @@ export function ReviewCard({
               GOOD
             </button>
             <button
-              className="btn-grade border-good text-good"
+              className="btn-grade inline-flex items-center justify-center gap-1.5 border-good text-good"
               onClick={(e) => {
                 e.stopPropagation();
                 grade(4, e);
               }}
             >
-              EASY
+              <Icon name="check" size={14} /> EASY
             </button>
           </motion.div>
         )}

@@ -352,6 +352,8 @@ export function Landing() {
   const level = levelFromXp(app.xp).level;
   // brand-new visitors go through onboarding; everyone else straight to the feed
   const startHref = !mounted || app.onboarding.done || app.xp > 0 ? "/reels" : "/onboarding";
+  // the reference dashboard follows the selected language
+  const dashHref = lang === "de" ? "/learn-de" : "/learn";
 
   return (
     <div
@@ -433,7 +435,7 @@ export function Landing() {
             <Link href={startHref} className="btn-primary inline-flex items-center gap-2 px-8">
               <Icon name="play" size={16} /> Start scrolling
             </Link>
-            <Link href="/learn" className="btn-ghost px-8">
+            <Link href={dashHref} className="btn-ghost px-8">
               Open dashboard
             </Link>
           </div>
@@ -516,21 +518,30 @@ export function Landing() {
         </p>
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {FEATURES.map((f, i) => (
+          {FEATURES.map((f, i) => {
+            // the Learn Zone card follows the selected language
+            const isLearn = f.href === "/learn";
+            const href = isLearn ? dashHref : f.href;
+            const body =
+              isLearn && lang === "de"
+                ? "Calm reference wing: the alphabet with sounds, der/die/das article trainer, vocab browser, phrasebook, grammar drills, translate."
+                : f.body;
+            return (
             <Link
               key={f.href}
-              href={f.href}
+              href={href}
               className="tile rv flex flex-col gap-3 p-6"
               style={{ "--rv-delay": `${(i % 3) * 0.1}s` } as React.CSSProperties}
             >
               <Icon name={f.icon} size={30} className="text-(--accent)" />
               <span className="font-display text-lg uppercase">{f.title}</span>
-              <span className="text-sm leading-relaxed opacity-60">{f.body}</span>
+              <span className="text-sm leading-relaxed opacity-60">{body}</span>
               <span className="mt-auto pt-2 font-display text-xs uppercase tracking-widest text-(--accent)">
                 open →
               </span>
             </Link>
-          ))}
+            );
+          })}
         </div>
       </section>
 

@@ -12,6 +12,8 @@ import { Hud } from "./Hud";
 import { ReviewCard } from "./cards/ReviewCard";
 import { NewWordCard } from "./cards/NewWordCard";
 import { QuizCard } from "./cards/QuizCard";
+import { GrammarCard } from "./cards/GrammarCard";
+import { ListenCard } from "./cards/ListenCard";
 import { SpeakCard } from "./cards/SpeakCard";
 import { MemeCard } from "./cards/MemeCard";
 import { StatusCard } from "./cards/StatusCard";
@@ -153,7 +155,7 @@ export function Feed() {
             className="fixed inset-x-0 top-16 z-30 mx-auto w-fit border-2 border-yellow-300 bg-panel px-4 py-2 font-display text-sm text-yellow-300"
             style={{ boxShadow: "4px 4px 0 rgba(0,0,0,0.6)" }}
           >
-            🎴 QUEST CLEARED — CARD PACK EARNED · tap to open
+            QUEST CLEARED — CARD PACK EARNED · tap to open
           </motion.a>
         )}
       </AnimatePresence>
@@ -217,6 +219,31 @@ function FeedCard({
       if (!card) return <StatusCard state={state} />;
       return (
         <QuizCard
+          card={card}
+          options={item.options}
+          answer={item.answer}
+          furigana={state.furigana}
+          combo={combo}
+          multiplier={multiplier}
+          onAnswered={onAnswered}
+        />
+      );
+    }
+    case "grammar":
+      return (
+        <GrammarCard
+          item={item.item}
+          furigana={state.furigana}
+          combo={combo}
+          multiplier={multiplier}
+          onAnswered={onAnswered}
+        />
+      );
+    case "listen": {
+      const card = state.cards.find((c) => c.id === item.cardId);
+      if (!card) return <StatusCard state={state} />;
+      return (
+        <ListenCard
           card={card}
           options={item.options}
           answer={item.answer}

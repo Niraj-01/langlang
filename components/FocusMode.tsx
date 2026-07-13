@@ -8,6 +8,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { Icon } from "./Icon";
 import { useApp } from "@/lib/store";
 import { SEED } from "@/lib/seed";
 import type { AppState, Lang } from "@/lib/types";
@@ -150,8 +151,8 @@ export function FocusMode() {
         <div className="flex flex-1 flex-col items-center justify-center gap-6 p-6 text-center">
           {check ? (
             <>
-              <div className="text-sm uppercase tracking-[0.3em] opacity-50">
-                🎧 what did they say?
+              <div className="flex items-center justify-center gap-2 text-sm uppercase tracking-[0.3em] opacity-50">
+                <Icon name="sound" size={16} /> what did they say?
               </div>
               <button
                 className="text-2xl underline decoration-dotted"

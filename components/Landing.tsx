@@ -21,6 +21,7 @@ import { useMounted } from "@/lib/useMounted";
 import { burst } from "@/lib/confetti";
 import { sfxAdd, sfxCorrect, sfxFlip } from "@/lib/audio";
 import { DeNoun, JaWord } from "@/components/Lex";
+import { Icon } from "@/components/Icon";
 import { AuthButton } from "@/components/AuthButton";
 
 const JA = jaSeed as VocabEntry[];
@@ -44,14 +45,12 @@ const GLYPH_SPOTS = [
 const COPY = {
   ja: {
     track: "JLPT N5 → N1",
-    flag: "🇯🇵",
     verb: "日本語",
     marqueeA: JA.slice(0, 14),
     marqueeB: JA.slice(14, 28),
   },
   de: {
     track: "Goethe A1 → C1",
-    flag: "🇩🇪",
     verb: "Deutsch",
     marqueeA: DE.slice(0, 14),
     marqueeB: DE.slice(14, 28),
@@ -285,43 +284,43 @@ function DemoCard({ lang }: { lang: Lang }) {
 const FEATURES = [
   {
     href: "/reels",
-    icon: "▶",
+    icon: "play" as const,
     title: "The Doomscroll",
     body: "Reviews, new words, quizzes, memes — one infinite snap feed scheduled by FSRS. No study menu. Just scroll.",
   },
   {
     href: "/path",
-    icon: "🗺",
+    icon: "map" as const,
     title: "The Path",
     body: "A winding unit roadmap with boss checkpoints, stars, and your streak — always in sync with the feed.",
   },
   {
     href: "/dojo",
-    icon: "⛩",
+    icon: "torii" as const,
     title: "Conversation Dojo",
     body: "Roleplay ordering ramen or renting a flat with an AI — every mistake gets filed straight back into your deck.",
   },
   {
     href: "/profile",
-    icon: "🎴",
+    icon: "layers" as const,
     title: "Quests, Packs & Pet",
     body: "Clear daily quests, rip open card packs with golden pulls, and keep a pet that judges your streak.",
   },
   {
     href: "/boss",
-    icon: "👹",
+    icon: "swords" as const,
     title: "Boss Battles",
     body: "Timed gauntlets over everything you've learned. Beat the boss, take the loot.",
   },
   {
     href: "/learn",
-    icon: "📖",
+    icon: "book" as const,
     title: "Learn Zone",
     body: "Calm reference wing: kana charts, 101 kanji with animated stroke order, phrasebook, drawing board.",
   },
   {
     href: "/progress",
-    icon: "📈",
+    icon: "chart" as const,
     title: "Progress & Wrapped",
     body: "Streak calendar, exam countdown forecasts, and a Weekly Wrapped of your grind.",
   },
@@ -353,6 +352,8 @@ export function Landing() {
   const level = levelFromXp(app.xp).level;
   // brand-new visitors go through onboarding; everyone else straight to the feed
   const startHref = !mounted || app.onboarding.done || app.xp > 0 ? "/reels" : "/onboarding";
+  // the reference dashboard follows the selected language
+  const dashHref = lang === "de" ? "/learn-de" : "/learn";
 
   return (
     <div
@@ -377,7 +378,7 @@ export function Landing() {
                   lang === l ? "bg-(--accent) text-black" : "opacity-60 hover:opacity-100"
                 }`}
               >
-                {l === "ja" ? "🇯🇵 JA" : "🇩🇪 DE"}
+                {l === "ja" ? "JA" : "DE"}
               </button>
             ))}
           </div>
@@ -406,7 +407,7 @@ export function Landing() {
 
         <div className="relative z-10 flex max-w-4xl flex-col items-center text-center">
           <div className="tag mb-6 border-2 border-line px-3 py-1.5">
-            {c.flag} {c.track} · free · local-first
+            {c.track} · free · local-first
           </div>
 
           <h1 className="font-display text-[16vw] leading-[0.9] sm:text-8xl md:text-9xl">
@@ -431,10 +432,10 @@ export function Landing() {
           </p>
 
           <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row">
-            <Link href={startHref} className="btn-primary px-8">
-              ▶ Start scrolling
+            <Link href={startHref} className="btn-primary inline-flex items-center gap-2 px-8">
+              <Icon name="play" size={16} /> Start scrolling
             </Link>
-            <Link href="/learn" className="btn-ghost px-8">
+            <Link href={dashHref} className="btn-ghost px-8">
               Open dashboard
             </Link>
           </div>
@@ -444,7 +445,7 @@ export function Landing() {
               href="/reels"
               className="hud-chip mt-8 gap-3 !px-4 !py-2 text-sm"
             >
-              <span className="animate-flame inline-block">🔥</span>
+              <Icon name="flame" size={16} className="animate-flame text-(--accent)" />
               <span className="font-display">{app.streak.current}-day streak</span>
               <span className="opacity-50">·</span>
               <span className="font-display">LV {level}</span>
@@ -517,23 +518,30 @@ export function Landing() {
         </p>
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {FEATURES.map((f, i) => (
+          {FEATURES.map((f, i) => {
+            // the Learn Zone card follows the selected language
+            const isLearn = f.href === "/learn";
+            const href = isLearn ? dashHref : f.href;
+            const body =
+              isLearn && lang === "de"
+                ? "Calm reference wing: the alphabet with sounds, der/die/das article trainer, vocab browser, phrasebook, grammar drills, translate."
+                : f.body;
+            return (
             <Link
               key={f.href}
-              href={f.href}
+              href={href}
               className="tile rv flex flex-col gap-3 p-6"
               style={{ "--rv-delay": `${(i % 3) * 0.1}s` } as React.CSSProperties}
             >
-              <span className="text-3xl" aria-hidden>
-                {f.icon}
-              </span>
+              <Icon name={f.icon} size={30} className="text-(--accent)" />
               <span className="font-display text-lg uppercase">{f.title}</span>
-              <span className="text-sm leading-relaxed opacity-60">{f.body}</span>
+              <span className="text-sm leading-relaxed opacity-60">{body}</span>
               <span className="mt-auto pt-2 font-display text-xs uppercase tracking-widest text-(--accent)">
                 open →
               </span>
             </Link>
-          ))}
+            );
+          })}
         </div>
       </section>
 

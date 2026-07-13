@@ -9,7 +9,8 @@ import type { Lang } from "@/lib/types";
 import { openPack, type PackReward } from "@/lib/store";
 import { sfxBonus, sfxAdd, sfxCorrect } from "@/lib/audio";
 import { burst } from "@/lib/confetti";
-import { cosmeticById } from "@/lib/quests";
+import { CosmeticGlyph } from "./CosmeticGlyph";
+import { Icon } from "./Icon";
 
 export function PackOpen({ lang, onClose }: { lang: Lang; onClose: () => void }) {
   const [phase, setPhase] = useState<"sealed" | "opening" | "revealed">("sealed");
@@ -53,7 +54,7 @@ export function PackOpen({ lang, onClose }: { lang: Lang; onClose: () => void })
             transition={phase === "opening" ? { duration: 0.6 } : { duration: 1.4, repeat: Infinity }}
             exit={{ scale: 1.4, opacity: 0 }}
           >
-            <div className="text-7xl">🎴</div>
+            <Icon name="layers" size={68} className="text-yellow-300" />
             <div className="font-display text-2xl text-yellow-300">CARD PACK</div>
             <div className="text-sm uppercase tracking-[0.3em] opacity-70">
               {phase === "opening" ? "ripping…" : "tap to open"}
@@ -99,7 +100,7 @@ export function PackOpen({ lang, onClose }: { lang: Lang; onClose: () => void })
                   transition={{ delay: (reward.cards.length + 1) * 0.12 }}
                   className="flex items-center gap-3 border-2 border-(--accent) bg-black/30 p-3"
                 >
-                  <span className="text-3xl">{cosmeticById(reward.cosmetic.id)?.emoji}</span>
+                  <CosmeticGlyph id={reward.cosmetic.id} size={36} />
                   <div>
                     <div className="font-display text-(--accent)">COSMETIC</div>
                     <div className="text-sm opacity-70">{reward.cosmetic.label} — for your pet</div>

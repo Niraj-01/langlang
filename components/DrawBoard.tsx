@@ -8,6 +8,7 @@ import { useEffect, useRef, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { speakJa, canSpeak } from "@/lib/speak";
 import { useMounted } from "@/lib/useMounted";
+import { Icon } from "./Icon";
 import { StrokeOrder } from "./StrokeOrder";
 
 export interface DrawItem {
@@ -144,7 +145,7 @@ export function DrawBoard({ items }: { items: DrawItem[] }) {
       <div className="mb-3 flex items-center justify-between">
         <div>
           <button onClick={() => speakJa(current.char)} className="romaji text-lg hover:text-accent">
-            {current.reading} {speech && <span className="text-sm">🔊</span>}
+            <span className="inline-flex items-center gap-1.5">{current.reading} {speech && <Icon name="sound" size={14} />}</span>
           </button>
           {current.meaning && <span className="ml-2 text-sm text-muted">· {current.meaning}</span>}
           {current.strokes && (
@@ -198,7 +199,7 @@ export function DrawBoard({ items }: { items: DrawItem[] }) {
             guide ? "border-accent2 text-accent2" : "border-line text-muted"
           }`}
         >
-          {guide ? "👁 Guide: ON (trace)" : "👁 Guide: OFF (test)"}
+          <span className="inline-flex items-center gap-1.5"><Icon name="eye" size={15} /> {guide ? "Guide: ON (trace)" : "Guide: OFF (test)"}</span>
         </button>
         <button onClick={clear} className="rounded-lg border border-line py-2.5 text-sm font-medium text-muted hover:text-ink">
           ↺ Clear
@@ -208,8 +209,8 @@ export function DrawBoard({ items }: { items: DrawItem[] }) {
         <button onClick={prev} className="rounded-lg border border-line py-2.5 text-sm text-muted hover:text-ink">
           ← Prev
         </button>
-        <button onClick={random} className="rounded-lg border border-line py-2.5 text-sm text-muted hover:text-ink">
-          🎲 Random
+        <button onClick={random} className="inline-flex items-center justify-center gap-1.5 rounded-lg border border-line py-2.5 text-sm text-muted hover:text-ink">
+          <Icon name="dice" size={15} /> Random
         </button>
         <button onClick={next} className="rounded-lg bg-accent py-2.5 text-sm font-semibold text-white">
           Next →

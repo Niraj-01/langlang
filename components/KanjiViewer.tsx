@@ -1,11 +1,13 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import type { Kanji } from "@/lib/types";
 import { speakJa } from "@/lib/speak";
 import { useApp, toggleFavorite } from "@/lib/store";
 import { Modal } from "./Modal";
+import { Icon } from "./Icon";
 
 const CATEGORIES: { id: string; label: string }[] = [
   { id: "all", label: "All" },
@@ -26,6 +28,15 @@ export function KanjiViewer({ data }: { data: Kanji[] }) {
   const [q, setQ] = useState("");
   const [sel, setSel] = useState<Kanji | null>(null);
   const favorites = useApp().favorites;
+  const params = useSearchParams();
+
+  // deep-link: /kanji?focus=木 opens that kanji (e.g. from the radicals page)
+  const focus = params.get("focus");
+  useEffect(() => {
+    if (!focus) return;
+    const k = data.find((x) => x.kanji === focus);
+    if (k) setSel(k);
+  }, [focus, data]);
 
   const list = useMemo(() => {
     const query = q.trim().toLowerCase();
@@ -111,7 +122,7 @@ export function KanjiViewer({ data }: { data: Kanji[] }) {
                     href={`/draw?char=${encodeURIComponent(sel.kanji)}`}
                     className="press inline-block rounded-lg bg-accent px-3 py-1.5 text-xs font-semibold text-white"
                   >
-                    ✎ Practice drawing
+                    <span className="inline-flex items-center gap-1.5"><Icon name="pencil" size={13} /> Practice drawing</span>
                   </Link>
                   <button
                     onClick={() => toggleFavorite(`kanji:${sel.kanji}`)}

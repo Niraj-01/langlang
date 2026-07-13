@@ -18,6 +18,8 @@ import {
 } from "@/lib/store";
 import { BADGES, DAILY_GOALS } from "@/lib/achievements";
 import { COSMETICS, petStageName, nextStageXp, petStage, PET_STAGES } from "@/lib/quests";
+import { Icon, type IconName } from "./Icon";
+import { CosmeticGlyph } from "./CosmeticGlyph";
 import { fireRoast, notifyPermission, requestNotify } from "@/lib/notify";
 import { Pet } from "./Pet";
 import { PackOpen } from "./PackOpen";
@@ -57,14 +59,14 @@ export function Profile() {
   return (
     <div className={`${accent} min-h-dvh bg-bg pb-10`}>
       <div className="flex items-center justify-between border-b-2 border-line p-3">
-        <Link href="/reels" className="hud-chip">
-          ← FEED
+        <Link href="/reels" className="hud-chip gap-1">
+          <Icon name="arrowLeft" size={14} /> FEED
         </Link>
         <div className="font-display text-sm uppercase tracking-[0.3em] text-(--accent)">
           Profile
         </div>
-        <Link href="/dojo" className="hud-chip">
-          ⛩ DOJO
+        <Link href="/dojo" className="hud-chip gap-1">
+          <Icon name="torii" size={14} /> DOJO
         </Link>
       </div>
 
@@ -87,7 +89,7 @@ export function Profile() {
               onChange={(e) => setNameDraft(e.target.value)}
               placeholder={state.pet.name}
             />
-            <button className="hud-chip">✓</button>
+            <button className="hud-chip" aria-label="Save name"><Icon name="check" size={14} /></button>
           </form>
         ) : (
           <button
@@ -97,7 +99,7 @@ export function Profile() {
               setEditing(true);
             }}
           >
-            {state.pet.name} <span className="text-xs opacity-40">✎</span>
+            {state.pet.name} <Icon name="pencil" size={13} className="inline opacity-40" />
           </button>
         )}
         <div className="text-xs uppercase tracking-[0.3em] text-(--accent)">
@@ -125,7 +127,15 @@ export function Profile() {
       {/* stat row */}
       <div className="stagger grid grid-cols-4 gap-2 px-4">
         <Stat label="level" value={level} />
-        <Stat label="streak" value={`${state.streak.current}🔥`} />
+        <Stat
+          label="streak"
+          value={
+            <span className="inline-flex items-center gap-1">
+              {state.streak.current}
+              <Icon name="flame" size={16} className="text-(--accent)" />
+            </span>
+          }
+        />
         <Stat label="due" value={due} />
         <Stat label="best combo" value={state.bestCombo} />
       </div>
@@ -154,9 +164,13 @@ export function Profile() {
         <div className="border-2 border-line bg-panel p-4">
           <div className="flex items-center justify-between">
             <div className="text-sm opacity-70">
-              {state.today.xp >= state.dailyGoal
-                ? "✓ goal smashed today"
-                : `${state.dailyGoal - state.today.xp} XP to go today`}
+              {state.today.xp >= state.dailyGoal ? (
+                <span className="inline-flex items-center gap-1 text-good">
+                  <Icon name="check" size={14} /> goal smashed today
+                </span>
+              ) : (
+                `${state.dailyGoal - state.today.xp} XP to go today`
+              )}
             </div>
             <div className="flex border-2 border-line">
               {DAILY_GOALS.map((g) => (
@@ -188,25 +202,27 @@ export function Profile() {
       {/* modes hub */}
       <Section title="Modes">
         <div className="stagger grid grid-cols-3 gap-2">
-          {[
-            { href: "/path", emoji: "🗺", label: "Path" },
-            { href: "/lesson?mode=review", emoji: "🩹", label: "Practice" },
-            { href: "/mistakes", emoji: "📕", label: "Mistakes" },
-            { href: "/saved", emoji: "❤️", label: "Saved" },
-            { href: "/dojo", emoji: "⛩", label: "Dojo" },
-            { href: "/boss", emoji: "⚔️", label: "Bosses" },
-            { href: "/mine", emoji: "⛏", label: "Mine" },
-            { href: "/focus", emoji: "🌀", label: "Focus" },
-            { href: "/progress", emoji: "📈", label: "Progress" },
-            { href: "/wrapped", emoji: "🎁", label: "Wrapped" },
-            { href: "/learn", emoji: "📖", label: "Learn JP" },
-          ].map((m) => (
+          {([
+            { href: "/path", icon: "map", label: "Path" },
+            { href: "/lesson?mode=review", icon: "repeat", label: "Practice" },
+            { href: "/mistakes", icon: "bookAlert", label: "Mistakes" },
+            { href: "/saved", icon: "heart", label: "Saved" },
+            { href: "/dojo", icon: "torii", label: "Dojo" },
+            { href: "/boss", icon: "swords", label: "Bosses" },
+            { href: "/mine", icon: "pickaxe", label: "Mine" },
+            { href: "/focus", icon: "focus", label: "Focus" },
+            { href: "/progress", icon: "chart", label: "Progress" },
+            { href: "/league", icon: "trophy", label: "League" },
+            { href: "/wrapped", icon: "gift", label: "Wrapped" },
+            { href: "/learn", icon: "book", label: "Learn JP" },
+            { href: "/learn-de", icon: "book", label: "Learn DE" },
+          ] as { href: string; icon: IconName; label: string }[]).map((m) => (
             <Link
               key={m.href}
               href={m.href}
-              className="tile group flex flex-col items-center gap-1 !border-2 p-3"
+              className="tile group flex flex-col items-center gap-1.5 !border-2 p-3"
             >
-              <span className="text-2xl transition-transform group-hover:scale-125">{m.emoji}</span>
+              <Icon name={m.icon} size={22} className="text-(--accent) transition-transform group-hover:scale-125" />
               <span className="text-[10px] uppercase tracking-widest opacity-60">
                 {m.label}
               </span>
@@ -219,7 +235,9 @@ export function Profile() {
       <Section title="Card Packs">
         <div className="flex items-center justify-between border-2 border-line bg-panel p-4">
           <div>
-            <div className="font-display text-3xl">{state.packs} 🎴</div>
+            <div className="flex items-center gap-2 font-display text-3xl">
+              {state.packs} <Icon name="layers" size={26} className="text-yellow-300" />
+            </div>
             <div className="text-xs uppercase tracking-widest opacity-50">
               earn packs by clearing quests
             </div>
@@ -244,8 +262,8 @@ export function Profile() {
               className={`border-2 p-3 ${q.done ? "border-good bg-good/10" : "border-line bg-panel"}`}
             >
               <div className="flex justify-between text-sm">
-                <span className={q.done ? "text-good" : ""}>
-                  {q.done ? "✓ " : ""}
+                <span className={`inline-flex items-center gap-1 ${q.done ? "text-good" : ""}`}>
+                  {q.done && <Icon name="check" size={13} />}
                   {q.label}
                 </span>
                 <span className="opacity-60">
@@ -279,7 +297,7 @@ export function Profile() {
                   got ? "border-(--accent) bg-panel" : "border-line bg-black/20 opacity-35 grayscale"
                 }`}
               >
-                <span className="text-2xl">{b.emoji}</span>
+                <Icon name={b.icon} size={22} className={got ? "text-(--accent)" : ""} />
                 <span className="text-[8px] uppercase leading-tight tracking-wide opacity-70">
                   {b.label}
                 </span>
@@ -308,7 +326,7 @@ export function Profile() {
                   onClick={() => toggleCosmetic(c.id)}
                   className={`flex flex-col items-center gap-1 border-4 p-3 ${on ? "border-(--accent)" : "border-line bg-panel"}`}
                 >
-                  <span className="text-3xl">{c.emoji}</span>
+                  <CosmeticGlyph id={c.id} size={40} />
                   <span className="text-[10px] uppercase tracking-widest opacity-60">
                     {on ? "worn" : c.label}
                   </span>
@@ -320,7 +338,7 @@ export function Profile() {
       </Section>
 
       {/* menace mode */}
-      <Section title="Menace Mode 😈">
+      <Section title="Menace Mode">
         <div className="border-2 border-line bg-panel p-4">
           <div className="flex items-center justify-between">
             <div className="pr-3 text-sm opacity-70">
@@ -370,7 +388,7 @@ function Section({ title, children }: { title: string; children: React.ReactNode
   );
 }
 
-function Stat({ label, value }: { label: string; value: number | string }) {
+function Stat({ label, value }: { label: string; value: React.ReactNode }) {
   return (
     <div className="border-2 border-line bg-black/30 p-2 text-center transition-colors hover:border-(--accent)">
       <div className="font-display text-2xl">{value}</div>

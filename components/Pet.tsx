@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import type { PetMood } from "@/lib/types";
 import { petStage } from "@/lib/quests";
 import { cosmeticById } from "@/lib/quests";
+import { CosmeticGlyph } from "./CosmeticGlyph";
 
 const BODY_BY_STAGE = ["#c9c4b6", "#7fd6c2", "#8ad67f", "#ff9e5c", "#c98bff"];
 const GLOW_BY_STAGE = ["transparent", "transparent", "transparent", "#ff9e5c88", "#c98bffcc"];
@@ -103,38 +104,35 @@ export function Pet({
           {/* mouth */}
           <path d={mouthPath} fill="none" stroke="#111" strokeWidth="3" strokeLinecap="round" />
 
-          {/* sparkles at top stages */}
+          {/* sparkle at top stages */}
           {stage >= 3 && (
-            <text x="80" y="26" fontSize="12" className="animate-pulse">
-              ✦
-            </text>
+            <path
+              d="M82 20v10M77 25h10M84 12l1.5 3 3 1.5-3 1.5L84 22l-1.5-3-3-1.5 3-1.5z"
+              fill="#fff"
+              stroke="none"
+              className="animate-pulse"
+            />
           )}
         </svg>
       </motion.div>
 
-      {/* cosmetics as emoji overlays */}
+      {/* cosmetics as SVG overlays */}
       {neck && (
-        <span
-          className="absolute left-1/2 -translate-x-1/2"
-          style={{ bottom: size * 0.16, fontSize: size * 0.24 }}
-        >
-          {neck.emoji}
+        <span className="absolute left-1/2 -translate-x-1/2" style={{ bottom: size * 0.12 }}>
+          <CosmeticGlyph id={neck.id} size={size * 0.5} />
         </span>
       )}
       {face && (
-        <span
-          className="absolute left-1/2 -translate-x-1/2"
-          style={{ top: size * 0.4, fontSize: size * 0.26 }}
-        >
-          {face.emoji}
+        <span className="absolute left-1/2 -translate-x-1/2" style={{ top: size * 0.34 }}>
+          <CosmeticGlyph id={face.id} size={size * 0.5} />
         </span>
       )}
       {head && (
         <span
           className="absolute left-1/2 -translate-x-1/2"
-          style={{ top: isEgg ? size * 0.06 : -size * 0.04, fontSize: size * 0.3 }}
+          style={{ top: isEgg ? size * 0.02 : -size * 0.12 }}
         >
-          {head.emoji}
+          <CosmeticGlyph id={head.id} size={size * 0.55} />
         </span>
       )}
     </div>

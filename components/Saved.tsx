@@ -7,6 +7,7 @@ import kanjiData from "@/data/kanji.json";
 import phrasesData from "@/data/phrases.json";
 import type { Kanji, Phrase } from "@/lib/types";
 import { useApp, toggleFavorite } from "@/lib/store";
+import { Icon } from "./Icon";
 import { useMounted } from "@/lib/useMounted";
 import { speakJa } from "@/lib/speak";
 
@@ -30,7 +31,7 @@ export function Saved() {
   if (kanji.length === 0 && phrases.length === 0) {
     return (
       <div className="rise flex flex-col items-center gap-4 px-4 py-16 text-center">
-        <div className="text-6xl">♡</div>
+        <Icon name="heartOff" size={52} className="text-muted" />
         <p className="max-w-xs text-sm text-muted">
           Nothing saved yet. Tap the heart on any kanji or phrase and it&apos;ll wait
           for you here.

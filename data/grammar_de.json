@@ -1,0 +1,17 @@
+[
+{"lang":"de","prompt":"＿ Mann ist groß.","options":["der","die","das"],"answer":0,"note":"Mann is masculine → der.","translation":"The man is tall."},
+{"lang":"de","prompt":"＿ Frau heißt Anna.","options":["der","die","das"],"answer":1,"note":"Frau is feminine → die.","translation":"The woman is called Anna."},
+{"lang":"de","prompt":"＿ Kind spielt.","options":["der","die","das"],"answer":2,"note":"Kind is neuter → das (all -chen/-lein and most young beings).","translation":"The child is playing."},
+{"lang":"de","prompt":"＿ Wohnung ist klein.","options":["der","die","das"],"answer":1,"note":"Nouns ending in -ung are always feminine → die.","translation":"The apartment is small."},
+{"lang":"de","prompt":"＿ Auto ist neu.","options":["der","die","das"],"answer":2,"note":"Auto is neuter → das.","translation":"The car is new."},
+{"lang":"de","prompt":"＿ Mädchen lernt Deutsch.","options":["der","die","das"],"answer":2,"note":"-chen diminutives are always neuter → das, even 'girl'.","translation":"The girl is learning German."},
+{"lang":"de","prompt":"＿ Freiheit ist wichtig.","options":["der","die","das"],"answer":1,"note":"-heit/-keit nouns are always feminine → die.","translation":"Freedom is important."},
+{"lang":"de","prompt":"＿ Apfel ist rot.","options":["der","die","das"],"answer":0,"note":"Apfel is masculine → der.","translation":"The apple is red."},
+{"lang":"de","prompt":"Ich sehe ＿ Mann.","options":["der","den","dem"],"answer":1,"note":"Masculine accusative (direct object) → den.","translation":"I see the man."},
+{"lang":"de","prompt":"Ich gebe ＿ Frau das Buch.","options":["die","der","den"],"answer":1,"note":"Feminine dative (indirect object) → der.","translation":"I give the book to the woman."},
+{"lang":"de","prompt":"Ich fahre mit ＿ Bus.","options":["der","dem","den"],"answer":1,"note":"mit takes the dative; masculine dative → dem.","translation":"I go by bus."},
+{"lang":"de","prompt":"Das Buch ist für ＿ Kind.","options":["das","dem","den"],"answer":0,"note":"für takes the accusative; neuter stays das.","translation":"The book is for the child."},
+{"lang":"de","prompt":"Ich wohne in ＿ Stadt.","options":["die","der","dem"],"answer":1,"note":"in + dative (location); feminine dative → der.","translation":"I live in the city."},
+{"lang":"de","prompt":"Ich habe ＿ Hund.","options":["ein","einen","einem"],"answer":1,"note":"Masculine accusative indefinite → einen.","translation":"I have a dog."},
+{"lang":"de","prompt":"Wir helfen ＿ Mann.","options":["der","den","dem"],"answer":2,"note":"helfen always takes the dative; masculine dative → dem.","translation":"We help the man."}
+]

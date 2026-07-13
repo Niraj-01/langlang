@@ -6,6 +6,7 @@
 
 import type { AppState } from "@/lib/types";
 import { nextMilestone, streakWeek, STREAK_MILESTONES } from "@/lib/path";
+import { Icon } from "./Icon";
 
 export function StreakPanel({ state }: { state: AppState }) {
   const s = state.streak;
@@ -18,7 +19,7 @@ export function StreakPanel({ state }: { state: AppState }) {
   return (
     <div className="border-4 border-line bg-panel p-4" style={{ boxShadow: "6px 6px 0 rgba(0,0,0,.55)" }}>
       <div className="flex items-center gap-4">
-        <div className={`text-6xl ${alive ? "animate-flame" : "opacity-30 grayscale"}`}>🔥</div>
+        <Icon name="flame" size={56} className={alive ? "animate-flame text-(--accent)" : "opacity-30"} />
         <div className="flex-1">
           <div className="font-display text-4xl leading-none">
             {s.current}
@@ -27,7 +28,7 @@ export function StreakPanel({ state }: { state: AppState }) {
             </span>
           </div>
           <div className="mt-1 text-[11px] uppercase tracking-widest opacity-50">
-            longest {s.longest} · ❄️ {s.freezes} freeze{s.freezes === 1 ? "" : "s"} banked
+            longest {s.longest} · {s.freezes} freeze{s.freezes === 1 ? "" : "s"} banked
           </div>
         </div>
       </div>
@@ -44,7 +45,7 @@ export function StreakPanel({ state }: { state: AppState }) {
               }`}
               title={d.date}
             >
-              {d.active ? "🔥" : i === 6 ? "·" : "—"}
+              {d.active ? <Icon name="flame" size={16} className="text-(--accent)" /> : i === 6 ? "·" : "—"}
             </div>
             <div className={`text-[9px] uppercase ${i === 6 ? "text-(--accent)" : "opacity-40"}`}>
               {i === 6 ? "today" : d.label}
@@ -66,7 +67,7 @@ export function StreakPanel({ state }: { state: AppState }) {
         </div>
         <div className="mt-1 text-[10px] uppercase tracking-widest opacity-40">
           {next - s.current} day{next - s.current === 1 ? "" : "s"} to the {next}-day flame
-          {s.freezes === 0 && " · beat a boss to bank a streak freeze ❄️"}
+          {s.freezes === 0 && " · beat a boss to bank a streak freeze"}
         </div>
       </div>
     </div>

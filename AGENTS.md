@@ -70,6 +70,53 @@ words, quizzes) is a card in one infinite vertical snap feed ("the Doomscroll").
   a wrong answer — `LessonWord` carries `tip`/`mnemonic`, threaded from the
   unit seed, from card fields (review mode), or looked up in SEED by word
   (mistake mode). Max 2 sentences per tip (hard rule).
+- **Phase 8 (done):** depth + breadth upgrade.
+  - *More levels:* `data/jlpt_n4.json` (49) + `data/goethe_a2.json` (48) are
+    APPENDED onto the seed in `lib/seed.ts` (now a `LEVELS` structure that
+    `flatMap`s into `SEED`), so the Path/feed flow N5→N4 and A1→A2 with no
+    pointer drift. `seedLevelLabel(lang, i)` gives the per-index level tag on
+    new-word cards.
+  - *Grammar cards:* new `grammar` FeedItem + `data/grammar_{ja,de}.json`
+    (ja particle drills, de der/die/das + case drills). `GrammarCard` is a
+    fill-the-＿ card with a why-note; built in `lib/feed.ts` (`buildGrammar`).
+  - *Listening cards:* `listen` FeedItem — "which word did you hear?" MC over
+    deck cards, audio auto-plays (`ListenCard`, `buildListen`).
+  - *Radicals:* `data/radicals.json` (derived from kanji `components`),
+    `/radicals` page + `RadicalsViewer`, linked from Kanji; radical→kanji jump
+    uses `/kanji?focus=木` (KanjiViewer reads it via `useSearchParams`, so the
+    kanji page is now `Suspense`-wrapped).
+  - *Pitch accent:* `pitch?` (Tokyo drop position, 0=heiban) on ja entries —
+    a CONSERVATIVE ~32-word confident subset only. `PitchAccent` renders the
+    mora contour on ja new-word cards.
+  - *Better TTS:* `pickVoice` in `lib/audio.ts` now scores voices
+    (Google/Neural/named-native up, compact/eSpeak down); `lib/speak.ts`
+    delegates to it. No recorded native audio assets (browser TTS only).
+  - *Heatmap:* `Heatmap` (12-week contribution grid from `state.log`) on
+    `/progress`.
+  - *Weekly League:* `/league` + `League` + `lib/league.ts` — Duolingo-style
+    XP tiers from real weekly XP (honest solo ladder; no fake rivals). Real
+    cross-user standings need the OPTIONAL, NOT-APPLIED
+    `supabase/migrations/0002_leaderboard.sql` view (RLS stays owner-only;
+    `fetchLeaderboard()` returns null → solo fallback until provisioned).
+
+- **Phase 9 (done):** professional visual pass + content depth.
+  - *De-emoji:* every decorative emoji across the app is replaced by a
+    monochrome line-icon system — `components/Icon.tsx` (`<Icon name=… />`,
+    currentColor stroke SVGs). Pet cosmetics are SVG line-art
+    (`components/CosmeticGlyph.tsx`); Path unit nodes show numbers (`label`)
+    with a lock/swords/flag icon; league tiers use medal/diamond icons +
+    `color`; achievements carry an `icon: IconName`; scenario emoji/avatars
+    dropped in favour of a `chat`/`swords` icon. Language chips are text
+    (JA/DE), not flags. Monochrome typographic marks (★ ♥ ✓ ⇄ ✦) are kept as
+    intentional typography. Wrapped slides use `icon` (the PNG export just
+    drops the glyph). If you add UI, use `<Icon>` — do not add emoji.
+  - *Grammar in lessons:* `buildLesson(words, pool, grammar?)` folds up to 2
+    fill-the-blank grammar drills into each lesson; `GrammarEx` in
+    `components/Lesson.tsx` shows the "why" note via the shared `CheckBar`
+    coach on a miss. `onChecked(ok, word?)` — grammar passes no word, so it
+    never mints a vocab mistake.
+  - *More content:* N4 → 68, A2 → 68 (append-only); confident Tokyo
+    pitch-accent subset grown to ~57 N5 words.
 
 ## Architecture
 

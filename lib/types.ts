@@ -31,6 +31,7 @@ export interface Card {
   pos?: string;
   tip?: string; // usage / grammar note (max 2 sentences)
   mnemonic?: string; // memory hook (max 2 sentences)
+  pitch?: number; // ja Tokyo pitch-accent: mora after which pitch drops (0 = heiban)
   isGolden: boolean;
   createdAt: number;
   fsrs: FsrsState;
@@ -48,6 +49,7 @@ export interface VocabEntry {
   pos?: string;
   tip?: string;
   mnemonic?: string;
+  pitch?: number; // ja Tokyo pitch-accent drop position (0 = heiban)
 }
 
 export interface StreakState {
@@ -117,6 +119,8 @@ export interface MistakeEntry {
   word: string;
   meaning: string;
   reading?: string;
+  tip?: string; // coaching note captured at miss time, so rehab can teach
+  mnemonic?: string;
   ts: number;
 }
 
@@ -154,9 +158,23 @@ export type FeedItem =
   | { kind: "review"; id: string; cardId: string }
   | { kind: "new"; id: string; entryIndex: number }
   | { kind: "quiz"; id: string; cardId: string; options: string[]; answer: number }
+  | { kind: "grammar"; id: string; item: GrammarItem }
+  | { kind: "listen"; id: string; cardId: string; options: string[]; answer: number }
   | { kind: "speak"; id: string; target: SpeakTarget }
   | { kind: "meme"; id: string; word: string; reading?: string; meaning: string }
   | { kind: "status"; id: string };
+
+// A fill-in-the-blank grammar drill (particle for ja, article/case for de).
+// `prompt` marks the blank with the full-width underscore ＿.
+export interface GrammarItem {
+  lang: Lang;
+  prompt: string;
+  promptReading?: string; // kana version (ja)
+  options: string[];
+  answer: number;
+  note: string; // why — max 2 sentences
+  translation: string;
+}
 
 export interface SpeakTarget {
   sentence: string;
@@ -190,6 +208,14 @@ export interface Kanji {
   examples: Example[];
   components?: string; // visual parts, e.g. "亻 person + 木 tree"
   mnemonic?: string; // WaniKani-style story (max 2 sentences)
+}
+
+export interface Radical {
+  radical: string;
+  meaning: string;
+  mnemonic: string;
+  forms: string[]; // alternate written forms, e.g. 亻 for 人
+  kanji: string[]; // kanji in our set built from this radical
 }
 
 export interface Phrase {

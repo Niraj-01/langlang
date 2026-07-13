@@ -1,7 +1,7 @@
 // Lesson builder — Duolingo-style exercise sessions over a small word set.
 // Pure functions: the Lesson component owns hearts/XP/state.
 
-import type { Lang, VocabEntry } from "./types";
+import type { GrammarItem, Lang, VocabEntry } from "./types";
 
 export interface LessonWord {
   word: string;
@@ -16,6 +16,7 @@ export type Exercise =
   | { kind: "mc"; word: LessonWord; options: string[]; answer: number } // word → pick meaning
   | { kind: "rmc"; word: LessonWord; options: LessonWord[]; answer: number } // meaning → pick word
   | { kind: "type"; word: LessonWord } // word → type the meaning
+  | { kind: "grammar"; item: GrammarItem } // fill-the-blank particle/article drill
   | { kind: "match"; pairs: LessonWord[] }; // tap word ↔ meaning pairs
 
 function shuffle<T>(arr: T[]): T[] {
@@ -31,8 +32,13 @@ function distractors<T>(pool: T[], not: (t: T) => boolean, n: number): T[] {
   return shuffle(pool.filter(not)).slice(0, n);
 }
 
-/** ~1 exercise per word plus a match round per 4 words, shuffled but ending on match. */
-export function buildLesson(words: LessonWord[], pool: LessonWord[]): Exercise[] {
+/** ~1 exercise per word, up to 2 grammar drills mixed in, plus a match round
+ *  per 4 words. Shuffled but always ending on a match. */
+export function buildLesson(
+  words: LessonWord[],
+  pool: LessonWord[],
+  grammar: GrammarItem[] = []
+): Exercise[] {
   const kinds: ("mc" | "rmc" | "type")[] = ["mc", "rmc", "type"];
   const perWord: Exercise[] = shuffle(words).map((w, i) => {
     const kind = kinds[i % kinds.length];
@@ -48,7 +54,12 @@ export function buildLesson(words: LessonWord[], pool: LessonWord[]): Exercise[]
     return { kind: "rmc", word: w, options: opts, answer: opts.findIndex((o) => o.word === w.word) };
   });
 
-  const out = shuffle(perWord);
+  // fold in a couple of grammar drills so lessons teach patterns, not just words
+  const grammarEx: Exercise[] = shuffle(grammar)
+    .slice(0, Math.min(2, grammar.length))
+    .map((item) => ({ kind: "grammar", item }));
+
+  const out = shuffle([...perWord, ...grammarEx]);
   for (let i = 0; i + 4 <= words.length; i += 4) {
     out.push({ kind: "match", pairs: shuffle(words).slice(i, i + 4) });
   }

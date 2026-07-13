@@ -4,9 +4,22 @@
 //  - after a fail, the next card must be an easy win
 //  - occasional status card mid-scroll
 
-import type { AppState, FeedItem, Lang } from "./types";
+import type { AppState, FeedItem, GrammarItem, Lang } from "./types";
 import { SEED } from "./seed";
 import { dueCards, pickSpeakTarget } from "./store";
+import grammarJa from "@/data/grammar_ja.json";
+import grammarDe from "@/data/grammar_de.json";
+
+const GRAMMAR: Record<Lang, GrammarItem[]> = {
+  ja: grammarJa as GrammarItem[],
+  de: grammarDe as GrammarItem[],
+};
+
+function buildGrammar(lang: Lang): FeedItem {
+  const pool = GRAMMAR[lang];
+  const item = pool[Math.floor(Math.random() * pool.length)];
+  return { kind: "grammar", id: uid(), item };
+}
 
 let counter = 0;
 const uid = () => `f${++counter}`;
@@ -25,6 +38,25 @@ function buildMeme(state: AppState, lang: Lang): FeedItem | null {
   if (pool.length === 0) return null;
   const c = pool[Math.floor(Math.random() * pool.length)];
   return { kind: "meme", id: uid(), word: c.word, reading: c.reading, meaning: c.meaning };
+}
+
+// "Which word did you hear?" — trains the ear without keyboard friction.
+function buildListen(state: AppState, lang: Lang): FeedItem | null {
+  const pool = state.cards.filter((c) => c.lang === lang && c.fsrs.reps >= 1);
+  if (pool.length === 0) return null;
+  const card = pool[Math.floor(Math.random() * pool.length)];
+  const distractors = shuffle(
+    SEED[lang].filter((e) => e.word !== card.word).map((e) => e.word)
+  ).slice(0, 3);
+  if (distractors.length < 3) return null;
+  const options = shuffle([card.word, ...distractors]);
+  return {
+    kind: "listen",
+    id: uid(),
+    cardId: card.id,
+    options,
+    answer: options.indexOf(card.word),
+  };
 }
 
 function buildQuiz(state: AppState, lang: Lang): FeedItem | null {
@@ -77,17 +109,22 @@ export function nextFeedItem(state: AppState, ctx: FeedContext): FeedItem {
 
   const canReview = due.length > 0 && reviewRun < 2 && !ctx.lastWasFail;
   const quiz = buildQuiz(state, lang);
+  const canGrammar =
+    GRAMMAR[lang].length > 0 && !ctx.lastWasFail && !recent.includes("grammar");
+  const listen = !ctx.lastWasFail && !recent.includes("listen") ? buildListen(state, lang) : null;
   const speakTarget =
     !ctx.lastWasFail && !recent.includes("speak") ? pickSpeakTarget(state, lang) : null;
   const meme = !recent.includes("meme") ? buildMeme(state, lang) : null;
 
-  // Weighted pick: reviews 38 / new 18 / quiz 18 / speak 14 / meme 7 / status 5
+  // Weighted pick: reviews 32 / new 15 / quiz 14 / grammar 11 / listen 11 / speak 11 / meme 5 / status 4
   const roll = Math.random() * 100;
-  if (canReview && roll < 38) return reviewItem();
-  if (hasNew && roll < 56) return newItem();
-  if (quiz && !ctx.lastWasFail && roll < 74) return quiz;
-  if (speakTarget && roll < 88) return { kind: "speak", id: uid(), target: speakTarget };
-  if (meme && roll < 95) return meme;
+  if (canReview && roll < 32) return reviewItem();
+  if (hasNew && roll < 47) return newItem();
+  if (quiz && !ctx.lastWasFail && roll < 61) return quiz;
+  if (canGrammar && roll < 72) return buildGrammar(lang);
+  if (listen && roll < 83) return listen;
+  if (speakTarget && roll < 94) return { kind: "speak", id: uid(), target: speakTarget };
+  if (meme && roll < 98) return meme;
 
   // fallbacks, easiest wins first (also the post-fail path)
   if (hasNew) return newItem();

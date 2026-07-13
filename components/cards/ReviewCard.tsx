@@ -10,6 +10,7 @@ import { rateCard } from "@/lib/store";
 import { speak, sfxFlip, sfxCorrect, sfxWrong } from "@/lib/audio";
 import { burst } from "@/lib/confetti";
 import { JaWord, DeNoun, DePlural, Example } from "@/components/Lex";
+import { Icon } from "@/components/Icon";
 import { XpPop } from "./XpPop";
 
 export function ReviewCard({
@@ -71,21 +72,24 @@ export function ReviewCard({
         onClick={flip}
       >
         <div className="tag">
-          REVIEW {card.isGolden && <span className="text-yellow-300">★ GOLDEN</span>}
+          REVIEW {card.isGolden && <span className="inline-flex items-center gap-1 text-yellow-300"><Icon name="star" size={13} /> GOLDEN</span>}
         </div>
 
         <div className="flex flex-1 flex-col items-center justify-center text-center">
           {card.lang === "ja" ? (
             <JaWord
               word={card.word}
-              reading={revealed ? card.reading : undefined}
-              furigana={furigana}
-              className="text-7xl font-bold"
+              furigana={false}
+              className="glyph-float block text-8xl font-bold leading-none"
             />
           ) : (
             <div className="text-6xl font-bold">
               {revealed ? <DeNoun entry={card} /> : card.word}
             </div>
+          )}
+          {/* reading revealed on flip, as a blue line (design), honoring furigana */}
+          {card.lang === "ja" && revealed && furigana && card.reading && card.reading !== card.word && (
+            <div className="mt-3.5 text-lg tracking-[0.2em] text-[#4aa8ff]">{card.reading}</div>
           )}
 
           {!revealed && (
@@ -104,8 +108,9 @@ export function ReviewCard({
               {card.lang === "de" && <DePlural entry={card} />}
               <Example entry={card} lang={card.lang} furigana={furigana} />
               {card.tip && (
-                <div className="mx-auto mt-3 max-w-[32ch] text-sm leading-snug opacity-60">
-                  💡 {card.tip}
+                <div className="mx-auto mt-3 flex max-w-[32ch] items-start justify-center gap-2 text-sm leading-snug opacity-60">
+                  <Icon name="bulb" size={14} className="mt-0.5 shrink-0" />
+                  <span>{card.tip}</span>
                 </div>
               )}
             </motion.div>
@@ -119,13 +124,13 @@ export function ReviewCard({
             className="grid grid-cols-3 gap-3"
           >
             <button
-              className="btn-grade border-bad text-bad"
+              className="btn-grade inline-flex items-center justify-center gap-1.5 border-bad text-bad"
               onClick={(e) => {
                 e.stopPropagation();
                 grade(1, e);
               }}
             >
-              AGAIN
+              <Icon name="repeat" size={14} /> AGAIN
             </button>
             <button
               className="btn-grade border-(--accent) text-(--accent)"
@@ -137,13 +142,13 @@ export function ReviewCard({
               GOOD
             </button>
             <button
-              className="btn-grade border-good text-good"
+              className="btn-grade inline-flex items-center justify-center gap-1.5 border-good text-good"
               onClick={(e) => {
                 e.stopPropagation();
                 grade(4, e);
               }}
             >
-              EASY
+              <Icon name="check" size={14} /> EASY
             </button>
           </motion.div>
         )}

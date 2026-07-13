@@ -12,6 +12,7 @@ import { useApp } from "@/lib/store";
 import { useMounted } from "@/lib/useMounted";
 import { buildPath, UNIT_SIZE, type PathNode } from "@/lib/path";
 import { StreakPanel } from "./StreakPanel";
+import { Icon } from "./Icon";
 
 export function Path() {
   const state = useApp();
@@ -36,8 +37,8 @@ export function Path() {
         <div className="font-display text-sm uppercase tracking-[0.3em] text-(--accent)">
           The Path
         </div>
-        <div className="hud-chip">
-          <span className="animate-flame inline-block">🔥</span>
+        <div className="hud-chip gap-1">
+          <Icon name="flame" size={15} className="animate-flame text-(--accent)" />
           <span className="font-display">{state.streak.current}</span>
         </div>
       </div>
@@ -72,8 +73,8 @@ export function Path() {
                 onSelect={() => n.state !== "locked" && setSel(n)}
               />
             ))}
-            <div className="pt-2 text-2xl opacity-30" aria-hidden>
-              🏁
+            <div className="pt-2 opacity-30" aria-hidden>
+              <Icon name="flag" size={26} />
             </div>
           </div>
         </div>
@@ -99,7 +100,9 @@ export function Path() {
               onClick={(e) => e.stopPropagation()}
             >
               <div className="flex items-center gap-3">
-                <span className="text-4xl">{sel.emoji}</span>
+                <span className="flex h-12 w-12 items-center justify-center border-2 border-(--accent) font-display text-2xl text-(--accent)">
+                  {sel.kind === "boss" ? <Icon name="swords" size={26} /> : sel.label}
+                </span>
                 <div className="flex-1">
                   <div className="font-display text-xl uppercase">{sel.title}</div>
                   <div className="text-[10px] uppercase tracking-widest opacity-50">
@@ -110,8 +113,8 @@ export function Path() {
                         : `${sel.words?.length ?? UNIT_SIZE} new words ahead`}
                   </div>
                 </div>
-                <button className="hud-chip" onClick={() => setSel(null)}>
-                  ✕
+                <button className="hud-chip" onClick={() => setSel(null)} aria-label="Close">
+                  <Icon name="x" size={14} />
                 </button>
               </div>
 
@@ -133,22 +136,22 @@ export function Path() {
               )}
 
               {sel.kind === "boss" ? (
-                <Link href="/boss" className="btn-primary mt-4 block w-full text-center">
-                  {sel.state === "done" ? "⚔ REMATCH" : "⚔ FIGHT THE BOSS"}
+                <Link href="/boss" className="btn-primary mt-4 flex w-full items-center justify-center gap-2 text-center">
+                  <Icon name="swords" size={16} /> {sel.state === "done" ? "REMATCH" : "FIGHT THE BOSS"}
                 </Link>
               ) : (
                 <div className="mt-4 grid grid-cols-1 gap-2">
                   <Link
                     href={`/lesson?unit=${sel.unitIndex}`}
-                    className="btn-primary block w-full text-center"
+                    className="btn-primary flex w-full items-center justify-center gap-2 text-center"
                   >
-                    {sel.state === "done" ? "📖 REPLAY LESSON" : "📖 START LESSON"}
+                    <Icon name="book" size={16} /> {sel.state === "done" ? "REPLAY LESSON" : "START LESSON"}
                   </Link>
                   <Link
                     href="/reels"
-                    className="btn-ghost block w-full text-center !py-3 !text-xs"
+                    className="btn-ghost flex w-full items-center justify-center gap-2 text-center !py-3 !text-xs"
                   >
-                    ▶ or grind it in the feed
+                    <Icon name="play" size={13} /> or grind it in the feed
                   </Link>
                 </div>
               )}
@@ -213,12 +216,21 @@ function PathNodeButton({
             aria-hidden
           />
         )}
-        <span className={current ? "glyph-float" : ""} style={{ "--gf-t": "4s" } as React.CSSProperties}>
-          {locked && !boss ? "🔒" : node.emoji}
+        <span
+          className={`flex items-center justify-center font-display ${current ? "glyph-float" : ""}`}
+          style={{ "--gf-t": "4s" } as React.CSSProperties}
+        >
+          {locked && !boss ? (
+            <Icon name="lock" size={28} />
+          ) : boss ? (
+            <Icon name="swords" size={34} />
+          ) : (
+            node.label
+          )}
         </span>
         {done && (
-          <span className="absolute -right-2 -top-2 border-2 border-black bg-good px-1 font-display text-xs text-black">
-            ✓
+          <span className="absolute -right-2 -top-2 flex items-center border-2 border-black bg-good px-0.5 text-black">
+            <Icon name="check" size={13} strokeWidth={3} />
           </span>
         )}
       </motion.button>

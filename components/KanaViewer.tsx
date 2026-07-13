@@ -8,6 +8,7 @@ import { useMemo, useState } from "react";
 import Link from "next/link";
 import type { Kana } from "@/lib/types";
 import { speakJa, canSpeak } from "@/lib/speak";
+import { Icon } from "./Icon";
 import { useMounted } from "@/lib/useMounted";
 import { Modal } from "./Modal";
 
@@ -136,7 +137,7 @@ export function KanaViewer({
                   className="jp mt-1 text-2xl hover:text-accent"
                   title="Hear it"
                 >
-                  {sel.example.word} {speech && <span className="text-base">🔊</span>}
+                  <span className="inline-flex items-center gap-1.5">{sel.example.word} {speech && <Icon name="sound" size={15} />}</span>
                 </button>
                 <div className="romaji text-sm">{sel.example.romaji}</div>
                 <div className="text-sm text-muted">{sel.example.meaning}</div>
@@ -147,16 +148,16 @@ export function KanaViewer({
               {speech && (
                 <button
                   onClick={() => speakJa(sel.char)}
-                  className="flex-1 rounded-lg border border-line bg-surface2 py-2.5 text-sm font-medium hover:border-accent"
+                  className="flex flex-1 items-center justify-center gap-1.5 rounded-lg border border-line bg-surface2 py-2.5 text-sm font-medium hover:border-accent"
                 >
-                  🔊 Hear it
+                  <Icon name="sound" size={15} /> Hear it
                 </button>
               )}
               <Link
                 href={`/draw?char=${encodeURIComponent(sel.char)}`}
-                className="flex-1 rounded-lg bg-accent py-2.5 text-center text-sm font-semibold text-white"
+                className="flex flex-1 items-center justify-center gap-1.5 rounded-lg bg-accent py-2.5 text-center text-sm font-semibold text-white"
               >
-                ✎ Practice drawing
+                <Icon name="pencil" size={15} /> Practice drawing
               </Link>
             </div>
           </div>

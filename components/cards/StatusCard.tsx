@@ -5,6 +5,7 @@
 import type { AppState } from "@/lib/types";
 import { dueCards, levelFromXp } from "@/lib/store";
 import { SEED_LABEL } from "@/lib/seed";
+import { Icon } from "@/components/Icon";
 
 export function StatusCard({ state }: { state: AppState }) {
   const due = dueCards(state, state.lang).length;
@@ -14,16 +15,19 @@ export function StatusCard({ state }: { state: AppState }) {
       ? Math.round((state.today.correct / state.today.reviews) * 100)
       : null;
   const flameSize =
-    state.streak.current >= 100 ? "text-9xl" : state.streak.current >= 30 ? "text-8xl" : state.streak.current >= 7 ? "text-7xl" : "text-6xl";
+    state.streak.current >= 100 ? 112 : state.streak.current >= 30 ? 96 : state.streak.current >= 7 ? 80 : 64;
 
   return (
     <div className="card-shell">
       <div className="card-panel items-center justify-center gap-6 text-center">
         <div className="tag self-stretch">STATUS CHECK</div>
 
-        <div className={`${flameSize} ${state.streak.current > 0 ? "animate-flame" : "grayscale opacity-40"}`}>
-          🔥
-        </div>
+        <Icon
+          name="flame"
+          size={flameSize}
+          strokeWidth={1.5}
+          className={state.streak.current > 0 ? "animate-flame text-(--accent)" : "opacity-40"}
+        />
         <div>
           <div className="font-display text-6xl text-(--accent)">
             {state.streak.current}
@@ -66,8 +70,8 @@ export function StatusCard({ state }: { state: AppState }) {
                   style={{ width: `${(q.progress / q.target) * 100}%` }}
                 />
               </div>
-              <span className="w-24 shrink-0 text-left text-[10px] uppercase tracking-wider opacity-60">
-                {q.done ? "✓ done" : q.label}
+              <span className="flex w-24 shrink-0 items-center gap-1 text-left text-[10px] uppercase tracking-wider opacity-60">
+                {q.done ? <><Icon name="check" size={11} /> done</> : q.label}
               </span>
             </div>
           ))}

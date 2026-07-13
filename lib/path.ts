@@ -11,18 +11,14 @@ import type { AppState, Lang, VocabEntry } from "@/lib/types";
 export const UNIT_SIZE = 8;
 const UNITS_PER_BOSS = 4;
 
-const UNIT_EMOJI: Record<Lang, string[]> = {
-  ja: ["🌱", "🍜", "🚉", "🗻", "🎎", "🌊", "🏮", "🦊", "🌸", "🎋", "⛩", "🎌", "🍡", "🏯"],
-  de: ["🌱", "🥨", "🚂", "🏰", "🍺", "⚽", "🌲", "🦁", "🎻", "🚲", "⛰", "🧀", "🥖", "🎭"],
-};
-
 export type PathNodeState = "done" | "current" | "locked";
 
 export interface PathNode {
   key: string;
   kind: "unit" | "boss";
   title: string;
-  emoji: string;
+  /** unit nodes show this label (the unit number); bosses render a swords icon */
+  label: string;
   state: PathNodeState;
   /** unit nodes */
   unitIndex?: number;
@@ -63,7 +59,7 @@ export function buildPath(s: AppState, lang: Lang): PathNode[] {
       key: `unit-${u}`,
       kind: "unit",
       title: `Unit ${u + 1}`,
-      emoji: UNIT_EMOJI[lang][u % UNIT_EMOJI[lang].length],
+      label: String(u + 1),
       state,
       unitIndex: u,
       words,
@@ -78,7 +74,7 @@ export function buildPath(s: AppState, lang: Lang): PathNode[] {
         key: b.id,
         kind: "boss",
         title: b.title,
-        emoji: b.boss?.avatar ?? "👹",
+        label: "",
         bossId: b.id,
         setting: b.setting,
         state: cleared ? "done" : state === "done" ? "current" : "locked",

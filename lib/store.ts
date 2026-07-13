@@ -249,6 +249,7 @@ export function entryToCard(lang: Lang, entry: VocabEntry): Card {
     pos: entry.pos,
     tip: entry.tip,
     mnemonic: entry.mnemonic,
+    pitch: entry.pitch,
     isGolden: Math.random() < 0.06, // rare golden pull
     createdAt: Date.now(),
     fsrs: newFsrsState(),
@@ -347,14 +348,23 @@ export function toggleFavorite(id: string) {
   emit();
 }
 
-/** Remember a wrong answer (deduped by word, newest first, capped). */
+/** Remember a wrong answer (deduped by word, newest first, capped). Fills in a
+ *  coaching tip from the seed when the caller didn't supply one, so mistake
+ *  rehab can still teach the "why". */
 export function logMistake(entry: Omit<MistakeEntry, "ts">) {
   const rest = state.mistakeLog.filter(
     (m) => !(m.lang === entry.lang && m.word === entry.word)
   );
+  const seed = SEED[entry.lang].find((e) => e.word === entry.word);
+  const enriched: MistakeEntry = {
+    ...entry,
+    tip: entry.tip ?? seed?.tip,
+    mnemonic: entry.mnemonic ?? seed?.mnemonic,
+    ts: Date.now(),
+  };
   state = {
     ...state,
-    mistakeLog: [{ ...entry, ts: Date.now() }, ...rest].slice(0, MISTAKE_CAP),
+    mistakeLog: [enriched, ...rest].slice(0, MISTAKE_CAP),
   };
   emit();
 }

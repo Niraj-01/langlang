@@ -15,6 +15,8 @@ import {
   logRange,
 } from "@/lib/store";
 import { EXAMS_BY_LANG, EXAM_LABEL, EXAM_VOCAB_TOTAL } from "@/lib/exams";
+import { Heatmap } from "./Heatmap";
+import { Icon } from "./Icon";
 import type { Exam } from "@/lib/types";
 
 function fmtDate(d: string): string {
@@ -51,8 +53,8 @@ export function Progress() {
         <div className="font-display text-sm uppercase tracking-[0.3em] text-(--accent)">
           Progress
         </div>
-        <Link href="/profile" className="hud-chip">
-          👤
+        <Link href="/profile" className="hud-chip" aria-label="Profile">
+          <Icon name="user" size={14} />
         </Link>
       </div>
 
@@ -116,8 +118,8 @@ export function Progress() {
             return (
               <div key={e}>
                 <div className="mb-1 flex justify-between text-sm">
-                  <span className={isTarget ? "text-(--accent)" : ""}>
-                    {isTarget ? "🎯 " : ""}
+                  <span className={`inline-flex items-center gap-1.5 ${isTarget ? "text-(--accent)" : ""}`}>
+                    {isTarget && <Icon name="target" size={13} />}
                     {EXAM_LABEL[e]}
                   </span>
                   <span className="opacity-60">
@@ -136,6 +138,16 @@ export function Progress() {
         </div>
         <div className="mt-2 text-[10px] uppercase tracking-widest opacity-40">
           mastered = FSRS stability ≥ 21 days · {active} words in your {lang === "ja" ? "Japanese" : "German"} deck
+        </div>
+      </div>
+
+      {/* activity heatmap — last 12 weeks */}
+      <div className="rise px-4 pt-6" style={{ "--rise-delay": "0.14s" } as React.CSSProperties}>
+        <div className="mb-2 font-display text-xs uppercase tracking-[0.3em] opacity-60">
+          Activity
+        </div>
+        <div className="border-2 border-line bg-panel p-3">
+          <Heatmap state={state} />
         </div>
       </div>
 
@@ -186,7 +198,9 @@ function Forecast({ state, lang }: { state: ReturnType<typeof useApp>; lang: "ja
         </div>
         {date && (
           <div className={`mt-1 text-sm ${onTrack ? "text-good" : "text-bad"}`}>
-            {onTrack ? "✓ on track for exam day" : "⚡ behind pace — pick it up"}
+            <span className="inline-flex items-center gap-1.5">
+              {onTrack ? <><Icon name="check" size={14} /> on track for exam day</> : <><Icon name="bolt" size={14} /> behind pace — pick it up</>}
+            </span>
           </div>
         )}
       </div>

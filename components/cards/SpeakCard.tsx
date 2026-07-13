@@ -13,6 +13,7 @@ import { speak as tts, sfxCorrect, sfxWrong } from "@/lib/audio";
 import { startRecognition, sttAvailable, type Recognizer } from "@/lib/speech";
 import { shadowScore, scoreGrade } from "@/lib/similarity";
 import { burst } from "@/lib/confetti";
+import { Icon } from "@/components/Icon";
 import { XpPop } from "./XpPop";
 
 export function SpeakCard({
@@ -164,7 +165,15 @@ export function SpeakCard({
             onPointerLeave={stopRec}
             onContextMenu={(e) => e.preventDefault()}
           >
-            {recording ? "● LISTENING — RELEASE WHEN DONE" : attempt > 0 ? "🎙 ONE MORE TRY" : "🎙 HOLD TO SPEAK"}
+            <span className="inline-flex items-center gap-2">
+              {recording ? (
+                "● LISTENING — RELEASE WHEN DONE"
+              ) : (
+                <>
+                  <Icon name="mic" size={16} /> {attempt > 0 ? "ONE MORE TRY" : "HOLD TO SPEAK"}
+                </>
+              )}
+            </span>
           </motion.button>
         )}
 

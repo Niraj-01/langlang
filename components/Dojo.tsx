@@ -6,6 +6,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import { Icon } from "./Icon";
 import { motion } from "framer-motion";
 import { scenariosFor, type Scenario } from "@/data/scenarios";
 import type { DojoReport } from "@/app/api/dojo/report/route";
@@ -179,7 +180,9 @@ export function Dojo() {
                 onClick={() => start(s)}
               >
                 <div className="flex items-center gap-3">
-                  <span className="text-4xl transition-transform duration-200 group-hover:scale-125 group-hover:-rotate-6">{s.emoji}</span>
+                  <span className="text-(--accent) transition-transform duration-200 group-hover:scale-125 group-hover:-rotate-6">
+                    <Icon name="chat" size={34} />
+                  </span>
                   <div>
                     <div className="font-display text-lg">{s.title}</div>
                     <div className="mt-1 text-sm opacity-60">{s.setting}</div>
@@ -228,8 +231,9 @@ export function Dojo() {
                   onPointerUp={() => recognizer.current?.stop()}
                   onPointerLeave={() => recognizer.current?.stop()}
                   onContextMenu={(e) => e.preventDefault()}
+                  aria-label="Hold to speak"
                 >
-                  🎙
+                  <Icon name="mic" size={18} />
                 </motion.button>
               )}
               <input
@@ -239,8 +243,8 @@ export function Dojo() {
                 onChange={(e) => setDraft(e.target.value)}
                 disabled={busy}
               />
-              <button className="btn-ghost !px-4 !py-3" disabled={busy || !draft.trim()}>
-                ➤
+              <button className="btn-ghost !px-4 !py-3" disabled={busy || !draft.trim()} aria-label="Send">
+                <Icon name="arrowRight" size={18} />
               </button>
             </form>
           </div>
@@ -270,8 +274,8 @@ export function Dojo() {
             <div className="mb-4 border-2 border-good p-3">
               <div className="mb-1 text-[10px] uppercase tracking-widest text-good">what landed</div>
               {report.wins.map((w, i) => (
-                <div key={i} className="text-sm">
-                  ✓ {w}
+                <div key={i} className="flex items-center gap-1.5 text-sm">
+                  <Icon name="check" size={13} className="text-good" /> {w}
                 </div>
               ))}
             </div>
@@ -305,7 +309,7 @@ export function Dojo() {
                   }`}
                   onClick={() => addMistake(i)}
                 >
-                  {added.has(i) ? "✓ IN YOUR DECK" : "＋ ADD TO DECK"}
+                  {added.has(i) ? "IN YOUR DECK" : "+ ADD TO DECK"}
                 </button>
               </div>
             ))}

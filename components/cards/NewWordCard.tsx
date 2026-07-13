@@ -6,11 +6,13 @@
 import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import type { Lang, VocabEntry } from "@/lib/types";
-import { SEED, SEED_LABEL } from "@/lib/seed";
+import { SEED, seedLevelLabel } from "@/lib/seed";
 import { addNewWord, skipNewWord } from "@/lib/store";
 import { speak, sfxAdd } from "@/lib/audio";
 import { burst } from "@/lib/confetti";
 import { JaWord, DeNoun, DePlural, Example } from "@/components/Lex";
+import { PitchAccent } from "@/components/PitchAccent";
+import { Icon } from "@/components/Icon";
 import { XpPop } from "./XpPop";
 
 export function NewWordCard({
@@ -67,7 +69,7 @@ export function NewWordCard({
         }}
       >
         <div className="tag">
-          NEW WORD <span className="opacity-50">· {SEED_LABEL[lang]}</span>
+          NEW WORD <span className="opacity-50">· {seedLevelLabel(lang, entryIndex)}</span>
         </div>
 
         <div className="flex flex-1 flex-col items-center justify-center text-center">
@@ -81,17 +83,27 @@ export function NewWordCard({
             {lang === "ja" ? (
               <JaWord
                 word={entry.word}
-                reading={entry.reading}
-                furigana={furigana}
-                className="text-7xl font-bold"
+                furigana={false}
+                className="glyph-float block text-8xl font-bold leading-none"
               />
             ) : (
               <DeNoun entry={entry} className="text-6xl font-bold" />
             )}
-            <div className="mt-2 text-xs uppercase tracking-[0.3em] opacity-40 group-active:opacity-90">
-              ▶ tap word for audio · hold card to replay
+            {/* reading as a distinct blue line (design), gated on the furigana toggle */}
+            {lang === "ja" && furigana && entry.reading && entry.reading !== entry.word && (
+              <div className="mt-3.5 text-lg tracking-[0.2em] text-[#4aa8ff]">{entry.reading}</div>
+            )}
+            <div className="mt-2 flex items-center justify-center gap-1.5 text-xs uppercase tracking-[0.3em] opacity-40 group-active:opacity-90">
+              <Icon name="play" size={11} /> tap word for audio · hold card to replay
             </div>
           </button>
+
+          {lang === "ja" && entry.reading && entry.pitch !== undefined && (
+            <div className="mt-3 flex items-center gap-2 text-2xl">
+              <PitchAccent reading={entry.reading} pitch={entry.pitch} />
+              <span className="text-[10px] uppercase tracking-widest opacity-40">pitch {entry.pitch}</span>
+            </div>
+          )}
 
           <div className="mt-5 text-3xl">{entry.meaning}</div>
           {lang === "de" && <DePlural entry={entry} />}
@@ -102,8 +114,9 @@ export function NewWordCard({
           )}
           <Example entry={entry} lang={lang} furigana={furigana} />
           {(entry.mnemonic ?? entry.tip) && (
-            <div className="mt-4 max-w-[30ch] rounded-xl border border-white/10 bg-white/5 px-4 py-2.5 text-sm leading-snug opacity-80">
-              {entry.mnemonic ? <>🧠 {entry.mnemonic}</> : <>💡 {entry.tip}</>}
+            <div className="mt-4 flex max-w-[30ch] items-start gap-2 rounded-xl border border-white/10 bg-white/5 px-4 py-2.5 text-sm leading-snug opacity-80">
+              <Icon name={entry.mnemonic ? "spark" : "bulb"} size={15} className="mt-0.5 shrink-0 text-(--accent)" />
+              <span>{entry.mnemonic ?? entry.tip}</span>
             </div>
           )}
         </div>
@@ -112,13 +125,13 @@ export function NewWordCard({
           <div className="grid grid-cols-[1fr_auto] gap-3">
             <motion.button
               whileTap={{ scale: 0.94 }}
-              className="btn-primary"
+              className="btn-primary inline-flex items-center justify-center gap-1.5"
               onClick={(e) => {
                 e.stopPropagation();
                 add(e);
               }}
             >
-              ＋ ADD TO DECK
+              <Icon name="plus" size={16} /> ADD TO DECK
             </motion.button>
             <button
               className="btn-ghost"

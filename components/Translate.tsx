@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import type { Translation } from "@/app/api/translate/route";
 import { speakJa, canSpeak } from "@/lib/speak";
+import { Icon } from "./Icon";
 import { useMounted } from "@/lib/useMounted";
 
 const EXAMPLES = [
@@ -102,7 +103,7 @@ export function Translate() {
             onClick={() => speakJa(result.japanese)}
             className="jp text-left text-2xl leading-snug hover:text-accent"
           >
-            {result.japanese} {speech && <span className="text-lg">🔊</span>}
+            <span className="inline-flex items-center gap-2">{result.japanese} {speech && <Icon name="sound" size={17} />}</span>
           </button>
           <div className="romaji mt-2 text-base">{result.romaji}</div>
           <div className="mt-1 border-t border-line pt-2 text-base text-muted">{result.english}</div>

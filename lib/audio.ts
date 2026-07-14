@@ -35,11 +35,50 @@ function scoreVoice(v: SpeechSynthesisVoice, lang: Lang): number {
   return s;
 }
 
+/** Every installed voice for a language, best-scoring first (for the picker). */
+export function listVoices(lang: Lang): SpeechSynthesisVoice[] {
+  const code = BCP47[lang].toLowerCase();
+  return voices
+    .filter((v) => v.lang.replace("_", "-").toLowerCase().startsWith(code))
+    .sort((a, b) => scoreVoice(b, lang) - scoreVoice(a, lang));
+}
+
+// A user's explicit voice choice beats our scoring. Kept in its own localStorage
+// key rather than AppState so lib/audio stays free of a store dependency (and
+// so a voice that only exists on this device never syncs to another one).
+const VOICE_KEY = "langlang.voice";
+
+function loadPrefs(): Partial<Record<Lang, string>> {
+  if (typeof window === "undefined") return {};
+  try {
+    return JSON.parse(localStorage.getItem(VOICE_KEY) ?? "{}");
+  } catch {
+    return {};
+  }
+}
+let prefs: Partial<Record<Lang, string>> = loadPrefs();
+
+export function getVoicePref(lang: Lang): string | null {
+  return prefs[lang] ?? null;
+}
+
+/** Pass null to fall back to automatic (scored) selection. */
+export function setVoicePref(lang: Lang, voiceURI: string | null) {
+  prefs = { ...prefs, [lang]: voiceURI ?? undefined };
+  if (voiceURI === null) delete prefs[lang];
+  try {
+    localStorage.setItem(VOICE_KEY, JSON.stringify(prefs));
+  } catch {
+    /* storage full — the choice just won't persist */
+  }
+}
+
 function pickVoice(lang: Lang): SpeechSynthesisVoice | null {
-  const code = BCP47[lang];
-  const match = voices.filter((v) => v.lang.replace("_", "-").toLowerCase().startsWith(code.toLowerCase()));
-  if (match.length === 0) return null;
-  return [...match].sort((a, b) => scoreVoice(b, lang) - scoreVoice(a, lang))[0];
+  const available = listVoices(lang);
+  if (available.length === 0) return null;
+  const chosen = prefs[lang];
+  // an explicitly chosen voice wins, but only while it's still installed
+  return (chosen && available.find((v) => v.voiceURI === chosen)) || available[0];
 }
 
 export { pickVoice };

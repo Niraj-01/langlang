@@ -150,6 +150,11 @@ export interface AppState {
   mistakeLog: MistakeEntry[]; // most recent first, capped
   dailyGoal: number; // XP target per day
   onboarding: OnboardingState;
+  // League identity. Both are read by the OPTIONAL supabase `leaderboard` view;
+  // shareLeaderboard defaults to false, so a user is never listed without
+  // explicitly opting in (see supabase/migrations/0002_leaderboard.sql).
+  displayName?: string;
+  shareLeaderboard?: boolean;
 }
 
 // ---- Feed ----

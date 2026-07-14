@@ -1,6 +1,6 @@
 [
-{"word":"Termin","article":"der","plural":"Termine","meaning":"appointment","pos":"noun","example":"Ich habe einen Termin beim Arzt.","exampleMeaning":"I have a doctor's appointment.","tip":"Sacred in Germany — book everything ahead."},
-{"word":"Rechnung","article":"die","plural":"Rechnungen","meaning":"bill, invoice","pos":"noun","example":"Können wir die Rechnung haben?","exampleMeaning":"Can we have the bill?","tip":"At restaurants: zusammen oder getrennt? (together or separate?)"},
+{"word":"Bescheid","article":"der","plural":"Bescheide","meaning":"notice, answer","pos":"noun","example":"Sag mir bitte Bescheid.","exampleMeaning":"Please let me know.","tip":"Lives in a set phrase: Bescheid sagen/geben = to let someone know."},
+{"word":"Trinkgeld","article":"das","plural":"Trinkgelder","meaning":"tip (gratuity)","pos":"noun","example":"Das Trinkgeld ist schon inklusive.","exampleMeaning":"The tip is already included.","tip":"In Germany you round up and say the total out loud when paying, rather than leaving coins."},
 {"word":"Erfahrung","article":"die","plural":"Erfahrungen","meaning":"experience","pos":"noun","example":"Ich habe viel Erfahrung.","exampleMeaning":"I have a lot of experience.","tip":"-ung -> die."},
 {"word":"Meinung","article":"die","plural":"Meinungen","meaning":"opinion","pos":"noun","example":"Meiner Meinung nach ist das falsch.","exampleMeaning":"In my opinion that's wrong.","tip":"Meiner Meinung nach... = 'in my opinion...' — a key A2 phrase."},
 {"word":"Entscheidung","article":"die","plural":"Entscheidungen","meaning":"decision","pos":"noun","example":"Das ist eine schwere Entscheidung.","exampleMeaning":"That's a hard decision.","tip":"eine Entscheidung treffen = to make a decision."},
@@ -43,7 +43,7 @@
 {"word":"kündigen","meaning":"to quit, to cancel","pos":"verb","example":"Ich habe meinen Job gekündigt.","exampleMeaning":"I quit my job.","tip":"Also cancel a contract/subscription: den Vertrag kündigen."},
 {"word":"Prüfung","article":"die","plural":"Prüfungen","meaning":"exam","pos":"noun","example":"Ich habe die Prüfung bestanden.","exampleMeaning":"I passed the exam.","tip":"bestehen = to pass; durchfallen = to fail."},
 {"word":"Führerschein","article":"der","plural":"Führerscheine","meaning":"driver's license","pos":"noun","example":"Ich mache meinen Führerschein.","exampleMeaning":"I'm getting my driver's license.","tip":"Famously expensive and hard to get in Germany."},
-{"word":"Wohnung","article":"die","plural":"Wohnungen","meaning":"apartment","pos":"noun","example":"Wir suchen eine neue Wohnung.","exampleMeaning":"We're looking for a new apartment.","tip":"die Miete = rent; die Kaution = deposit."},
+{"word":"Miete","article":"die","plural":"Mieten","meaning":"rent","pos":"noun","example":"Die Miete ist zu hoch.","exampleMeaning":"The rent is too high.","tip":"Warmmiete includes heating/utilities; Kaltmiete does not — always check which is quoted."},
 {"word":"Nachbar","article":"der","plural":"Nachbarn","meaning":"neighbor","pos":"noun","example":"Mein Nachbar ist sehr laut.","exampleMeaning":"My neighbor is very loud.","tip":"Weak noun: den Nachbarn, dem Nachbarn."},
 {"word":"Ausland","article":"das","plural":"Ausland","meaning":"abroad","pos":"noun","example":"Ich wohne im Ausland.","exampleMeaning":"I live abroad.","tip":"ins Ausland = to go abroad; im Ausland = while abroad."},
 {"word":"Grenze","article":"die","plural":"Grenzen","meaning":"border","pos":"noun","example":"Wir fahren über die Grenze.","exampleMeaning":"We're driving across the border."},

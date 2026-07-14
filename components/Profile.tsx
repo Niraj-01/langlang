@@ -20,6 +20,7 @@ import { BADGES, DAILY_GOALS } from "@/lib/achievements";
 import { COSMETICS, petStageName, nextStageXp, petStage, PET_STAGES } from "@/lib/quests";
 import { Icon, type IconName } from "./Icon";
 import { CosmeticGlyph } from "./CosmeticGlyph";
+import { VoicePicker } from "./VoicePicker";
 import { fireRoast, notifyPermission, requestNotify } from "@/lib/notify";
 import { Pet } from "./Pet";
 import { PackOpen } from "./PackOpen";
@@ -152,6 +153,11 @@ export function Profile() {
       {/* account & sync */}
       <Section title="Account">
         <AuthButton variant="panel" />
+      </Section>
+
+      {/* voice */}
+      <Section title="Voice">
+        <VoicePicker lang={state.lang} />
       </Section>
 
       {/* streak */}

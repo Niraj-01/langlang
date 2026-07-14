@@ -16,7 +16,7 @@ import {
 import jaSeed from "@/data/jlpt_n5.json";
 import deSeed from "@/data/goethe_a1.json";
 import type { Lang, VocabEntry } from "@/lib/types";
-import { levelFromXp, useApp } from "@/lib/store";
+import { levelFromXp, useApp, setLang as setAppLang } from "@/lib/store";
 import { SEED } from "@/lib/seed";
 import { useMounted } from "@/lib/useMounted";
 import { burst } from "@/lib/confetti";
@@ -336,12 +336,19 @@ const FEATURES = [
 // ---- page -----------------------------------------------------------------
 
 export function Landing() {
-  const [lang, setLang] = useState<Lang>("ja");
   const [glyphGen, setGlyphGen] = useState(0);
   const rootRef = useRef<HTMLDivElement>(null);
   const heroRef = useRef<HTMLDivElement>(null);
   const mounted = useMounted();
   const app = useApp();
+
+  // The language chip drives the REAL app language, not just this page's looks.
+  // It used to be local state, so picking DE restyled the landing but left the
+  // store on "ja" — "Start scrolling" then dropped you into the Japanese feed.
+  // Pre-mount we render "ja" (matching SSR) and swap to the stored language
+  // once hydrated, so there's no hydration mismatch.
+  const lang: Lang = mounted ? app.lang : "ja";
+  const setLang = setAppLang;
 
   useReveal(rootRef);
 

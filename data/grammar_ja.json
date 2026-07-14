@@ -13,5 +13,22 @@
 {"lang":"ja","prompt":"これ＿私のかばんです。","promptReading":"これ＿わたしのかばんです。","options":["は","を","に","が"],"answer":0,"note":"は presents the topic 'this' before describing it.","translation":"This is my bag."},
 {"lang":"ja","prompt":"水＿ください。","promptReading":"みず＿ください。","options":["は","を","に","で"],"answer":1,"note":"を marks what you're requesting with ください.","translation":"Water, please."},
 {"lang":"ja","prompt":"九時＿五時まで働く。","promptReading":"くじ＿ごじまではたらく。","options":["に","から","を","で"],"answer":1,"note":"から marks a starting point (time or place).","translation":"I work from nine to five."},
-{"lang":"ja","prompt":"兄＿背が高い。","promptReading":"あに＿せがたかい。","options":["を","は","に","で"],"answer":1,"note":"は sets the topic; が then marks what's tall.","translation":"My brother is tall."}
+{"lang":"ja","prompt":"兄＿背が高い。","promptReading":"あに＿せがたかい。","options":["を","は","に","で"],"answer":1,"note":"は sets the topic; が then marks what's tall.","translation":"My brother is tall."},
+{"lang":"ja","prompt":"音楽＿聞く。","promptReading":"おんがく＿きく。","options":["は","を","に","で"],"answer":1,"note":"を marks the direct object of 聞く.","translation":"I listen to music."},
+{"lang":"ja","prompt":"公園＿散歩する。","promptReading":"こうえん＿さんぽする。","options":["を","に","で","と"],"answer":2,"note":"で marks where an activity takes place.","translation":"I take a walk in the park."},
+{"lang":"ja","prompt":"先生＿聞いてください。","promptReading":"せんせい＿きいてください。","options":["を","に","で","が"],"answer":1,"note":"聞く with に = ask that person. Xに聞く = ask X.","translation":"Please ask the teacher."},
+{"lang":"ja","prompt":"かばん＿中に本がある。","promptReading":"かばん＿なかにほんがある。","options":["を","の","に","で"],"answer":1,"note":"の links two nouns: かばんの中 = the inside of the bag.","translation":"There's a book inside the bag."},
+{"lang":"ja","prompt":"これは私＿本です。","promptReading":"これはわたし＿ほんです。","options":["を","の","に","が"],"answer":1,"note":"の shows possession: 私の本 = my book.","translation":"This is my book."},
+{"lang":"ja","prompt":"毎日、日本語＿勉強する。","promptReading":"まいにち、にほんご＿べんきょうする。","options":["は","を","に","で"],"answer":1,"note":"を marks the object of 勉強する.","translation":"I study Japanese every day."},
+{"lang":"ja","prompt":"三時＿会いましょう。","promptReading":"さんじ＿あいましょう。","options":["に","で","を","と"],"answer":0,"note":"に pins an event to a clock time.","translation":"Let's meet at three."},
+{"lang":"ja","prompt":"バス＿学校へ行く。","promptReading":"バス＿がっこうへいく。","options":["を","に","で","と"],"answer":2,"note":"で marks the means of transport.","translation":"I go to school by bus."},
+{"lang":"ja","prompt":"兄＿一緒に行く。","promptReading":"あに＿いっしょにいく。","options":["を","に","と","で"],"answer":2,"note":"と + 一緒に = together with someone.","translation":"I go together with my brother."},
+{"lang":"ja","prompt":"宿題＿もう終わった。","promptReading":"しゅくだい＿もうおわった。","options":["は","を","に","で"],"answer":0,"note":"は topicalises 宿題 — 'as for the homework, it's done'.","translation":"The homework is already done."},
+{"lang":"ja","prompt":"時間＿ありません。","promptReading":"じかん＿ありません。","options":["を","が","に","で"],"answer":1,"note":"ある/ない take が for what exists.","translation":"I don't have time."},
+{"lang":"ja","prompt":"友だち＿手紙を書く。","promptReading":"ともだち＿てがみをかく。","options":["を","に","で","が"],"answer":1,"note":"に marks the recipient of the letter.","translation":"I write a letter to a friend."},
+{"lang":"ja","prompt":"駅＿歩いて行く。","promptReading":"えき＿あるいていく。","options":["を","まで","に","で"],"answer":1,"note":"まで marks the end point: 'as far as the station'.","translation":"I walk to the station."},
+{"lang":"ja","prompt":"寒い＿、窓を閉めて。","promptReading":"さむい＿、まどをしめて。","options":["から","まで","でも","のに"],"answer":0,"note":"から after a plain form = 'because'.","translation":"It's cold, so close the window."},
+{"lang":"ja","prompt":"安い＿、買わない。","promptReading":"やすい＿、かわない。","options":["から","けど","ので","まで"],"answer":1,"note":"けど = 'but' — it contrasts the two clauses.","translation":"It's cheap, but I won't buy it."},
+{"lang":"ja","prompt":"日本語＿話せますか。","promptReading":"にほんご＿はなせますか。","options":["を","が","に","で"],"answer":1,"note":"The potential form 話せる takes が, not を.","translation":"Can you speak Japanese?"},
+{"lang":"ja","prompt":"ペン＿二本ください。","promptReading":"ペン＿にほんください。","options":["を","が","に","で"],"answer":0,"note":"を + counter: the counter follows the object.","translation":"Two pens, please."}
 ]

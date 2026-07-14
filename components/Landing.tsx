@@ -17,6 +17,7 @@ import jaSeed from "@/data/jlpt_n5.json";
 import deSeed from "@/data/goethe_a1.json";
 import type { Lang, VocabEntry } from "@/lib/types";
 import { levelFromXp, useApp } from "@/lib/store";
+import { SEED } from "@/lib/seed";
 import { useMounted } from "@/lib/useMounted";
 import { burst } from "@/lib/confetti";
 import { sfxAdd, sfxCorrect, sfxFlip } from "@/lib/audio";
@@ -24,9 +25,15 @@ import { DeNoun, JaWord } from "@/components/Lex";
 import { Icon } from "@/components/Icon";
 import { AuthButton } from "@/components/AuthButton";
 
+// N5/A1 only — used purely as a marquee sample of "real words".
 const JA = jaSeed as VocabEntry[];
 const DE = deSeed as VocabEntry[];
-const SEED_COUNT = JA.length + DE.length;
+// The advertised count must come from the REAL seed (all levels), or the
+// landing under-reports the app every time a level is appended.
+const SEED_COUNT_BY_LANG: Record<Lang, number> = {
+  ja: SEED.ja.length,
+  de: SEED.de.length,
+};
 
 // Ambient hero glyphs — fixed positions so SSR and hydration agree.
 const GLYPHS: Record<Lang, string[]> = {
@@ -487,7 +494,10 @@ export function Landing() {
 
       {/* ---- stats ---- */}
       <section className="mx-auto grid max-w-4xl grid-cols-2 gap-10 px-4 py-24 sm:grid-cols-4">
-        <Stat value={SEED_COUNT} label="words seeded" />
+        <Stat
+          value={SEED_COUNT_BY_LANG[lang]}
+          label={lang === "ja" ? "Japanese words" : "German words"}
+        />
         <Stat value={90} suffix="%" label="target retention" delay={0.1} />
         <Stat value={19} label="FSRS weights" delay={0.2} />
         <Stat value={100} suffix="ms" label="to dopamine" delay={0.3} />

@@ -110,6 +110,10 @@ words, quizzes) is a card in one infinite vertical snap feed ("the Doomscroll").
     (JA/DE), not flags. Monochrome typographic marks (★ ♥ ✓ ⇄ ✦) are kept as
     intentional typography. Wrapped slides use `icon` (the PNG export just
     drops the glyph). If you add UI, use `<Icon>` — do not add emoji.
+    **One deliberate exception:** `app/reels-design/page.tsx` (`/reels-design`)
+    is a 1:1 copy of the `Reels.dc.html` Claude Design mockup, kept as a visual
+    reference. Its emoji are INTENTIONAL and must not be "fixed" — it is not a
+    product surface (unlinked from nav, excluded from the offline shell).
   - *Grammar in lessons:* `buildLesson(words, pool, grammar?)` folds up to 2
     fill-the-blank grammar drills into each lesson; `GrammarEx` in
     `components/Lesson.tsx` shows the "why" note via the shared `CheckBar`

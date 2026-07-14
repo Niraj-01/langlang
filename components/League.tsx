@@ -6,7 +6,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { useApp } from "@/lib/store";
+import { useApp, setDisplayName, setShareLeaderboard } from "@/lib/store";
 import { TIERS, standing, weekXp, fetchLeaderboard, type LeagueRow } from "@/lib/league";
 import { Icon } from "./Icon";
 
@@ -118,6 +118,44 @@ export function League() {
             </div>
           </div>
         )}
+      </div>
+
+      {/* opt-in — nobody is listed without explicitly choosing to be */}
+      <div className="rise px-4 pt-6" style={{ "--rise-delay": "0.22s" } as React.CSSProperties}>
+        <div className="mb-2 font-display text-xs uppercase tracking-[0.3em] opacity-60">
+          Appear on the board
+        </div>
+        <div className="border-2 border-line bg-panel p-4">
+          <div className="flex items-center justify-between gap-3">
+            <div className="text-sm opacity-70">
+              Share a display name and this week&apos;s XP with other signed-in learners. Off by
+              default — nothing leaves your device until you turn this on.
+            </div>
+            <button
+              onClick={() => setShareLeaderboard(!state.shareLeaderboard)}
+              aria-pressed={!!state.shareLeaderboard}
+              aria-label="Share my score on the leaderboard"
+              className={`relative h-8 w-14 shrink-0 border-2 border-line ${
+                state.shareLeaderboard ? "bg-(--accent)" : "bg-black/40"
+              }`}
+            >
+              <span
+                className={`absolute top-0.5 h-6 w-6 bg-black transition-all ${
+                  state.shareLeaderboard ? "left-7" : "left-0.5"
+                }`}
+              />
+            </button>
+          </div>
+          {state.shareLeaderboard && (
+            <input
+              value={state.displayName ?? ""}
+              onChange={(e) => setDisplayName(e.target.value)}
+              maxLength={24}
+              placeholder="Display name (shown to others)"
+              className="mt-3 w-full border-2 border-line bg-black/30 px-3 py-2 text-sm outline-none focus:border-(--accent)"
+            />
+          )}
+        </div>
       </div>
     </div>
   );

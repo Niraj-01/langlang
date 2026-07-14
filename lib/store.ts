@@ -14,18 +14,13 @@ import type {
   VocabEntry,
 } from "./types";
 import type { DayStats, Exam, MistakeEntry, OnboardingState, Target } from "./types";
-import { newFsrsState, schedule, MASTERY_STABILITY_DAYS } from "./fsrs";
+import { newFsrsState, schedule } from "./fsrs";
 import { SEED } from "./seed";
 import { COSMETICS, type Cosmetic, dailyQuests } from "./quests";
+// selectors the store's own actions rely on (also re-exported at the bottom)
+import { todayStr, dueCards, levelFromXp } from "./derive";
 
 const KEY = "langlang.v1";
-
-export function todayStr(d = new Date()): string {
-  const y = d.getFullYear();
-  const m = String(d.getMonth() + 1).padStart(2, "0");
-  const day = String(d.getDate()).padStart(2, "0");
-  return `${y}-${m}-${day}`;
-}
 
 function defaultState(): AppState {
   return {
@@ -51,6 +46,8 @@ function defaultState(): AppState {
     mistakeLog: [],
     dailyGoal: 20,
     onboarding: { done: false },
+    displayName: "",
+    shareLeaderboard: false, // opt-in only — never list a user by default
   };
 }
 
@@ -382,6 +379,18 @@ export function setDailyGoal(xp: number) {
   emit();
 }
 
+/** League identity. Only ever leaves the device if the user opts in AND the
+ *  optional supabase `leaderboard` view has been provisioned. */
+export function setDisplayName(name: string) {
+  state = { ...state, displayName: name.slice(0, 24).trim() };
+  emit();
+}
+
+export function setShareLeaderboard(on: boolean) {
+  state = { ...state, shareLeaderboard: on };
+  emit();
+}
+
 /** Save first-run onboarding answers; minutes map onto the daily XP goal. */
 export function completeOnboarding(answers: Omit<OnboardingState, "done">) {
   load(); // the onboarding page renders without useApp — hydrate before writing
@@ -655,94 +664,18 @@ export function clearBoss(id: string): boolean {
   return true;
 }
 
-/** Cards whose FSRS stability clears the mastery threshold. */
-export function masteredCount(s: AppState, lang: Lang): number {
-  return s.cards.filter(
-    (c) => c.lang === lang && c.fsrs.stability >= MASTERY_STABILITY_DAYS
-  ).length;
-}
-
-export function activeVocab(s: AppState, lang: Lang): number {
-  return s.cards.filter((c) => c.lang === lang && c.type !== "sentence").length;
-}
-
-/** Ordered [date, stats] for the last `days` days (missing days omitted). */
-export function logRange(s: AppState, days: number): { date: string; stats: DayStats }[] {
-  const out: { date: string; stats: DayStats }[] = [];
-  for (let i = days - 1; i >= 0; i--) {
-    const date = todayStr(new Date(Date.now() - i * 86400000));
-    const stats = date === s.today.date ? s.today : s.log[date];
-    if (stats) out.push({ date, stats });
-  }
-  return out;
-}
-
-export function weeklyStats(s: AppState) {
-  const days = logRange(s, 7);
-  const sum = days.reduce(
-    (a, { stats }) => ({
-      reviews: a.reviews + stats.reviews,
-      correct: a.correct + stats.correct,
-      newWords: a.newWords + stats.newWords,
-      xp: a.xp + stats.xp,
-      speaks: a.speaks + (stats.speaks ?? 0),
-    }),
-    { reviews: 0, correct: 0, newWords: 0, xp: 0, speaks: 0 }
-  );
-  // rough practice minutes: reviews ~4s, speaks ~7s, new words ~3s
-  const minutes = Math.round((sum.reviews * 4 + sum.speaks * 7 + sum.newWords * 3) / 60);
-  const activeDays = days.filter(
-    ({ stats }) => stats.reviews || stats.newWords || stats.speaks
-  ).length;
-  return { ...sum, minutes, activeDays };
-}
-
-/** The card that fought back hardest: most lapses, then lowest stability. */
-export function hardestWord(s: AppState, lang: Lang): Card | null {
-  const pool = s.cards.filter((c) => c.lang === lang && c.fsrs.reps > 0);
-  if (pool.length === 0) return null;
-  return [...pool].sort(
-    (a, b) => b.fsrs.lapses - a.fsrs.lapses || a.fsrs.stability - b.fsrs.stability
-  )[0];
-}
-
-/** Projected date to reach a target's vocab count at the recent learning pace. */
-export function paceForecast(
-  s: AppState,
-  lang: Lang,
-  total: number
-): { rate: number; daysLeft: number; date: string | null } {
-  const mastered = masteredCount(s, lang);
-  const remaining = Math.max(0, total - mastered);
-  const window = logRange(s, 14);
-  const learned = window.reduce((a, { stats }) => a + stats.newWords, 0);
-  const activeDays = Math.max(1, window.length);
-  const rate = learned / activeDays; // words/day proxy
-  if (remaining === 0) return { rate, daysLeft: 0, date: todayStr() };
-  if (rate < 0.05) return { rate, daysLeft: Infinity, date: null };
-  const daysLeft = Math.ceil(remaining / rate);
-  const date = todayStr(new Date(Date.now() + daysLeft * 86400000));
-  return { rate, daysLeft, date };
-}
-
-// ---- derived ----
-
-export function dueCards(s: AppState, lang: Lang, now = Date.now()): Card[] {
-  // includes phase "new" cards: a just-added word is immediately reviewable
-  return s.cards
-    .filter((c) => c.lang === lang && c.fsrs.due <= now)
-    .sort((a, b) => a.fsrs.due - b.fsrs.due);
-}
-
-export function levelFromXp(xp: number): { level: number; into: number; span: number } {
-  // Level n requires 100 * n^1.5 XP total-ish; simple quadratic curve
-  let level = 1;
-  let threshold = 0;
-  let span = 100;
-  while (xp >= threshold + span) {
-    threshold += span;
-    level += 1;
-    span = Math.round(100 * Math.pow(level, 1.3));
-  }
-  return { level, into: xp - threshold, span };
-}
+// ---- derived selectors ----
+// Pure, state-in/value-out. They live in lib/derive.ts (independently testable,
+// no store singleton) and are re-exported here so every existing
+// `import { ... } from "@/lib/store"` keeps working unchanged.
+export {
+  todayStr,
+  dueCards,
+  masteredCount,
+  activeVocab,
+  logRange,
+  weeklyStats,
+  hardestWord,
+  paceForecast,
+  levelFromXp,
+} from "./derive";

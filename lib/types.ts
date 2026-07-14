@@ -165,6 +165,7 @@ export type FeedItem =
   | { kind: "quiz"; id: string; cardId: string; options: string[]; answer: number }
   | { kind: "grammar"; id: string; item: GrammarItem }
   | { kind: "listen"; id: string; cardId: string; options: string[]; answer: number }
+  | { kind: "sentence"; id: string; sentenceIdx: number; unknownSeedIndex: number }
   | { kind: "speak"; id: string; target: SpeakTarget }
   | { kind: "meme"; id: string; word: string; reading?: string; meaning: string }
   | { kind: "status"; id: string };
@@ -179,6 +180,22 @@ export interface GrammarItem {
   answer: number;
   note: string; // why — max 2 sentences
   translation: string;
+}
+
+// ---- i+1 sentences (Tatoeba, CC BY 2.0 FR — built by scripts/gen-sentences.mjs) ----
+
+export interface SentenceToken {
+  surface: string;
+  /** index into SEED[lang], or null for grammar glue (particles, aux, names, punct) */
+  seedIndex: number | null;
+  reading?: string; // kana (ja)
+}
+
+export interface SentenceData {
+  id: number; // Tatoeba sentence id (kept for CC BY attribution)
+  text: string;
+  translation: string;
+  tokens: SentenceToken[];
 }
 
 export interface SpeakTarget {

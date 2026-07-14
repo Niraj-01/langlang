@@ -14,6 +14,7 @@ import { NewWordCard } from "./cards/NewWordCard";
 import { QuizCard } from "./cards/QuizCard";
 import { GrammarCard } from "./cards/GrammarCard";
 import { ListenCard } from "./cards/ListenCard";
+import { SentenceCard } from "./cards/SentenceCard";
 import { SpeakCard } from "./cards/SpeakCard";
 import { MemeCard } from "./cards/MemeCard";
 import { StatusCard } from "./cards/StatusCard";
@@ -254,6 +255,18 @@ function FeedCard({
         />
       );
     }
+    case "sentence":
+      return (
+        <SentenceCard
+          lang={state.lang}
+          sentenceIdx={item.sentenceIdx}
+          unknownSeedIndex={item.unknownSeedIndex}
+          furigana={state.furigana}
+          combo={combo}
+          multiplier={multiplier}
+          onAnswered={onAnswered}
+        />
+      );
     case "speak":
       return (
         <SpeakCard

@@ -378,6 +378,26 @@ export function Profile() {
         </div>
       </Section>
 
+      {/* open-data credits (license attribution) */}
+      <Section title="Credits">
+        <div className="space-y-1 border-2 border-line bg-panel p-4 text-xs opacity-60">
+          <div>
+            Sentences:{" "}
+            <a href="https://tatoeba.org" target="_blank" rel="noreferrer" className="underline hover:text-(--accent)">
+              Tatoeba
+            </a>{" "}
+            — CC BY 2.0 FR
+          </div>
+          <div>
+            Kanji stroke data:{" "}
+            <a href="https://kanjivg.tagaini.net" target="_blank" rel="noreferrer" className="underline hover:text-(--accent)">
+              KanjiVG
+            </a>{" "}
+            — CC BY-SA 3.0
+          </div>
+        </div>
+      </Section>
+
       {opening && <PackOpen lang={state.lang} onClose={() => setOpening(false)} />}
     </div>
   );

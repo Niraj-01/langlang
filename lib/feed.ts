@@ -7,6 +7,7 @@
 import type { AppState, FeedItem, GrammarItem, Lang } from "./types";
 import { SEED } from "./seed";
 import { dueCards, pickSpeakTarget } from "./store";
+import { pickSentence } from "./sentences";
 import grammarJa from "@/data/grammar_ja.json";
 import grammarDe from "@/data/grammar_de.json";
 
@@ -38,6 +39,13 @@ function buildMeme(state: AppState, lang: Lang): FeedItem | null {
   if (pool.length === 0) return null;
   const c = pool[Math.floor(Math.random() * pool.length)];
   return { kind: "meme", id: uid(), word: c.word, reading: c.reading, meaning: c.meaning };
+}
+
+// i+1 reading: a real sentence where exactly one word isn't mastered yet.
+function buildSentence(state: AppState, lang: Lang): FeedItem | null {
+  const pick = pickSentence(state, lang);
+  if (!pick) return null;
+  return { kind: "sentence", id: uid(), ...pick };
 }
 
 // "Which word did you hear?" — trains the ear without keyboard friction.
@@ -112,19 +120,22 @@ export function nextFeedItem(state: AppState, ctx: FeedContext): FeedItem {
   const canGrammar =
     GRAMMAR[lang].length > 0 && !ctx.lastWasFail && !recent.includes("grammar");
   const listen = !ctx.lastWasFail && !recent.includes("listen") ? buildListen(state, lang) : null;
+  const sentence =
+    !ctx.lastWasFail && !recent.includes("sentence") ? buildSentence(state, lang) : null;
   const speakTarget =
     !ctx.lastWasFail && !recent.includes("speak") ? pickSpeakTarget(state, lang) : null;
   const meme = !recent.includes("meme") ? buildMeme(state, lang) : null;
 
-  // Weighted pick: reviews 32 / new 15 / quiz 14 / grammar 11 / listen 11 / speak 11 / meme 5 / status 4
+  // Weighted pick: reviews 30 / new 14 / quiz 12 / grammar 10 / listen 10 / sentence 10 / speak 9 / meme 4 / status ~1
   const roll = Math.random() * 100;
-  if (canReview && roll < 32) return reviewItem();
-  if (hasNew && roll < 47) return newItem();
-  if (quiz && !ctx.lastWasFail && roll < 61) return quiz;
-  if (canGrammar && roll < 72) return buildGrammar(lang);
-  if (listen && roll < 83) return listen;
-  if (speakTarget && roll < 94) return { kind: "speak", id: uid(), target: speakTarget };
-  if (meme && roll < 98) return meme;
+  if (canReview && roll < 30) return reviewItem();
+  if (hasNew && roll < 44) return newItem();
+  if (quiz && !ctx.lastWasFail && roll < 56) return quiz;
+  if (canGrammar && roll < 66) return buildGrammar(lang);
+  if (listen && roll < 76) return listen;
+  if (sentence && roll < 86) return sentence;
+  if (speakTarget && roll < 95) return { kind: "speak", id: uid(), target: speakTarget };
+  if (meme && roll < 99) return meme;
 
   // fallbacks, easiest wins first (also the post-fail path)
   if (hasNew) return newItem();

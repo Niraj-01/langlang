@@ -122,6 +122,21 @@ words, quizzes) is a card in one infinite vertical snap feed ("the Doomscroll").
   - *More content:* N4 → 68, A2 → 68 (append-only); confident Tokyo
     pitch-accent subset grown to ~57 N5 words.
 
+- **i+1 sentence cards (done):** real Tatoeba sentences (CC BY 2.0 FR) served
+  as feed cards when the learner knows every content word except exactly ONE
+  (due card or the current new word). `scripts/gen-sentences.mjs`
+  (`npm run gen-sentences`) downloads the per-language Tatoeba exports (cached
+  in gitignored `.cache/tatoeba/`), tokenizes ja with kuromoji (devDependency,
+  build-time only) and de naively, and keeps only sentences whose every
+  content token maps to a seed word → `data/sentences_{ja,de}.json` (~1500
+  each, ship in the repo — the review path never fetches). Runtime:
+  `lib/sentences.ts` (`qualifying`/`pickSentence`, known = FSRS stability ≥ 7d,
+  same bar as Path stars), `buildSentence` in `lib/feed.ts` (~10% weight),
+  `SentenceCard` (tap-gloss per word, tap the highlighted unknown → reveal →
+  self-grade rates that word's card via `rateCard`; grading the current new
+  word `addNewWord`s it first). Attribution lives in Profile → Credits.
+  REGENERATE the JSONs after seed changes (seedIndex is positional).
+
 ## Architecture
 
 - `lib/fsrs.ts` — FSRS v5 scheduler (19 default weights, desired retention 0.9).

@@ -7,7 +7,8 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import type { Card, Rating } from "@/lib/types";
 import { rateCard } from "@/lib/store";
-import { speak, sfxFlip, sfxCorrect, sfxWrong } from "@/lib/audio";
+import { sfxFlip, sfxCorrect, sfxWrong } from "@/lib/audio";
+import { playWord } from "@/lib/nativeAudio";
 import { burst } from "@/lib/confetti";
 import { JaWord, DeNoun, DePlural, Example } from "@/components/Lex";
 import { Icon } from "@/components/Icon";
@@ -34,7 +35,7 @@ export function ReviewCard({
     if (revealed) return;
     setRevealed(true);
     sfxFlip();
-    speak(card.word, card.lang);
+    playWord(card.word, card.lang);
   };
 
   const grade = (rating: Rating, e?: React.MouseEvent) => {

@@ -164,11 +164,19 @@ export type FeedItem =
   | { kind: "new"; id: string; entryIndex: number }
   | { kind: "quiz"; id: string; cardId: string; options: string[]; answer: number }
   | { kind: "grammar"; id: string; item: GrammarItem }
-  | { kind: "listen"; id: string; cardId: string; options: string[]; answer: number }
+  | { kind: "listen"; id: string; cardId: string; options: string[]; answer: number; pair?: ListenPair }
   | { kind: "sentence"; id: string; sentenceIdx: number; unknownSeedIndex: number }
   | { kind: "speak"; id: string; target: SpeakTarget }
   | { kind: "meme"; id: string; word: string; reading?: string; meaning: string }
   | { kind: "status"; id: string };
+
+// "Same word, different voice?" listen drill — two native clips back to back.
+// Only built when a word has 2+ recorded voices (see data/audio_manifest.json).
+export interface ListenPair {
+  a: { word: string; variant: number }; // 1-based voice variant
+  b: { word: string; variant: number };
+  same: boolean; // do both clips say the same word?
+}
 
 // A fill-in-the-blank grammar drill (particle for ja, article/case for de).
 // `prompt` marks the blank with the full-width underscore ＿.

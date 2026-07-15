@@ -38,7 +38,8 @@ import {
 } from "@/lib/lesson";
 import { UNIT_SIZE } from "@/lib/path";
 import { useMounted } from "@/lib/useMounted";
-import { speak as tts, sfxCorrect, sfxWrong, sfxBonus } from "@/lib/audio";
+import { sfxCorrect, sfxWrong, sfxBonus } from "@/lib/audio";
+import { playWord as tts } from "@/lib/nativeAudio";
 import { burst } from "@/lib/confetti";
 import { JaWord, DeNoun } from "@/components/Lex";
 import { Icon } from "@/components/Icon";

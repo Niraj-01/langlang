@@ -8,7 +8,8 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import type { GrammarItem } from "@/lib/types";
 import { awardXp } from "@/lib/store";
-import { speak, sfxCorrect, sfxWrong } from "@/lib/audio";
+import { sfxCorrect, sfxWrong } from "@/lib/audio";
+import { playWord } from "@/lib/nativeAudio";
 import { burst } from "@/lib/confetti";
 import { Icon } from "@/components/Icon";
 import { XpPop } from "./XpPop";
@@ -49,7 +50,7 @@ export function GrammarCard({
       sfxWrong();
     }
     // read the correct, fully-formed sentence aloud
-    speak(item.prompt.replace(BLANK, item.options[item.answer]), item.lang);
+    playWord(item.prompt.replace(BLANK, item.options[item.answer]), item.lang);
     onAnswered(correct);
   };
 

@@ -10,7 +10,8 @@
     "test:watch": "vitest",
     "prebuild": "node scripts/gen-sw.mjs",
     "gen:sw": "node scripts/gen-sw.mjs",
-    "gen-sentences": "node scripts/gen-sentences.mjs"
+    "gen-sentences": "node scripts/gen-sentences.mjs",
+    "gen-audio": "node scripts/gen-audio.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.110.0",

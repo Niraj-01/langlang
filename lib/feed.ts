@@ -4,9 +4,10 @@
 //  - after a fail, the next card must be an easy win
 //  - occasional status card mid-scroll
 
-import type { AppState, FeedItem, GrammarItem, Lang } from "./types";
+import type { AppState, FeedItem, GrammarItem, Lang, ListenPair } from "./types";
 import { SEED } from "./seed";
 import { dueCards, pickSpeakTarget } from "./store";
+import { voiceCount } from "./nativeAudio";
 import { pickSentence } from "./sentences";
 import grammarJa from "@/data/grammar_ja.json";
 import grammarDe from "@/data/grammar_de.json";
@@ -49,10 +50,19 @@ function buildSentence(state: AppState, lang: Lang): FeedItem | null {
 }
 
 // "Which word did you hear?" — trains the ear without keyboard friction.
+// When the picked word has 2+ recorded native voices, half the time we deal
+// the harder variant instead: two clips, "same word or different?".
 function buildListen(state: AppState, lang: Lang): FeedItem | null {
   const pool = state.cards.filter((c) => c.lang === lang && c.fsrs.reps >= 1);
   if (pool.length === 0) return null;
   const card = pool[Math.floor(Math.random() * pool.length)];
+
+  const voices = voiceCount(lang, card.word);
+  if (voices >= 2 && Math.random() < 0.5) {
+    const pair = buildListenPair(lang, card.word, voices);
+    if (pair) return { kind: "listen", id: uid(), cardId: card.id, options: [], answer: pair.same ? 0 : 1, pair };
+  }
+
   const distractors = shuffle(
     SEED[lang].filter((e) => e.word !== card.word).map((e) => e.word)
   ).slice(0, 3);
@@ -65,6 +75,23 @@ function buildListen(state: AppState, lang: Lang): FeedItem | null {
     options,
     answer: options.indexOf(card.word),
   };
+}
+
+// exported for tests
+export function buildListenPair(lang: Lang, word: string, voices: number): ListenPair | null {
+  const a = { word, variant: 1 + Math.floor(Math.random() * voices) };
+  if (Math.random() < 0.5) {
+    // same word, a DIFFERENT one of its voices
+    let v = 1 + Math.floor(Math.random() * (voices - 1));
+    if (v >= a.variant) v++;
+    return { a, b: { word, variant: v }, same: true };
+  }
+  // different word — must also have native audio, or "different voice" is moot
+  const others = SEED[lang].filter((e) => e.word !== word && voiceCount(lang, e.word) > 0);
+  if (others.length === 0) return null;
+  const o = others[Math.floor(Math.random() * others.length)];
+  const ov = voiceCount(lang, o.word);
+  return { a, b: { word: o.word, variant: 1 + Math.floor(Math.random() * ov) }, same: false };
 }
 
 function buildQuiz(state: AppState, lang: Lang): FeedItem | null {

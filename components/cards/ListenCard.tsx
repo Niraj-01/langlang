@@ -2,12 +2,16 @@
 
 // Listening drill: audio plays on arrival, you pick which word you heard.
 // Trains the ear with no keyboard friction (works for kana and German alike).
+// Two modes: classic "which word?" (replays rotate through recorded voices
+// when a word has several), and — only when a word has 2+ native recordings —
+// "same word, different voice?": two clips back to back, you judge same/not.
 
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
-import type { Card } from "@/lib/types";
+import type { Card, ListenPair } from "@/lib/types";
 import { awardXp } from "@/lib/store";
-import { speak, sfxCorrect, sfxWrong } from "@/lib/audio";
+import { sfxCorrect, sfxWrong } from "@/lib/audio";
+import { playWord, voiceCount } from "@/lib/nativeAudio";
 import { burst } from "@/lib/confetti";
 import { JaWord } from "@/components/Lex";
 import { Icon } from "@/components/Icon";
@@ -16,6 +20,7 @@ export function ListenCard({
   card,
   options,
   answer,
+  pair,
   furigana,
   combo,
   multiplier,
@@ -24,6 +29,7 @@ export function ListenCard({
   card: Card;
   options: string[];
   answer: number;
+  pair?: ListenPair;
   furigana: boolean;
   combo: number;
   multiplier: number;
@@ -32,7 +38,20 @@ export function ListenCard({
   const [picked, setPicked] = useState<number | null>(null);
   const played = useRef(false);
 
-  const say = () => speak(card.word, card.lang);
+  const say = () => {
+    if (pair) {
+      // the two clips, back to back with a beat between
+      void playWord(pair.a.word, card.lang, { variant: pair.a.variant })
+        .then(() => new Promise((r) => setTimeout(r, 450)))
+        .then(() => playWord(pair.b.word, card.lang, { variant: pair.b.variant }));
+      return;
+    }
+    // rotate voices on replay when this word has several recordings
+    const voices = voiceCount(card.lang, card.word);
+    playWord(card.word, card.lang, {
+      variant: voices > 1 ? 1 + Math.floor(Math.random() * voices) : 1,
+    });
+  };
 
   // auto-play once when the card mounts (i.e. scrolls into the queue)
   useEffect(() => {
@@ -54,7 +73,7 @@ export function ListenCard({
     } else {
       sfxWrong();
     }
-    say();
+    if (!pair) say();
     onAnswered(correct);
   };
 
@@ -66,7 +85,7 @@ export function ListenCard({
         transition={{ duration: 0.4 }}
       >
         <div className="tag">
-          LISTEN <span className="opacity-50">· which word?</span>
+          LISTEN <span className="opacity-50">· {pair ? "same word?" : "which word?"}</span>
         </div>
 
         <div className="flex flex-1 flex-col items-center justify-center text-center">
@@ -78,44 +97,84 @@ export function ListenCard({
             <Icon name="sound" size={52} strokeWidth={1.75} />
           </button>
           <div className="mt-4 text-xs uppercase tracking-[0.3em] opacity-40">
-            tap to replay · pick what you heard
+            {pair
+              ? "two voices · same word or not?"
+              : "tap to replay · pick what you heard"}
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-3">
-          {options.map((opt, i) => {
-            let cls = "btn-option";
-            if (picked !== null) {
-              if (i === answer) cls += " correct";
-              else if (i === picked) cls += " wrong";
-              else cls += " opacity-40";
-            }
-            return (
-              <motion.button
-                key={i}
-                whileTap={picked === null ? { scale: 0.96 } : {}}
-                className={cls}
-                onClick={(e) => pick(i, e)}
-              >
-                {card.lang === "ja" ? (
-                  <JaWord
-                    word={opt}
-                    reading={picked !== null && furigana ? card.reading : undefined}
-                    furigana={picked !== null && furigana && opt === card.word}
-                    className="text-2xl"
-                  />
-                ) : (
-                  opt
-                )}
-              </motion.button>
-            );
-          })}
-        </div>
+        {pair ? (
+          <div className="grid grid-cols-2 gap-3">
+            {["SAME WORD", "DIFFERENT"].map((label, i) => {
+              let cls = "btn-option";
+              if (picked !== null) {
+                if (i === answer) cls += " correct";
+                else if (i === picked) cls += " wrong";
+                else cls += " opacity-40";
+              }
+              return (
+                <motion.button
+                  key={i}
+                  whileTap={picked === null ? { scale: 0.96 } : {}}
+                  className={cls}
+                  onClick={(e) => pick(i, e)}
+                >
+                  {label}
+                </motion.button>
+              );
+            })}
+          </div>
+        ) : (
+          <div className="grid grid-cols-2 gap-3">
+            {options.map((opt, i) => {
+              let cls = "btn-option";
+              if (picked !== null) {
+                if (i === answer) cls += " correct";
+                else if (i === picked) cls += " wrong";
+                else cls += " opacity-40";
+              }
+              return (
+                <motion.button
+                  key={i}
+                  whileTap={picked === null ? { scale: 0.96 } : {}}
+                  className={cls}
+                  onClick={(e) => pick(i, e)}
+                >
+                  {card.lang === "ja" ? (
+                    <JaWord
+                      word={opt}
+                      reading={picked !== null && furigana ? card.reading : undefined}
+                      furigana={picked !== null && furigana && opt === card.word}
+                      className="text-2xl"
+                    />
+                  ) : (
+                    opt
+                  )}
+                </motion.button>
+              );
+            })}
+          </div>
+        )}
 
         {picked !== null && (
           <div className="mt-3 flex items-center justify-center gap-1.5 text-center text-sm opacity-60">
             <Icon name={picked === answer ? "check" : "bulb"} size={14} className="shrink-0" />
-            <span className="font-semibold">{card.word}</span> — {card.meaning}
+            {pair ? (
+              pair.same ? (
+                <span>
+                  <span className="font-semibold">{pair.a.word}</span> — same word, two voices
+                </span>
+              ) : (
+                <span>
+                  <span className="font-semibold">{pair.a.word}</span> vs{" "}
+                  <span className="font-semibold">{pair.b.word}</span>
+                </span>
+              )
+            ) : (
+              <span>
+                <span className="font-semibold">{card.word}</span> — {card.meaning}
+              </span>
+            )}
           </div>
         )}
       </motion.div>

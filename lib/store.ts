@@ -673,6 +673,7 @@ export {
   dueCards,
   masteredCount,
   activeVocab,
+  examListCoverage,
   logRange,
   weeklyStats,
   hardestWord,

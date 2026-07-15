@@ -5,8 +5,10 @@
 // store.ts re-exports every one of these, so callers keep importing from
 // "@/lib/store" as before.
 
-import type { AppState, Card, DayStats, Lang } from "./types";
+import type { AppState, Card, DayStats, Exam, Lang } from "./types";
 import { MASTERY_STABILITY_DAYS } from "./fsrs";
+import { SEED } from "./seed";
+import { examCoverage, examLang, type ExamCoverage } from "./exams";
 
 const DAY_MS = 86_400_000;
 
@@ -33,6 +35,20 @@ export function masteredCount(s: AppState, lang: Lang): number {
 
 export function activeVocab(s: AppState, lang: Lang): number {
   return s.cards.filter((c) => c.lang === lang && c.type !== "sentence").length;
+}
+
+/** Coverage of an exam's OFFICIAL wordlist (null when the exam isn't audited).
+ *  A list word counts as mastered when the seed word it maps to has a card at
+ *  mastery stability — the same bar as masteredCount/Path stars. */
+export function examListCoverage(s: AppState, exam: Exam): ExamCoverage | null {
+  const lang = examLang(exam);
+  const stability = new Map(
+    s.cards.filter((c) => c.lang === lang).map((c) => [c.word, c.fsrs.stability])
+  );
+  return examCoverage(
+    exam,
+    (idx) => (stability.get(SEED[lang][idx]?.word ?? "") ?? 0) >= MASTERY_STABILITY_DAYS
+  );
 }
 
 /** Ordered [date, stats] for the last `days` days (missing days omitted). */
@@ -77,9 +93,10 @@ export function hardestWord(s: AppState, lang: Lang): Card | null {
 export function paceForecast(
   s: AppState,
   lang: Lang,
-  total: number
+  total: number,
+  masteredOverride?: number // audited exams pass official-list mastery
 ): { rate: number; daysLeft: number; date: string | null } {
-  const mastered = masteredCount(s, lang);
+  const mastered = masteredOverride ?? masteredCount(s, lang);
   const remaining = Math.max(0, total - mastered);
   const window = logRange(s, 14);
   const learned = window.reduce((a, { stats }) => a + stats.newWords, 0);

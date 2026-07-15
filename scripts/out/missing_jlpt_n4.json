@@ -1,0 +1,2718 @@
+[
+ {
+  "word": "あ",
+  "meaning": "Ah"
+ },
+ {
+  "word": "ああ",
+  "meaning": "like that"
+ },
+ {
+  "word": "あいさつ・する",
+  "meaning": "to greet"
+ },
+ {
+  "word": "間",
+  "reading": "あいだ",
+  "meaning": "a space"
+ },
+ {
+  "word": "合う",
+  "reading": "あう",
+  "meaning": "to match"
+ },
+ {
+  "word": "あかちゃん",
+  "meaning": "infant"
+ },
+ {
+  "word": "上る",
+  "reading": "あがる",
+  "meaning": "to rise"
+ },
+ {
+  "word": "赤ん坊",
+  "reading": "あかんぼう",
+  "meaning": "baby"
+ },
+ {
+  "word": "空く",
+  "reading": "あく",
+  "meaning": "to open, to become empty"
+ },
+ {
+  "word": "アクセサリー",
+  "meaning": "accessory"
+ },
+ {
+  "word": "あげる",
+  "meaning": "to give"
+ },
+ {
+  "word": "浅い",
+  "reading": "あさい",
+  "meaning": "shallow,superficial"
+ },
+ {
+  "word": "アジア",
+  "meaning": "Asia"
+ },
+ {
+  "word": "遊び",
+  "reading": "あそび",
+  "meaning": "play"
+ },
+ {
+  "word": "集る",
+  "reading": "あつまる",
+  "meaning": "to gather"
+ },
+ {
+  "word": "アナウンサー",
+  "meaning": "announcer"
+ },
+ {
+  "word": "アフリカ",
+  "meaning": "Africa"
+ },
+ {
+  "word": "アメリカ",
+  "meaning": "America"
+ },
+ {
+  "word": "謝る",
+  "reading": "あやまる",
+  "meaning": "to apologize"
+ },
+ {
+  "word": "アルコール",
+  "meaning": "alcohol"
+ },
+ {
+  "word": "アルバイト",
+  "meaning": "part-time job"
+ },
+ {
+  "word": "安心",
+  "reading": "あんしん",
+  "meaning": "relief"
+ },
+ {
+  "word": "安全",
+  "reading": "あんぜん",
+  "meaning": "safety"
+ },
+ {
+  "word": "あんな",
+  "meaning": "such"
+ },
+ {
+  "word": "案内",
+  "reading": "あんない・する",
+  "meaning": "to guide"
+ },
+ {
+  "word": "以下",
+  "reading": "いか",
+  "meaning": "less than"
+ },
+ {
+  "word": "以外",
+  "reading": "いがい",
+  "meaning": "with the exception of"
+ },
+ {
+  "word": "医学",
+  "reading": "いがく",
+  "meaning": "medical science"
+ },
+ {
+  "word": "生きる",
+  "reading": "いきる",
+  "meaning": "to live"
+ },
+ {
+  "word": "意見",
+  "reading": "いけん",
+  "meaning": "opinion"
+ },
+ {
+  "word": "石",
+  "reading": "いし",
+  "meaning": "stone"
+ },
+ {
+  "word": "いじめる",
+  "meaning": "to tease"
+ },
+ {
+  "word": "致す",
+  "reading": "いたす",
+  "meaning": "(humble) to do"
+ },
+ {
+  "word": "いただく",
+  "meaning": "(humble) to receive"
+ },
+ {
+  "word": "一度",
+  "reading": "いちど",
+  "meaning": "once"
+ },
+ {
+  "word": "一生懸命",
+  "reading": "いっしょうけんめい",
+  "meaning": "with utmost effort"
+ },
+ {
+  "word": "いっぱい",
+  "meaning": "full"
+ },
+ {
+  "word": "糸",
+  "reading": "いと",
+  "meaning": "thread"
+ },
+ {
+  "word": "以内",
+  "reading": "いない",
+  "meaning": "within"
+ },
+ {
+  "word": "田舎",
+  "reading": "いなか",
+  "meaning": "countryside"
+ },
+ {
+  "word": "祈る",
+  "reading": "いのる",
+  "meaning": "to pray"
+ },
+ {
+  "word": "いらっしゃる",
+  "meaning": "(respectful) to be,to come or to go"
+ },
+ {
+  "word": "植える",
+  "reading": "うえる",
+  "meaning": "to plant,to grow"
+ },
+ {
+  "word": "うかがう",
+  "meaning": "to visit"
+ },
+ {
+  "word": "受付",
+  "reading": "うけつけ",
+  "meaning": "receipt"
+ },
+ {
+  "word": "受ける",
+  "reading": "うける",
+  "meaning": "to take a lesson or test"
+ },
+ {
+  "word": "動く",
+  "reading": "うごく",
+  "meaning": "to move"
+ },
+ {
+  "word": "うそ",
+  "meaning": "a lie"
+ },
+ {
+  "word": "うち",
+  "meaning": "within"
+ },
+ {
+  "word": "打つ",
+  "reading": "うつ",
+  "meaning": "to hit"
+ },
+ {
+  "word": "美しい",
+  "reading": "うつくしい",
+  "meaning": "beautiful"
+ },
+ {
+  "word": "写す",
+  "reading": "うつす",
+  "meaning": "to copy or photograph"
+ },
+ {
+  "word": "移る",
+  "reading": "うつる",
+  "meaning": "to move house or transfer"
+ },
+ {
+  "word": "腕",
+  "reading": "うで",
+  "meaning": "arm"
+ },
+ {
+  "word": "うまい",
+  "meaning": "delicious"
+ },
+ {
+  "word": "裏",
+  "reading": "うら",
+  "meaning": "reverse side"
+ },
+ {
+  "word": "売り場",
+  "reading": "うりば",
+  "meaning": "place where things are sold"
+ },
+ {
+  "word": "うん",
+  "meaning": "(informal) yes"
+ },
+ {
+  "word": "運転手",
+  "reading": "うんてんしゅ",
+  "meaning": "driver"
+ },
+ {
+  "word": "運動",
+  "reading": "うんどう・する",
+  "meaning": "to exercise"
+ },
+ {
+  "word": "エスカレーター",
+  "meaning": "escalator"
+ },
+ {
+  "word": "枝",
+  "reading": "えだ",
+  "meaning": "branch, twig"
+ },
+ {
+  "word": "選ぶ",
+  "reading": "えらぶ",
+  "meaning": "to choose"
+ },
+ {
+  "word": "遠慮",
+  "reading": "えんりょ・する",
+  "meaning": "to be reserved, to be restrained"
+ },
+ {
+  "word": "おいでになる",
+  "meaning": "(respectful) to be"
+ },
+ {
+  "word": "お祝い",
+  "reading": "おいわい",
+  "meaning": "congratulation"
+ },
+ {
+  "word": "オートバイ",
+  "meaning": "motorcycle"
+ },
+ {
+  "word": "おかげ",
+  "meaning": "owing to"
+ },
+ {
+  "word": "おかしい",
+  "meaning": "strange or funny"
+ },
+ {
+  "word": "億",
+  "reading": "おく",
+  "meaning": "one hundred million"
+ },
+ {
+  "word": "屋上",
+  "reading": "おくじょう",
+  "meaning": "rooftop"
+ },
+ {
+  "word": "贈り物",
+  "reading": "おくりもの",
+  "meaning": "gift"
+ },
+ {
+  "word": "送る",
+  "reading": "おくる",
+  "meaning": "to send"
+ },
+ {
+  "word": "遅れる",
+  "reading": "おくれる",
+  "meaning": "to be late"
+ },
+ {
+  "word": "起す",
+  "reading": "おこす",
+  "meaning": "to wake"
+ },
+ {
+  "word": "行う",
+  "reading": "おこなう",
+  "meaning": "to do"
+ },
+ {
+  "word": "押し入れ",
+  "reading": "おしいれ",
+  "meaning": "closet"
+ },
+ {
+  "word": "お嬢さん",
+  "reading": "おじょうさん",
+  "meaning": "young lady"
+ },
+ {
+  "word": "お宅",
+  "reading": "おたく",
+  "meaning": "(polite) your house"
+ },
+ {
+  "word": "落る",
+  "reading": "おちる",
+  "meaning": "to fall or drop"
+ },
+ {
+  "word": "おっしゃる",
+  "meaning": "(respectful) to say"
+ },
+ {
+  "word": "夫",
+  "reading": "おっと",
+  "meaning": "husband"
+ },
+ {
+  "word": "おつり",
+  "meaning": "change from purchase, balance"
+ },
+ {
+  "word": "落す",
+  "reading": "おとす",
+  "meaning": "to drop"
+ },
+ {
+  "word": "踊り",
+  "reading": "おどり",
+  "meaning": "a dance"
+ },
+ {
+  "word": "踊る",
+  "reading": "おどる",
+  "meaning": "to dance"
+ },
+ {
+  "word": "お祭り",
+  "reading": "おまつり",
+  "meaning": "festival"
+ },
+ {
+  "word": "お見舞い",
+  "reading": "おみまい",
+  "meaning": "calling on someone who is ill,enquiry"
+ },
+ {
+  "word": "お土産",
+  "reading": "おみやげ",
+  "meaning": "souvenir"
+ },
+ {
+  "word": "思い出す",
+  "reading": "おもいだす",
+  "meaning": "to remember"
+ },
+ {
+  "word": "思う",
+  "reading": "おもう",
+  "meaning": "to think,to feel"
+ },
+ {
+  "word": "おもちゃ",
+  "meaning": "toy"
+ },
+ {
+  "word": "表",
+  "reading": "おもて",
+  "meaning": "the front"
+ },
+ {
+  "word": "親",
+  "reading": "おや",
+  "meaning": "parents"
+ },
+ {
+  "word": "下りる",
+  "reading": "おりる",
+  "meaning": "to get off"
+ },
+ {
+  "word": "折る",
+  "reading": "おる",
+  "meaning": "to break or to fold"
+ },
+ {
+  "word": "お礼",
+  "reading": "おれい",
+  "meaning": "expression of gratitude"
+ },
+ {
+  "word": "折れる",
+  "reading": "おれる",
+  "meaning": "to break or be folded"
+ },
+ {
+  "word": "終わり",
+  "reading": "おわり",
+  "meaning": "the end"
+ },
+ {
+  "word": "カーテン",
+  "meaning": "curtain"
+ },
+ {
+  "word": "海岸",
+  "reading": "かいがん",
+  "meaning": "coast"
+ },
+ {
+  "word": "会議",
+  "reading": "かいぎ",
+  "meaning": "meeting"
+ },
+ {
+  "word": "会議室",
+  "reading": "かいぎしつ",
+  "meaning": "meeting room"
+ },
+ {
+  "word": "会場",
+  "reading": "かいじょう",
+  "meaning": "assembly hall or meeting place"
+ },
+ {
+  "word": "会話",
+  "reading": "かいわ",
+  "meaning": "conversation"
+ },
+ {
+  "word": "帰り",
+  "reading": "かえり",
+  "meaning": "return"
+ },
+ {
+  "word": "科学",
+  "reading": "かがく",
+  "meaning": "science"
+ },
+ {
+  "word": "鏡",
+  "reading": "かがみ",
+  "meaning": "mirror"
+ },
+ {
+  "word": "掛ける",
+  "reading": "かける",
+  "meaning": "to hang something"
+ },
+ {
+  "word": "飾る",
+  "reading": "かざる",
+  "meaning": "to decorate"
+ },
+ {
+  "word": "火事",
+  "reading": "かじ",
+  "meaning": "fire"
+ },
+ {
+  "word": "ガス",
+  "meaning": "petrol"
+ },
+ {
+  "word": "ガソリン",
+  "meaning": "petrol"
+ },
+ {
+  "word": "ガソリンスタンド",
+  "meaning": "petrol station"
+ },
+ {
+  "word": "堅/硬/固い",
+  "reading": "かたい",
+  "meaning": "hard"
+ },
+ {
+  "word": "形",
+  "reading": "かたち",
+  "meaning": "shape"
+ },
+ {
+  "word": "片付ける",
+  "reading": "かたづける",
+  "meaning": "to tidy up"
+ },
+ {
+  "word": "課長",
+  "reading": "かちょう",
+  "meaning": "section manager"
+ },
+ {
+  "word": "勝つ",
+  "reading": "かつ",
+  "meaning": "to win"
+ },
+ {
+  "word": "かっこう",
+  "meaning": "appearance"
+ },
+ {
+  "word": "家内",
+  "reading": "かない",
+  "meaning": "housewife"
+ },
+ {
+  "word": "必ず",
+  "reading": "かならず",
+  "meaning": "certainly,necessarily"
+ },
+ {
+  "word": "お・金持ち",
+  "reading": "かねもち/おかねもち",
+  "meaning": "rich man"
+ },
+ {
+  "word": "彼女",
+  "reading": "かのじょ",
+  "meaning": "she,girlfriend"
+ },
+ {
+  "word": "壁",
+  "reading": "かべ",
+  "meaning": "wall"
+ },
+ {
+  "word": "かまう",
+  "meaning": "to mind"
+ },
+ {
+  "word": "髪",
+  "reading": "かみ",
+  "meaning": "hair"
+ },
+ {
+  "word": "噛む",
+  "reading": "かむ",
+  "meaning": "to bite,to chew"
+ },
+ {
+  "word": "通う",
+  "reading": "かよう",
+  "meaning": "to commute"
+ },
+ {
+  "word": "ガラス",
+  "meaning": "a glass pane"
+ },
+ {
+  "word": "彼",
+  "reading": "かれ",
+  "meaning": "he,boyfriend"
+ },
+ {
+  "word": "彼ら",
+  "reading": "かれら",
+  "meaning": "they"
+ },
+ {
+  "word": "乾く",
+  "reading": "かわく",
+  "meaning": "to get dry"
+ },
+ {
+  "word": "代わり",
+  "reading": "かわり",
+  "meaning": "substitute,alternate"
+ },
+ {
+  "word": "変わる",
+  "reading": "かわる",
+  "meaning": "to change"
+ },
+ {
+  "word": "考える",
+  "reading": "かんがえる",
+  "meaning": "to consider"
+ },
+ {
+  "word": "看護婦",
+  "reading": "かんごふ",
+  "meaning": "female nurse"
+ },
+ {
+  "word": "気",
+  "reading": "き",
+  "meaning": "spirit,mood"
+ },
+ {
+  "word": "聞こえる",
+  "reading": "きこえる",
+  "meaning": "to be heard"
+ },
+ {
+  "word": "汽車",
+  "reading": "きしゃ",
+  "meaning": "steam train"
+ },
+ {
+  "word": "技術",
+  "reading": "ぎじゅつ",
+  "meaning": "art,technology,skill"
+ },
+ {
+  "word": "季節",
+  "reading": "きせつ",
+  "meaning": "season"
+ },
+ {
+  "word": "規則",
+  "reading": "きそく",
+  "meaning": "regulations"
+ },
+ {
+  "word": "きっと",
+  "meaning": "surely"
+ },
+ {
+  "word": "絹",
+  "reading": "きぬ",
+  "meaning": "silk"
+ },
+ {
+  "word": "厳しい",
+  "reading": "きびしい",
+  "meaning": "strict"
+ },
+ {
+  "word": "気分",
+  "reading": "きぶん",
+  "meaning": "mood"
+ },
+ {
+  "word": "決る",
+  "reading": "きまる",
+  "meaning": "to be decided"
+ },
+ {
+  "word": "君",
+  "reading": "くん",
+  "meaning": "suffix for familiar young male"
+ },
+ {
+  "word": "気持ち",
+  "reading": "きもち",
+  "meaning": "feeling,mood"
+ },
+ {
+  "word": "着物",
+  "reading": "きもの",
+  "meaning": "kimono"
+ },
+ {
+  "word": "客",
+  "reading": "きゃく",
+  "meaning": "guest,customer"
+ },
+ {
+  "word": "急",
+  "reading": "きゅう",
+  "meaning": "urgent, steep"
+ },
+ {
+  "word": "急行",
+  "reading": "きゅうこう",
+  "meaning": "speedy, express"
+ },
+ {
+  "word": "教育",
+  "reading": "きょういく",
+  "meaning": "education"
+ },
+ {
+  "word": "教会",
+  "reading": "きょうかい",
+  "meaning": "church"
+ },
+ {
+  "word": "競争",
+  "reading": "きょうそう",
+  "meaning": "competition"
+ },
+ {
+  "word": "近所",
+  "reading": "きんじょ",
+  "meaning": "neighbourhood"
+ },
+ {
+  "word": "具合",
+  "reading": "ぐあい",
+  "meaning": "condition,health"
+ },
+ {
+  "word": "空気",
+  "reading": "くうき",
+  "meaning": "air,atmosphere"
+ },
+ {
+  "word": "空港",
+  "reading": "くうこう",
+  "meaning": "airport"
+ },
+ {
+  "word": "草",
+  "reading": "くさ",
+  "meaning": "grass"
+ },
+ {
+  "word": "くださる",
+  "meaning": "(respectful) to give"
+ },
+ {
+  "word": "首",
+  "reading": "くび",
+  "meaning": "neck"
+ },
+ {
+  "word": "雲",
+  "reading": "くも",
+  "meaning": "cloud"
+ },
+ {
+  "word": "くれる",
+  "meaning": "to give"
+ },
+ {
+  "word": "暮れる",
+  "reading": "くれる",
+  "meaning": "to get dark,to come to an end"
+ },
+ {
+  "word": "毛",
+  "reading": "け",
+  "meaning": "hair or fur"
+ },
+ {
+  "word": "計画",
+  "reading": "けいかく・する",
+  "meaning": "to plan"
+ },
+ {
+  "word": "警察",
+  "reading": "けいさつ",
+  "meaning": "police"
+ },
+ {
+  "word": "ケーキ",
+  "meaning": "cake"
+ },
+ {
+  "word": "けが・する",
+  "meaning": "to injure"
+ },
+ {
+  "word": "景色",
+  "reading": "けしき",
+  "meaning": "scene,landscape"
+ },
+ {
+  "word": "消しゴム",
+  "reading": "けしゴム",
+  "meaning": "eraser"
+ },
+ {
+  "word": "下宿",
+  "reading": "げしゅく",
+  "meaning": "lodging"
+ },
+ {
+  "word": "決して",
+  "reading": "けっして",
+  "meaning": "never"
+ },
+ {
+  "word": "けれど/けれども",
+  "meaning": "however"
+ },
+ {
+  "word": "けんか・する",
+  "meaning": "to quarrel"
+ },
+ {
+  "word": "研究",
+  "reading": "けんきゅう",
+  "meaning": "research"
+ },
+ {
+  "word": "研究室",
+  "reading": "けんきゅうしつ",
+  "meaning": "study room,laboratory"
+ },
+ {
+  "word": "見物",
+  "reading": "けんぶつ",
+  "meaning": "sightseeing"
+ },
+ {
+  "word": "子",
+  "reading": "こ",
+  "meaning": "child"
+ },
+ {
+  "word": "こう",
+  "meaning": "this way"
+ },
+ {
+  "word": "郊外",
+  "reading": "こうがい",
+  "meaning": "outskirts"
+ },
+ {
+  "word": "講義",
+  "reading": "こうぎ",
+  "meaning": "lecture"
+ },
+ {
+  "word": "工業",
+  "reading": "こうぎょう",
+  "meaning": "the manufacturing industry"
+ },
+ {
+  "word": "高校",
+  "reading": "こうこう",
+  "meaning": "high school"
+ },
+ {
+  "word": "高校生",
+  "reading": "こうこうせい",
+  "meaning": "high school student"
+ },
+ {
+  "word": "工場",
+  "reading": "こうじょう",
+  "meaning": "factory"
+ },
+ {
+  "word": "校長",
+  "reading": "こうちょう",
+  "meaning": "headmaster"
+ },
+ {
+  "word": "交通",
+  "reading": "こうつう",
+  "meaning": "traffic,transportation"
+ },
+ {
+  "word": "講堂",
+  "reading": "こうどう",
+  "meaning": "auditorium"
+ },
+ {
+  "word": "高等学校",
+  "reading": "こうとうがっこう",
+  "meaning": "high school"
+ },
+ {
+  "word": "公務員",
+  "reading": "こうむいん",
+  "meaning": "government worker"
+ },
+ {
+  "word": "国際",
+  "reading": "こくさい",
+  "meaning": "international"
+ },
+ {
+  "word": "心",
+  "reading": "こころ",
+  "meaning": "core,heart"
+ },
+ {
+  "word": "御主人",
+  "reading": "ごしゅじん",
+  "meaning": "(honorable) your husband"
+ },
+ {
+  "word": "故障",
+  "reading": "こしょう・する",
+  "meaning": "to break-down"
+ },
+ {
+  "word": "ご存じ",
+  "reading": "ごぞんじ",
+  "meaning": "knowing,acquaintance"
+ },
+ {
+  "word": "答",
+  "reading": "こたえ",
+  "meaning": "response"
+ },
+ {
+  "word": "ごちそう",
+  "meaning": "a feast"
+ },
+ {
+  "word": "こと",
+  "meaning": "thing,matter"
+ },
+ {
+  "word": "小鳥",
+  "reading": "ことり",
+  "meaning": "small bird"
+ },
+ {
+  "word": "このあいだ",
+  "meaning": "the other day,recently"
+ },
+ {
+  "word": "このごろ",
+  "meaning": "these days,nowadays"
+ },
+ {
+  "word": "細かい",
+  "reading": "こまかい",
+  "meaning": "small, fine"
+ },
+ {
+  "word": "ごみ",
+  "meaning": "rubbish"
+ },
+ {
+  "word": "込む",
+  "reading": "こむ",
+  "meaning": "to be crowded"
+ },
+ {
+  "word": "米",
+  "reading": "こめ",
+  "meaning": "uncooked rice"
+ },
+ {
+  "word": "ごらんになる",
+  "meaning": "(respectful) to see"
+ },
+ {
+  "word": "これから",
+  "meaning": "after this"
+ },
+ {
+  "word": "壊す",
+  "reading": "こわす",
+  "meaning": "to break"
+ },
+ {
+  "word": "壊れる",
+  "reading": "こわれる",
+  "meaning": "to be broken"
+ },
+ {
+  "word": "コンサート",
+  "meaning": "concert"
+ },
+ {
+  "word": "今度",
+  "reading": "こんど",
+  "meaning": "now,next time"
+ },
+ {
+  "word": "コンピュータ/コンピューター",
+  "meaning": "computer"
+ },
+ {
+  "word": "今夜",
+  "reading": "こんや",
+  "meaning": "tonight"
+ },
+ {
+  "word": "坂",
+  "reading": "さか",
+  "meaning": "slope,hill"
+ },
+ {
+  "word": "下る",
+  "reading": "さがる",
+  "meaning": "to get down,to descend"
+ },
+ {
+  "word": "盛ん",
+  "reading": "さかん",
+  "meaning": "popularity,prosperous"
+ },
+ {
+  "word": "下げる",
+  "reading": "さげる",
+  "meaning": "to hang,to lower,to move back"
+ },
+ {
+  "word": "差し上げる",
+  "reading": "さしあげる",
+  "meaning": "(polite) to give"
+ },
+ {
+  "word": "さっき",
+  "meaning": "some time ago"
+ },
+ {
+  "word": "さ来月",
+  "reading": "さらいげつ",
+  "meaning": "the month after next"
+ },
+ {
+  "word": "さ来週",
+  "reading": "さらいしゅう",
+  "meaning": "the week after next"
+ },
+ {
+  "word": "サラダ",
+  "meaning": "salad"
+ },
+ {
+  "word": "騒ぐ",
+  "reading": "さわぐ",
+  "meaning": "to make noise,to be excited"
+ },
+ {
+  "word": "触る",
+  "reading": "さわる",
+  "meaning": "to touch"
+ },
+ {
+  "word": "産業",
+  "reading": "さんぎょう",
+  "meaning": "industry"
+ },
+ {
+  "word": "サンダル",
+  "meaning": "sandal"
+ },
+ {
+  "word": "サンドイッチ",
+  "meaning": "sandwich"
+ },
+ {
+  "word": "残念",
+  "reading": "ざんねん",
+  "meaning": "disappointment"
+ },
+ {
+  "word": "市",
+  "reading": "し",
+  "meaning": "city"
+ },
+ {
+  "word": "試合",
+  "reading": "しあい",
+  "meaning": "match,game"
+ },
+ {
+  "word": "仕方",
+  "reading": "しかた",
+  "meaning": "method"
+ },
+ {
+  "word": "しかる",
+  "meaning": "a particular"
+ },
+ {
+  "word": "事故",
+  "reading": "じこ",
+  "meaning": "accident"
+ },
+ {
+  "word": "地震",
+  "reading": "じしん",
+  "meaning": "earthquake"
+ },
+ {
+  "word": "時代",
+  "reading": "じだい",
+  "meaning": "era"
+ },
+ {
+  "word": "下着",
+  "reading": "したぎ",
+  "meaning": "underwear"
+ },
+ {
+  "word": "支度",
+  "reading": "したく・する",
+  "meaning": "to prepare"
+ },
+ {
+  "word": "しっかり",
+  "meaning": "firmly,steadily"
+ },
+ {
+  "word": "失敗",
+  "reading": "しっぱい",
+  "meaning": "failure,mistake"
+ },
+ {
+  "word": "辞典",
+  "reading": "じてん",
+  "meaning": "dictionary"
+ },
+ {
+  "word": "品物",
+  "reading": "しなもの",
+  "meaning": "goods"
+ },
+ {
+  "word": "しばらく",
+  "meaning": "little while"
+ },
+ {
+  "word": "島",
+  "reading": "しま",
+  "meaning": "island"
+ },
+ {
+  "word": "市民",
+  "reading": "しみん",
+  "meaning": "citizen"
+ },
+ {
+  "word": "事務所",
+  "reading": "じむしょ",
+  "meaning": "office"
+ },
+ {
+  "word": "社長",
+  "reading": "しゃちょう",
+  "meaning": "company president"
+ },
+ {
+  "word": "じゃま",
+  "meaning": "hindrance,intrusion"
+ },
+ {
+  "word": "ジャム",
+  "meaning": "jam"
+ },
+ {
+  "word": "習慣",
+  "reading": "しゅうかん",
+  "meaning": "custom,manners"
+ },
+ {
+  "word": "住所",
+  "reading": "じゅうしょ",
+  "meaning": "an address,a residence"
+ },
+ {
+  "word": "柔道",
+  "reading": "じゅうどう",
+  "meaning": "judo"
+ },
+ {
+  "word": "出席",
+  "reading": "しゅっせき・する",
+  "meaning": "to attend"
+ },
+ {
+  "word": "出発",
+  "reading": "しゅっぱつ・する",
+  "meaning": "to depart"
+ },
+ {
+  "word": "趣味",
+  "reading": "しゅみ",
+  "meaning": "hobby"
+ },
+ {
+  "word": "紹介",
+  "reading": "しょうかい",
+  "meaning": "introduction"
+ },
+ {
+  "word": "小学校",
+  "reading": "しょうがっこう",
+  "meaning": "elementary school"
+ },
+ {
+  "word": "小説",
+  "reading": "しょうせつ",
+  "meaning": "novel"
+ },
+ {
+  "word": "招待",
+  "reading": "しょうたい・する",
+  "meaning": "to invite"
+ },
+ {
+  "word": "承知",
+  "reading": "しょうち・する",
+  "meaning": "to consent"
+ },
+ {
+  "word": "食事",
+  "reading": "しょくじ・する",
+  "meaning": "to have a meal"
+ },
+ {
+  "word": "食料品",
+  "reading": "しょくりょうひん",
+  "meaning": "groceries"
+ },
+ {
+  "word": "女性",
+  "reading": "じょせい",
+  "meaning": "woman"
+ },
+ {
+  "word": "知らせる",
+  "reading": "しらせる",
+  "meaning": "to notify"
+ },
+ {
+  "word": "人口",
+  "reading": "じんこう",
+  "meaning": "population"
+ },
+ {
+  "word": "神社",
+  "reading": "じんじゃ",
+  "meaning": "Shinto shrine"
+ },
+ {
+  "word": "心配",
+  "reading": "しんぱい・する",
+  "meaning": "to worry"
+ },
+ {
+  "word": "新聞社",
+  "reading": "しんぶんしゃ",
+  "meaning": "newspaper company"
+ },
+ {
+  "word": "水泳",
+  "reading": "すいえい",
+  "meaning": "swimming"
+ },
+ {
+  "word": "水道",
+  "reading": "すいどう",
+  "meaning": "water supply"
+ },
+ {
+  "word": "ずいぶん",
+  "meaning": "extremely"
+ },
+ {
+  "word": "数学",
+  "reading": "すうがく",
+  "meaning": "mathematics,arithmetic"
+ },
+ {
+  "word": "スーツ",
+  "meaning": "suit"
+ },
+ {
+  "word": "スーツケース",
+  "meaning": "suitcase"
+ },
+ {
+  "word": "過ぎる",
+  "reading": "すぎる",
+  "meaning": "to exceed"
+ },
+ {
+  "word": "すく",
+  "meaning": "to become empty"
+ },
+ {
+  "word": "スクリーン",
+  "meaning": "screen"
+ },
+ {
+  "word": "凄い",
+  "reading": "すごい",
+  "meaning": "terrific"
+ },
+ {
+  "word": "進む",
+  "reading": "すすむ",
+  "meaning": "to make progress"
+ },
+ {
+  "word": "すっかり",
+  "meaning": "completely"
+ },
+ {
+  "word": "すっと",
+  "meaning": "straight,all of a sudden"
+ },
+ {
+  "word": "ステーキ",
+  "meaning": "steak"
+ },
+ {
+  "word": "捨てる",
+  "reading": "すてる",
+  "meaning": "to throw away"
+ },
+ {
+  "word": "ステレオ",
+  "meaning": "stereo"
+ },
+ {
+  "word": "砂",
+  "reading": "すな",
+  "meaning": "sand"
+ },
+ {
+  "word": "すばらしい",
+  "meaning": "wonderful"
+ },
+ {
+  "word": "滑る",
+  "reading": "すべる",
+  "meaning": "to slide,to slip"
+ },
+ {
+  "word": "隅",
+  "reading": "すみ",
+  "meaning": "corner,nook"
+ },
+ {
+  "word": "済む",
+  "reading": "すむ",
+  "meaning": "to finish"
+ },
+ {
+  "word": "すり",
+  "meaning": "pickpocket"
+ },
+ {
+  "word": "すると",
+  "meaning": "then"
+ },
+ {
+  "word": "生活",
+  "reading": "せいかつ・する",
+  "meaning": "to live"
+ },
+ {
+  "word": "生産",
+  "reading": "せいさん・する",
+  "meaning": "to produce"
+ },
+ {
+  "word": "西洋",
+  "reading": "せいよう",
+  "meaning": "western countries"
+ },
+ {
+  "word": "世界",
+  "reading": "せかい",
+  "meaning": "the world"
+ },
+ {
+  "word": "席",
+  "reading": "せき",
+  "meaning": "seat"
+ },
+ {
+  "word": "背中",
+  "reading": "せなか",
+  "meaning": "back of the body"
+ },
+ {
+  "word": "ぜひ",
+  "meaning": "without fail"
+ },
+ {
+  "word": "世話",
+  "reading": "せわ・する",
+  "meaning": "to look after"
+ },
+ {
+  "word": "線",
+  "reading": "せん",
+  "meaning": "line"
+ },
+ {
+  "word": "ぜんぜん",
+  "meaning": "not entirely (used in a negative sentence)"
+ },
+ {
+  "word": "戦争",
+  "reading": "せんそう",
+  "meaning": "war"
+ },
+ {
+  "word": "先輩",
+  "reading": "せんぱい",
+  "meaning": "senior"
+ },
+ {
+  "word": "そう",
+  "meaning": "really"
+ },
+ {
+  "word": "相談",
+  "reading": "そうだん・する",
+  "meaning": "to discuss"
+ },
+ {
+  "word": "育てる",
+  "reading": "そだてる",
+  "meaning": "to rear,to bring up"
+ },
+ {
+  "word": "卒業",
+  "reading": "そつぎょう",
+  "meaning": "graduation"
+ },
+ {
+  "word": "祖父",
+  "reading": "そふ",
+  "meaning": "grandfather"
+ },
+ {
+  "word": "ソフト",
+  "meaning": "soft"
+ },
+ {
+  "word": "祖母",
+  "reading": "そぼ",
+  "meaning": "grandmother"
+ },
+ {
+  "word": "それで",
+  "meaning": "because of that"
+ },
+ {
+  "word": "それに",
+  "meaning": "moreover"
+ },
+ {
+  "word": "それほど",
+  "meaning": "to that extent"
+ },
+ {
+  "word": "そろそろ",
+  "meaning": "gradually,soon"
+ },
+ {
+  "word": "そんな",
+  "meaning": "that sort of"
+ },
+ {
+  "word": "そんなに",
+  "meaning": "so much,like that"
+ },
+ {
+  "word": "退院",
+  "reading": "たいいん・する",
+  "meaning": "to leave hospital"
+ },
+ {
+  "word": "大学生",
+  "reading": "だいがくせい",
+  "meaning": "university student"
+ },
+ {
+  "word": "大事",
+  "reading": "だいじ",
+  "meaning": "important,valuable,serious matter"
+ },
+ {
+  "word": "大体",
+  "reading": "だいたい",
+  "meaning": "generally"
+ },
+ {
+  "word": "たいてい",
+  "meaning": "usually"
+ },
+ {
+  "word": "タイプ",
+  "meaning": "type,style"
+ },
+ {
+  "word": "大分",
+  "reading": "だいぶ",
+  "meaning": "greatly"
+ },
+ {
+  "word": "台風",
+  "reading": "たいふう",
+  "meaning": "typhoon"
+ },
+ {
+  "word": "倒れる",
+  "reading": "たおれる",
+  "meaning": "to break down"
+ },
+ {
+  "word": "だから",
+  "meaning": "so,therefore"
+ },
+ {
+  "word": "確か",
+  "reading": "たしか",
+  "meaning": "definite"
+ },
+ {
+  "word": "足す",
+  "reading": "たす",
+  "meaning": "to add a number"
+ },
+ {
+  "word": "訪ねる",
+  "reading": "たずねる",
+  "meaning": "to visit"
+ },
+ {
+  "word": "尋ねる",
+  "reading": "たずねる",
+  "meaning": "to ask"
+ },
+ {
+  "word": "正しい",
+  "reading": "ただしい",
+  "meaning": "correct"
+ },
+ {
+  "word": "畳",
+  "reading": "たたみ",
+  "meaning": "Japanese straw mat"
+ },
+ {
+  "word": "立てる",
+  "reading": "たてる",
+  "meaning": "to stand something up"
+ },
+ {
+  "word": "建てる",
+  "reading": "たてる",
+  "meaning": "to build"
+ },
+ {
+  "word": "例えば",
+  "reading": "たとえば",
+  "meaning": "for example"
+ },
+ {
+  "word": "棚",
+  "reading": "たな",
+  "meaning": "shelves"
+ },
+ {
+  "word": "楽む",
+  "reading": "たのしむ",
+  "meaning": "to enjoy oneself"
+ },
+ {
+  "word": "たまに",
+  "meaning": "occasionally"
+ },
+ {
+  "word": "為",
+  "reading": "ため",
+  "meaning": "in order to"
+ },
+ {
+  "word": "だめ",
+  "meaning": "no good"
+ },
+ {
+  "word": "男性",
+  "reading": "だんせい",
+  "meaning": "male"
+ },
+ {
+  "word": "暖房",
+  "reading": "だんぼう",
+  "meaning": "heating"
+ },
+ {
+  "word": "血",
+  "reading": "ち",
+  "meaning": "blood"
+ },
+ {
+  "word": "チェック・する",
+  "meaning": "to check"
+ },
+ {
+  "word": "ちっとも",
+  "meaning": "not at all (used with a negative verb)"
+ },
+ {
+  "word": "ちゃん",
+  "meaning": "suffix for familiar female person"
+ },
+ {
+  "word": "注意",
+  "reading": "ちゅうい",
+  "meaning": "caution"
+ },
+ {
+  "word": "中学校",
+  "reading": "ちゅうがっこう",
+  "meaning": "junior high school,middle school"
+ },
+ {
+  "word": "注射",
+  "reading": "ちゅうしゃ",
+  "meaning": "injection"
+ },
+ {
+  "word": "駐車場",
+  "reading": "ちゅうしゃじょう",
+  "meaning": "parking lot"
+ },
+ {
+  "word": "地理",
+  "reading": "ちり",
+  "meaning": "geography"
+ },
+ {
+  "word": "捕まえる",
+  "reading": "つかまえる",
+  "meaning": "to seize"
+ },
+ {
+  "word": "つき",
+  "meaning": "moon"
+ },
+ {
+  "word": "付く",
+  "reading": "つく",
+  "meaning": "to be attached"
+ },
+ {
+  "word": "漬ける",
+  "reading": "つける",
+  "meaning": "to soak,to pickle"
+ },
+ {
+  "word": "都合",
+  "reading": "つごう",
+  "meaning": "circumstances,convenience"
+ },
+ {
+  "word": "伝える",
+  "reading": "つたえる",
+  "meaning": "to report"
+ },
+ {
+  "word": "続く",
+  "reading": "つづく",
+  "meaning": "to be continued"
+ },
+ {
+  "word": "包む",
+  "reading": "つつむ",
+  "meaning": "to wrap"
+ },
+ {
+  "word": "妻",
+  "reading": "つま",
+  "meaning": "(humble) wife"
+ },
+ {
+  "word": "つもり",
+  "meaning": "intention"
+ },
+ {
+  "word": "釣る",
+  "reading": "つる",
+  "meaning": "to fish"
+ },
+ {
+  "word": "丁寧",
+  "reading": "ていねい",
+  "meaning": "polite"
+ },
+ {
+  "word": "テキスト",
+  "meaning": "text,text book"
+ },
+ {
+  "word": "適当",
+  "reading": "てきとう",
+  "meaning": "suitability"
+ },
+ {
+  "word": "できるだけ",
+  "meaning": "as much as possible"
+ },
+ {
+  "word": "テニス",
+  "meaning": "tennis"
+ },
+ {
+  "word": "手袋",
+  "reading": "てぶくろ",
+  "meaning": "glove"
+ },
+ {
+  "word": "寺",
+  "reading": "てら",
+  "meaning": "temple"
+ },
+ {
+  "word": "点",
+  "reading": "てん",
+  "meaning": "point,dot"
+ },
+ {
+  "word": "店員",
+  "reading": "てんいん",
+  "meaning": "shop assistant"
+ },
+ {
+  "word": "天気予報",
+  "reading": "てんきよほう",
+  "meaning": "weather forecast"
+ },
+ {
+  "word": "電灯",
+  "reading": "でんとう",
+  "meaning": "electric light"
+ },
+ {
+  "word": "電報",
+  "reading": "でんぽう",
+  "meaning": "telegram"
+ },
+ {
+  "word": "展覧会",
+  "reading": "てんらんかい",
+  "meaning": "exhibition"
+ },
+ {
+  "word": "都",
+  "reading": "と",
+  "meaning": "metropolitan"
+ },
+ {
+  "word": "道具",
+  "reading": "どうぐ",
+  "meaning": "tool,means"
+ },
+ {
+  "word": "とうとう",
+  "meaning": "finally, after all"
+ },
+ {
+  "word": "動物園",
+  "reading": "どうぶつえん",
+  "meaning": "zoo"
+ },
+ {
+  "word": "遠く",
+  "reading": "とおく",
+  "meaning": "distant"
+ },
+ {
+  "word": "通る",
+  "reading": "とおる",
+  "meaning": "to go through"
+ },
+ {
+  "word": "特に",
+  "reading": "とくに",
+  "meaning": "particularly,especially"
+ },
+ {
+  "word": "とこや",
+  "meaning": "barber"
+ },
+ {
+  "word": "途中",
+  "reading": "とちゅう",
+  "meaning": "on the way"
+ },
+ {
+  "word": "特急",
+  "reading": "とっきゅう",
+  "meaning": "limited express train (faster than an express train)"
+ },
+ {
+  "word": "泊まる",
+  "reading": "とまる",
+  "meaning": "to lodge at"
+ },
+ {
+  "word": "止める",
+  "reading": "やめる",
+  "meaning": "to stop"
+ },
+ {
+  "word": "取り替える",
+  "reading": "とりかえる",
+  "meaning": "to exchange"
+ },
+ {
+  "word": "泥棒",
+  "reading": "どろぼう",
+  "meaning": "thief"
+ },
+ {
+  "word": "どんどん",
+  "meaning": "more and more"
+ },
+ {
+  "word": "直す",
+  "reading": "なおす",
+  "meaning": "to fix,to repair"
+ },
+ {
+  "word": "直る",
+  "reading": "なおる",
+  "meaning": "to be fixed,to be repaired"
+ },
+ {
+  "word": "治る",
+  "reading": "なおる",
+  "meaning": "to be cured,to heal"
+ },
+ {
+  "word": "中々",
+  "reading": "なかなか",
+  "meaning": "considerably"
+ },
+ {
+  "word": "無くなる",
+  "reading": "なくなる",
+  "meaning": "to disappear,to get lost"
+ },
+ {
+  "word": "亡くなる",
+  "reading": "なくなる",
+  "meaning": "to die"
+ },
+ {
+  "word": "投げる",
+  "reading": "なげる",
+  "meaning": "to throw or cast away"
+ },
+ {
+  "word": "なさる",
+  "meaning": "(respectful) to do"
+ },
+ {
+  "word": "鳴る",
+  "reading": "なる",
+  "meaning": "to sound"
+ },
+ {
+  "word": "なるべく",
+  "meaning": "as much as possible"
+ },
+ {
+  "word": "なるほど",
+  "meaning": "now I understand"
+ },
+ {
+  "word": "慣れる",
+  "reading": "なれる",
+  "meaning": "to grow accustomed to"
+ },
+ {
+  "word": "苦い",
+  "reading": "にがい",
+  "meaning": "bitter"
+ },
+ {
+  "word": "二階建て",
+  "reading": "にかいだて",
+  "meaning": "two storied"
+ },
+ {
+  "word": "逃げる",
+  "reading": "にげる",
+  "meaning": "to escape"
+ },
+ {
+  "word": "日記",
+  "reading": "にっき",
+  "meaning": "journal"
+ },
+ {
+  "word": "入院",
+  "reading": "にゅういん・する",
+  "meaning": "to hospitalise"
+ },
+ {
+  "word": "入学",
+  "reading": "にゅうがく・する",
+  "meaning": "to enter school or university"
+ },
+ {
+  "word": "似る",
+  "reading": "にる",
+  "meaning": "to be similar"
+ },
+ {
+  "word": "人形",
+  "reading": "にんぎょう",
+  "meaning": "doll, figure"
+ },
+ {
+  "word": "盗む",
+  "reading": "ぬすむ",
+  "meaning": "to steal"
+ },
+ {
+  "word": "塗る",
+  "reading": "ぬる",
+  "meaning": "to paint,to plaster"
+ },
+ {
+  "word": "ぬれる",
+  "meaning": "to get wet"
+ },
+ {
+  "word": "ねだん",
+  "meaning": "price"
+ },
+ {
+  "word": "熱",
+  "reading": "ねつ",
+  "meaning": "fever"
+ },
+ {
+  "word": "ねっしん",
+  "meaning": "enthusiasm"
+ },
+ {
+  "word": "寝坊",
+  "reading": "ねぼう",
+  "meaning": "sleeping in late"
+ },
+ {
+  "word": "眠る",
+  "reading": "ねむる",
+  "meaning": "to sleep"
+ },
+ {
+  "word": "残る",
+  "reading": "のこる",
+  "meaning": "to remain"
+ },
+ {
+  "word": "のど",
+  "meaning": "throat"
+ },
+ {
+  "word": "乗り換える",
+  "reading": "のりかえる",
+  "meaning": "to change between buses or trains"
+ },
+ {
+  "word": "乗り物",
+  "reading": "のりもの",
+  "meaning": "vehicle"
+ },
+ {
+  "word": "葉",
+  "reading": "は",
+  "meaning": "leaf"
+ },
+ {
+  "word": "場合",
+  "reading": "ばあい",
+  "meaning": "situation"
+ },
+ {
+  "word": "パート",
+  "meaning": "part time"
+ },
+ {
+  "word": "倍",
+  "reading": "ばい",
+  "meaning": "double"
+ },
+ {
+  "word": "拝見",
+  "reading": "はいけん・する",
+  "meaning": "(humble) to look at"
+ },
+ {
+  "word": "歯医者",
+  "reading": "はいしゃ",
+  "meaning": "dentist"
+ },
+ {
+  "word": "始める",
+  "reading": "はじめる",
+  "meaning": "to begin"
+ },
+ {
+  "word": "場所",
+  "reading": "ばしょ",
+  "meaning": "location"
+ },
+ {
+  "word": "はず",
+  "meaning": "it should be so"
+ },
+ {
+  "word": "恥ずかしい",
+  "reading": "はずかしい",
+  "meaning": "embarrassed"
+ },
+ {
+  "word": "パソコン",
+  "meaning": "personal computer"
+ },
+ {
+  "word": "発音",
+  "reading": "はつおん",
+  "meaning": "pronunciation"
+ },
+ {
+  "word": "はっきり",
+  "meaning": "clearly"
+ },
+ {
+  "word": "花見",
+  "reading": "はなみ",
+  "meaning": "cherry-blossom viewing"
+ },
+ {
+  "word": "林",
+  "reading": "はやし",
+  "meaning": "woods,forester"
+ },
+ {
+  "word": "払う",
+  "reading": "はらう",
+  "meaning": "to pay"
+ },
+ {
+  "word": "番組",
+  "reading": "ばんぐみ",
+  "meaning": "television or radio program"
+ },
+ {
+  "word": "反対",
+  "reading": "はんたい",
+  "meaning": "opposition"
+ },
+ {
+  "word": "ハンドバッグ",
+  "meaning": "handbag　"
+ },
+ {
+  "word": "日",
+  "reading": "ひ",
+  "meaning": "day, sun"
+ },
+ {
+  "word": "火",
+  "reading": "ひ",
+  "meaning": "fire"
+ },
+ {
+  "word": "ピアノ",
+  "meaning": "piano"
+ },
+ {
+  "word": "冷える",
+  "reading": "ひえる",
+  "meaning": "to grow cold"
+ },
+ {
+  "word": "光",
+  "reading": "ひかり",
+  "meaning": "light"
+ },
+ {
+  "word": "光る",
+  "reading": "ひかる",
+  "meaning": "to shine,to glitter"
+ },
+ {
+  "word": "引き出し",
+  "reading": "ひきだし",
+  "meaning": "drawer,drawing out"
+ },
+ {
+  "word": "引き出す",
+  "reading": "ひきだす",
+  "meaning": "to withdraw"
+ },
+ {
+  "word": "ひげ",
+  "meaning": "beard"
+ },
+ {
+  "word": "飛行場",
+  "reading": "ひこうじょう",
+  "meaning": "airport"
+ },
+ {
+  "word": "久しぶり",
+  "reading": "ひさしぶり",
+  "meaning": "after a long time"
+ },
+ {
+  "word": "美術館",
+  "reading": "びじゅつかん",
+  "meaning": "art gallery"
+ },
+ {
+  "word": "非常に",
+  "reading": "ひじょうに",
+  "meaning": "extremely"
+ },
+ {
+  "word": "びっくり・する",
+  "meaning": "to be surprised"
+ },
+ {
+  "word": "引っ越す",
+  "reading": "ひっこす",
+  "meaning": "to move house"
+ },
+ {
+  "word": "ひどい",
+  "meaning": "awful"
+ },
+ {
+  "word": "開く",
+  "reading": "ひらく",
+  "meaning": "to open an event"
+ },
+ {
+  "word": "ビル",
+  "meaning": "building or bill"
+ },
+ {
+  "word": "昼間",
+  "reading": "ひるま",
+  "meaning": "daytime,during the day"
+ },
+ {
+  "word": "昼休み",
+  "reading": "ひるやすみ",
+  "meaning": "noon break"
+ },
+ {
+  "word": "拾う",
+  "reading": "ひろう",
+  "meaning": "to pick up,to gather"
+ },
+ {
+  "word": "ファックス",
+  "meaning": "fax"
+ },
+ {
+  "word": "深い",
+  "reading": "ふかい",
+  "meaning": "deep"
+ },
+ {
+  "word": "復習",
+  "reading": "ふくしゅう",
+  "meaning": "revision"
+ },
+ {
+  "word": "部長",
+  "reading": "ぶちょう",
+  "meaning": "head of a section"
+ },
+ {
+  "word": "普通",
+  "reading": "ふつう",
+  "meaning": "usually, or a train that stops at every station"
+ },
+ {
+  "word": "ぶどう",
+  "meaning": "grapes"
+ },
+ {
+  "word": "太る",
+  "reading": "ふとる",
+  "meaning": "to become fat"
+ },
+ {
+  "word": "布団",
+  "reading": "ふとん",
+  "meaning": "Japanese bedding, futon"
+ },
+ {
+  "word": "舟",
+  "reading": "ふね",
+  "meaning": "ship"
+ },
+ {
+  "word": "不便",
+  "reading": "ふべん",
+  "meaning": "inconvenience"
+ },
+ {
+  "word": "踏む",
+  "reading": "ふむ",
+  "meaning": "to step on"
+ },
+ {
+  "word": "降り出す",
+  "reading": "ふりだす",
+  "meaning": "to start to rain"
+ },
+ {
+  "word": "プレゼント",
+  "meaning": "present"
+ },
+ {
+  "word": "文学",
+  "reading": "ぶんがく",
+  "meaning": "literature"
+ },
+ {
+  "word": "文法",
+  "reading": "ぶんぽう",
+  "meaning": "grammar"
+ },
+ {
+  "word": "別",
+  "reading": "べつ",
+  "meaning": "different"
+ },
+ {
+  "word": "ベル",
+  "meaning": "bell"
+ },
+ {
+  "word": "変",
+  "reading": "へん",
+  "meaning": "strange"
+ },
+ {
+  "word": "返事",
+  "reading": "へんじ",
+  "meaning": "reply"
+ },
+ {
+  "word": "貿易",
+  "reading": "ぼうえき",
+  "meaning": "trade"
+ },
+ {
+  "word": "放送",
+  "reading": "ほうそう・する",
+  "meaning": "to broadcast"
+ },
+ {
+  "word": "法律",
+  "reading": "ほうりつ",
+  "meaning": "law"
+ },
+ {
+  "word": "僕",
+  "reading": "ぼく",
+  "meaning": "I (used by males)"
+ },
+ {
+  "word": "星",
+  "reading": "ほし",
+  "meaning": "star"
+ },
+ {
+  "word": "ほど",
+  "meaning": "extent"
+ },
+ {
+  "word": "ほとんど",
+  "meaning": "mostly"
+ },
+ {
+  "word": "ほめる",
+  "meaning": "to praise"
+ },
+ {
+  "word": "翻訳",
+  "reading": "ほんやく",
+  "meaning": "translation"
+ },
+ {
+  "word": "参る",
+  "reading": "まいる",
+  "meaning": "(humble) to go,to come"
+ },
+ {
+  "word": "負ける",
+  "reading": "まける",
+  "meaning": "to lose"
+ },
+ {
+  "word": "まじめ",
+  "meaning": "serious"
+ },
+ {
+  "word": "まず",
+  "meaning": "first of all"
+ },
+ {
+  "word": "または",
+  "meaning": "or,otherwise"
+ },
+ {
+  "word": "間に合う",
+  "reading": "まにあう",
+  "meaning": "to be in time for"
+ },
+ {
+  "word": "周り",
+  "reading": "まわり",
+  "meaning": "surroundings"
+ },
+ {
+  "word": "回る",
+  "reading": "まわる",
+  "meaning": "to go around"
+ },
+ {
+  "word": "漫画",
+  "reading": "まんが",
+  "meaning": "comic"
+ },
+ {
+  "word": "真中",
+  "reading": "まんなか",
+  "meaning": "middle"
+ },
+ {
+  "word": "見える",
+  "reading": "みえる",
+  "meaning": "to be in sight"
+ },
+ {
+  "word": "湖",
+  "reading": "みずうみ",
+  "meaning": "lake"
+ },
+ {
+  "word": "味噌",
+  "reading": "みそ",
+  "meaning": "bean paste"
+ },
+ {
+  "word": "見つかる",
+  "reading": "みつかる",
+  "meaning": "to be discovered"
+ },
+ {
+  "word": "見つける",
+  "reading": "みつける",
+  "meaning": "to discover"
+ },
+ {
+  "word": "皆",
+  "reading": "みな",
+  "meaning": "everybody"
+ },
+ {
+  "word": "港",
+  "reading": "みなと",
+  "meaning": "harbour"
+ },
+ {
+  "word": "向かう",
+  "reading": "むかう",
+  "meaning": "to face"
+ },
+ {
+  "word": "迎える",
+  "reading": "むかえる",
+  "meaning": "to go out to meet"
+ },
+ {
+  "word": "昔",
+  "reading": "むかし",
+  "meaning": "olden days, former"
+ },
+ {
+  "word": "虫",
+  "reading": "むし",
+  "meaning": "insect"
+ },
+ {
+  "word": "息子",
+  "reading": "むすこ",
+  "meaning": "(humble) son"
+ },
+ {
+  "word": "娘",
+  "reading": "むすめ",
+  "meaning": "(humble) daughter"
+ },
+ {
+  "word": "無理",
+  "reading": "むり",
+  "meaning": "impossible"
+ },
+ {
+  "word": "召し上がる",
+  "reading": "めしあがる",
+  "meaning": "(polite) to eat"
+ },
+ {
+  "word": "珍しい",
+  "reading": "めずらしい",
+  "meaning": "rare"
+ },
+ {
+  "word": "申し上げる",
+  "reading": "もうしあげる",
+  "meaning": "(humble) to say,to tell"
+ },
+ {
+  "word": "申す",
+  "reading": "もうす",
+  "meaning": "(humble) to be called,to say"
+ },
+ {
+  "word": "もうすぐ",
+  "meaning": "soon"
+ },
+ {
+  "word": "もし",
+  "meaning": "if"
+ },
+ {
+  "word": "もちろん",
+  "meaning": "of course"
+ },
+ {
+  "word": "もっとも",
+  "meaning": "extremely"
+ },
+ {
+  "word": "戻る",
+  "reading": "もどる",
+  "meaning": "to turn back"
+ },
+ {
+  "word": "木綿",
+  "reading": "もめん",
+  "meaning": "cotton"
+ },
+ {
+  "word": "もらう",
+  "meaning": "to receive"
+ },
+ {
+  "word": "森",
+  "reading": "もり",
+  "meaning": "forest"
+ },
+ {
+  "word": "焼く",
+  "reading": "やく",
+  "meaning": "to bake,to grill"
+ },
+ {
+  "word": "役に立つ",
+  "reading": "やくにたつ",
+  "meaning": "to be helpful"
+ },
+ {
+  "word": "焼ける",
+  "reading": "やける",
+  "meaning": "to burn,to be roasted"
+ },
+ {
+  "word": "痩せる",
+  "reading": "やせる",
+  "meaning": "to become thin"
+ },
+ {
+  "word": "やっと",
+  "meaning": "at last"
+ },
+ {
+  "word": "やはり/やっぱり",
+  "meaning": "as I thought,absolutely"
+ },
+ {
+  "word": "止む",
+  "reading": "やむ",
+  "meaning": "to stop"
+ },
+ {
+  "word": "柔らかい",
+  "reading": "やわらかい",
+  "meaning": "soft"
+ },
+ {
+  "word": "湯",
+  "reading": "ゆ",
+  "meaning": "hot water"
+ },
+ {
+  "word": "輸出",
+  "reading": "ゆしゅつ・する",
+  "meaning": "to export"
+ },
+ {
+  "word": "輸入",
+  "reading": "ゆにゅう・する",
+  "meaning": "to import"
+ },
+ {
+  "word": "指",
+  "reading": "ゆび",
+  "meaning": "finger"
+ },
+ {
+  "word": "指輪",
+  "reading": "ゆびわ",
+  "meaning": "finger ring"
+ },
+ {
+  "word": "夢",
+  "reading": "ゆめ",
+  "meaning": "dream"
+ },
+ {
+  "word": "揺れる",
+  "reading": "ゆれる",
+  "meaning": "to shake,to sway"
+ },
+ {
+  "word": "用",
+  "reading": "よう",
+  "meaning": "use"
+ },
+ {
+  "word": "用意",
+  "reading": "ようい",
+  "meaning": "preparation"
+ },
+ {
+  "word": "用事",
+  "reading": "ようじ",
+  "meaning": "things to do"
+ },
+ {
+  "word": "汚れる",
+  "reading": "よごれる",
+  "meaning": "to get dirty"
+ },
+ {
+  "word": "予習",
+  "reading": "よしゅう",
+  "meaning": "preparation for a lesson"
+ },
+ {
+  "word": "予定",
+  "reading": "よてい",
+  "meaning": "arrangement"
+ },
+ {
+  "word": "予約",
+  "reading": "よやく",
+  "meaning": "reservation"
+ },
+ {
+  "word": "寄る",
+  "reading": "よる",
+  "meaning": "to visit"
+ },
+ {
+  "word": "喜ぶ",
+  "reading": "よろこぶ",
+  "meaning": "to be delighted"
+ },
+ {
+  "word": "よろしい",
+  "meaning": "(respectful) OK,all right"
+ },
+ {
+  "word": "利用",
+  "reading": "りよう",
+  "meaning": "utilization"
+ },
+ {
+  "word": "両方",
+  "reading": "りょうほう",
+  "meaning": "both sides"
+ },
+ {
+  "word": "旅館",
+  "reading": "りょかん",
+  "meaning": "Japanese hotel"
+ },
+ {
+  "word": "留守",
+  "reading": "るす",
+  "meaning": "absence"
+ },
+ {
+  "word": "冷房",
+  "reading": "れいぼう",
+  "meaning": "air conditioning"
+ },
+ {
+  "word": "レジ",
+  "meaning": "register"
+ },
+ {
+  "word": "レポート/リポート",
+  "meaning": "report"
+ },
+ {
+  "word": "連絡",
+  "reading": "れんらく",
+  "meaning": "contact"
+ },
+ {
+  "word": "ワープロ",
+  "meaning": "word processor"
+ },
+ {
+  "word": "沸かす",
+  "reading": "わかす",
+  "meaning": "to boil,to heat"
+ },
+ {
+  "word": "別れる",
+  "reading": "わかれる",
+  "meaning": "to separate"
+ },
+ {
+  "word": "沸く",
+  "reading": "わく",
+  "meaning": "to boil, to grow hot,to get excited"
+ },
+ {
+  "word": "訳",
+  "reading": "わけ",
+  "meaning": "meaning,reason"
+ },
+ {
+  "word": "忘れ物",
+  "reading": "わすれもの",
+  "meaning": "lost article"
+ },
+ {
+  "word": "割合",
+  "reading": "わりあい",
+  "meaning": "rate,ratio,percentage"
+ },
+ {
+  "word": "割れる",
+  "reading": "われる",
+  "meaning": "to break"
+ },
+ {
+  "word": "泳ぎ方",
+  "reading": "およぎかた",
+  "meaning": "way of swimming"
+ }
+]

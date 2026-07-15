@@ -136,6 +136,25 @@ words, quizzes) is a card in one infinite vertical snap feed ("the Doomscroll").
   self-grade rates that word's card via `rateCard`; grading the current new
   word `addNewWord`s it first). Attribution lives in Profile → Credits.
   REGENERATE the JSONs after seed changes (seedIndex is positional).
+- **Native audio layer (done):** real native-speaker audio for seed words,
+  with browser TTS as the UNIVERSAL fallback (never remove it — words without
+  clips, old Safari without ogg/opus, and offline-before-first-play all rely
+  on it). `scripts/gen-audio.mjs` (`npm run gen-audio`) matches seed entries
+  against Kanji Alive example-word audio (CC BY 4.0, zip cached in
+  `.cache/audio/`) and — optionally, `commonvoice <local-dataset-dir>`, never
+  downloads, needs ffmpeg — Mozilla Common Voice (CC0). Ships small opus clips
+  to `public/audio/{lang}/{index}.opus` (voices 2–3 as `{index}.{k}.opus`,
+  example sentences as `{index}.s.opus`) + `data/audio_manifest.json`
+  (bundled via import; seedIndex-keyed, so REGENERATE-safe only by append).
+  Runtime: `lib/nativeAudio.ts` — `play(lang, seedIndex)` / `playWord(text,
+  lang)` (drop-in for `speak()`; all feed/lesson 🔊 route through it;
+  `VoicePicker` and the Learn-zone reference pages stay raw TTS on purpose).
+  SW caches `/audio/` cache-first → replays work offline after first listen.
+  Multi-voice: `voiceCount` powers random-variant replays on listen cards and
+  the "same word, different voice?" pair mode (`buildListenPair` in
+  `lib/feed.ts`, `pair` on the listen FeedItem). ja: 167/206 words covered
+  (33 multi-voice, ~1MB total); de stays TTS until a Common Voice run.
+  Attribution in Profile → Credits; integrity tests in `tests/audio.test.ts`.
 
 ## Architecture
 

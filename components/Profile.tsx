@@ -395,6 +395,20 @@ export function Profile() {
             </a>{" "}
             — CC BY-SA 3.0
           </div>
+          <div>
+            Japanese word audio:{" "}
+            <a href="https://kanjialive.com" target="_blank" rel="noreferrer" className="underline hover:text-(--accent)">
+              Kanji alive
+            </a>{" "}
+            — CC BY 4.0
+          </div>
+          <div>
+            Voice recordings:{" "}
+            <a href="https://commonvoice.mozilla.org" target="_blank" rel="noreferrer" className="underline hover:text-(--accent)">
+              Mozilla Common Voice
+            </a>{" "}
+            — CC0
+          </div>
         </div>
       </Section>
 

@@ -11,7 +11,8 @@ import type { Lang } from "@/lib/types";
 import { SENTENCES } from "@/lib/sentences";
 import { SEED } from "@/lib/seed";
 import { getState, addNewWord, rateCard, cardIdFor } from "@/lib/store";
-import { speak, sfxCorrect, sfxWrong } from "@/lib/audio";
+import { sfxCorrect, sfxWrong } from "@/lib/audio";
+import { play, playWord } from "@/lib/nativeAudio";
 import { burst } from "@/lib/confetti";
 import { Icon } from "@/components/Icon";
 import { XpPop } from "./XpPop";
@@ -44,7 +45,7 @@ export function SentenceCard({
 
   const tapToken = (seedIndex: number) => {
     setGlossIdx(seedIndex);
-    speak(SEED[lang][seedIndex].word, lang);
+    play(lang, seedIndex);
     if (seedIndex === unknownSeedIndex) setRevealed(true);
   };
 
@@ -111,7 +112,7 @@ export function SentenceCard({
 
           {/* play the whole sentence */}
           <button
-            onClick={() => speak(sentence.text, lang)}
+            onClick={() => playWord(sentence.text, lang)}
             className="mt-4 flex items-center gap-1.5 text-xs uppercase tracking-[0.3em] opacity-40 hover:opacity-90"
             aria-label="Hear the sentence"
           >

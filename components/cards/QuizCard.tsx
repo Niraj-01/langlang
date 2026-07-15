@@ -6,7 +6,8 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import type { Card } from "@/lib/types";
 import { awardXp } from "@/lib/store";
-import { speak, sfxCorrect, sfxWrong, sfxBonus } from "@/lib/audio";
+import { sfxCorrect, sfxWrong, sfxBonus } from "@/lib/audio";
+import { playWord } from "@/lib/nativeAudio";
 import { burst } from "@/lib/confetti";
 import { JaWord } from "@/components/Lex";
 import { XpPop } from "./XpPop";
@@ -48,7 +49,7 @@ export function QuizCard({
       burst(e.clientX, e.clientY, undefined, isBonus ? 120 : 50);
     } else {
       sfxWrong();
-      speak(card.word, card.lang);
+      playWord(card.word, card.lang);
     }
     onAnswered(correct);
   };
@@ -67,7 +68,7 @@ export function QuizCard({
         <div className="tag">QUICK QUIZ</div>
 
         <div className="flex flex-1 flex-col items-center justify-center text-center">
-          <button onClick={() => speak(card.word, card.lang)}>
+          <button onClick={() => playWord(card.word, card.lang)}>
             {card.lang === "ja" ? (
               <JaWord
                 word={card.word}

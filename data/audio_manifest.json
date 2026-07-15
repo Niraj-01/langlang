@@ -1,0 +1,1207 @@
+{
+ "ja": {
+  "0": {
+   "file": "0.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "1": {
+   "file": "1.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "2": {
+   "file": "2.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "4": {
+   "file": "4.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "5": {
+   "file": "5.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "6": {
+   "file": "6.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "7": {
+   "file": "7.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "8": {
+   "file": "8.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "9": {
+   "file": "9.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "10": {
+   "file": "10.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "11": {
+   "file": "11.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "12": {
+   "file": "12.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "16": {
+   "file": "16.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "17": {
+   "file": "17.opus",
+   "voices": 2,
+   "src": [
+    "ka",
+    "ka"
+   ]
+  },
+  "18": {
+   "file": "18.opus",
+   "voices": 2,
+   "src": [
+    "ka",
+    "ka"
+   ]
+  },
+  "19": {
+   "file": "19.opus",
+   "voices": 2,
+   "src": [
+    "ka",
+    "ka"
+   ]
+  },
+  "21": {
+   "file": "21.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "22": {
+   "file": "22.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "23": {
+   "file": "23.opus",
+   "voices": 2,
+   "src": [
+    "ka",
+    "ka"
+   ]
+  },
+  "24": {
+   "file": "24.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "25": {
+   "file": "25.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "26": {
+   "file": "26.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "27": {
+   "file": "27.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "28": {
+   "file": "28.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "29": {
+   "file": "29.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "30": {
+   "file": "30.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "31": {
+   "file": "31.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "32": {
+   "file": "32.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "33": {
+   "file": "33.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "34": {
+   "file": "34.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "36": {
+   "file": "36.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "37": {
+   "file": "37.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "38": {
+   "file": "38.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "39": {
+   "file": "39.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "40": {
+   "file": "40.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "41": {
+   "file": "41.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "42": {
+   "file": "42.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "43": {
+   "file": "43.opus",
+   "voices": 2,
+   "src": [
+    "ka",
+    "ka"
+   ]
+  },
+  "44": {
+   "file": "44.opus",
+   "voices": 2,
+   "src": [
+    "ka",
+    "ka"
+   ]
+  },
+  "45": {
+   "file": "45.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "46": {
+   "file": "46.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "47": {
+   "file": "47.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "48": {
+   "file": "48.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "49": {
+   "file": "49.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "50": {
+   "file": "50.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "51": {
+   "file": "51.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "52": {
+   "file": "52.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "53": {
+   "file": "53.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "54": {
+   "file": "54.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "55": {
+   "file": "55.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "56": {
+   "file": "56.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "57": {
+   "file": "57.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "59": {
+   "file": "59.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "61": {
+   "file": "61.opus",
+   "voices": 2,
+   "src": [
+    "ka",
+    "ka"
+   ]
+  },
+  "62": {
+   "file": "62.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "63": {
+   "file": "63.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "64": {
+   "file": "64.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "65": {
+   "file": "65.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "66": {
+   "file": "66.opus",
+   "voices": 2,
+   "src": [
+    "ka",
+    "ka"
+   ]
+  },
+  "67": {
+   "file": "67.opus",
+   "voices": 2,
+   "src": [
+    "ka",
+    "ka"
+   ]
+  },
+  "68": {
+   "file": "68.opus",
+   "voices": 2,
+   "src": [
+    "ka",
+    "ka"
+   ]
+  },
+  "70": {
+   "file": "70.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "71": {
+   "file": "71.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "72": {
+   "file": "72.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "74": {
+   "file": "74.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "78": {
+   "file": "78.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "79": {
+   "file": "79.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "80": {
+   "file": "80.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "81": {
+   "file": "81.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "82": {
+   "file": "82.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "83": {
+   "file": "83.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "84": {
+   "file": "84.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "85": {
+   "file": "85.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "86": {
+   "file": "86.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "87": {
+   "file": "87.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "92": {
+   "file": "92.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "93": {
+   "file": "93.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "94": {
+   "file": "94.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "95": {
+   "file": "95.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "96": {
+   "file": "96.opus",
+   "voices": 2,
+   "src": [
+    "ka",
+    "ka"
+   ]
+  },
+  "97": {
+   "file": "97.opus",
+   "voices": 2,
+   "src": [
+    "ka",
+    "ka"
+   ]
+  },
+  "98": {
+   "file": "98.opus",
+   "voices": 2,
+   "src": [
+    "ka",
+    "ka"
+   ]
+  },
+  "99": {
+   "file": "99.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "102": {
+   "file": "102.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "103": {
+   "file": "103.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "104": {
+   "file": "104.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "105": {
+   "file": "105.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "106": {
+   "file": "106.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "107": {
+   "file": "107.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "108": {
+   "file": "108.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "109": {
+   "file": "109.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "110": {
+   "file": "110.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "111": {
+   "file": "111.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "115": {
+   "file": "115.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "116": {
+   "file": "116.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "117": {
+   "file": "117.opus",
+   "voices": 2,
+   "src": [
+    "ka",
+    "ka"
+   ]
+  },
+  "118": {
+   "file": "118.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "120": {
+   "file": "120.opus",
+   "voices": 2,
+   "src": [
+    "ka",
+    "ka"
+   ]
+  },
+  "121": {
+   "file": "121.opus",
+   "voices": 2,
+   "src": [
+    "ka",
+    "ka"
+   ]
+  },
+  "122": {
+   "file": "122.opus",
+   "voices": 2,
+   "src": [
+    "ka",
+    "ka"
+   ]
+  },
+  "123": {
+   "file": "123.opus",
+   "voices": 2,
+   "src": [
+    "ka",
+    "ka"
+   ]
+  },
+  "124": {
+   "file": "124.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "125": {
+   "file": "125.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "126": {
+   "file": "126.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "127": {
+   "file": "127.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "128": {
+   "file": "128.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "129": {
+   "file": "129.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "130": {
+   "file": "130.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "131": {
+   "file": "131.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "132": {
+   "file": "132.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "133": {
+   "file": "133.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "134": {
+   "file": "134.opus",
+   "voices": 2,
+   "src": [
+    "ka",
+    "ka"
+   ]
+  },
+  "135": {
+   "file": "135.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "136": {
+   "file": "136.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "137": {
+   "file": "137.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "138": {
+   "file": "138.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "139": {
+   "file": "139.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "141": {
+   "file": "141.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "144": {
+   "file": "144.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "145": {
+   "file": "145.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "146": {
+   "file": "146.opus",
+   "voices": 2,
+   "src": [
+    "ka",
+    "ka"
+   ]
+  },
+  "147": {
+   "file": "147.opus",
+   "voices": 2,
+   "src": [
+    "ka",
+    "ka"
+   ]
+  },
+  "149": {
+   "file": "149.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "150": {
+   "file": "150.opus",
+   "voices": 2,
+   "src": [
+    "ka",
+    "ka"
+   ]
+  },
+  "151": {
+   "file": "151.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "152": {
+   "file": "152.opus",
+   "voices": 2,
+   "src": [
+    "ka",
+    "ka"
+   ]
+  },
+  "153": {
+   "file": "153.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "155": {
+   "file": "155.opus",
+   "voices": 2,
+   "src": [
+    "ka",
+    "ka"
+   ]
+  },
+  "156": {
+   "file": "156.opus",
+   "voices": 2,
+   "src": [
+    "ka",
+    "ka"
+   ]
+  },
+  "157": {
+   "file": "157.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "158": {
+   "file": "158.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "159": {
+   "file": "159.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "160": {
+   "file": "160.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "161": {
+   "file": "161.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "162": {
+   "file": "162.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "163": {
+   "file": "163.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "164": {
+   "file": "164.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "165": {
+   "file": "165.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "166": {
+   "file": "166.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "167": {
+   "file": "167.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "168": {
+   "file": "168.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "169": {
+   "file": "169.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "170": {
+   "file": "170.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "171": {
+   "file": "171.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "172": {
+   "file": "172.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "173": {
+   "file": "173.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "174": {
+   "file": "174.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "175": {
+   "file": "175.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "183": {
+   "file": "183.opus",
+   "voices": 2,
+   "src": [
+    "ka",
+    "ka"
+   ]
+  },
+  "184": {
+   "file": "184.opus",
+   "voices": 2,
+   "src": [
+    "ka",
+    "ka"
+   ]
+  },
+  "185": {
+   "file": "185.opus",
+   "voices": 2,
+   "src": [
+    "ka",
+    "ka"
+   ]
+  },
+  "186": {
+   "file": "186.opus",
+   "voices": 2,
+   "src": [
+    "ka",
+    "ka"
+   ]
+  },
+  "187": {
+   "file": "187.opus",
+   "voices": 2,
+   "src": [
+    "ka",
+    "ka"
+   ]
+  },
+  "188": {
+   "file": "188.opus",
+   "voices": 2,
+   "src": [
+    "ka",
+    "ka"
+   ]
+  },
+  "189": {
+   "file": "189.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "190": {
+   "file": "190.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "192": {
+   "file": "192.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "193": {
+   "file": "193.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "194": {
+   "file": "194.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "195": {
+   "file": "195.opus",
+   "voices": 2,
+   "src": [
+    "ka",
+    "ka"
+   ]
+  },
+  "196": {
+   "file": "196.opus",
+   "voices": 2,
+   "src": [
+    "ka",
+    "ka"
+   ]
+  },
+  "197": {
+   "file": "197.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "198": {
+   "file": "198.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "200": {
+   "file": "200.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "202": {
+   "file": "202.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "204": {
+   "file": "204.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  },
+  "205": {
+   "file": "205.opus",
+   "voices": 1,
+   "src": [
+    "ka"
+   ]
+  }
+ },
+ "de": {}
+}

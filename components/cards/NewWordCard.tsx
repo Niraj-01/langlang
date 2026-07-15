@@ -8,7 +8,8 @@ import { motion } from "framer-motion";
 import type { Lang, VocabEntry } from "@/lib/types";
 import { SEED, seedLevelLabel } from "@/lib/seed";
 import { addNewWord, skipNewWord } from "@/lib/store";
-import { speak, sfxAdd } from "@/lib/audio";
+import { sfxAdd } from "@/lib/audio";
+import { play, playWord } from "@/lib/nativeAudio";
 import { burst } from "@/lib/confetti";
 import { JaWord, DeNoun, DePlural, Example } from "@/components/Lex";
 import { PitchAccent } from "@/components/PitchAccent";
@@ -34,7 +35,7 @@ export function NewWordCard({
   const holdTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   if (!entry) return null;
-  const say = () => speak(entry.example ?? entry.word, lang);
+  const say = () => playWord(entry.example ?? entry.word, lang);
 
   const add = (e?: { clientX: number; clientY: number }) => {
     if (added || skipped) return;
@@ -77,7 +78,7 @@ export function NewWordCard({
             className="group"
             onClick={(e) => {
               e.stopPropagation();
-              speak(entry.word, lang);
+              play(lang, entryIndex);
             }}
           >
             {lang === "ja" ? (

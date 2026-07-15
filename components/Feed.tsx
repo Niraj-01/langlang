@@ -248,6 +248,7 @@ function FeedCard({
           card={card}
           options={item.options}
           answer={item.answer}
+          pair={item.pair}
           furigana={state.furigana}
           combo={combo}
           multiplier={multiplier}

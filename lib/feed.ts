@@ -5,7 +5,7 @@
 //  - occasional status card mid-scroll
 
 import type { AppState, FeedItem, GrammarItem, Lang, ListenPair } from "./types";
-import { SEED } from "./seed";
+import { SEED, dealIndexAt } from "./seed";
 import { dueCards, pickSpeakTarget } from "./store";
 import { voiceCount } from "./nativeAudio";
 import { pickSentence } from "./sentences";
@@ -134,7 +134,13 @@ export function nextFeedItem(state: AppState, ctx: FeedContext): FeedItem {
   const recent = ctx.recentKinds.slice(-2);
   const reviewRun = recent.filter((k) => k === "review").length;
 
-  const newItem = (): FeedItem => ({ kind: "new", id: uid(), entryIndex: nextNewIndex });
+  // within a Path unit, the next new word is the most frequent one remaining
+  // (lib/seed.ts DEAL_ORDER — unit-local, so the pointer stays a plain count)
+  const newItem = (): FeedItem => ({
+    kind: "new",
+    id: uid(),
+    entryIndex: dealIndexAt(lang, nextNewIndex),
+  });
   const reviewItem = (): FeedItem => ({ kind: "review", id: uid(), cardId: due[0].id });
 
   // status card roughly every 12 items

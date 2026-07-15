@@ -409,6 +409,17 @@ export function Profile() {
             </a>{" "}
             — CC0
           </div>
+          <div>
+            Frequency data:{" "}
+            <a href="https://wortschatz.uni-leipzig.de" target="_blank" rel="noreferrer" className="underline hover:text-(--accent)">
+              Leipzig Corpora Collection
+            </a>{" "}
+            — CC BY 4.0 ·{" "}
+            <a href="https://github.com/hermitdave/FrequencyWords" target="_blank" rel="noreferrer" className="underline hover:text-(--accent)">
+              FrequencyWords
+            </a>{" "}
+            — CC BY-SA 4.0
+          </div>
         </div>
       </Section>
 

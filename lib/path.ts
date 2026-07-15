@@ -8,7 +8,10 @@ import { bossesFor } from "@/data/scenarios";
 import { cardIdFor } from "@/lib/store";
 import type { AppState, Lang, VocabEntry } from "@/lib/types";
 
-export const UNIT_SIZE = 8;
+// UNIT_SIZE lives in lib/seed.ts (the frequency deal-order needs it there);
+// re-exported here because path callers have always imported it from path.
+export { UNIT_SIZE } from "@/lib/seed";
+import { UNIT_SIZE } from "@/lib/seed";
 const UNITS_PER_BOSS = 4;
 
 export type PathNodeState = "done" | "current" | "locked";

@@ -8,6 +8,12 @@ import type { Lang, VocabEntry } from "./types";
 // higher levels appended. `newIndex` walks it, so the Path and feed flow from
 // N5 → N4 (and A1 → A2) automatically. Never reorder or splice earlier levels —
 // only append — or existing users' progress pointers would drift.
+//
+// FUTURE LEVELS (N3, B1, …): sort the new level's entries by freqRank
+// (ascending, nulls last) BEFORE appending it. Existing levels predate the
+// frequency data and must never be re-sorted; the runtime compensates by
+// dealing new words most-frequent-first WITHIN each Path unit (DEAL_ORDER
+// below), which needs no reordering of the files.
 interface Level {
   label: string;
   entries: VocabEntry[];
@@ -44,3 +50,73 @@ export const SEED_LABEL: Record<Lang, string> = {
   ja: LEVELS.ja[0].label,
   de: LEVELS.de[0].label,
 };
+
+// ---- corpus frequency (gen-frequency.mjs writes freqRank onto entries) ----
+
+/** The Path's unit size. Defined here (not path.ts) so DEAL_ORDER can be
+ *  unit-scoped without a circular import; lib/path.ts re-exports it. */
+export const UNIT_SIZE = 8;
+
+export function seedFreqRank(lang: Lang, index: number): number | null {
+  return SEED[lang][index]?.freqRank ?? null;
+}
+
+const rankByWord: Record<Lang, Map<string, number>> = { ja: new Map(), de: new Map() };
+for (const lang of ["ja", "de"] as const) {
+  for (const e of SEED[lang]) {
+    if (e.freqRank != null && !rankByWord[lang].has(e.word)) rankByWord[lang].set(e.word, e.freqRank);
+  }
+}
+
+/** freqRank looked up by word — for callers that don't carry a seed index. */
+export function seedFreqRankByWord(lang: Lang, word: string): number | null {
+  return rankByWord[lang].get(word) ?? null;
+}
+
+/** Muted tier chip label ("top 500" / "top 2000"), or null below the bar. */
+export function freqTier(rank?: number | null): string | null {
+  if (rank == null) return null;
+  if (rank <= 500) return "top 500";
+  if (rank <= 2000) return "top 2000";
+  return null;
+}
+
+// Deal order: new words are dealt most-frequent-first WITHIN each Path unit
+// (freqRank asc, nulls last, ties by seed index). The permutation is STRICTLY
+// unit-local: `newIndex` stays a plain count of consumed entries, so unit
+// boundaries, Path progress, and cross-level flow are byte-for-byte what they
+// were — only the order inside a unit's 8 words changes.
+function buildDealOrder(lang: Lang): number[] {
+  const seed = SEED[lang];
+  const order: number[] = [];
+  for (let start = 0; start < seed.length; start += UNIT_SIZE) {
+    const block = [];
+    for (let i = start; i < Math.min(seed.length, start + UNIT_SIZE); i++) block.push(i);
+    block.sort(
+      (a, b) =>
+        (seed[a].freqRank ?? Infinity) - (seed[b].freqRank ?? Infinity) || a - b
+    );
+    order.push(...block);
+  }
+  return order;
+}
+
+const DEAL_ORDER: Record<Lang, number[]> = {
+  ja: buildDealOrder("ja"),
+  de: buildDealOrder("de"),
+};
+
+const DEAL_POS: Record<Lang, number[]> = { ja: [], de: [] };
+for (const lang of ["ja", "de"] as const) {
+  DEAL_ORDER[lang].forEach((entryIndex, pos) => (DEAL_POS[lang][entryIndex] = pos));
+}
+
+/** The seed entry dealt at pointer position `pos` (identity beyond the seeds). */
+export function dealIndexAt(lang: Lang, pos: number): number {
+  return DEAL_ORDER[lang][pos] ?? pos;
+}
+
+/** Inverse of dealIndexAt — the pointer position that deals `entryIndex`. */
+export function dealPosOf(lang: Lang, entryIndex: number): number {
+  return DEAL_POS[lang][entryIndex] ?? entryIndex;
+}

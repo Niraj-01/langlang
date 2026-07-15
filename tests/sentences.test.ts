@@ -5,7 +5,7 @@
 
 import { describe, it, expect } from "vitest";
 import { qualifying, SENTENCES, KNOWN_STABILITY_DAYS } from "@/lib/sentences";
-import { SEED } from "@/lib/seed";
+import { SEED, dealIndexAt, dealPosOf } from "@/lib/seed";
 import { newFsrsState } from "@/lib/fsrs";
 import type { AppState, Card, SentenceData } from "@/lib/types";
 
@@ -74,7 +74,9 @@ describe("qualifying — the exactly-one-unknown invariant", () => {
   });
 
   it("accepts the current new word as the one unknown", () => {
-    const s = state([card(0, { stability: 10, due: NOW + DAY })], /* newIndex */ 3);
+    // the pointer counts DEAL positions (frequency-ordered within a unit),
+    // so aim it at the position that deals seed entry 3
+    const s = state([card(0, { stability: 10, due: NOW + DAY })], dealPosOf("ja", 3));
     const picks = qualifying([sentence([0, 3])], s, "ja", NOW);
     expect(picks).toHaveLength(1);
     expect(picks[0].unknownSeedIndex).toBe(3);
@@ -145,14 +147,18 @@ describe.each(["ja", "de"] as const)("generated sentence data (%s)", (lang) => {
 
 describe("qualifying against the real pool", () => {
   it("a learner with ~20 mastered words starts getting sentences, each with one unknown", () => {
-    // master the first 20 seed words, make word 20 due — the classic mid-game state
-    const cards = Array.from({ length: 20 }, (_, i) => card(i, { stability: 30, due: NOW + 90 * DAY }));
-    cards.push(card(20, { stability: 1, due: NOW - DAY }));
+    // master the first 20 DEALT words, make the 21st due — the classic
+    // mid-game state (the pointer walks deal positions, not raw indices)
+    const dealt = (pos: number) => dealIndexAt("ja", pos);
+    const cards = Array.from({ length: 20 }, (_, p) =>
+      card(dealt(p), { stability: 30, due: NOW + 90 * DAY })
+    );
+    cards.push(card(dealt(20), { stability: 1, due: NOW - DAY }));
     const s = state(cards, 21);
     const picks = qualifying(SENTENCES.ja, s, "ja", NOW);
     // every pick's unknown must be the due card or the current new word
     for (const p of picks) {
-      expect([20, 21]).toContain(p.unknownSeedIndex);
+      expect([dealt(20), dealt(21)]).toContain(p.unknownSeedIndex);
     }
     expect(picks.length).toBeGreaterThan(0);
   });

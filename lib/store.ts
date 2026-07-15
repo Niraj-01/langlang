@@ -15,7 +15,7 @@ import type {
 } from "./types";
 import type { DayStats, Exam, MistakeEntry, OnboardingState, Target } from "./types";
 import { newFsrsState, schedule } from "./fsrs";
-import { SEED } from "./seed";
+import { SEED, dealPosOf } from "./seed";
 import { COSMETICS, type Cosmetic, dailyQuests } from "./quests";
 // selectors the store's own actions rely on (also re-exported at the bottom)
 import { todayStr, dueCards, levelFromXp } from "./derive";
@@ -286,10 +286,14 @@ export function skipNewWord(lang: Lang, index: number) {
 }
 
 function bumpNewIndex(lang: Lang, index: number) {
-  if (state.newIndex[lang] <= index) {
+  // newIndex counts CONSUMED deal positions, not raw entry indices — within a
+  // Path unit new words are dealt most-frequent-first (see lib/seed.ts
+  // DEAL_ORDER), so translate the entry index to its position first.
+  const pos = dealPosOf(lang, index);
+  if (state.newIndex[lang] <= pos) {
     state = {
       ...state,
-      newIndex: { ...state.newIndex, [lang]: index + 1 },
+      newIndex: { ...state.newIndex, [lang]: pos + 1 },
     };
   }
 }

@@ -14,7 +14,7 @@ import { useMemo, useState } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { SEED } from "@/lib/seed";
+import { SEED, dealIndexAt, seedFreqRankByWord, freqTier } from "@/lib/seed";
 import grammarJa from "@/data/grammar_ja.json";
 import grammarDe from "@/data/grammar_de.json";
 import type { GrammarItem } from "@/lib/types";
@@ -179,11 +179,13 @@ export function Lesson() {
     setFinishedAt(Date.now());
     const xp = correct * XP_PER_CORRECT;
     awardXp(xp);
-    // completing the frontier unit deals its words into the deck
+    // completing the frontier unit deals its words into the deck (newIndex is
+    // a count of consumed deal positions; map each to its entry index)
     if (session.unit !== null) {
       const start = session.unit * UNIT_SIZE;
       const end = Math.min(SEED[lang].length, start + UNIT_SIZE);
-      for (let i = getState().newIndex[lang]; i < end; i++) {
+      for (let pos = getState().newIndex[lang]; pos < end; pos++) {
+        const i = dealIndexAt(lang, pos);
         if (i >= start) addNewWord(lang, i);
       }
     }
@@ -282,6 +284,23 @@ export function Lesson() {
               <div className="w-px" style={{ background: C.line }} />
               <EndStat label="Time" value={`${secs}s`} />
             </div>
+            {(() => {
+              // subtle corpus-frequency footnote: how much of this lesson was
+              // high-frequency vocabulary (only when we have rank data)
+              const ranked = session.words.filter((w) =>
+                freqTier(seedFreqRankByWord(lang, w.word))
+              ).length;
+              return ranked > 0 ? (
+                <div
+                  className="flex items-center gap-1.5 text-xs"
+                  style={{ color: C.muted }}
+                >
+                  <Icon name="chart" size={13} />
+                  {ranked}/{session.words.length} words in the top 2000 of everyday{" "}
+                  {lang === "ja" ? "Japanese" : "German"}
+                </div>
+              ) : null;
+            })()}
           </div>
           <div className="flex flex-col gap-3">
             <Link

@@ -6,7 +6,7 @@
 import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import type { Lang, VocabEntry } from "@/lib/types";
-import { SEED, seedLevelLabel } from "@/lib/seed";
+import { SEED, seedLevelLabel, freqTier } from "@/lib/seed";
 import { addNewWord, skipNewWord } from "@/lib/store";
 import { sfxAdd } from "@/lib/audio";
 import { play, playWord } from "@/lib/nativeAudio";
@@ -108,9 +108,14 @@ export function NewWordCard({
 
           <div className="mt-5 text-3xl">{entry.meaning}</div>
           {lang === "de" && <DePlural entry={entry} />}
-          {entry.pos && (
-            <div className="mt-1 text-xs uppercase tracking-widest opacity-40">
+          {(entry.pos || freqTier(entry.freqRank)) && (
+            <div className="mt-1 flex items-center gap-2 text-xs uppercase tracking-widest opacity-40">
               {entry.pos}
+              {freqTier(entry.freqRank) && (
+                <span className="inline-flex items-center gap-1">
+                  <Icon name="chart" size={11} /> {freqTier(entry.freqRank)}
+                </span>
+              )}
             </div>
           )}
           <Example entry={entry} lang={lang} furigana={furigana} />

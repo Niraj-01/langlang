@@ -50,6 +50,7 @@ export interface VocabEntry {
   tip?: string;
   mnemonic?: string;
   pitch?: number; // ja Tokyo pitch-accent drop position (0 = heiban)
+  freqRank?: number | null; // corpus frequency rank (scripts/gen-frequency.mjs), null = not in corpus
 }
 
 export interface StreakState {

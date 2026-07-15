@@ -174,6 +174,23 @@ words, quizzes) is a card in one infinite vertical snap feed ("the Doomscroll").
   faint band = seed coverage, solid fill = mastered). Current honest
   coverage: N5 ~21%, N4 ~10%, A1 ~20%, A2 ~13%. Tests in
   `tests/coverage.test.ts` re-verify every shipped mapping.
+- **Frequency ranking (done):** corpus `freqRank` on every seed entry, written
+  IN PLACE by `npm run gen-frequency` (`scripts/gen-frequency.mjs`; ja =
+  Leipzig jpn_news 10K CC BY 4.0 — hermitdave's ja list is stem-segmented and
+  only matched ~50%; de = hermitdave OpenSubtitles de_50k CC BY-SA 4.0 +
+  Leipzig deu fill; caches in `.cache/frequency/`, idempotent, edits the
+  one-entry-per-line JSONs surgically so diffs are freqRank-only). ja 195/206,
+  de 203/210 ranked. Used two ways: (1) muted "top 500"/"top 2000" tier chips
+  (`freqTier` in `lib/seed.ts`) on new-word cards + the lesson end screen;
+  (2) new words are dealt most-frequent-first WITHIN each Path unit —
+  `DEAL_ORDER`/`dealIndexAt`/`dealPosOf` in `lib/seed.ts`. IMPORTANT semantic
+  shift: `newIndex` now counts consumed DEAL POSITIONS (unit-local
+  permutation), so it crosses unit/level boundaries exactly as before;
+  `bumpNewIndex`, `buildLesson`'s unit deal, and `lib/sentences.ts` all map
+  through `dealPosOf`/`dealIndexAt`. `UNIT_SIZE` moved to `lib/seed.ts`
+  (path.ts re-exports). FUTURE levels (N3/B1) must be sorted by freqRank
+  BEFORE appending (comment in seed.ts). Order-stability snapshot +
+  permutation invariants in `tests/frequency.test.ts`.
 
 ## Architecture
 

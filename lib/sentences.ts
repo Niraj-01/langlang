@@ -10,7 +10,7 @@
 
 import sentencesJa from "@/data/sentences_ja.json";
 import sentencesDe from "@/data/sentences_de.json";
-import { SEED } from "./seed";
+import { SEED, dealIndexAt } from "./seed";
 import type { AppState, Card, Lang, SentenceData } from "./types";
 
 export const SENTENCES: Record<Lang, SentenceData[]> = {
@@ -60,7 +60,9 @@ export function qualifying(
       const card = entry ? byWord.get(entry.word) : undefined;
       if (card && card.fsrs.stability >= KNOWN_STABILITY_DAYS) continue; // known
       const isDue = !!card && card.fsrs.due <= now;
-      const isCurrentNew = !card && si === newIdx;
+      // the upcoming new word is the one DEALT at the pointer, which inside a
+      // unit is frequency-ordered (lib/seed.ts DEAL_ORDER)
+      const isCurrentNew = !card && si === dealIndexAt(lang, newIdx);
       if ((isDue || isCurrentNew) && unknown === null) {
         unknown = si;
         continue;

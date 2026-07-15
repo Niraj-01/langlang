@@ -155,6 +155,25 @@ words, quizzes) is a card in one infinite vertical snap feed ("the Doomscroll").
   `lib/feed.ts`, `pair` on the listen FeedItem). ja: 167/206 words covered
   (33 multi-voice, ~1MB total); de stays TTS until a Common Voice run.
   Attribution in Profile → Credits; integrity tests in `tests/audio.test.ts`.
+- **Coverage audit (done):** honest exam coverage against real wordlists.
+  `scripts/wordlists/` holds the four lists (tanos.co.uk JLPT N5/N4 CC BY;
+  official Goethe A1/A2 Wortliste PDFs extracted by geometry — see the README
+  there; replace a CSV + re-run to upgrade a list). `npm run audit`
+  (`scripts/audit-coverage.mjs`) diffs them against the seeds (ja matches word
+  or kana reading, but reading matches must share a kanji — 飴≠雨; de matches
+  case-insensitively, articles live in their own column) and writes
+  `scripts/out/missing_{exam}.json` + `data/exam_words_{exam}.json`
+  (listWord → seedIndex|null, bundled). `npm run gen-gap-entries` drafts
+  REVIEWABLE seed entries for missing words via the Claude API (needs
+  `ANTHROPIC_API_KEY`; batch/cache/resume in `scripts/out/gap_{exam}.json`,
+  validator enforces VocabEntry shape + tip ≤ 2 sentences + no invented
+  pitch) — entries are NEVER auto-appended; review then append manually and
+  re-run `npm run audit` + `npm run gen-sentences`. `/progress` bars for
+  audited exams compute against the official list size (`EXAM_WORDS` +
+  `examCoverage` in `lib/exams.ts`, `examListCoverage` in `lib/derive.ts`;
+  faint band = seed coverage, solid fill = mastered). Current honest
+  coverage: N5 ~21%, N4 ~10%, A1 ~20%, A2 ~13%. Tests in
+  `tests/coverage.test.ts` re-verify every shipped mapping.
 
 ## Architecture
 

@@ -9,6 +9,7 @@ import {
   useApp,
   masteredCount,
   activeVocab,
+  examListCoverage,
   setTarget,
   clearTarget,
   paceForecast,
@@ -112,8 +113,12 @@ export function Progress() {
         </div>
         <div className="space-y-3">
           {exams.map((e) => {
-            const total = EXAM_VOCAB_TOTAL[e];
-            const pct = Math.min(100, (mastered / total) * 100);
+            // audited exams count against the OFFICIAL wordlist; the rest
+            // fall back to the published size estimate
+            const cov = examListCoverage(state, e);
+            const total = cov ? cov.total : EXAM_VOCAB_TOTAL[e];
+            const done = cov ? cov.mastered : mastered;
+            const pct = Math.min(100, (done / total) * 100);
             const isTarget = target?.exam === e;
             return (
               <div key={e}>
@@ -123,12 +128,19 @@ export function Progress() {
                     {EXAM_LABEL[e]}
                   </span>
                   <span className="opacity-60">
-                    {mastered}/{total} mastered
+                    {done}/{total} {cov ? "official words" : ""} mastered
                   </span>
                 </div>
-                <div className="h-3 w-full border-2 border-line bg-black/40">
+                <div className="relative h-3 w-full border-2 border-line bg-black/40">
+                  {cov && (
+                    // how far the seed content itself reaches on this list
+                    <div
+                      className="absolute inset-y-0 left-0 bg-white/10"
+                      style={{ width: `${Math.min(100, (cov.inSeeds / total) * 100)}%` }}
+                    />
+                  )}
                   <div
-                    className={`bar-anim h-full ${isTarget ? "bg-(--accent)" : "bg-good/70"}`}
+                    className={`bar-anim relative h-full ${isTarget ? "bg-(--accent)" : "bg-good/70"}`}
                     style={{ width: `${pct}%` }}
                   />
                 </div>
@@ -138,6 +150,8 @@ export function Progress() {
         </div>
         <div className="mt-2 text-[10px] uppercase tracking-widest opacity-40">
           mastered = FSRS stability ≥ 21 days · {active} words in your {lang === "ja" ? "Japanese" : "German"} deck
+          <br />
+          {lang === "ja" ? "N5/N4" : "A1/A2"} bars track the official wordlist; the faint band is what the app's content covers today
         </div>
       </div>
 
@@ -178,8 +192,9 @@ export function Progress() {
 
 function Forecast({ state, lang }: { state: ReturnType<typeof useApp>; lang: "ja" | "de" }) {
   const target = state.targets[lang]!;
-  const total = EXAM_VOCAB_TOTAL[target.exam];
-  const { rate, date } = paceForecast(state, lang, total);
+  const cov = examListCoverage(state, target.exam);
+  const total = cov?.total ?? EXAM_VOCAB_TOTAL[target.exam];
+  const { rate, date } = paceForecast(state, lang, total, cov?.mastered);
   const daysToExam = Math.round(
     (new Date(target.date + "T00:00:00").getTime() - Date.now()) / 86400000
   );

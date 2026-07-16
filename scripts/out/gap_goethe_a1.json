@@ -1,0 +1,1214 @@
+[
+ {
+  "word": "ich",
+  "meaning": "I",
+  "pos": "pronoun",
+  "example": "Ich komme aus Indien.",
+  "exampleMeaning": "I come from India."
+ },
+ {
+  "word": "sie",
+  "meaning": "she; they; you (formal: Sie)",
+  "pos": "pronoun",
+  "example": "Sie wohnt in Berlin.",
+  "exampleMeaning": "She lives in Berlin.",
+  "tip": "Capitalized Sie = formal 'you'. Context and the verb ending separate she/they."
+ },
+ {
+  "word": "nicht",
+  "meaning": "not",
+  "pos": "adverb",
+  "example": "Ich verstehe das nicht.",
+  "exampleMeaning": "I don't understand that.",
+  "tip": "Negates verbs and adjectives; for nouns use kein (kein Auto)."
+ },
+ {
+  "word": "es",
+  "meaning": "it",
+  "pos": "pronoun",
+  "example": "Es regnet heute.",
+  "exampleMeaning": "It's raining today.",
+  "tip": "Also the dummy subject: es gibt = there is."
+ },
+ {
+  "word": "und",
+  "meaning": "and",
+  "pos": "conjunction",
+  "example": "Kaffee und Kuchen, bitte.",
+  "exampleMeaning": "Coffee and cake, please."
+ },
+ {
+  "word": "der",
+  "meaning": "the (masculine)",
+  "pos": "article",
+  "example": "Der Zug kommt gleich.",
+  "exampleMeaning": "The train is coming soon.",
+  "tip": "Masculine nominative — but also feminine dative (mit der Bahn)."
+ },
+ {
+  "word": "wir",
+  "meaning": "we",
+  "pos": "pronoun",
+  "example": "Wir lernen Deutsch.",
+  "exampleMeaning": "We are learning German."
+ },
+ {
+  "word": "was",
+  "meaning": "what",
+  "pos": "pronoun",
+  "example": "Was machst du heute?",
+  "exampleMeaning": "What are you doing today?"
+ },
+ {
+  "word": "zu",
+  "meaning": "to; too (much)",
+  "pos": "preposition",
+  "example": "Ich gehe zu Fuß zur Arbeit.",
+  "exampleMeaning": "I walk to work.",
+  "tip": "Preposition with dative — and 'too': zu teuer = too expensive."
+ },
+ {
+  "word": "er",
+  "meaning": "he",
+  "pos": "pronoun",
+  "example": "Er heißt Thomas.",
+  "exampleMeaning": "His name is Thomas."
+ },
+ {
+  "word": "in",
+  "meaning": "in, into",
+  "pos": "preposition",
+  "example": "Wir sind in der Stadt.",
+  "exampleMeaning": "We are in the city.",
+  "tip": "Dative for location (in der Stadt), accusative for direction (in die Stadt)."
+ },
+ {
+  "word": "ja",
+  "meaning": "yes",
+  "pos": "particle",
+  "example": "Ja, gerne!",
+  "exampleMeaning": "Yes, gladly!",
+  "tip": "Mid-sentence it softens statements: Das ist ja toll! = That's really great!"
+ },
+ {
+  "word": "mit",
+  "meaning": "with",
+  "pos": "preposition",
+  "example": "Ich fahre mit dem Bus.",
+  "exampleMeaning": "I go by bus.",
+  "tip": "Always takes the dative."
+ },
+ {
+  "word": "wie",
+  "meaning": "how; like",
+  "pos": "adverb",
+  "example": "Wie heißen Sie?",
+  "exampleMeaning": "What is your name?",
+  "tip": "Also comparisons: groß wie ein Haus = big as a house."
+ },
+ {
+  "word": "auf",
+  "meaning": "on, onto",
+  "pos": "preposition",
+  "example": "Das Buch liegt auf dem Tisch.",
+  "exampleMeaning": "The book is on the table.",
+  "tip": "Dative for location, accusative for direction — like in."
+ },
+ {
+  "word": "aber",
+  "meaning": "but",
+  "pos": "conjunction",
+  "example": "Klein, aber fein.",
+  "exampleMeaning": "Small but nice.",
+  "tip": "Doesn't change word order — unlike weil or dass."
+ },
+ {
+  "word": "so",
+  "meaning": "so, like this",
+  "pos": "adverb",
+  "example": "So macht man das.",
+  "exampleMeaning": "This is how you do it."
+ },
+ {
+  "word": "haben",
+  "meaning": "to have",
+  "pos": "verb",
+  "example": "Wir haben heute frei.",
+  "exampleMeaning": "We have the day off today.",
+  "tip": "Irregular: du hast, er hat. Also the perfect-tense helper: ich habe gegessen."
+ },
+ {
+  "word": "für",
+  "meaning": "for",
+  "pos": "preposition",
+  "example": "Das Geschenk ist für dich.",
+  "exampleMeaning": "The present is for you.",
+  "tip": "Always takes the accusative."
+ },
+ {
+  "word": "von",
+  "meaning": "from, of",
+  "pos": "preposition",
+  "example": "Das ist ein Brief von Anna.",
+  "exampleMeaning": "That's a letter from Anna.",
+  "tip": "Always takes the dative."
+ },
+ {
+  "word": "dich",
+  "meaning": "you (accusative)",
+  "pos": "pronoun",
+  "example": "Ich sehe dich morgen.",
+  "exampleMeaning": "I'll see you tomorrow.",
+  "tip": "du → dich (accusative) → dir (dative)."
+ },
+ {
+  "word": "nein",
+  "meaning": "no",
+  "pos": "particle",
+  "example": "Nein, danke.",
+  "exampleMeaning": "No, thank you."
+ },
+ {
+  "word": "an",
+  "meaning": "at, on (vertical)",
+  "pos": "preposition",
+  "example": "Das Bild hängt an der Wand.",
+  "exampleMeaning": "The picture hangs on the wall.",
+  "tip": "an = on a vertical surface or at an edge; auf = on top."
+ },
+ {
+  "word": "noch",
+  "meaning": "still, yet; more",
+  "pos": "adverb",
+  "example": "Ich bin noch im Büro.",
+  "exampleMeaning": "I'm still at the office.",
+  "tip": "noch ein Bier = one more beer; noch nicht = not yet."
+ },
+ {
+  "word": "nur",
+  "meaning": "only",
+  "pos": "adverb",
+  "example": "Ich habe nur zehn Euro.",
+  "exampleMeaning": "I only have ten euros."
+ },
+ {
+  "word": "da",
+  "meaning": "there; then",
+  "pos": "adverb",
+  "example": "Da ist die Haltestelle.",
+  "exampleMeaning": "There is the bus stop.",
+  "tip": "Also means 'present': Ist Herr Braun da? = Is he in?"
+ },
+ {
+  "word": "dir",
+  "meaning": "you (dative)",
+  "pos": "pronoun",
+  "example": "Wie geht es dir?",
+  "exampleMeaning": "How are you?",
+  "tip": "Dative of du — the receiver: Ich gebe dir das Buch."
+ },
+ {
+  "word": "sich",
+  "meaning": "oneself (reflexive)",
+  "pos": "pronoun",
+  "example": "Er freut sich auf das Wochenende.",
+  "exampleMeaning": "He's looking forward to the weekend.",
+  "tip": "Reflexive for er/sie/es/Sie: sich freuen, sich anmelden."
+ },
+ {
+  "word": "auch",
+  "meaning": "also, too",
+  "pos": "adverb",
+  "example": "Ich komme auch mit.",
+  "exampleMeaning": "I'm coming along too."
+ },
+ {
+  "word": "schon",
+  "meaning": "already",
+  "pos": "adverb",
+  "example": "Der Film hat schon angefangen.",
+  "exampleMeaning": "The film has already started."
+ },
+ {
+  "word": "sein",
+  "meaning": "to be",
+  "pos": "verb",
+  "example": "Das kann nicht sein.",
+  "exampleMeaning": "That can't be.",
+  "tip": "Wildly irregular: ich bin, du bist, er ist, wir sind. Also 'his': sein Auto."
+ },
+ {
+  "word": "dann",
+  "meaning": "then",
+  "pos": "adverb",
+  "example": "Erst essen, dann arbeiten.",
+  "exampleMeaning": "First eat, then work.",
+  "tip": "Starting a clause it flips the verb first: Dann gehen wir."
+ },
+ {
+  "word": "aus",
+  "meaning": "from, out of",
+  "pos": "preposition",
+  "example": "Sie kommt aus der Schweiz.",
+  "exampleMeaning": "She comes from Switzerland.",
+  "tip": "Always dative. Also 'off': Das Licht ist aus."
+ },
+ {
+  "word": "um",
+  "meaning": "at (time); around",
+  "pos": "preposition",
+  "example": "Der Kurs beginnt um neun Uhr.",
+  "exampleMeaning": "The course starts at nine.",
+  "tip": "um + clock time; um die Ecke = around the corner."
+ },
+ {
+  "word": "mein",
+  "meaning": "my",
+  "pos": "determiner",
+  "example": "Das ist mein Bruder.",
+  "exampleMeaning": "This is my brother.",
+  "tip": "Takes endings like ein: meine Schwester, meinen Vater."
+ },
+ {
+  "word": "oder",
+  "meaning": "or",
+  "pos": "conjunction",
+  "example": "Tee oder Kaffee?",
+  "exampleMeaning": "Tea or coffee?",
+  "tip": "Tag question too: Du kommst doch, oder? = You're coming, right?"
+ },
+ {
+  "word": "nach",
+  "meaning": "to (places); after",
+  "pos": "preposition",
+  "example": "Wir fahren nach Berlin.",
+  "exampleMeaning": "We're going to Berlin.",
+  "tip": "nach + cities/countries, zu + people/buildings. Also time: nach dem Essen."
+ },
+ {
+  "word": "nichts",
+  "meaning": "nothing",
+  "pos": "pronoun",
+  "example": "Ich habe nichts gesagt.",
+  "exampleMeaning": "I said nothing.",
+  "tip": "Don't confuse with nicht (not)."
+ },
+ {
+  "word": "man",
+  "meaning": "one, you (people in general)",
+  "pos": "pronoun",
+  "example": "Hier darf man nicht rauchen.",
+  "exampleMeaning": "You're not allowed to smoke here.",
+  "tip": "Always third person singular; not the same as Mann."
+ },
+ {
+  "word": "werden",
+  "meaning": "to become; will",
+  "pos": "verb",
+  "example": "Wir werden sehen.",
+  "exampleMeaning": "We will see.",
+  "tip": "Irregular: du wirst, er wird. Doubles as the future helper: ich werde kommen."
+ },
+ {
+  "word": "mehr",
+  "meaning": "more",
+  "pos": "adverb",
+  "example": "Ich möchte mehr Zeit haben.",
+  "exampleMeaning": "I'd like to have more time.",
+  "tip": "nicht mehr = no longer, not anymore."
+ },
+ {
+  "word": "bei",
+  "meaning": "at, near, with (someone)",
+  "pos": "preposition",
+  "example": "Ich wohne noch bei meinen Eltern.",
+  "exampleMeaning": "I still live with my parents.",
+  "tip": "Always dative. bei der Arbeit = at work."
+ },
+ {
+  "word": "also",
+  "meaning": "so, therefore",
+  "pos": "adverb",
+  "example": "Also, fangen wir an!",
+  "exampleMeaning": "So, let's get started!",
+  "tip": "False friend: German also ≠ English 'also' (that's auch)."
+ },
+ {
+  "word": "vor",
+  "meaning": "in front of; before; ago",
+  "pos": "preposition",
+  "example": "Ich warte vor dem Kino.",
+  "exampleMeaning": "I'm waiting in front of the cinema.",
+  "tip": "vor einem Jahr = a year ago."
+ },
+ {
+  "word": "können",
+  "meaning": "can, to be able to",
+  "pos": "verb",
+  "example": "Wir können morgen kommen.",
+  "exampleMeaning": "We can come tomorrow.",
+  "tip": "Modal: ich kann, du kannst — second verb goes to the end as infinitive."
+ },
+ {
+  "word": "denn",
+  "meaning": "because; (question particle)",
+  "pos": "conjunction",
+  "example": "Was ist denn los?",
+  "exampleMeaning": "What's the matter, then?",
+  "tip": "As 'because' it keeps normal word order: Ich bleibe, denn es regnet."
+ },
+ {
+  "word": "tun",
+  "meaning": "to do",
+  "pos": "verb",
+  "example": "Was kann ich für Sie tun?",
+  "exampleMeaning": "What can I do for you?",
+  "tip": "machen covers most 'do/make'; tun survives in set phrases (weh tun = to hurt)."
+ },
+ {
+  "word": "wer",
+  "meaning": "who",
+  "pos": "pronoun",
+  "example": "Wer ist das?",
+  "exampleMeaning": "Who is that?",
+  "tip": "Declines: wer → wen (acc) → wem (dat)."
+ },
+ {
+  "word": "über",
+  "meaning": "over, above; about",
+  "pos": "preposition",
+  "example": "Wir sprechen über den Film.",
+  "exampleMeaning": "We're talking about the film.",
+  "tip": "sprechen/reden über + accusative = talk about."
+ },
+ {
+  "word": "müssen",
+  "meaning": "must, to have to",
+  "pos": "verb",
+  "example": "Wir müssen jetzt gehen.",
+  "exampleMeaning": "We have to go now.",
+  "tip": "Modal: ich muss, du musst. nicht müssen = don't have to (not 'must not')."
+ },
+ {
+  "word": "kein",
+  "meaning": "no, not a",
+  "pos": "determiner",
+  "example": "Ich habe kein Auto.",
+  "exampleMeaning": "I don't have a car.",
+  "tip": "Negates nouns; nicht negates everything else."
+ },
+ {
+  "word": "einfach",
+  "meaning": "simple, easy; simply",
+  "pos": "adjective",
+  "example": "Die Aufgabe ist einfach.",
+  "exampleMeaning": "The task is easy.",
+  "tip": "As an adverb: einfach fragen! = just ask!"
+ },
+ {
+  "word": "leben",
+  "meaning": "to live",
+  "pos": "verb",
+  "example": "Wir leben gern in Köln.",
+  "exampleMeaning": "We like living in Cologne.",
+  "tip": "leben = be alive/live one's life; wohnen = reside at an address."
+ },
+ {
+  "word": "wollen",
+  "meaning": "to want",
+  "pos": "verb",
+  "example": "Wir wollen nach Hause.",
+  "exampleMeaning": "We want to go home.",
+  "tip": "Modal: ich will, du willst. Polite wishes use möchte instead."
+ },
+ {
+  "word": "bis",
+  "meaning": "until, by",
+  "pos": "preposition",
+  "example": "Bis morgen!",
+  "exampleMeaning": "See you tomorrow!",
+  "tip": "bis bald, bis später — the standard goodbye builder."
+ },
+ {
+  "word": "zurück",
+  "meaning": "back",
+  "pos": "adverb",
+  "example": "Ich bin gleich zurück.",
+  "exampleMeaning": "I'll be right back.",
+  "tip": "Glues onto verbs: zurückkommen, zurückgeben."
+ },
+ {
+  "word": "hallo",
+  "meaning": "hello",
+  "pos": "expression",
+  "example": "Hallo, wie geht's?",
+  "exampleMeaning": "Hello, how are you?"
+ },
+ {
+  "word": "klar",
+  "meaning": "clear; sure",
+  "pos": "adjective",
+  "example": "Alles klar?",
+  "exampleMeaning": "Everything okay?",
+  "tip": "Na klar! = of course!"
+ },
+ {
+  "word": "ab",
+  "meaning": "from (a point on)",
+  "pos": "preposition",
+  "example": "Ab morgen habe ich Urlaub.",
+  "exampleMeaning": "From tomorrow I'm on vacation.",
+  "tip": "ab und zu = now and then."
+ },
+ {
+  "word": "gerade",
+  "meaning": "just now; straight",
+  "pos": "adverb",
+  "example": "Ich koche gerade.",
+  "exampleMeaning": "I'm cooking right now.",
+  "tip": "gerade + present tense ≈ English '-ing right now'."
+ },
+ {
+  "word": "durch",
+  "meaning": "through",
+  "pos": "preposition",
+  "example": "Wir gehen durch den Park.",
+  "exampleMeaning": "We walk through the park.",
+  "tip": "Always takes the accusative."
+ },
+ {
+  "word": "besser",
+  "meaning": "better",
+  "pos": "adjective",
+  "example": "Heute geht es mir besser.",
+  "exampleMeaning": "I feel better today.",
+  "tip": "Comparative of gut: gut → besser → am besten."
+ },
+ {
+  "word": "ohne",
+  "meaning": "without",
+  "pos": "preposition",
+  "example": "Kaffee ohne Zucker, bitte.",
+  "exampleMeaning": "Coffee without sugar, please.",
+  "tip": "Always takes the accusative."
+ },
+ {
+  "word": "finden",
+  "meaning": "to find; to think (opinion)",
+  "pos": "verb",
+  "example": "Ich kann meine Brille nicht finden.",
+  "exampleMeaning": "I can't find my glasses.",
+  "tip": "Opinions too: Ich finde den Film gut."
+ },
+ {
+  "word": "lange",
+  "meaning": "for a long time",
+  "pos": "adverb",
+  "example": "Das dauert nicht lange.",
+  "exampleMeaning": "That won't take long.",
+  "tip": "Wie lange? = how long?"
+ },
+ {
+  "word": "dort",
+  "meaning": "there",
+  "pos": "adverb",
+  "example": "Dort ist der Bahnhof.",
+  "exampleMeaning": "The station is over there.",
+  "tip": "Slightly more formal/distant than da."
+ },
+ {
+  "word": "weiter",
+  "meaning": "further, continue",
+  "pos": "adverb",
+  "example": "Bitte gehen Sie weiter.",
+  "exampleMeaning": "Please move along.",
+  "tip": "Verb prefix for 'keep doing': weitermachen, weiterlesen."
+ },
+ {
+  "word": "geben",
+  "meaning": "to give",
+  "pos": "verb",
+  "example": "Kannst du mir das Salz geben?",
+  "exampleMeaning": "Can you pass me the salt?",
+  "tip": "Irregular: du gibst, er gibt. es gibt + accusative = there is/are."
+ },
+ {
+  "word": "seit",
+  "meaning": "since, for (time)",
+  "pos": "preposition",
+  "example": "Ich lerne seit einem Jahr Deutsch.",
+  "exampleMeaning": "I've been learning German for a year.",
+  "tip": "Takes dative — and the present tense where English uses 'have been'."
+ },
+ {
+  "word": "gleich",
+  "meaning": "right away; same",
+  "pos": "adverb",
+  "example": "Ich komme gleich.",
+  "exampleMeaning": "I'm coming right away.",
+  "tip": "Also 'equal/same': die gleiche Farbe."
+ },
+ {
+  "word": "richtig",
+  "meaning": "correct, right",
+  "pos": "adjective",
+  "example": "Die Antwort ist richtig.",
+  "exampleMeaning": "The answer is correct."
+ },
+ {
+  "word": "Ordnung",
+  "article": "die",
+  "plural": "Ordnungen",
+  "meaning": "order, tidiness",
+  "pos": "noun",
+  "example": "Alles in Ordnung?",
+  "exampleMeaning": "Everything all right?",
+  "tip": "in Ordnung = okay/fine — one of the most common phrases in German."
+ },
+ {
+  "word": "sollen",
+  "meaning": "should, to be supposed to",
+  "pos": "verb",
+  "example": "Was sollen wir mitbringen?",
+  "exampleMeaning": "What should we bring?",
+  "tip": "Modal: ich soll, du sollst — often 'someone said to do it'."
+ },
+ {
+  "word": "bleiben",
+  "meaning": "to stay",
+  "pos": "verb",
+  "example": "Wir bleiben heute zu Hause.",
+  "exampleMeaning": "We're staying home today.",
+  "tip": "Perfect with sein: ich bin geblieben."
+ },
+ {
+  "word": "Welt",
+  "article": "die",
+  "plural": "Welten",
+  "meaning": "world",
+  "pos": "noun",
+  "example": "Sie reist um die ganze Welt.",
+  "exampleMeaning": "She travels around the whole world."
+ },
+ {
+  "word": "unter",
+  "meaning": "under, below",
+  "pos": "preposition",
+  "example": "Die Katze liegt unter dem Tisch.",
+  "exampleMeaning": "The cat is lying under the table.",
+  "tip": "Dative for location, accusative for direction."
+ },
+ {
+  "word": "schnell",
+  "meaning": "fast, quick",
+  "pos": "adjective",
+  "example": "Der Zug ist sehr schnell.",
+  "exampleMeaning": "The train is very fast."
+ },
+ {
+  "word": "tot",
+  "meaning": "dead",
+  "pos": "adjective",
+  "example": "Die Batterie ist tot.",
+  "exampleMeaning": "The battery is dead."
+ },
+ {
+  "word": "nehmen",
+  "meaning": "to take",
+  "pos": "verb",
+  "example": "Wir nehmen den Bus.",
+  "exampleMeaning": "We take the bus.",
+  "tip": "Irregular: du nimmst, er nimmt; perfect: hat genommen."
+ },
+ {
+  "word": "glauben",
+  "meaning": "to believe, to think",
+  "pos": "verb",
+  "example": "Ich glaube, er kommt später.",
+  "exampleMeaning": "I think he's coming later.",
+  "tip": "The believed person takes dative: Ich glaube dir."
+ },
+ {
+  "word": "bringen",
+  "meaning": "to bring",
+  "pos": "verb",
+  "example": "Ich bringe dich zum Bahnhof.",
+  "exampleMeaning": "I'll take you to the station.",
+  "tip": "Irregular perfect: hat gebracht."
+ },
+ {
+  "word": "gegen",
+  "meaning": "against; around (time)",
+  "pos": "preposition",
+  "example": "Wir spielen gegen eure Mannschaft.",
+  "exampleMeaning": "We're playing against your team.",
+  "tip": "Always accusative. gegen acht Uhr = around eight."
+ },
+ {
+  "word": "Moment",
+  "article": "der",
+  "plural": "Momente",
+  "meaning": "moment",
+  "pos": "noun",
+  "example": "Einen Moment, bitte!",
+  "exampleMeaning": "One moment, please!",
+  "tip": "im Moment = at the moment."
+ },
+ {
+  "word": "fragen",
+  "meaning": "to ask",
+  "pos": "verb",
+  "example": "Darf ich Sie etwas fragen?",
+  "exampleMeaning": "May I ask you something?",
+  "tip": "The person asked takes the accusative: Frag mich!"
+ },
+ {
+  "word": "Herr",
+  "article": "der",
+  "plural": "Herren",
+  "meaning": "Mr.; gentleman",
+  "pos": "noun",
+  "example": "Guten Tag, Herr Müller!",
+  "exampleMeaning": "Good day, Mr. Müller!",
+  "tip": "Weak noun: Herrn in other cases (mit Herrn Müller)."
+ },
+ {
+  "word": "sofort",
+  "meaning": "immediately",
+  "pos": "adverb",
+  "example": "Ich komme sofort.",
+  "exampleMeaning": "I'm coming right away."
+ },
+ {
+  "word": "einmal",
+  "meaning": "once; one time",
+  "pos": "adverb",
+  "example": "Ich war einmal in Wien.",
+  "exampleMeaning": "I was in Vienna once.",
+  "tip": "noch einmal = once more; auf einmal = suddenly."
+ },
+ {
+  "word": "Problem",
+  "article": "das",
+  "plural": "Probleme",
+  "meaning": "problem",
+  "pos": "noun",
+  "example": "Kein Problem!",
+  "exampleMeaning": "No problem!"
+ },
+ {
+  "word": "Sohn",
+  "article": "der",
+  "plural": "Söhne",
+  "meaning": "son",
+  "pos": "noun",
+  "example": "Mein Sohn geht schon zur Schule.",
+  "exampleMeaning": "My son already goes to school."
+ },
+ {
+  "word": "wann",
+  "meaning": "when (question)",
+  "pos": "adverb",
+  "example": "Wann fängt der Film an?",
+  "exampleMeaning": "When does the film start?",
+  "tip": "Only for questions — 'when' in statements is wenn or als."
+ },
+ {
+  "word": "fertig",
+  "meaning": "finished, ready",
+  "pos": "adjective",
+  "example": "Das Essen ist fertig.",
+  "exampleMeaning": "The food is ready."
+ },
+ {
+  "word": "allein",
+  "meaning": "alone",
+  "pos": "adverb",
+  "example": "Sie wohnt allein.",
+  "exampleMeaning": "She lives alone."
+ },
+ {
+  "word": "beide",
+  "meaning": "both",
+  "pos": "pronoun",
+  "example": "Beide Antworten sind richtig.",
+  "exampleMeaning": "Both answers are correct."
+ },
+ {
+  "word": "Hilfe",
+  "article": "die",
+  "plural": "Hilfen",
+  "meaning": "help",
+  "pos": "noun",
+  "example": "Danke für deine Hilfe!",
+  "exampleMeaning": "Thanks for your help!",
+  "tip": "Hilfe! alone is the cry for help."
+ },
+ {
+  "word": "halten",
+  "meaning": "to hold; to stop",
+  "pos": "verb",
+  "example": "Kannst du das kurz halten?",
+  "exampleMeaning": "Can you hold this for a second?",
+  "tip": "Irregular: du hältst, er hält. Buses halten (stop) at the Haltestelle."
+ },
+ {
+  "word": "Dank",
+  "article": "der",
+  "plural": "Dank",
+  "meaning": "thanks",
+  "pos": "noun",
+  "example": "Vielen Dank für alles!",
+  "exampleMeaning": "Many thanks for everything!",
+  "tip": "Vielen Dank / herzlichen Dank — the noun behind danke."
+ },
+ {
+  "word": "lieber",
+  "meaning": "rather, preferably",
+  "pos": "adverb",
+  "example": "Ich trinke lieber Tee.",
+  "exampleMeaning": "I prefer to drink tea.",
+  "tip": "Comparative of gern: gern → lieber → am liebsten."
+ },
+ {
+  "word": "kennen",
+  "meaning": "to know (people/places)",
+  "pos": "verb",
+  "example": "Wir kennen uns schon lange.",
+  "exampleMeaning": "We've known each other for a long time.",
+  "tip": "kennen = be familiar with; wissen = know facts."
+ },
+ {
+  "word": "Baby",
+  "article": "das",
+  "plural": "Babys",
+  "meaning": "baby",
+  "pos": "noun",
+  "example": "Das Baby schläft endlich.",
+  "exampleMeaning": "The baby is finally sleeping."
+ },
+ {
+  "word": "bekommen",
+  "meaning": "to get, to receive",
+  "pos": "verb",
+  "example": "Was bekommen Sie?",
+  "exampleMeaning": "What will you have? (lit. what do you get?)",
+  "tip": "False friend: bekommen ≠ to become (that's werden)."
+ },
+ {
+  "word": "später",
+  "meaning": "later",
+  "pos": "adverb",
+  "example": "Bis später!",
+  "exampleMeaning": "See you later!"
+ },
+ {
+  "word": "Glück",
+  "article": "das",
+  "plural": "Glück",
+  "meaning": "luck; happiness",
+  "pos": "noun",
+  "example": "Viel Glück bei der Prüfung!",
+  "exampleMeaning": "Good luck on the exam!",
+  "tip": "Glück haben = to be lucky; glücklich = happy."
+ },
+ {
+  "word": "Ende",
+  "article": "das",
+  "plural": "Enden",
+  "meaning": "end",
+  "pos": "noun",
+  "example": "Am Ende war alles gut.",
+  "exampleMeaning": "In the end everything was fine.",
+  "tip": "zu Ende = over/finished: Der Film ist zu Ende."
+ },
+ {
+  "word": "bald",
+  "meaning": "soon",
+  "pos": "adverb",
+  "example": "Bis bald!",
+  "exampleMeaning": "See you soon!"
+ },
+ {
+  "word": "weit",
+  "meaning": "far",
+  "pos": "adjective",
+  "example": "Ist es noch weit?",
+  "exampleMeaning": "Is it much farther?",
+  "tip": "Wie weit ist es bis...? = how far is it to...?"
+ },
+ {
+  "word": "bisschen",
+  "meaning": "a little, a bit",
+  "pos": "pronoun",
+  "example": "Ich spreche ein bisschen Deutsch.",
+  "exampleMeaning": "I speak a little German.",
+  "tip": "Almost always ein bisschen."
+ },
+ {
+  "word": "Polizei",
+  "article": "die",
+  "plural": "Polizei",
+  "meaning": "police",
+  "pos": "noun",
+  "example": "Die Polizei ist schon da.",
+  "exampleMeaning": "The police are already here.",
+  "tip": "Singular in German: die Polizei ist (not sind)."
+ },
+ {
+  "word": "stehen",
+  "meaning": "to stand",
+  "pos": "verb",
+  "example": "Da stehen viele Leute.",
+  "exampleMeaning": "A lot of people are standing there.",
+  "tip": "Also 'to suit': Das Hemd steht dir gut."
+ },
+ {
+  "word": "draußen",
+  "meaning": "outside",
+  "pos": "adverb",
+  "example": "Die Kinder spielen draußen.",
+  "exampleMeaning": "The children are playing outside."
+ },
+ {
+  "word": "gerne",
+  "meaning": "gladly, with pleasure",
+  "pos": "adverb",
+  "example": "Ich helfe dir gerne.",
+  "exampleMeaning": "I'm happy to help you.",
+  "tip": "gern and gerne are the same word. Verb + gern = to like doing."
+ },
+ {
+  "word": "Tochter",
+  "article": "die",
+  "plural": "Töchter",
+  "meaning": "daughter",
+  "pos": "noun",
+  "example": "Unsere Tochter studiert in Bonn.",
+  "exampleMeaning": "Our daughter studies in Bonn."
+ },
+ {
+  "word": "ruhig",
+  "meaning": "quiet, calm",
+  "pos": "adjective",
+  "example": "Die Straße ist nachts ruhig.",
+  "exampleMeaning": "The street is quiet at night."
+ },
+ {
+  "word": "spät",
+  "meaning": "late",
+  "pos": "adjective",
+  "example": "Es ist schon spät.",
+  "exampleMeaning": "It's already late.",
+  "tip": "Wie spät ist es? = what time is it?"
+ },
+ {
+  "word": "kurz",
+  "meaning": "short, brief",
+  "pos": "adjective",
+  "example": "Ich habe nur kurz Zeit.",
+  "exampleMeaning": "I only have a moment.",
+  "tip": "Opposite of lang. kurz vor acht = shortly before eight."
+ },
+ {
+  "word": "suchen",
+  "meaning": "to look for",
+  "pos": "verb",
+  "example": "Ich suche meinen Schlüssel.",
+  "exampleMeaning": "I'm looking for my key.",
+  "tip": "suchen = search; finden = find (the result)."
+ },
+ {
+  "word": "woher",
+  "meaning": "where from",
+  "pos": "adverb",
+  "example": "Woher kommen Sie?",
+  "exampleMeaning": "Where do you come from?"
+ },
+ {
+  "word": "lang",
+  "meaning": "long",
+  "pos": "adjective",
+  "example": "Der Weg ist lang.",
+  "exampleMeaning": "The way is long.",
+  "tip": "Adjective lang, adverb lange: ein langer Tag / es dauert lange."
+ },
+ {
+  "word": "Job",
+  "article": "der",
+  "plural": "Jobs",
+  "meaning": "job",
+  "pos": "noun",
+  "example": "Sie hat einen neuen Job.",
+  "exampleMeaning": "She has a new job.",
+  "tip": "Casual; the formal words are Arbeit and Stelle."
+ },
+ {
+  "word": "oben",
+  "meaning": "above, upstairs",
+  "pos": "adverb",
+  "example": "Das Bad ist oben.",
+  "exampleMeaning": "The bathroom is upstairs.",
+  "tip": "Opposite of unten."
+ },
+ {
+  "word": "schwer",
+  "meaning": "heavy; difficult",
+  "pos": "adjective",
+  "example": "Der Koffer ist zu schwer.",
+  "exampleMeaning": "The suitcase is too heavy.",
+  "tip": "Both meanings are common: eine schwere Frage = a hard question."
+ },
+ {
+  "word": "wenig",
+  "meaning": "little, few",
+  "pos": "pronoun",
+  "example": "Ich habe wenig Zeit.",
+  "exampleMeaning": "I have little time.",
+  "tip": "ein wenig = a little (like ein bisschen)."
+ },
+ {
+  "word": "holen",
+  "meaning": "to fetch, to get",
+  "pos": "verb",
+  "example": "Ich gehe schnell Brot holen.",
+  "exampleMeaning": "I'll quickly go get bread.",
+  "tip": "abholen = pick someone/something up."
+ },
+ {
+  "word": "hoch",
+  "meaning": "high, tall",
+  "pos": "adjective",
+  "example": "Der Berg ist sehr hoch.",
+  "exampleMeaning": "The mountain is very high.",
+  "tip": "Drops the c before endings: ein hoher Berg."
+ },
+ {
+  "word": "Alter",
+  "article": "das",
+  "plural": "Alter",
+  "meaning": "age",
+  "pos": "noun",
+  "example": "Alter und Name, bitte.",
+  "exampleMeaning": "Age and name, please.",
+  "tip": "im Alter von 30 = at the age of 30."
+ },
+ {
+  "word": "gefallen",
+  "meaning": "to please, to be liked",
+  "pos": "verb",
+  "example": "Es wird dir gefallen.",
+  "exampleMeaning": "You're going to like it.",
+  "tip": "Flipped: the liker takes dative — Das Bild gefällt mir = I like the picture."
+ },
+ {
+  "word": "Ort",
+  "article": "der",
+  "plural": "Orte",
+  "meaning": "place; town",
+  "pos": "noun",
+  "example": "Das ist ein schöner Ort.",
+  "exampleMeaning": "This is a beautiful place."
+ },
+ {
+  "word": "zwischen",
+  "meaning": "between",
+  "pos": "preposition",
+  "example": "Das Café ist zwischen der Post und der Bank.",
+  "exampleMeaning": "The café is between the post office and the bank.",
+  "tip": "Dative for location, accusative for direction."
+ },
+ {
+  "word": "erzählen",
+  "meaning": "to tell (a story)",
+  "pos": "verb",
+  "example": "Erzähl mir alles!",
+  "exampleMeaning": "Tell me everything!",
+  "tip": "erzählen = narrate; sagen = say a thing."
+ },
+ {
+  "word": "entschuldigen",
+  "meaning": "to excuse",
+  "pos": "verb",
+  "example": "Entschuldigen Sie bitte die Verspätung.",
+  "exampleMeaning": "Please excuse the delay.",
+  "tip": "Entschuldigung! = sorry/excuse me — the noun of this verb."
+ },
+ {
+  "word": "Bett",
+  "article": "das",
+  "plural": "Betten",
+  "meaning": "bed",
+  "pos": "noun",
+  "example": "Ich gehe jetzt ins Bett.",
+  "exampleMeaning": "I'm going to bed now.",
+  "tip": "ins Bett gehen = go to bed."
+ },
+ {
+  "word": "euer",
+  "meaning": "your (plural)",
+  "pos": "determiner",
+  "example": "Ist das euer Haus?",
+  "exampleMeaning": "Is that your (pl.) house?",
+  "tip": "Drops an e with endings: eure Kinder, not euere."
+ },
+ {
+  "word": "unten",
+  "meaning": "below, downstairs",
+  "pos": "adverb",
+  "example": "Die Küche ist unten.",
+  "exampleMeaning": "The kitchen is downstairs."
+ },
+ {
+  "word": "Teil",
+  "article": "der",
+  "plural": "Teile",
+  "meaning": "part",
+  "pos": "noun",
+  "example": "Der erste Teil war besser.",
+  "exampleMeaning": "The first part was better.",
+  "tip": "zum Teil = partly."
+ },
+ {
+  "word": "Mensch",
+  "article": "der",
+  "plural": "Menschen",
+  "meaning": "human, person",
+  "pos": "noun",
+  "example": "Hier leben viele Menschen.",
+  "exampleMeaning": "Many people live here.",
+  "tip": "Weak noun: den Menschen. As an exclamation it means 'wow, man'."
+ },
+ {
+  "word": "stellen",
+  "meaning": "to put (upright); to place",
+  "pos": "verb",
+  "example": "Ich stelle die Flasche auf den Tisch.",
+  "exampleMeaning": "I put the bottle on the table.",
+  "tip": "stellen = place standing; legen = lay flat. eine Frage stellen = ask a question."
+ },
+ {
+  "word": "oft",
+  "meaning": "often",
+  "pos": "adverb",
+  "example": "Wir essen oft zusammen.",
+  "exampleMeaning": "We often eat together."
+ },
+ {
+  "word": "kriegen",
+  "meaning": "to get (colloquial)",
+  "pos": "verb",
+  "example": "Wir kriegen morgen Besuch.",
+  "exampleMeaning": "We're having visitors tomorrow.",
+  "tip": "Everyday speech for bekommen — avoid in formal writing."
+ },
+ {
+  "word": "glücklich",
+  "meaning": "happy",
+  "pos": "adjective",
+  "example": "Sie sieht sehr glücklich aus.",
+  "exampleMeaning": "She looks very happy."
+ },
+ {
+  "word": "Wiedersehen",
+  "article": "das",
+  "plural": "Wiedersehen",
+  "meaning": "reunion, seeing again",
+  "pos": "noun",
+  "example": "Auf Wiedersehen!",
+  "exampleMeaning": "Goodbye!",
+  "tip": "Literally 'seeing again' — auf Wiederhören ends phone calls."
+ },
+ {
+  "word": "frei",
+  "meaning": "free; vacant",
+  "pos": "adjective",
+  "example": "Ist dieser Platz noch frei?",
+  "exampleMeaning": "Is this seat still free?",
+  "tip": "frei haben = to have time off."
+ },
+ {
+  "word": "Platz",
+  "article": "der",
+  "plural": "Plätze",
+  "meaning": "seat; square; space",
+  "pos": "noun",
+  "example": "Nehmen Sie bitte Platz!",
+  "exampleMeaning": "Please take a seat!",
+  "tip": "Platz nehmen = sit down; der Marktplatz = market square."
+ },
+ {
+  "word": "falsch",
+  "meaning": "wrong, false",
+  "pos": "adjective",
+  "example": "Die Nummer ist falsch.",
+  "exampleMeaning": "The number is wrong."
+ },
+ {
+  "word": "Nummer",
+  "article": "die",
+  "plural": "Nummern",
+  "meaning": "number",
+  "pos": "noun",
+  "example": "Meine Nummer ist neu.",
+  "exampleMeaning": "My number is new."
+ },
+ {
+  "word": "früher",
+  "meaning": "earlier; in the past",
+  "pos": "adverb",
+  "example": "Früher habe ich in Bonn gewohnt.",
+  "exampleMeaning": "I used to live in Bonn.",
+  "tip": "Sentence-initial früher ≈ 'I used to...'."
+ },
+ {
+  "word": "wohin",
+  "meaning": "where to",
+  "pos": "adverb",
+  "example": "Wohin fahrt ihr im Urlaub?",
+  "exampleMeaning": "Where are you going on vacation?",
+  "tip": "wo = where (at), wohin = where to, woher = where from."
+ },
+ {
+  "word": "dürfen",
+  "meaning": "may, to be allowed to",
+  "pos": "verb",
+  "example": "Kinder dürfen hier spielen.",
+  "exampleMeaning": "Children are allowed to play here.",
+  "tip": "Modal: ich darf, du darfst. nicht dürfen = must not."
+ },
+ {
+  "word": "willkommen",
+  "meaning": "welcome",
+  "pos": "expression",
+  "example": "Herzlich willkommen in Berlin!",
+  "exampleMeaning": "Welcome to Berlin!"
+ },
+ {
+  "word": "Plan",
+  "article": "der",
+  "plural": "Pläne",
+  "meaning": "plan",
+  "pos": "noun",
+  "example": "Hast du schon einen Plan?",
+  "exampleMeaning": "Do you have a plan yet?"
+ },
+ {
+  "word": "Fehler",
+  "article": "der",
+  "plural": "Fehler",
+  "meaning": "mistake, error",
+  "pos": "noun",
+  "example": "Jeder macht Fehler.",
+  "exampleMeaning": "Everyone makes mistakes."
+ },
+ {
+  "word": "Pass",
+  "article": "der",
+  "plural": "Pässe",
+  "meaning": "passport",
+  "pos": "noun",
+  "example": "Ihren Pass, bitte!",
+  "exampleMeaning": "Your passport, please!"
+ }
+]

@@ -1,7 +1,11 @@
 import jlptN5 from "@/data/jlpt_n5.json";
 import jlptN4 from "@/data/jlpt_n4.json";
+import jlptN5Gap from "@/data/jlpt_n5_gap.json";
+import jlptN4Gap from "@/data/jlpt_n4_gap.json";
 import goetheA1 from "@/data/goethe_a1.json";
 import goetheA2 from "@/data/goethe_a2.json";
+import goetheA1Gap from "@/data/goethe_a1_gap.json";
+import goetheA2Gap from "@/data/goethe_a2_gap.json";
 import type { Lang, VocabEntry } from "./types";
 
 // Seed vocab is one flat, ORDER-STABLE list per language: earlier levels first,
@@ -19,14 +23,23 @@ interface Level {
   entries: VocabEntry[];
 }
 
+// The *_gap files are coverage-audit fills (scripts/gen-gap-entries.mjs +
+// review): the most frequent words from the official exam lists that the
+// original levels missed. They live AFTER the original levels because the
+// pointer contract forbids inserting into an existing level — the label keeps
+// the exam tag honest on cards, and each gap file is pre-sorted by freqRank.
 const LEVELS: Record<Lang, Level[]> = {
   ja: [
     { label: "JLPT N5", entries: jlptN5 as VocabEntry[] },
     { label: "JLPT N4", entries: jlptN4 as VocabEntry[] },
+    { label: "JLPT N5", entries: jlptN5Gap as VocabEntry[] },
+    { label: "JLPT N4", entries: jlptN4Gap as VocabEntry[] },
   ],
   de: [
     { label: "GOETHE A1", entries: goetheA1 as VocabEntry[] },
     { label: "GOETHE A2", entries: goetheA2 as VocabEntry[] },
+    { label: "GOETHE A1", entries: goetheA1Gap as VocabEntry[] },
+    { label: "GOETHE A2", entries: goetheA2Gap as VocabEntry[] },
   ],
 };
 

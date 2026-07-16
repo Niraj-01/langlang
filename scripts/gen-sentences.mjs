@@ -52,10 +52,14 @@ const PER_WORD_CAP = 30; // variety: don't let one word hog the pool
 const seedJa = [
   ...JSON.parse(readFileSync(path.join(ROOT, "data/jlpt_n5.json"), "utf8")),
   ...JSON.parse(readFileSync(path.join(ROOT, "data/jlpt_n4.json"), "utf8")),
+  ...JSON.parse(readFileSync(path.join(ROOT, "data/jlpt_n5_gap.json"), "utf8")),
+  ...JSON.parse(readFileSync(path.join(ROOT, "data/jlpt_n4_gap.json"), "utf8")),
 ];
 const seedDe = [
   ...JSON.parse(readFileSync(path.join(ROOT, "data/goethe_a1.json"), "utf8")),
   ...JSON.parse(readFileSync(path.join(ROOT, "data/goethe_a2.json"), "utf8")),
+  ...JSON.parse(readFileSync(path.join(ROOT, "data/goethe_a1_gap.json"), "utf8")),
+  ...JSON.parse(readFileSync(path.join(ROOT, "data/goethe_a2_gap.json"), "utf8")),
 ];
 
 // ---------------------------------------------------------------- download
@@ -242,8 +246,16 @@ async function loadPairs(sentFile, linkFile) {
 }
 
 function selectAndCap(candidates) {
-  // prefer higher coverage then shorter; greedy per-word cap keeps variety
-  candidates.sort((a, b) => b.coverage - a.coverage || a.tokens.length - b.tokens.length);
+  // Progressive pool: sentences built from EARLY-curriculum words first (their
+  // highest seedIndex, ascending), so beginners with a 20-word deck still find
+  // qualifying i+1 sentences now that the seed list is 500+ words. Within the
+  // same frontier, prefer higher coverage then shorter; the greedy per-word
+  // cap keeps variety and lets later vocabulary fill the rest of the pool.
+  const maxIdx = (c) =>
+    Math.max(...c.tokens.filter((t) => t.seedIndex !== null).map((t) => t.seedIndex));
+  candidates.sort(
+    (a, b) => maxIdx(a) - maxIdx(b) || b.coverage - a.coverage || a.tokens.length - b.tokens.length
+  );
   const perWord = new Map();
   const out = [];
   const seenText = new Set();

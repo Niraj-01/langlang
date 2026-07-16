@@ -63,10 +63,14 @@ const SEED = {
   ja: [
     ...JSON.parse(readFileSync(path.join(ROOT, "data/jlpt_n5.json"), "utf8")),
     ...JSON.parse(readFileSync(path.join(ROOT, "data/jlpt_n4.json"), "utf8")),
+    ...JSON.parse(readFileSync(path.join(ROOT, "data/jlpt_n5_gap.json"), "utf8")),
+    ...JSON.parse(readFileSync(path.join(ROOT, "data/jlpt_n4_gap.json"), "utf8")),
   ],
   de: [
     ...JSON.parse(readFileSync(path.join(ROOT, "data/goethe_a1.json"), "utf8")),
     ...JSON.parse(readFileSync(path.join(ROOT, "data/goethe_a2.json"), "utf8")),
+    ...JSON.parse(readFileSync(path.join(ROOT, "data/goethe_a1_gap.json"), "utf8")),
+    ...JSON.parse(readFileSync(path.join(ROOT, "data/goethe_a2_gap.json"), "utf8")),
   ],
 };
 

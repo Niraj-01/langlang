@@ -1,0 +1,1201 @@
+[
+ {
+  "word": "dass",
+  "meaning": "that (conjunction)",
+  "pos": "conjunction",
+  "example": "Ich hoffe, dass du kommst.",
+  "exampleMeaning": "I hope that you'll come.",
+  "tip": "Kicks the verb to the end of its clause: ..., dass du morgen kommst."
+ },
+ {
+  "word": "wenn",
+  "meaning": "if; when(ever)",
+  "pos": "conjunction",
+  "example": "Wenn es regnet, bleiben wir hier.",
+  "exampleMeaning": "If it rains, we'll stay here.",
+  "tip": "Verb goes to the end. For one-time past events use als instead."
+ },
+ {
+  "word": "als",
+  "meaning": "when (past); than; as",
+  "pos": "conjunction",
+  "example": "Als ich klein war, wohnte ich hier.",
+  "exampleMeaning": "When I was little, I lived here.",
+  "tip": "als = single past event; wenn = repeated/future. Also comparisons: größer als ich."
+ },
+ {
+  "word": "doch",
+  "meaning": "but; yes it is!",
+  "pos": "particle",
+  "example": "Komm doch mit!",
+  "exampleMeaning": "Come along, why don't you!",
+  "tip": "As an answer it contradicts a negative question — Doch! means 'yes I am'."
+ },
+ {
+  "word": "etwas",
+  "meaning": "something; a little",
+  "pos": "pronoun",
+  "example": "Möchtest du etwas trinken?",
+  "exampleMeaning": "Would you like something to drink?",
+  "tip": "Casual speech shortens it to was: Willst du was?"
+ },
+ {
+  "word": "wieder",
+  "meaning": "again",
+  "pos": "adverb",
+  "example": "Schön, dich wieder zu sehen!",
+  "exampleMeaning": "Nice to see you again!",
+  "tip": "immer wieder = again and again."
+ },
+ {
+  "word": "wirklich",
+  "meaning": "really",
+  "pos": "adverb",
+  "example": "Das ist wirklich nett von dir.",
+  "exampleMeaning": "That's really nice of you."
+ },
+ {
+  "word": "Weg",
+  "article": "der",
+  "plural": "Wege",
+  "meaning": "way, path",
+  "pos": "noun",
+  "example": "Ist das der richtige Weg?",
+  "exampleMeaning": "Is this the right way?",
+  "tip": "auf dem Weg = on the way. Lowercase weg (adverb) = gone/away."
+ },
+ {
+  "word": "weil",
+  "meaning": "because",
+  "pos": "conjunction",
+  "example": "Ich bleibe, weil es regnet.",
+  "exampleMeaning": "I'm staying because it's raining.",
+  "tip": "Verb goes to the end — unlike denn, which keeps normal order."
+ },
+ {
+  "word": "ganz",
+  "meaning": "whole; quite",
+  "pos": "adverb",
+  "example": "Ich war den ganzen Tag zu Hause.",
+  "exampleMeaning": "I was home the whole day.",
+  "tip": "ganz gut = pretty good (weaker than gut!); ganz allein = all alone."
+ },
+ {
+  "word": "sicher",
+  "meaning": "sure; safe",
+  "pos": "adjective",
+  "example": "Bist du sicher?",
+  "exampleMeaning": "Are you sure?",
+  "tip": "Also 'safe': ein sicherer Ort."
+ },
+ {
+  "word": "lassen",
+  "meaning": "to let; to leave (something)",
+  "pos": "verb",
+  "example": "Wir lassen das Auto zu Hause.",
+  "exampleMeaning": "We'll leave the car at home.",
+  "tip": "Lass uns gehen means 'let's go'. Also 'have something done': die Haare schneiden lassen."
+ },
+ {
+  "word": "meinen",
+  "meaning": "to mean, to think",
+  "pos": "verb",
+  "example": "Was meinen Sie damit?",
+  "exampleMeaning": "What do you mean by that?",
+  "tip": "Ich meine = I mean/think. Related noun: die Meinung (opinion)."
+ },
+ {
+  "word": "genau",
+  "meaning": "exactly",
+  "pos": "adverb",
+  "example": "Genau! Das wollte ich sagen.",
+  "exampleMeaning": "Exactly! That's what I wanted to say.",
+  "tip": "A universal agreement word in conversation."
+ },
+ {
+  "word": "reden",
+  "meaning": "to talk",
+  "pos": "verb",
+  "example": "Wir müssen reden.",
+  "exampleMeaning": "We need to talk.",
+  "tip": "reden über + accusative = talk about; ≈ sprechen but more informal."
+ },
+ {
+  "word": "jemand",
+  "meaning": "someone",
+  "pos": "pronoun",
+  "example": "Ist da jemand?",
+  "exampleMeaning": "Is someone there?",
+  "tip": "Opposite: niemand = no one."
+ },
+ {
+  "word": "Paar",
+  "article": "das",
+  "plural": "Paare",
+  "meaning": "pair, couple",
+  "pos": "noun",
+  "example": "Das Paar tanzt schön.",
+  "exampleMeaning": "The couple dances beautifully.",
+  "tip": "ein Paar Schuhe = a pair; lowercase ein paar = a few."
+ },
+ {
+  "word": "selbst",
+  "meaning": "oneself; even",
+  "pos": "pronoun",
+  "example": "Das habe ich selbst gemacht.",
+  "exampleMeaning": "I made that myself.",
+  "tip": "Before the noun it means 'even': Selbst er weiß das."
+ },
+ {
+  "word": "natürlich",
+  "meaning": "of course; natural",
+  "pos": "adverb",
+  "example": "Natürlich helfe ich dir!",
+  "exampleMeaning": "Of course I'll help you!"
+ },
+ {
+  "word": "wegen",
+  "meaning": "because of",
+  "pos": "preposition",
+  "example": "Wegen des Wetters bleiben wir hier.",
+  "exampleMeaning": "We're staying here because of the weather.",
+  "tip": "Officially genitive; spoken German often uses dative (wegen dem Wetter)."
+ },
+ {
+  "word": "Angst",
+  "article": "die",
+  "plural": "Ängste",
+  "meaning": "fear",
+  "pos": "noun",
+  "example": "Ich habe Angst vor Hunden.",
+  "exampleMeaning": "I'm afraid of dogs.",
+  "tip": "Angst haben vor + dative = to be afraid of."
+ },
+ {
+  "word": "erst",
+  "meaning": "only (so far); first",
+  "pos": "adverb",
+  "example": "Es ist erst acht Uhr.",
+  "exampleMeaning": "It's only eight o'clock.",
+  "tip": "erst = later than expected; nur = less than expected. erst mal = first of all."
+ },
+ {
+  "word": "genug",
+  "meaning": "enough",
+  "pos": "adverb",
+  "example": "Wir haben genug Zeit.",
+  "exampleMeaning": "We have enough time."
+ },
+ {
+  "word": "sonst",
+  "meaning": "otherwise; else",
+  "pos": "adverb",
+  "example": "Beeil dich, sonst kommst du zu spät!",
+  "exampleMeaning": "Hurry, otherwise you'll be late!",
+  "tip": "Sonst noch etwas (anything else?) is the standard shop phrase."
+ },
+ {
+  "word": "niemand",
+  "meaning": "nobody",
+  "pos": "pronoun",
+  "example": "Niemand war zu Hause.",
+  "exampleMeaning": "Nobody was home."
+ },
+ {
+  "word": "Sache",
+  "article": "die",
+  "plural": "Sachen",
+  "meaning": "thing, matter",
+  "pos": "noun",
+  "example": "Das ist eine gute Sache.",
+  "exampleMeaning": "That's a good thing.",
+  "tip": "Plural Sachen also = clothes/stuff: Pack deine Sachen!"
+ },
+ {
+  "word": "jeder",
+  "meaning": "every, everyone",
+  "pos": "pronoun",
+  "example": "Jeder kennt dieses Lied.",
+  "exampleMeaning": "Everyone knows this song.",
+  "tip": "Declines like der: jeder Mann, jede Frau, jedes Kind."
+ },
+ {
+  "word": "darüber",
+  "meaning": "about it, over it",
+  "pos": "adverb",
+  "example": "Wir sprechen später darüber.",
+  "exampleMeaning": "We'll talk about it later.",
+  "tip": "da(r)- + preposition replaces 'preposition + it': darüber, damit, davon."
+ },
+ {
+  "word": "wahr",
+  "meaning": "true",
+  "pos": "adjective",
+  "example": "Die Geschichte ist wahr.",
+  "exampleMeaning": "The story is true.",
+  "tip": "nicht wahr? = right?/isn't it?"
+ },
+ {
+  "word": "denken",
+  "meaning": "to think",
+  "pos": "verb",
+  "example": "Ich denke oft an dich.",
+  "exampleMeaning": "I often think of you.",
+  "tip": "denken an + accusative = think of. Irregular perfect: hat gedacht."
+ },
+ {
+  "word": "egal",
+  "meaning": "all the same, no matter",
+  "pos": "adjective",
+  "example": "Das ist mir egal.",
+  "exampleMeaning": "I don't care.",
+  "tip": "mir ist es egal — the person takes dative."
+ },
+ {
+  "word": "vergessen",
+  "meaning": "to forget",
+  "pos": "verb",
+  "example": "Ich habe den Termin vergessen.",
+  "exampleMeaning": "I forgot the appointment.",
+  "tip": "Irregular: du vergisst; the participle looks identical (vergessen)."
+ },
+ {
+  "word": "echt",
+  "meaning": "real; really (colloquial)",
+  "pos": "adjective",
+  "example": "Echt? Das glaube ich nicht!",
+  "exampleMeaning": "Really? I don't believe it!",
+  "tip": "Casual sibling of wirklich."
+ },
+ {
+  "word": "eigentlich",
+  "meaning": "actually",
+  "pos": "adverb",
+  "example": "Eigentlich wollte ich schlafen.",
+  "exampleMeaning": "Actually, I wanted to sleep.",
+  "tip": "Softens questions too: Wo wohnst du eigentlich? = where do you live, anyway?"
+ },
+ {
+  "word": "darauf",
+  "meaning": "on it; to that",
+  "pos": "adverb",
+  "example": "Ich freue mich darauf.",
+  "exampleMeaning": "I'm looking forward to it.",
+  "tip": "sich freuen auf → darauf when 'it' would follow."
+ },
+ {
+  "word": "toll",
+  "meaning": "great, awesome",
+  "pos": "adjective",
+  "example": "Das ist eine tolle Idee!",
+  "exampleMeaning": "That's a great idea!"
+ },
+ {
+  "word": "Ahnung",
+  "article": "die",
+  "plural": "Ahnungen",
+  "meaning": "idea, clue",
+  "pos": "noun",
+  "example": "Keine Ahnung!",
+  "exampleMeaning": "No idea!",
+  "tip": "Keine Ahnung is the standard 'dunno'."
+ },
+ {
+  "word": "sterben",
+  "meaning": "to die",
+  "pos": "verb",
+  "example": "Die Blumen sterben ohne Wasser.",
+  "exampleMeaning": "The flowers die without water.",
+  "tip": "Irregular: er stirbt; perfect with sein: ist gestorben."
+ },
+ {
+  "word": "fast",
+  "meaning": "almost",
+  "pos": "adverb",
+  "example": "Ich bin fast fertig.",
+  "exampleMeaning": "I'm almost done.",
+  "tip": "False friend: not English 'fast' (that's schnell)."
+ },
+ {
+  "word": "vorbei",
+  "meaning": "over, past",
+  "pos": "adverb",
+  "example": "Der Sommer ist vorbei.",
+  "exampleMeaning": "Summer is over.",
+  "tip": "vorbeikommen = to drop by."
+ },
+ {
+  "word": "hinter",
+  "meaning": "behind",
+  "pos": "preposition",
+  "example": "Der Garten ist hinter dem Haus.",
+  "exampleMeaning": "The garden is behind the house.",
+  "tip": "Dative for location, accusative for direction."
+ },
+ {
+  "word": "Idee",
+  "article": "die",
+  "plural": "Ideen",
+  "meaning": "idea",
+  "pos": "noun",
+  "example": "Ich habe eine bessere Idee.",
+  "exampleMeaning": "I have a better idea."
+ },
+ {
+  "word": "sogar",
+  "meaning": "even",
+  "pos": "adverb",
+  "example": "Er spricht sogar Japanisch.",
+  "exampleMeaning": "He even speaks Japanese."
+ },
+ {
+  "word": "Ruhe",
+  "article": "die",
+  "plural": "Ruhe",
+  "meaning": "quiet, calm",
+  "pos": "noun",
+  "example": "Ich brauche jetzt Ruhe.",
+  "exampleMeaning": "I need quiet now.",
+  "tip": "Lass mich in Ruhe! = leave me alone!"
+ },
+ {
+  "word": "versuchen",
+  "meaning": "to try",
+  "pos": "verb",
+  "example": "Ich versuche es noch einmal.",
+  "exampleMeaning": "I'll try it once more.",
+  "tip": "With verbs: versuchen + zu + infinitive."
+ },
+ {
+  "word": "endlich",
+  "meaning": "finally",
+  "pos": "adverb",
+  "example": "Endlich ist Freitag!",
+  "exampleMeaning": "It's finally Friday!"
+ },
+ {
+  "word": "anders",
+  "meaning": "different(ly)",
+  "pos": "adverb",
+  "example": "Das machen wir anders.",
+  "exampleMeaning": "We'll do that differently.",
+  "tip": "anders als = different from."
+ },
+ {
+  "word": "Geschichte",
+  "article": "die",
+  "plural": "Geschichten",
+  "meaning": "story; history",
+  "pos": "noun",
+  "example": "Erzähl mir eine Geschichte!",
+  "exampleMeaning": "Tell me a story!",
+  "tip": "Both 'story' and the school subject 'history'."
+ },
+ {
+  "word": "nett",
+  "meaning": "nice, kind",
+  "pos": "adjective",
+  "example": "Deine Eltern sind sehr nett.",
+  "exampleMeaning": "Your parents are very nice."
+ },
+ {
+  "word": "deshalb",
+  "meaning": "therefore, that's why",
+  "pos": "adverb",
+  "example": "Es regnet, deshalb bleibe ich hier.",
+  "exampleMeaning": "It's raining, that's why I'm staying here.",
+  "tip": "Verb comes right after: deshalb bleibe ich."
+ },
+ {
+  "word": "Wagen",
+  "article": "der",
+  "plural": "Wagen",
+  "meaning": "car; wagon",
+  "pos": "noun",
+  "example": "Der Wagen steht in der Garage.",
+  "exampleMeaning": "The car is in the garage.",
+  "tip": "≈ Auto; also train cars (Speisewagen)."
+ },
+ {
+  "word": "Spaß",
+  "article": "der",
+  "plural": "Späße",
+  "meaning": "fun",
+  "pos": "noun",
+  "example": "Viel Spaß beim Spiel!",
+  "exampleMeaning": "Have fun at the game!",
+  "tip": "Spaß machen = to be fun: Deutsch macht Spaß."
+ },
+ {
+  "word": "zeigen",
+  "meaning": "to show",
+  "pos": "verb",
+  "example": "Ich zeige dir die Stadt.",
+  "exampleMeaning": "I'll show you the city."
+ },
+ {
+  "word": "manchmal",
+  "meaning": "sometimes",
+  "pos": "adverb",
+  "example": "Manchmal koche ich selbst.",
+  "exampleMeaning": "Sometimes I cook myself."
+ },
+ {
+  "word": "Seite",
+  "article": "die",
+  "plural": "Seiten",
+  "meaning": "page; side",
+  "pos": "noun",
+  "example": "Öffnet das Buch auf Seite zehn!",
+  "exampleMeaning": "Open the book to page ten!",
+  "tip": "Also 'side': auf der anderen Seite."
+ },
+ {
+  "word": "Spiel",
+  "article": "das",
+  "plural": "Spiele",
+  "meaning": "game, match",
+  "pos": "noun",
+  "example": "Das Spiel beginnt um drei.",
+  "exampleMeaning": "The game starts at three."
+ },
+ {
+  "word": "Freundin",
+  "article": "die",
+  "plural": "Freundinnen",
+  "meaning": "(female) friend; girlfriend",
+  "pos": "noun",
+  "example": "Meine Freundin wohnt in Wien.",
+  "exampleMeaning": "My girlfriend lives in Vienna.",
+  "tip": "meine Freundin = girlfriend; eine Freundin von mir = a (female) friend."
+ },
+ {
+  "word": "Gesicht",
+  "article": "das",
+  "plural": "Gesichter",
+  "meaning": "face",
+  "pos": "noun",
+  "example": "Wasch dir das Gesicht!",
+  "exampleMeaning": "Wash your face!"
+ },
+ {
+  "word": "Ding",
+  "article": "das",
+  "plural": "Dinge",
+  "meaning": "thing",
+  "pos": "noun",
+  "example": "Was ist das für ein Ding?",
+  "exampleMeaning": "What kind of thing is that?",
+  "tip": "Sache is more common for abstract matters; Ding for objects."
+ },
+ {
+  "word": "wen",
+  "meaning": "whom (accusative)",
+  "pos": "pronoun",
+  "example": "Wen besuchst du morgen?",
+  "exampleMeaning": "Whom are you visiting tomorrow?",
+  "tip": "wer → wen (accusative) → wem (dative)."
+ },
+ {
+  "word": "Fest",
+  "article": "das",
+  "plural": "Feste",
+  "meaning": "celebration, festival",
+  "pos": "noun",
+  "example": "Das Fest beginnt am Samstag.",
+  "exampleMeaning": "The celebration starts on Saturday.",
+  "tip": "Frohes Fest! = happy holidays!"
+ },
+ {
+  "word": "außer",
+  "meaning": "except for",
+  "pos": "preposition",
+  "example": "Alle kommen, außer meinem Bruder.",
+  "exampleMeaning": "Everyone is coming except my brother.",
+  "tip": "Takes the dative."
+ },
+ {
+  "word": "früh",
+  "meaning": "early",
+  "pos": "adjective",
+  "example": "Ich stehe früh auf.",
+  "exampleMeaning": "I get up early.",
+  "tip": "morgen früh = tomorrow morning."
+ },
+ {
+  "word": "setzen",
+  "meaning": "to set down; to sit (oneself)",
+  "pos": "verb",
+  "example": "Setzen Sie sich, bitte!",
+  "exampleMeaning": "Please sit down!",
+  "tip": "sich setzen = the action of sitting down; sitzen = the state of sitting."
+ },
+ {
+  "word": "zuerst",
+  "meaning": "first, at first",
+  "pos": "adverb",
+  "example": "Zuerst frühstücken wir.",
+  "exampleMeaning": "First we have breakfast."
+ },
+ {
+  "word": "wahrscheinlich",
+  "meaning": "probably",
+  "pos": "adverb",
+  "example": "Er kommt wahrscheinlich später.",
+  "exampleMeaning": "He's probably coming later."
+ },
+ {
+  "word": "nächste",
+  "meaning": "next",
+  "pos": "adjective",
+  "example": "Nächste Woche habe ich Urlaub.",
+  "exampleMeaning": "Next week I'm on vacation.",
+  "tip": "der Nächste, bitte! = next, please!"
+ },
+ {
+  "word": "Menge",
+  "article": "die",
+  "plural": "Mengen",
+  "meaning": "amount; crowd",
+  "pos": "noun",
+  "example": "Eine Menge Leute warten draußen.",
+  "exampleMeaning": "A lot of people are waiting outside.",
+  "tip": "eine Menge = a lot (colloquial)."
+ },
+ {
+  "word": "Büro",
+  "article": "das",
+  "plural": "Büros",
+  "meaning": "office",
+  "pos": "noun",
+  "example": "Ich bin bis fünf im Büro.",
+  "exampleMeaning": "I'm at the office until five."
+ },
+ {
+  "word": "schaffen",
+  "meaning": "to manage, to accomplish",
+  "pos": "verb",
+  "example": "Wir schaffen das!",
+  "exampleMeaning": "We can do it!",
+  "tip": "es schaffen = to manage it; the famous phrase Wir schaffen das."
+ },
+ {
+  "word": "voll",
+  "meaning": "full",
+  "pos": "adjective",
+  "example": "Der Bus ist heute voll.",
+  "exampleMeaning": "The bus is full today.",
+  "tip": "Colloquially also 'totally': voll gut."
+ },
+ {
+  "word": "überall",
+  "meaning": "everywhere",
+  "pos": "adverb",
+  "example": "Ich habe überall gesucht.",
+  "exampleMeaning": "I looked everywhere."
+ },
+ {
+  "word": "direkt",
+  "meaning": "direct(ly)",
+  "pos": "adjective",
+  "example": "Der Zug fährt direkt nach Bonn.",
+  "exampleMeaning": "The train goes directly to Bonn."
+ },
+ {
+  "word": "Schiff",
+  "article": "das",
+  "plural": "Schiffe",
+  "meaning": "ship",
+  "pos": "noun",
+  "example": "Das Schiff fährt nach Norwegen.",
+  "exampleMeaning": "The ship sails to Norway."
+ },
+ {
+  "word": "wem",
+  "meaning": "whom (dative)",
+  "pos": "pronoun",
+  "example": "Wem gehört diese Jacke?",
+  "exampleMeaning": "Whose jacket is this?",
+  "tip": "Dative of wer: Wem gehört...? = to whom belongs...?"
+ },
+ {
+  "word": "nennen",
+  "meaning": "to call, to name",
+  "pos": "verb",
+  "example": "Alle nennen mich Alex.",
+  "exampleMeaning": "Everyone calls me Alex.",
+  "tip": "Irregular perfect: hat genannt."
+ },
+ {
+  "word": "erinnern",
+  "meaning": "to remember; to remind",
+  "pos": "verb",
+  "example": "Erinnerst du dich an mich?",
+  "exampleMeaning": "Do you remember me?",
+  "tip": "sich erinnern an + accusative = to remember."
+ },
+ {
+  "word": "verlieren",
+  "meaning": "to lose",
+  "pos": "verb",
+  "example": "Wir verlieren das Spiel.",
+  "exampleMeaning": "We're losing the game.",
+  "tip": "Irregular perfect: hat verloren."
+ },
+ {
+  "word": "froh",
+  "meaning": "glad",
+  "pos": "adjective",
+  "example": "Ich bin froh, dass du da bist.",
+  "exampleMeaning": "I'm glad you're here.",
+  "tip": "Frohe Weihnachten! = Merry Christmas!"
+ },
+ {
+  "word": "rufen",
+  "meaning": "to call (out)",
+  "pos": "verb",
+  "example": "Wir rufen ein Taxi.",
+  "exampleMeaning": "We'll call a taxi.",
+  "tip": "anrufen = to phone someone; rufen = call out/summon."
+ },
+ {
+  "word": "super",
+  "meaning": "super, great",
+  "pos": "adjective",
+  "example": "Das Konzert war super!",
+  "exampleMeaning": "The concert was great!",
+  "tip": "Never takes endings: ein super Film."
+ },
+ {
+  "word": "total",
+  "meaning": "totally",
+  "pos": "adverb",
+  "example": "Ich bin total müde.",
+  "exampleMeaning": "I'm totally tired."
+ },
+ {
+  "word": "damals",
+  "meaning": "back then",
+  "pos": "adverb",
+  "example": "Damals gab es kein Internet.",
+  "exampleMeaning": "Back then there was no internet."
+ },
+ {
+  "word": "Stück",
+  "article": "das",
+  "plural": "Stücke",
+  "meaning": "piece",
+  "pos": "noun",
+  "example": "Ein Stück Kuchen, bitte!",
+  "exampleMeaning": "A piece of cake, please!"
+ },
+ {
+  "word": "Himmel",
+  "article": "der",
+  "plural": "Himmel",
+  "meaning": "sky; heaven",
+  "pos": "noun",
+  "example": "Der Himmel ist heute blau.",
+  "exampleMeaning": "The sky is blue today."
+ },
+ {
+  "word": "drüben",
+  "meaning": "over there",
+  "pos": "adverb",
+  "example": "Die Apotheke ist da drüben.",
+  "exampleMeaning": "The pharmacy is over there."
+ },
+ {
+  "word": "kümmern",
+  "meaning": "to take care of",
+  "pos": "verb",
+  "example": "Ich kümmere mich um die Kinder.",
+  "exampleMeaning": "I take care of the children.",
+  "tip": "sich kümmern um + accusative = look after."
+ },
+ {
+  "word": "Rest",
+  "article": "der",
+  "plural": "Reste",
+  "meaning": "rest, remainder",
+  "pos": "noun",
+  "example": "Den Rest machen wir morgen.",
+  "exampleMeaning": "We'll do the rest tomorrow."
+ },
+ {
+  "word": "passieren",
+  "meaning": "to happen",
+  "pos": "verb",
+  "example": "Was ist hier passiert?",
+  "exampleMeaning": "What happened here?",
+  "tip": "Perfect with sein: ist passiert. Things passieren TO someone in dative: Das ist mir passiert."
+ },
+ {
+  "word": "Körper",
+  "article": "der",
+  "plural": "Körper",
+  "meaning": "body",
+  "pos": "noun",
+  "example": "Sport ist gut für den Körper.",
+  "exampleMeaning": "Exercise is good for the body."
+ },
+ {
+  "word": "hart",
+  "meaning": "hard",
+  "pos": "adjective",
+  "example": "Das Brot ist hart geworden.",
+  "exampleMeaning": "The bread has gotten hard.",
+  "tip": "Physically hard or tough (harte Arbeit); difficult tasks are schwer."
+ },
+ {
+  "word": "außerdem",
+  "meaning": "besides, moreover",
+  "pos": "adverb",
+  "example": "Es ist spät, außerdem regnet es.",
+  "exampleMeaning": "It's late; besides, it's raining."
+ },
+ {
+  "word": "verletzt",
+  "meaning": "injured",
+  "pos": "adjective",
+  "example": "Zum Glück ist niemand verletzt.",
+  "exampleMeaning": "Luckily nobody is injured.",
+  "tip": "From verletzen (to injure); sich verletzen = to hurt oneself."
+ },
+ {
+  "word": "ändern",
+  "meaning": "to change",
+  "pos": "verb",
+  "example": "Wir müssen den Plan ändern.",
+  "exampleMeaning": "We have to change the plan.",
+  "tip": "sich ändern = to change (by itself): Das Wetter ändert sich."
+ },
+ {
+  "word": "tragen",
+  "meaning": "to carry; to wear",
+  "pos": "verb",
+  "example": "Ich trage den Koffer.",
+  "exampleMeaning": "I'll carry the suitcase.",
+  "tip": "Irregular: du trägst. Both carry AND wear: Sie trägt eine Brille."
+ },
+ {
+  "word": "wenigstens",
+  "meaning": "at least",
+  "pos": "adverb",
+  "example": "Wenigstens scheint die Sonne.",
+  "exampleMeaning": "At least the sun is shining."
+ },
+ {
+  "word": "vorsichtig",
+  "meaning": "careful",
+  "pos": "adjective",
+  "example": "Sei vorsichtig auf der Straße!",
+  "exampleMeaning": "Be careful on the street!",
+  "tip": "Vorsicht! = watch out!"
+ },
+ {
+  "word": "stark",
+  "meaning": "strong",
+  "pos": "adjective",
+  "example": "Der Kaffee ist sehr stark.",
+  "exampleMeaning": "The coffee is very strong."
+ },
+ {
+  "word": "besonders",
+  "meaning": "especially",
+  "pos": "adverb",
+  "example": "Die Pizza ist hier besonders gut.",
+  "exampleMeaning": "The pizza here is especially good.",
+  "tip": "nicht besonders = not great: Wie war's? — Nicht besonders."
+ },
+ {
+  "word": "Person",
+  "article": "die",
+  "plural": "Personen",
+  "meaning": "person",
+  "pos": "noun",
+  "example": "Ein Tisch für vier Personen, bitte.",
+  "exampleMeaning": "A table for four, please.",
+  "tip": "Grammatically always die Person, even for men."
+ },
+ {
+  "word": "fühlen",
+  "meaning": "to feel",
+  "pos": "verb",
+  "example": "Ich fühle mich heute gut.",
+  "exampleMeaning": "I feel good today.",
+  "tip": "sich fühlen for states: Wie fühlst du dich?"
+ },
+ {
+  "word": "schlimm",
+  "meaning": "bad, serious",
+  "pos": "adjective",
+  "example": "Ist es schlimm?",
+  "exampleMeaning": "Is it bad?",
+  "tip": "Halb so schlimm! = it's not that bad!"
+ },
+ {
+  "word": "Team",
+  "article": "das",
+  "plural": "Teams",
+  "meaning": "team",
+  "pos": "noun",
+  "example": "Unser Team hat gewonnen.",
+  "exampleMeaning": "Our team won.",
+  "tip": "Sports and work teams; die Mannschaft is the older word."
+ },
+ {
+  "word": "vorher",
+  "meaning": "before(hand)",
+  "pos": "adverb",
+  "example": "Ruf vorher bitte an!",
+  "exampleMeaning": "Please call beforehand!",
+  "tip": "Opposite: nachher = afterwards."
+ },
+ {
+  "word": "fallen",
+  "meaning": "to fall",
+  "pos": "verb",
+  "example": "Die Blätter fallen im Herbst.",
+  "exampleMeaning": "The leaves fall in autumn.",
+  "tip": "Irregular: er fällt; perfect with sein: ist gefallen."
+ },
+ {
+  "word": "Nähe",
+  "article": "die",
+  "plural": "Nähe",
+  "meaning": "vicinity, closeness",
+  "pos": "noun",
+  "example": "Gibt es eine Bank in der Nähe?",
+  "exampleMeaning": "Is there a bank nearby?",
+  "tip": "in der Nähe = nearby — learn it as a chunk."
+ },
+ {
+  "word": "plötzlich",
+  "meaning": "suddenly",
+  "pos": "adverb",
+  "example": "Plötzlich ging das Licht aus.",
+  "exampleMeaning": "Suddenly the light went out."
+ },
+ {
+  "word": "komisch",
+  "meaning": "funny; strange",
+  "pos": "adjective",
+  "example": "Das Essen schmeckt komisch.",
+  "exampleMeaning": "The food tastes strange.",
+  "tip": "Usually 'weird', not 'funny' — funny is lustig or witzig."
+ },
+ {
+  "word": "dumm",
+  "meaning": "stupid, dumb",
+  "pos": "adjective",
+  "example": "Das war eine dumme Idee.",
+  "exampleMeaning": "That was a stupid idea."
+ },
+ {
+  "word": "Traum",
+  "article": "der",
+  "plural": "Träume",
+  "meaning": "dream",
+  "pos": "noun",
+  "example": "Ich hatte einen schönen Traum.",
+  "exampleMeaning": "I had a nice dream.",
+  "tip": "träumen = to dream; Traum- as prefix = dream-/perfect: Traumjob."
+ },
+ {
+  "word": "Ziel",
+  "article": "das",
+  "plural": "Ziele",
+  "meaning": "goal; destination",
+  "pos": "noun",
+  "example": "Wir sind fast am Ziel.",
+  "exampleMeaning": "We're almost at our destination."
+ },
+ {
+  "word": "welcher",
+  "meaning": "which",
+  "pos": "pronoun",
+  "example": "Welcher Bus fährt zum Bahnhof?",
+  "exampleMeaning": "Which bus goes to the station?",
+  "tip": "Declines like der: welcher/welche/welches."
+ },
+ {
+  "word": "offen",
+  "meaning": "open",
+  "pos": "adjective",
+  "example": "Das Fenster ist noch offen.",
+  "exampleMeaning": "The window is still open.",
+  "tip": "≈ geöffnet for shops: Der Laden ist offen."
+ },
+ {
+  "word": "süß",
+  "meaning": "sweet; cute",
+  "pos": "adjective",
+  "example": "Der Tee ist zu süß.",
+  "exampleMeaning": "The tea is too sweet.",
+  "tip": "Also 'cute': ein süßes Baby."
+ },
+ {
+  "word": "wach",
+  "meaning": "awake",
+  "pos": "adjective",
+  "example": "Bist du schon wach?",
+  "exampleMeaning": "Are you awake yet?",
+  "tip": "aufwachen = to wake up."
+ },
+ {
+  "word": "hoffentlich",
+  "meaning": "hopefully",
+  "pos": "adverb",
+  "example": "Hoffentlich regnet es morgen nicht.",
+  "exampleMeaning": "Hopefully it won't rain tomorrow."
+ },
+ {
+  "word": "ansehen",
+  "meaning": "to look at, to watch",
+  "pos": "verb",
+  "example": "Willst du dir den Film ansehen?",
+  "exampleMeaning": "Do you want to watch the film?",
+  "tip": "Separable: ich sehe mir das an. sich etwas ansehen = take a look at."
+ },
+ {
+  "word": "unbedingt",
+  "meaning": "absolutely, definitely",
+  "pos": "adverb",
+  "example": "Du musst das unbedingt sehen!",
+  "exampleMeaning": "You absolutely have to see this!"
+ },
+ {
+  "word": "Unfall",
+  "article": "der",
+  "plural": "Unfälle",
+  "meaning": "accident",
+  "pos": "noun",
+  "example": "Auf der A3 gab es einen Unfall.",
+  "exampleMeaning": "There was an accident on the A3."
+ },
+ {
+  "word": "tief",
+  "meaning": "deep",
+  "pos": "adjective",
+  "example": "Der See ist sehr tief.",
+  "exampleMeaning": "The lake is very deep."
+ },
+ {
+  "word": "lügen",
+  "meaning": "to lie (untruth)",
+  "pos": "verb",
+  "example": "Du sollst nicht lügen!",
+  "exampleMeaning": "You shouldn't lie!",
+  "tip": "To lie DOWN is liegen — different verb, easy to mix up."
+ },
+ {
+  "word": "Witz",
+  "article": "der",
+  "plural": "Witze",
+  "meaning": "joke",
+  "pos": "noun",
+  "example": "Er erzählt gern Witze.",
+  "exampleMeaning": "He likes telling jokes.",
+  "tip": "Mach keine Witze! = you're kidding!"
+ },
+ {
+  "word": "neben",
+  "meaning": "next to",
+  "pos": "preposition",
+  "example": "Die Bäckerei ist neben der Post.",
+  "exampleMeaning": "The bakery is next to the post office.",
+  "tip": "Dative for location, accusative for direction."
+ },
+ {
+  "word": "Rücken",
+  "article": "der",
+  "plural": "Rücken",
+  "meaning": "back (body)",
+  "pos": "noun",
+  "example": "Mir tut der Rücken weh.",
+  "exampleMeaning": "My back hurts."
+ },
+ {
+  "word": "schrecklich",
+  "meaning": "terrible",
+  "pos": "adjective",
+  "example": "Das Wetter ist schrecklich.",
+  "exampleMeaning": "The weather is terrible."
+ },
+ {
+  "word": "Pferd",
+  "article": "das",
+  "plural": "Pferde",
+  "meaning": "horse",
+  "pos": "noun",
+  "example": "Sie reitet jeden Tag ihr Pferd.",
+  "exampleMeaning": "She rides her horse every day."
+ },
+ {
+  "word": "sauer",
+  "meaning": "sour; annoyed",
+  "pos": "adjective",
+  "example": "Die Zitrone ist sauer.",
+  "exampleMeaning": "The lemon is sour.",
+  "tip": "Colloquially 'mad': Ich bin sauer auf dich."
+ },
+ {
+  "word": "Kirche",
+  "article": "die",
+  "plural": "Kirchen",
+  "meaning": "church",
+  "pos": "noun",
+  "example": "Die Kirche ist aus dem Mittelalter.",
+  "exampleMeaning": "The church is from the Middle Ages."
+ },
+ {
+  "word": "reich",
+  "meaning": "rich",
+  "pos": "adjective",
+  "example": "Er ist reich geworden.",
+  "exampleMeaning": "He became rich."
+ },
+ {
+  "word": "traurig",
+  "meaning": "sad",
+  "pos": "adjective",
+  "example": "Warum bist du so traurig?",
+  "exampleMeaning": "Why are you so sad?"
+ },
+ {
+  "word": "schade",
+  "meaning": "a pity",
+  "pos": "expression",
+  "example": "Schade, dass du nicht kommst!",
+  "exampleMeaning": "Too bad you're not coming!",
+  "tip": "Wie schade! = what a shame!"
+ },
+ {
+  "word": "Gericht",
+  "article": "das",
+  "plural": "Gerichte",
+  "meaning": "dish (food); court",
+  "pos": "noun",
+  "example": "Das Gericht schmeckt fantastisch.",
+  "exampleMeaning": "The dish tastes fantastic.",
+  "tip": "Menu 'dish' and law 'court' share the word."
+ },
+ {
+  "word": "singen",
+  "meaning": "to sing",
+  "pos": "verb",
+  "example": "Wir singen zusammen ein Lied.",
+  "exampleMeaning": "We sing a song together.",
+  "tip": "Irregular perfect: hat gesungen."
+ },
+ {
+  "word": "Kontakt",
+  "article": "der",
+  "plural": "Kontakte",
+  "meaning": "contact",
+  "pos": "noun",
+  "example": "Wir haben noch Kontakt.",
+  "exampleMeaning": "We're still in touch."
+ },
+ {
+  "word": "gegenüber",
+  "meaning": "opposite, across from",
+  "pos": "preposition",
+  "example": "Die Bank ist gegenüber dem Bahnhof.",
+  "exampleMeaning": "The bank is across from the station.",
+  "tip": "Takes dative; can follow the noun: dem Bahnhof gegenüber."
+ },
+ {
+  "word": "Lust",
+  "article": "die",
+  "plural": "Lust",
+  "meaning": "desire, feeling like",
+  "pos": "noun",
+  "example": "Hast du Lust auf Kino?",
+  "exampleMeaning": "Do you feel like going to the movies?",
+  "tip": "Lust haben auf + accusative — the everyday 'feel like' phrase."
+ },
+ {
+  "word": "witzig",
+  "meaning": "funny",
+  "pos": "adjective",
+  "example": "Der Film war richtig witzig.",
+  "exampleMeaning": "The film was really funny."
+ },
+ {
+  "word": "Besuch",
+  "article": "der",
+  "plural": "Besuche",
+  "meaning": "visit; visitors",
+  "pos": "noun",
+  "example": "Wir haben heute Besuch.",
+  "exampleMeaning": "We have visitors today.",
+  "tip": "zu Besuch kommen = to come for a visit."
+ },
+ {
+  "word": "interessant",
+  "meaning": "interesting",
+  "pos": "adjective",
+  "example": "Das Buch ist sehr interessant.",
+  "exampleMeaning": "The book is very interesting."
+ },
+ {
+  "word": "sauber",
+  "meaning": "clean",
+  "pos": "adjective",
+  "example": "Die Küche ist wieder sauber.",
+  "exampleMeaning": "The kitchen is clean again.",
+  "tip": "sauber machen = to clean."
+ },
+ {
+  "word": "nervös",
+  "meaning": "nervous",
+  "pos": "adjective",
+  "example": "Vor Prüfungen bin ich nervös.",
+  "exampleMeaning": "I'm nervous before exams."
+ },
+ {
+  "word": "Hals",
+  "article": "der",
+  "plural": "Hälse",
+  "meaning": "neck; throat",
+  "pos": "noun",
+  "example": "Mein Hals tut weh.",
+  "exampleMeaning": "My throat hurts.",
+  "tip": "Hals covers both neck and throat — context decides."
+ },
+ {
+  "word": "passen",
+  "meaning": "to fit; to suit",
+  "pos": "verb",
+  "example": "Die Schuhe passen mir nicht.",
+  "exampleMeaning": "The shoes don't fit me.",
+  "tip": "passen zu = to match: Die Jacke passt zur Hose. Passt means 'works for me'."
+ },
+ {
+  "word": "teilen",
+  "meaning": "to share; to divide",
+  "pos": "verb",
+  "example": "Wir teilen uns die Pizza.",
+  "exampleMeaning": "We're sharing the pizza."
+ },
+ {
+  "word": "Situation",
+  "article": "die",
+  "plural": "Situationen",
+  "meaning": "situation",
+  "pos": "noun",
+  "example": "Die Situation ist schwierig.",
+  "exampleMeaning": "The situation is difficult."
+ },
+ {
+  "word": "Kamera",
+  "article": "die",
+  "plural": "Kameras",
+  "meaning": "camera",
+  "pos": "noun",
+  "example": "Die Kamera macht gute Fotos.",
+  "exampleMeaning": "The camera takes good photos."
+ }
+]

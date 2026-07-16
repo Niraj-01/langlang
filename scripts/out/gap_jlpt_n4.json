@@ -1,0 +1,1441 @@
+[
+ {
+  "word": "こと",
+  "reading": "こと",
+  "meaning": "thing, matter (abstract)",
+  "pos": "noun",
+  "example": "大切なことを話そう。",
+  "exampleReading": "たいせつなことをはなそう。",
+  "exampleMeaning": "Let's talk about something important.",
+  "tip": "こと = abstract matter; 物 (もの) = physical thing. Verb+こと makes nouns: 泳ぐこと."
+ },
+ {
+  "word": "日",
+  "reading": "ひ",
+  "meaning": "day; sun",
+  "pos": "noun",
+  "example": "その日は忙しかった。",
+  "exampleReading": "そのひはいそがしかった。",
+  "exampleMeaning": "I was busy that day.",
+  "tip": "Read ひ alone, にち/か in dates (三日 = みっか)."
+ },
+ {
+  "word": "利用",
+  "reading": "りよう",
+  "meaning": "use, utilization",
+  "pos": "noun",
+  "example": "バスを利用している。",
+  "exampleReading": "バスをりようしている。",
+  "exampleMeaning": "I use the bus.",
+  "tip": "利用する = to make use of (services, facilities)."
+ },
+ {
+  "word": "場合",
+  "reading": "ばあい",
+  "meaning": "case, situation",
+  "pos": "noun",
+  "example": "雨の場合は中止です。",
+  "exampleReading": "あめのばあいはちゅうしです。",
+  "exampleMeaning": "In case of rain, it's cancelled."
+ },
+ {
+  "word": "予定",
+  "reading": "よてい",
+  "meaning": "plan, schedule",
+  "pos": "noun",
+  "example": "明日の予定は何ですか。",
+  "exampleReading": "あしたのよていはなんですか。",
+  "exampleMeaning": "What are your plans for tomorrow?"
+ },
+ {
+  "word": "市",
+  "reading": "し",
+  "meaning": "city",
+  "pos": "noun",
+  "example": "大阪市に住んでいる。",
+  "exampleReading": "おおさかしにすんでいる。",
+  "exampleMeaning": "I live in Osaka City."
+ },
+ {
+  "word": "紹介",
+  "reading": "しょうかい",
+  "meaning": "introduction",
+  "pos": "noun",
+  "example": "友達を紹介します。",
+  "exampleReading": "ともだちをしょうかいします。",
+  "exampleMeaning": "I'll introduce my friend.",
+  "tip": "紹介する = to introduce; 自己紹介 = self-introduction."
+ },
+ {
+  "word": "世界",
+  "reading": "せかい",
+  "meaning": "world",
+  "pos": "noun",
+  "example": "世界を旅したい。",
+  "exampleReading": "せかいをたびしたい。",
+  "exampleMeaning": "I want to travel the world."
+ },
+ {
+  "word": "技術",
+  "reading": "ぎじゅつ",
+  "meaning": "technology, skill",
+  "pos": "noun",
+  "example": "新しい技術を学ぶ。",
+  "exampleReading": "あたらしいぎじゅつをまなぶ。",
+  "exampleMeaning": "I learn new technology."
+ },
+ {
+  "word": "寄る",
+  "reading": "よる",
+  "meaning": "to drop by",
+  "pos": "verb",
+  "example": "帰りに店に寄る。",
+  "exampleReading": "かえりにみせによる。",
+  "exampleMeaning": "I drop by the store on the way home."
+ },
+ {
+  "word": "点",
+  "reading": "てん",
+  "meaning": "point; dot; score",
+  "pos": "noun",
+  "example": "テストで九十点取った。",
+  "exampleReading": "テストできゅうじゅってんとった。",
+  "exampleMeaning": "I got 90 points on the test."
+ },
+ {
+  "word": "用",
+  "reading": "よう",
+  "meaning": "business, errand",
+  "pos": "noun",
+  "example": "今日は用がある。",
+  "exampleReading": "きょうはようがある。",
+  "exampleMeaning": "I have something to do today.",
+  "tip": "用がある = to have an errand/business; 用事 is a common synonym."
+ },
+ {
+  "word": "億",
+  "reading": "おく",
+  "meaning": "hundred million",
+  "pos": "noun",
+  "example": "一億円の家を見た。",
+  "exampleReading": "いちおくえんのいえをみた。",
+  "exampleMeaning": "I saw a house worth 100 million yen."
+ },
+ {
+  "word": "そう",
+  "reading": "そう",
+  "meaning": "so, that way",
+  "pos": "adverb",
+  "example": "私もそう聞きました。",
+  "exampleReading": "わたしもそうききました。",
+  "exampleMeaning": "I heard so too.",
+  "tip": "そうです = that's right; verb-stem+そう = looks like (おいしそう)."
+ },
+ {
+  "word": "米",
+  "reading": "こめ",
+  "meaning": "(uncooked) rice",
+  "pos": "noun",
+  "example": "米を二キロ買った。",
+  "exampleReading": "こめをにキロかった。",
+  "exampleMeaning": "I bought two kilos of rice.",
+  "tip": "米 = raw grain; cooked rice on the table is ご飯."
+ },
+ {
+  "word": "女性",
+  "reading": "じょせい",
+  "meaning": "woman (formal)",
+  "pos": "noun",
+  "example": "若い女性が多い店だ。",
+  "exampleReading": "わかいじょせいがおおいみせだ。",
+  "exampleMeaning": "That store has many young women.",
+  "tip": "More formal/respectful than 女の人."
+ },
+ {
+  "word": "間",
+  "reading": "あいだ",
+  "meaning": "interval, between",
+  "pos": "noun",
+  "example": "銀行と駅の間にある。",
+  "exampleReading": "ぎんこうとえきのあいだにある。",
+  "exampleMeaning": "It's between the bank and the station."
+ },
+ {
+  "word": "事故",
+  "reading": "じこ",
+  "meaning": "accident",
+  "pos": "noun",
+  "example": "駅の前で事故があった。",
+  "exampleReading": "えきのまえでじこがあった。",
+  "exampleMeaning": "There was an accident in front of the station."
+ },
+ {
+  "word": "ほど",
+  "reading": "ほど",
+  "meaning": "extent, about",
+  "pos": "particle",
+  "example": "山ほど宿題がある。",
+  "exampleReading": "やまほどしゅくだいがある。",
+  "exampleMeaning": "I have a mountain of homework.",
+  "tip": "X ほど〜ない = not as ... as X."
+ },
+ {
+  "word": "用意",
+  "reading": "ようい",
+  "meaning": "preparation",
+  "pos": "noun",
+  "example": "夕食の用意をする。",
+  "exampleReading": "ゆうしょくのよういをする。",
+  "exampleMeaning": "I prepare dinner.",
+  "tip": "用意する ≈ 準備する; 用意 is a bit more everyday."
+ },
+ {
+  "word": "チェックする",
+  "reading": "チェックする",
+  "meaning": "to check",
+  "pos": "verb",
+  "example": "メールをチェックする。",
+  "exampleReading": "メールをチェックする。",
+  "exampleMeaning": "I check my email."
+ },
+ {
+  "word": "行う",
+  "reading": "おこなう",
+  "meaning": "to carry out, to hold",
+  "pos": "verb",
+  "example": "会議を行う。",
+  "exampleReading": "かいぎをおこなう。",
+  "exampleMeaning": "We hold a meeting.",
+  "tip": "Formal/written version of する. Careful: 行って can be いって (go) or おこなって."
+ },
+ {
+  "word": "研究",
+  "reading": "けんきゅう",
+  "meaning": "research",
+  "pos": "noun",
+  "example": "大学で研究している。",
+  "exampleReading": "だいがくでけんきゅうしている。",
+  "exampleMeaning": "I do research at the university."
+ },
+ {
+  "word": "放送",
+  "reading": "ほうそう",
+  "meaning": "broadcast",
+  "pos": "noun",
+  "example": "夜九時に放送される。",
+  "exampleReading": "よるくじにほうそうされる。",
+  "exampleMeaning": "It's broadcast at 9 p.m.",
+  "tip": "放送する = to broadcast."
+ },
+ {
+  "word": "番組",
+  "reading": "ばんぐみ",
+  "meaning": "TV/radio program",
+  "pos": "noun",
+  "example": "好きな番組が始まる。",
+  "exampleReading": "すきなばんぐみがはじまる。",
+  "exampleMeaning": "My favorite program is starting."
+ },
+ {
+  "word": "場所",
+  "reading": "ばしょ",
+  "meaning": "place, location",
+  "pos": "noun",
+  "example": "静かな場所を探す。",
+  "exampleReading": "しずかなばしょをさがす。",
+  "exampleMeaning": "I look for a quiet place."
+ },
+ {
+  "word": "気",
+  "reading": "き",
+  "meaning": "spirit, mind, mood",
+  "pos": "noun",
+  "example": "気をつけてください。",
+  "exampleReading": "きをつけてください。",
+  "exampleMeaning": "Please be careful.",
+  "tip": "Endless set phrases: 気をつける (take care), 気にする (mind), 気がつく (notice)."
+ },
+ {
+  "word": "うち",
+  "reading": "うち",
+  "meaning": "within, while; home",
+  "pos": "noun",
+  "example": "朝のうちに掃除した。",
+  "exampleReading": "あさのうちにそうじした。",
+  "exampleMeaning": "I cleaned during the morning.",
+  "tip": "〜うちに = while/before it changes: 熱いうちに食べて."
+ },
+ {
+  "word": "もちろん",
+  "reading": "もちろん",
+  "meaning": "of course",
+  "pos": "adverb",
+  "example": "もちろん行きます。",
+  "exampleReading": "もちろんいきます。",
+  "exampleMeaning": "Of course I'll go."
+ },
+ {
+  "word": "男性",
+  "reading": "だんせい",
+  "meaning": "man (formal)",
+  "pos": "noun",
+  "example": "男性の店員に聞いた。",
+  "exampleReading": "だんせいのてんいんにきいた。",
+  "exampleMeaning": "I asked a male clerk.",
+  "tip": "Formal counterpart of 男の人; pairs with 女性."
+ },
+ {
+  "word": "社長",
+  "reading": "しゃちょう",
+  "meaning": "company president",
+  "pos": "noun",
+  "example": "社長に報告する。",
+  "exampleReading": "しゃちょうにほうこくする。",
+  "exampleMeaning": "I report to the president.",
+  "tip": "Used as a title on its own: 社長、おはようございます."
+ },
+ {
+  "word": "ソフト",
+  "reading": "ソフト",
+  "meaning": "software; soft",
+  "pos": "noun",
+  "example": "新しいソフトを入れた。",
+  "exampleReading": "あたらしいソフトをいれた。",
+  "exampleMeaning": "I installed new software."
+ },
+ {
+  "word": "以下",
+  "reading": "いか",
+  "meaning": "below, less than",
+  "pos": "noun",
+  "example": "十八歳以下は無料だ。",
+  "exampleReading": "じゅうはっさいいかはむりょうだ。",
+  "exampleMeaning": "Age 18 and under is free.",
+  "tip": "以下 includes the number itself; 未満 excludes it."
+ },
+ {
+  "word": "地震",
+  "reading": "じしん",
+  "meaning": "earthquake",
+  "pos": "noun",
+  "example": "昨夜地震があった。",
+  "exampleReading": "さくやじしんがあった。",
+  "exampleMeaning": "There was an earthquake last night."
+ },
+ {
+  "word": "パソコン",
+  "reading": "パソコン",
+  "meaning": "personal computer",
+  "pos": "noun",
+  "example": "パソコンで仕事をする。",
+  "exampleReading": "パソコンでしごとをする。",
+  "exampleMeaning": "I work on a computer."
+ },
+ {
+  "word": "タイプ",
+  "reading": "タイプ",
+  "meaning": "type, style",
+  "pos": "noun",
+  "example": "どんなタイプが好き。",
+  "exampleReading": "どんなタイプがすき。",
+  "exampleMeaning": "What type do you like?"
+ },
+ {
+  "word": "生活",
+  "reading": "せいかつ",
+  "meaning": "life, living",
+  "pos": "noun",
+  "example": "東京の生活に慣れた。",
+  "exampleReading": "とうきょうのせいかつになれた。",
+  "exampleMeaning": "I got used to life in Tokyo.",
+  "tip": "生活する = to live (one's daily life); 住む = to reside."
+ },
+ {
+  "word": "そんな",
+  "reading": "そんな",
+  "meaning": "that kind of",
+  "pos": "prenominal",
+  "example": "そんな話は聞いていない。",
+  "exampleReading": "そんなはなしはきいていない。",
+  "exampleMeaning": "I haven't heard anything like that.",
+  "tip": "そんな! alone = No way!"
+ },
+ {
+  "word": "時代",
+  "reading": "じだい",
+  "meaning": "era, period",
+  "pos": "noun",
+  "example": "学生時代が懐かしい。",
+  "exampleReading": "がくせいじだいがなつかしい。",
+  "exampleMeaning": "I miss my student days."
+ },
+ {
+  "word": "計画",
+  "reading": "けいかく",
+  "meaning": "plan, project",
+  "pos": "noun",
+  "example": "旅行の計画を立てる。",
+  "exampleReading": "りょこうのけいかくをたてる。",
+  "exampleMeaning": "I make travel plans.",
+  "tip": "計画を立てる = to make a plan; 計画する also works."
+ },
+ {
+  "word": "安全",
+  "reading": "あんぜん",
+  "meaning": "safety, safe",
+  "pos": "na-adjective",
+  "example": "この道は安全だ。",
+  "exampleReading": "このみちはあんぜんだ。",
+  "exampleMeaning": "This road is safe."
+ },
+ {
+  "word": "別",
+  "reading": "べつ",
+  "meaning": "different, separate",
+  "pos": "na-adjective",
+  "example": "別の店に行こう。",
+  "exampleReading": "べつのみせにいこう。",
+  "exampleMeaning": "Let's go to a different store.",
+  "tip": "別に + negative = not particularly: 別に問題ない."
+ },
+ {
+  "word": "思う",
+  "reading": "おもう",
+  "meaning": "to think, to feel",
+  "pos": "verb",
+  "example": "いい考えだと思う。",
+  "exampleReading": "いいかんがえだとおもう。",
+  "exampleMeaning": "I think it's a good idea.",
+  "tip": "Opinions take と: 〜と思う."
+ },
+ {
+  "word": "形",
+  "reading": "かたち",
+  "meaning": "shape, form",
+  "pos": "noun",
+  "example": "星の形のクッキーだ。",
+  "exampleReading": "ほしのかたちのクッキーだ。",
+  "exampleMeaning": "They're star-shaped cookies."
+ },
+ {
+  "word": "特に",
+  "reading": "とくに",
+  "meaning": "especially",
+  "pos": "adverb",
+  "example": "特に魚が好きだ。",
+  "exampleReading": "とくにさかながすきだ。",
+  "exampleMeaning": "I especially like fish."
+ },
+ {
+  "word": "くれる",
+  "reading": "くれる",
+  "meaning": "to give (to me)",
+  "pos": "verb",
+  "example": "姉がお菓子をくれる。",
+  "exampleReading": "あねがおかしをくれる。",
+  "exampleMeaning": "My sister gives me sweets.",
+  "tip": "くれる = someone gives TO me/us; あげる = I give to others. て-form+くれる = does me a favor."
+ },
+ {
+  "word": "暮れる",
+  "reading": "くれる",
+  "meaning": "to grow dark; to end (year)",
+  "pos": "verb",
+  "example": "日が暮れるのが早い。",
+  "exampleReading": "ひがくれるのがはやい。",
+  "exampleMeaning": "It gets dark early.",
+  "tip": "Same sound as くれる (give) but written 暮れる — about days/years ending."
+ },
+ {
+  "word": "生産",
+  "reading": "せいさん",
+  "meaning": "production",
+  "pos": "noun",
+  "example": "車の生産が増えた。",
+  "exampleReading": "くるまのせいさんがふえた。",
+  "exampleMeaning": "Car production increased.",
+  "tip": "生産する = to produce (goods)."
+ },
+ {
+  "word": "心",
+  "reading": "こころ",
+  "meaning": "heart, mind",
+  "pos": "noun",
+  "example": "心から感謝します。",
+  "exampleReading": "こころからかんしゃします。",
+  "exampleMeaning": "I thank you from my heart.",
+  "tip": "The feeling heart; the organ is 心臓 (しんぞう)."
+ },
+ {
+  "word": "注意",
+  "reading": "ちゅうい",
+  "meaning": "caution, attention",
+  "pos": "noun",
+  "example": "車に注意してください。",
+  "exampleReading": "くるまにちゅういしてください。",
+  "exampleMeaning": "Please watch out for cars.",
+  "tip": "注意する = to be careful, or to warn someone."
+ },
+ {
+  "word": "以外",
+  "reading": "いがい",
+  "meaning": "except for",
+  "pos": "noun",
+  "example": "月曜以外は開いている。",
+  "exampleReading": "げつよういがいはあいている。",
+  "exampleMeaning": "We're open every day except Monday."
+ },
+ {
+  "word": "倍",
+  "reading": "ばい",
+  "meaning": "times, double",
+  "pos": "counter",
+  "example": "値段が二倍になった。",
+  "exampleReading": "ねだんがにばいになった。",
+  "exampleMeaning": "The price doubled."
+ },
+ {
+  "word": "まず",
+  "reading": "まず",
+  "meaning": "first of all",
+  "pos": "adverb",
+  "example": "まず手を洗おう。",
+  "exampleReading": "まずてをあらおう。",
+  "exampleMeaning": "First, let's wash our hands."
+ },
+ {
+  "word": "光",
+  "reading": "ひかり",
+  "meaning": "light",
+  "pos": "noun",
+  "example": "月の光が明るい。",
+  "exampleReading": "つきのひかりがあかるい。",
+  "exampleMeaning": "The moonlight is bright."
+ },
+ {
+  "word": "国際",
+  "reading": "こくさい",
+  "meaning": "international",
+  "pos": "noun",
+  "example": "国際空港に着いた。",
+  "exampleReading": "こくさいくうこうについた。",
+  "exampleMeaning": "We arrived at the international airport.",
+  "tip": "Prefix-like: 国際空港, 国際電話, 国際結婚."
+ },
+ {
+  "word": "都",
+  "reading": "と",
+  "meaning": "metropolis (Tokyo)",
+  "pos": "noun",
+  "example": "東京都に住んでいる。",
+  "exampleReading": "とうきょうとにすんでいる。",
+  "exampleMeaning": "I live in Tokyo Metropolis.",
+  "tip": "Only Tokyo is a 都; other regions are 道・府・県."
+ },
+ {
+  "word": "プレゼント",
+  "reading": "プレゼント",
+  "meaning": "present, gift",
+  "pos": "noun",
+  "example": "母にプレゼントを渡した。",
+  "exampleReading": "ははにプレゼントをわたした。",
+  "exampleMeaning": "I gave my mother a present."
+ },
+ {
+  "word": "会場",
+  "reading": "かいじょう",
+  "meaning": "venue, hall",
+  "pos": "noun",
+  "example": "会場は駅の近くだ。",
+  "exampleReading": "かいじょうはえきのちかくだ。",
+  "exampleMeaning": "The venue is near the station."
+ },
+ {
+  "word": "線",
+  "reading": "せん",
+  "meaning": "line",
+  "pos": "noun",
+  "example": "山手線に乗る。",
+  "exampleReading": "やまのてせんにのる。",
+  "exampleMeaning": "I take the Yamanote Line.",
+  "tip": "Train lines end in 線: 山手線, 中央線."
+ },
+ {
+  "word": "相談",
+  "reading": "そうだん",
+  "meaning": "consultation, advice",
+  "pos": "noun",
+  "example": "先生に相談したい。",
+  "exampleReading": "せんせいにそうだんしたい。",
+  "exampleMeaning": "I want to consult my teacher.",
+  "tip": "相談する = to talk something over; the person takes に."
+ },
+ {
+  "word": "例えば",
+  "reading": "たとえば",
+  "meaning": "for example",
+  "pos": "adverb",
+  "example": "例えばこんな色はどう。",
+  "exampleReading": "たとえばこんないろはどう。",
+  "exampleMeaning": "For example, how about this color?"
+ },
+ {
+  "word": "しっかり",
+  "reading": "しっかり",
+  "meaning": "firmly, properly",
+  "pos": "adverb",
+  "example": "しっかり勉強しなさい。",
+  "exampleReading": "しっかりべんきょうしなさい。",
+  "exampleMeaning": "Study properly.",
+  "tip": "Often with する: しっかりして! = pull yourself together!"
+ },
+ {
+  "word": "意見",
+  "reading": "いけん",
+  "meaning": "opinion",
+  "pos": "noun",
+  "example": "あなたの意見を聞かせて。",
+  "exampleReading": "あなたのいけんをきかせて。",
+  "exampleMeaning": "Let me hear your opinion."
+ },
+ {
+  "word": "はず",
+  "reading": "はず",
+  "meaning": "should be, supposed to",
+  "pos": "noun",
+  "example": "彼は今日来るはずだ。",
+  "exampleReading": "かれはきょうくるはずだ。",
+  "exampleMeaning": "He should be coming today.",
+  "tip": "Expectation from reasoning: 〜はずだ. はずがない = can't possibly be."
+ },
+ {
+  "word": "ほとんど",
+  "reading": "ほとんど",
+  "meaning": "almost all; hardly",
+  "pos": "adverb",
+  "example": "宿題はほとんど終わった。",
+  "exampleReading": "しゅくだいはほとんどおわった。",
+  "exampleMeaning": "My homework is almost done.",
+  "tip": "With a negative it flips: ほとんどない = hardly any."
+ },
+ {
+  "word": "必ず",
+  "reading": "かならず",
+  "meaning": "certainly, without fail",
+  "pos": "adverb",
+  "example": "必ず連絡してください。",
+  "exampleReading": "かならずれんらくしてください。",
+  "exampleMeaning": "Please be sure to contact me."
+ },
+ {
+  "word": "気持ち",
+  "reading": "きもち",
+  "meaning": "feeling, mood",
+  "pos": "noun",
+  "example": "気持ちがいい朝だ。",
+  "exampleReading": "きもちがいいあさだ。",
+  "exampleMeaning": "It's a pleasant morning.",
+  "tip": "気持ちいい = feels good; 気持ち悪い = gross/feel sick."
+ },
+ {
+  "word": "会議",
+  "reading": "かいぎ",
+  "meaning": "meeting, conference",
+  "pos": "noun",
+  "example": "午後から会議がある。",
+  "exampleReading": "ごごからかいぎがある。",
+  "exampleMeaning": "There's a meeting this afternoon."
+ },
+ {
+  "word": "僕",
+  "reading": "ぼく",
+  "meaning": "I (male, casual)",
+  "pos": "pronoun",
+  "example": "僕も一緒に行くよ。",
+  "exampleReading": "ぼくもいっしょにいくよ。",
+  "exampleMeaning": "I'll come along too.",
+  "tip": "Softer than 俺; fine in most casual settings, use 私 in formal ones."
+ },
+ {
+  "word": "教育",
+  "reading": "きょういく",
+  "meaning": "education",
+  "pos": "noun",
+  "example": "子供の教育について話す。",
+  "exampleReading": "こどものきょういくについてはなす。",
+  "exampleMeaning": "We talk about children's education."
+ },
+ {
+  "word": "これから",
+  "reading": "これから",
+  "meaning": "from now on",
+  "pos": "adverb",
+  "example": "これから出かけます。",
+  "exampleReading": "これからでかけます。",
+  "exampleMeaning": "I'm heading out now."
+ },
+ {
+  "word": "予約",
+  "reading": "よやく",
+  "meaning": "reservation",
+  "pos": "noun",
+  "example": "七時に予約した。",
+  "exampleReading": "しちじによやくした。",
+  "exampleMeaning": "I made a reservation for seven.",
+  "tip": "予約する = to book/reserve."
+ },
+ {
+  "word": "普通",
+  "reading": "ふつう",
+  "meaning": "ordinary, usual",
+  "pos": "na-adjective",
+  "example": "普通の一日だった。",
+  "exampleReading": "ふつうのいちにちだった。",
+  "exampleMeaning": "It was an ordinary day.",
+  "tip": "Also the local train that stops everywhere (普通電車)."
+ },
+ {
+  "word": "考える",
+  "reading": "かんがえる",
+  "meaning": "to think, to consider",
+  "pos": "verb",
+  "example": "答えをよく考える。",
+  "exampleReading": "こたえをよくかんがえる。",
+  "exampleMeaning": "I think carefully about the answer.",
+  "tip": "考える = reason/consider; 思う = feel/believe."
+ },
+ {
+  "word": "食事",
+  "reading": "しょくじ",
+  "meaning": "meal",
+  "pos": "noun",
+  "example": "一緒に食事しませんか。",
+  "exampleReading": "いっしょにしょくじしませんか。",
+  "exampleMeaning": "Shall we have a meal together?",
+  "tip": "食事する = to dine — politer than ご飯を食べる."
+ },
+ {
+  "word": "工場",
+  "reading": "こうじょう",
+  "meaning": "factory",
+  "pos": "noun",
+  "example": "父は工場で働いている。",
+  "exampleReading": "ちちはこうじょうではたらいている。",
+  "exampleMeaning": "My father works at a factory."
+ },
+ {
+  "word": "彼",
+  "reading": "かれ",
+  "meaning": "he; boyfriend",
+  "pos": "pronoun",
+  "example": "彼は医者です。",
+  "exampleReading": "かれはいしゃです。",
+  "exampleMeaning": "He is a doctor.",
+  "tip": "Also means boyfriend (彼氏). Japanese often uses names instead of pronouns."
+ },
+ {
+  "word": "産業",
+  "reading": "さんぎょう",
+  "meaning": "industry",
+  "pos": "noun",
+  "example": "この町の産業は漁業だ。",
+  "exampleReading": "このまちのさんぎょうはぎょぎょうだ。",
+  "exampleMeaning": "This town's industry is fishing."
+ },
+ {
+  "word": "続く",
+  "reading": "つづく",
+  "meaning": "to continue",
+  "pos": "verb",
+  "example": "雨が三日続く。",
+  "exampleReading": "あめがみっかつづく。",
+  "exampleMeaning": "The rain continues for three days.",
+  "tip": "Intransitive; the transitive pair is 続ける (to continue something)."
+ },
+ {
+  "word": "または",
+  "reading": "または",
+  "meaning": "or",
+  "pos": "conjunction",
+  "example": "電話またはメールで連絡を。",
+  "exampleReading": "でんわまたはメールでれんらくを。",
+  "exampleMeaning": "Contact us by phone or email.",
+  "tip": "Formal/written; casual speech prefers か."
+ },
+ {
+  "word": "客",
+  "reading": "きゃく",
+  "meaning": "guest, customer",
+  "pos": "noun",
+  "example": "店に客が多い。",
+  "exampleReading": "みせにきゃくがおおい。",
+  "exampleMeaning": "The store has many customers.",
+  "tip": "Polite form お客さん/お客様 is what staff actually say."
+ },
+ {
+  "word": "席",
+  "reading": "せき",
+  "meaning": "seat",
+  "pos": "noun",
+  "example": "窓側の席をお願いします。",
+  "exampleReading": "まどがわのせきをおねがいします。",
+  "exampleMeaning": "A window seat, please."
+ },
+ {
+  "word": "科学",
+  "reading": "かがく",
+  "meaning": "science",
+  "pos": "noun",
+  "example": "科学の本を読む。",
+  "exampleReading": "かがくのほんをよむ。",
+  "exampleMeaning": "I read science books.",
+  "tip": "Same sound as 化学 (chemistry) — 化学 is often said ばけがく to disambiguate."
+ },
+ {
+  "word": "見える",
+  "reading": "みえる",
+  "meaning": "to be visible",
+  "pos": "verb",
+  "example": "窓から海が見える。",
+  "exampleReading": "まどからうみがみえる。",
+  "exampleMeaning": "You can see the sea from the window.",
+  "tip": "見える = naturally visible; 見られる = able to watch."
+ },
+ {
+  "word": "以内",
+  "reading": "いない",
+  "meaning": "within",
+  "pos": "noun",
+  "example": "十分以内に戻ります。",
+  "exampleReading": "じゅっぷんいないにもどります。",
+  "exampleMeaning": "I'll be back within ten minutes."
+ },
+ {
+  "word": "安心",
+  "reading": "あんしん",
+  "meaning": "relief, peace of mind",
+  "pos": "noun",
+  "example": "無事と聞いて安心した。",
+  "exampleReading": "ぶじときいてあんしんした。",
+  "exampleMeaning": "I was relieved to hear you're safe.",
+  "tip": "安心する = to feel relieved; opposite 心配."
+ },
+ {
+  "word": "選ぶ",
+  "reading": "えらぶ",
+  "meaning": "to choose",
+  "pos": "verb",
+  "example": "好きな色を選ぶ。",
+  "exampleReading": "すきないろをえらぶ。",
+  "exampleMeaning": "I choose my favorite color."
+ },
+ {
+  "word": "事務所",
+  "reading": "じむしょ",
+  "meaning": "office",
+  "pos": "noun",
+  "example": "事務所は二階にある。",
+  "exampleReading": "じむしょはにかいにある。",
+  "exampleMeaning": "The office is on the second floor."
+ },
+ {
+  "word": "部長",
+  "reading": "ぶちょう",
+  "meaning": "department head",
+  "pos": "noun",
+  "example": "部長に書類を渡した。",
+  "exampleReading": "ぶちょうにしょるいをわたした。",
+  "exampleMeaning": "I handed the documents to the department head."
+ },
+ {
+  "word": "こう",
+  "reading": "こう",
+  "meaning": "like this",
+  "pos": "adverb",
+  "example": "こうやって作ります。",
+  "exampleReading": "こうやってつくります。",
+  "exampleMeaning": "You make it like this.",
+  "tip": "Set: こう (this way), そう (that way), ああ (that way over there), どう (how)."
+ },
+ {
+  "word": "ちゃん",
+  "reading": "ちゃん",
+  "meaning": "(affectionate name suffix)",
+  "pos": "suffix",
+  "example": "花ちゃんはもう五歳だ。",
+  "exampleReading": "はなちゃんはもうごさいだ。",
+  "exampleMeaning": "Hana-chan is already five.",
+  "tip": "For children and close friends; never for superiors."
+ },
+ {
+  "word": "島",
+  "reading": "しま",
+  "meaning": "island",
+  "pos": "noun",
+  "example": "船で島へ渡る。",
+  "exampleReading": "ふねでしまへわたる。",
+  "exampleMeaning": "We cross to the island by boat."
+ },
+ {
+  "word": "熱",
+  "reading": "ねつ",
+  "meaning": "fever; heat",
+  "pos": "noun",
+  "example": "熱が三十八度ある。",
+  "exampleReading": "ねつがさんじゅうはちどある。",
+  "exampleMeaning": "I have a fever of 38 degrees.",
+  "tip": "熱がある = to have a fever."
+ },
+ {
+  "word": "高校",
+  "reading": "こうこう",
+  "meaning": "high school",
+  "pos": "noun",
+  "example": "妹は高校の一年生だ。",
+  "exampleReading": "いもうとはこうこうのいちねんせいだ。",
+  "exampleMeaning": "My sister is a first-year high schooler."
+ },
+ {
+  "word": "もらう",
+  "reading": "もらう",
+  "meaning": "to receive",
+  "pos": "verb",
+  "example": "友達にプレゼントをもらう。",
+  "exampleReading": "ともだちにプレゼントをもらう。",
+  "exampleMeaning": "I receive a present from a friend.",
+  "tip": "Giver takes に or から. て-form+もらう = have someone do something for you."
+ },
+ {
+  "word": "始める",
+  "reading": "はじめる",
+  "meaning": "to begin (something)",
+  "pos": "verb",
+  "example": "新しい仕事を始める。",
+  "exampleReading": "あたらしいしごとをはじめる。",
+  "exampleMeaning": "I start a new job.",
+  "tip": "Transitive pair of 始まる (something begins)."
+ },
+ {
+  "word": "星",
+  "reading": "ほし",
+  "meaning": "star",
+  "pos": "noun",
+  "example": "今夜は星がきれいだ。",
+  "exampleReading": "こんやはほしがきれいだ。",
+  "exampleMeaning": "The stars are beautiful tonight."
+ },
+ {
+  "word": "子",
+  "reading": "こ",
+  "meaning": "child",
+  "pos": "noun",
+  "example": "小さい子が泣いている。",
+  "exampleReading": "ちいさいこがないている。",
+  "exampleMeaning": "A small child is crying.",
+  "tip": "Usually 子供 in full; この子 = this kid."
+ },
+ {
+  "word": "いただく",
+  "reading": "いただく",
+  "meaning": "to receive (humble)",
+  "pos": "verb",
+  "example": "お茶をいただく。",
+  "exampleReading": "おちゃをいただく。",
+  "exampleMeaning": "I (humbly) receive some tea.",
+  "tip": "Humble もらう. いただきます before eating comes from this verb."
+ },
+ {
+  "word": "反対",
+  "reading": "はんたい",
+  "meaning": "opposition; opposite",
+  "pos": "noun",
+  "example": "その計画に反対だ。",
+  "exampleReading": "そのけいかくにはんたいだ。",
+  "exampleMeaning": "I'm against that plan.",
+  "tip": "反対する = to oppose; 反対側 = the opposite side."
+ },
+ {
+  "word": "夫",
+  "reading": "おっと",
+  "meaning": "husband",
+  "pos": "noun",
+  "example": "夫は銀行で働いている。",
+  "exampleReading": "おっとはぎんこうではたらいている。",
+  "exampleMeaning": "My husband works at a bank.",
+  "tip": "夫 = one's own husband; someone else's is ご主人."
+ },
+ {
+  "word": "失敗",
+  "reading": "しっぱい",
+  "meaning": "failure, mistake",
+  "pos": "noun",
+  "example": "試験に失敗した。",
+  "exampleReading": "しけんにしっぱいした。",
+  "exampleMeaning": "I failed the exam.",
+  "tip": "失敗する = to fail; opposite 成功 (せいこう)."
+ },
+ {
+  "word": "彼女",
+  "reading": "かのじょ",
+  "meaning": "she; girlfriend",
+  "pos": "pronoun",
+  "example": "彼女は歌が上手だ。",
+  "exampleReading": "かのじょはうたがじょうずだ。",
+  "exampleMeaning": "She is good at singing.",
+  "tip": "Also means girlfriend — context decides."
+ },
+ {
+  "word": "急",
+  "reading": "きゅう",
+  "meaning": "sudden; urgent",
+  "pos": "na-adjective",
+  "example": "急に雨が降ってきた。",
+  "exampleReading": "きゅうにあめがふってきた。",
+  "exampleMeaning": "It suddenly started raining.",
+  "tip": "急に = suddenly; 急行 = express train."
+ },
+ {
+  "word": "案内",
+  "reading": "あんない",
+  "meaning": "guidance, showing around",
+  "pos": "noun",
+  "example": "町を案内しましょう。",
+  "exampleReading": "まちをあんないしましょう。",
+  "exampleMeaning": "Let me show you around town.",
+  "tip": "案内する = to guide; 案内所 = information desk."
+ },
+ {
+  "word": "ぜひ",
+  "reading": "ぜひ",
+  "meaning": "by all means",
+  "pos": "adverb",
+  "example": "ぜひ遊びに来てください。",
+  "exampleReading": "ぜひあそびにきてください。",
+  "exampleMeaning": "Please do come visit.",
+  "tip": "Strengthens invitations and requests — pairs with てください/たい."
+ },
+ {
+  "word": "ガス",
+  "reading": "ガス",
+  "meaning": "gas",
+  "pos": "noun",
+  "example": "ガスを止めて出かけた。",
+  "exampleReading": "ガスをとめてでかけた。",
+  "exampleMeaning": "I turned off the gas and went out."
+ },
+ {
+  "word": "空港",
+  "reading": "くうこう",
+  "meaning": "airport",
+  "pos": "noun",
+  "example": "空港まで一時間かかる。",
+  "exampleReading": "くうこうまでいちじかんかかる。",
+  "exampleMeaning": "It takes an hour to the airport."
+ },
+ {
+  "word": "つき",
+  "reading": "つき",
+  "meaning": "moon; month",
+  "pos": "noun",
+  "example": "今夜はつきが明るい。",
+  "exampleReading": "こんやはつきがあかるい。",
+  "exampleMeaning": "The moon is bright tonight.",
+  "tip": "Usually written 月 — the same kanji as がつ/げつ in dates."
+ },
+ {
+  "word": "アメリカ",
+  "reading": "アメリカ",
+  "meaning": "America, the U.S.",
+  "pos": "noun",
+  "example": "アメリカに留学したい。",
+  "exampleReading": "アメリカにりゅうがくしたい。",
+  "exampleMeaning": "I want to study in America."
+ },
+ {
+  "word": "テキスト",
+  "reading": "テキスト",
+  "meaning": "textbook",
+  "pos": "noun",
+  "example": "テキストの十ページを開いて。",
+  "exampleReading": "テキストのじゅっページをひらいて。",
+  "exampleMeaning": "Open your textbook to page ten."
+ },
+ {
+  "word": "受ける",
+  "reading": "うける",
+  "meaning": "to take (a test); to receive",
+  "pos": "verb",
+  "example": "日曜に試験を受ける。",
+  "exampleReading": "にちようにしけんをうける。",
+  "exampleMeaning": "I take an exam on Sunday."
+ },
+ {
+  "word": "壁",
+  "reading": "かべ",
+  "meaning": "wall",
+  "pos": "noun",
+  "example": "壁に絵をかけた。",
+  "exampleReading": "かべにえをかけた。",
+  "exampleMeaning": "I hung a picture on the wall."
+ },
+ {
+  "word": "夢",
+  "reading": "ゆめ",
+  "meaning": "dream",
+  "pos": "noun",
+  "example": "変な夢を見た。",
+  "exampleReading": "へんなゆめをみた。",
+  "exampleMeaning": "I had a strange dream.",
+  "tip": "Dreams are seen: 夢を見る, never する."
+ },
+ {
+  "word": "火",
+  "reading": "ひ",
+  "meaning": "fire",
+  "pos": "noun",
+  "example": "火に気をつけて。",
+  "exampleReading": "ひにきをつけて。",
+  "exampleMeaning": "Be careful with fire.",
+  "tip": "Same sound as 日 (day) — kanji tells them apart."
+ },
+ {
+  "word": "空気",
+  "reading": "くうき",
+  "meaning": "air; atmosphere",
+  "pos": "noun",
+  "example": "山の空気はおいしい。",
+  "exampleReading": "やまのくうきはおいしい。",
+  "exampleMeaning": "Mountain air is delicious.",
+  "tip": "空気を読む = read the room."
+ },
+ {
+  "word": "表",
+  "reading": "おもて",
+  "meaning": "front, surface",
+  "pos": "noun",
+  "example": "紙の表に名前を書く。",
+  "exampleReading": "かみのおもてになまえをかく。",
+  "exampleMeaning": "Write your name on the front of the paper.",
+  "tip": "Opposite of 裏 (うら, back). Also read ひょう = table/chart."
+ },
+ {
+  "word": "運動",
+  "reading": "うんどう",
+  "meaning": "exercise",
+  "pos": "noun",
+  "example": "毎朝運動している。",
+  "exampleReading": "まいあさうんどうしている。",
+  "exampleMeaning": "I exercise every morning.",
+  "tip": "運動する = to exercise."
+ },
+ {
+  "word": "妻",
+  "reading": "つま",
+  "meaning": "wife",
+  "pos": "noun",
+  "example": "妻と買い物に行った。",
+  "exampleReading": "つまとかいものにいった。",
+  "exampleMeaning": "I went shopping with my wife.",
+  "tip": "妻 = one's own wife; someone else's is 奥さん."
+ },
+ {
+  "word": "娘",
+  "reading": "むすめ",
+  "meaning": "daughter",
+  "pos": "noun",
+  "example": "娘は今年五歳になる。",
+  "exampleReading": "むすめはことしごさいになる。",
+  "exampleMeaning": "My daughter turns five this year.",
+  "tip": "One's own daughter; someone else's is 娘さん."
+ },
+ {
+  "word": "小説",
+  "reading": "しょうせつ",
+  "meaning": "novel",
+  "pos": "noun",
+  "example": "夜は小説を読む。",
+  "exampleReading": "よるはしょうせつをよむ。",
+  "exampleMeaning": "I read novels at night."
+ },
+ {
+  "word": "競争",
+  "reading": "きょうそう",
+  "meaning": "competition",
+  "pos": "noun",
+  "example": "駅まで競争しよう。",
+  "exampleReading": "えきまできょうそうしよう。",
+  "exampleMeaning": "Let's race to the station.",
+  "tip": "競争する = to compete."
+ },
+ {
+  "word": "葉",
+  "reading": "は",
+  "meaning": "leaf",
+  "pos": "noun",
+  "example": "秋は葉が赤くなる。",
+  "exampleReading": "あきははがあかくなる。",
+  "exampleMeaning": "Leaves turn red in autumn.",
+  "tip": "Often 葉っぱ in speech."
+ },
+ {
+  "word": "連絡",
+  "reading": "れんらく",
+  "meaning": "contact, communication",
+  "pos": "noun",
+  "example": "着いたら連絡して。",
+  "exampleReading": "ついたられんらくして。",
+  "exampleMeaning": "Contact me when you arrive.",
+  "tip": "連絡する = to get in touch; the person takes に."
+ },
+ {
+  "word": "中々",
+  "reading": "なかなか",
+  "meaning": "quite; not easily (+neg)",
+  "pos": "adverb",
+  "example": "バスがなかなか来ない。",
+  "exampleReading": "バスがなかなかこない。",
+  "exampleMeaning": "The bus just won't come.",
+  "tip": "Positive = quite good (なかなかいい); with negative = (not) easily."
+ },
+ {
+  "word": "アジア",
+  "reading": "アジア",
+  "meaning": "Asia",
+  "pos": "noun",
+  "example": "アジアの国を旅した。",
+  "exampleReading": "アジアのくにをたびした。",
+  "exampleMeaning": "I traveled around Asian countries."
+ },
+ {
+  "word": "ビル",
+  "reading": "ビル",
+  "meaning": "building (multi-story)",
+  "pos": "noun",
+  "example": "あの高いビルは何。",
+  "exampleReading": "あのたかいビルはなに。",
+  "exampleMeaning": "What is that tall building?",
+  "tip": "From ビルディング — modern office towers; 建物 is any building."
+ },
+ {
+  "word": "代わり",
+  "reading": "かわり",
+  "meaning": "substitute, instead",
+  "pos": "noun",
+  "example": "私が代わりに行きます。",
+  "exampleReading": "わたしがかわりにいきます。",
+  "exampleMeaning": "I'll go instead.",
+  "tip": "〜の代わりに = in place of. おかわり = a refill."
+ },
+ {
+  "word": "卒業",
+  "reading": "そつぎょう",
+  "meaning": "graduation",
+  "pos": "noun",
+  "example": "三月に大学を卒業する。",
+  "exampleReading": "さんがつにだいがくをそつぎょうする。",
+  "exampleMeaning": "I graduate from university in March.",
+  "tip": "卒業する takes を: 大学を卒業する."
+ },
+ {
+  "word": "受付",
+  "reading": "うけつけ",
+  "meaning": "reception (desk)",
+  "pos": "noun",
+  "example": "受付で名前を書いて。",
+  "exampleReading": "うけつけでなまえをかいて。",
+  "exampleMeaning": "Write your name at reception."
+ },
+ {
+  "word": "大事",
+  "reading": "だいじ",
+  "meaning": "important, precious",
+  "pos": "na-adjective",
+  "example": "大事な話がある。",
+  "exampleReading": "だいじなはなしがある。",
+  "exampleMeaning": "I have something important to tell you.",
+  "tip": "お大事に = get well soon."
+ },
+ {
+  "word": "残念",
+  "reading": "ざんねん",
+  "meaning": "regrettable, a pity",
+  "pos": "na-adjective",
+  "example": "行けなくて残念だ。",
+  "exampleReading": "いけなくてざんねんだ。",
+  "exampleMeaning": "It's a pity I can't go.",
+  "tip": "残念ながら = unfortunately."
+ },
+ {
+  "word": "美しい",
+  "reading": "うつくしい",
+  "meaning": "beautiful",
+  "pos": "i-adjective",
+  "example": "美しい景色が広がる。",
+  "exampleReading": "うつくしいけしきがひろがる。",
+  "exampleMeaning": "A beautiful view spreads out.",
+  "tip": "More literary than きれい."
+ },
+ {
+  "word": "進む",
+  "reading": "すすむ",
+  "meaning": "to advance, to progress",
+  "pos": "verb",
+  "example": "列がゆっくり進む。",
+  "exampleReading": "れつがゆっくりすすむ。",
+  "exampleMeaning": "The line moves forward slowly.",
+  "tip": "Intransitive; transitive pair is 進める."
+ },
+ {
+  "word": "いっぱい",
+  "reading": "いっぱい",
+  "meaning": "full; a lot",
+  "pos": "adverb",
+  "example": "おなかがいっぱいだ。",
+  "exampleReading": "おなかがいっぱいだ。",
+  "exampleMeaning": "I'm full.",
+  "tip": "Written 一杯 it's also 'one cup': ビールを一杯."
+ },
+ {
+  "word": "入院",
+  "reading": "にゅういん",
+  "meaning": "hospitalization",
+  "pos": "noun",
+  "example": "祖父が入院した。",
+  "exampleReading": "そふがにゅういんした。",
+  "exampleMeaning": "My grandfather was hospitalized.",
+  "tip": "入院する = be admitted; 退院する = be discharged."
+ },
+ {
+  "word": "警察",
+  "reading": "けいさつ",
+  "meaning": "police",
+  "pos": "noun",
+  "example": "警察に電話した。",
+  "exampleReading": "けいさつにでんわした。",
+  "exampleMeaning": "I called the police."
+ },
+ {
+  "word": "輸出",
+  "reading": "ゆしゅつ",
+  "meaning": "export",
+  "pos": "noun",
+  "example": "車を海外に輸出する。",
+  "exampleReading": "くるまをかいがいにゆしゅつする。",
+  "exampleMeaning": "They export cars overseas.",
+  "tip": "輸出する = to export; opposite 輸入 (import)."
+ },
+ {
+  "word": "それほど",
+  "reading": "それほど",
+  "meaning": "not that much (+neg)",
+  "pos": "adverb",
+  "example": "それほど高くない。",
+  "exampleReading": "それほどたかくない。",
+  "exampleMeaning": "It's not that expensive."
+ },
+ {
+  "word": "だから",
+  "reading": "だから",
+  "meaning": "so, therefore",
+  "pos": "conjunction",
+  "example": "雨だ。だから家にいる。",
+  "exampleReading": "あめだ。だからいえにいる。",
+  "exampleMeaning": "It's raining. So I'm staying home.",
+  "tip": "ですから is the polite version."
+ },
+ {
+  "word": "つもり",
+  "reading": "つもり",
+  "meaning": "intention",
+  "pos": "noun",
+  "example": "夏に帰国するつもりだ。",
+  "exampleReading": "なつにきこくするつもりだ。",
+  "exampleMeaning": "I intend to go home in summer.",
+  "tip": "Verb dictionary form + つもり = plan to."
+ },
+ {
+  "word": "どんどん",
+  "reading": "どんどん",
+  "meaning": "rapidly, more and more",
+  "pos": "adverb",
+  "example": "日本語がどんどん上手になる。",
+  "exampleReading": "にほんごがどんどんじょうずになる。",
+  "exampleMeaning": "Your Japanese keeps getting better."
+ },
+ {
+  "word": "もっとも",
+  "reading": "もっとも",
+  "meaning": "most",
+  "pos": "adverb",
+  "example": "もっとも大切なことは何。",
+  "exampleReading": "もっともたいせつなことはなに。",
+  "exampleMeaning": "What is the most important thing?",
+  "tip": "Written 最も; formal version of 一番."
+ },
+ {
+  "word": "ガラス",
+  "reading": "ガラス",
+  "meaning": "glass (material)",
+  "pos": "noun",
+  "example": "ガラスのコップが割れた。",
+  "exampleReading": "ガラスのコップがわれた。",
+  "exampleMeaning": "The glass cup broke.",
+  "tip": "ガラス = the material; a drinking glass is コップ or グラス."
+ },
+ {
+  "word": "両方",
+  "reading": "りょうほう",
+  "meaning": "both",
+  "pos": "noun",
+  "example": "両方とも好きだ。",
+  "exampleReading": "りょうほうともすきだ。",
+  "exampleMeaning": "I like both."
+ },
+ {
+  "word": "割合",
+  "reading": "わりあい",
+  "meaning": "rate, proportion",
+  "pos": "noun",
+  "example": "学生の割合が高い。",
+  "exampleReading": "がくせいのわりあいがたかい。",
+  "exampleMeaning": "The proportion of students is high."
+ },
+ {
+  "word": "厳しい",
+  "reading": "きびしい",
+  "meaning": "strict; severe",
+  "pos": "i-adjective",
+  "example": "父は時間に厳しい。",
+  "exampleReading": "ちちはじかんにきびしい。",
+  "exampleMeaning": "My father is strict about time."
+ },
+ {
+  "word": "心配",
+  "reading": "しんぱい",
+  "meaning": "worry",
+  "pos": "noun",
+  "example": "心配しないでください。",
+  "exampleReading": "しんぱいしないでください。",
+  "exampleMeaning": "Please don't worry.",
+  "tip": "心配する = to worry; opposite 安心."
+ },
+ {
+  "word": "試合",
+  "reading": "しあい",
+  "meaning": "match, game",
+  "pos": "noun",
+  "example": "明日サッカーの試合がある。",
+  "exampleReading": "あしたサッカーのしあいがある。",
+  "exampleMeaning": "There's a soccer match tomorrow."
+ },
+ {
+  "word": "もし",
+  "reading": "もし",
+  "meaning": "if",
+  "pos": "adverb",
+  "example": "もし雨なら、中止だ。",
+  "exampleReading": "もしあめなら、ちゅうしだ。",
+  "exampleMeaning": "If it rains, it's cancelled.",
+  "tip": "Works with conditional forms (〜たら/〜なら) — もし just signals one is coming."
+ }
+]

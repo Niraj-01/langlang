@@ -171,9 +171,23 @@ words, quizzes) is a card in one infinite vertical snap feed ("the Doomscroll").
   re-run `npm run audit` + `npm run gen-sentences`. `/progress` bars for
   audited exams compute against the official list size (`EXAM_WORDS` +
   `examCoverage` in `lib/exams.ts`, `examListCoverage` in `lib/derive.ts`;
-  faint band = seed coverage, solid fill = mastered). Current honest
-  coverage: N5 ~21%, N4 ~10%, A1 ~20%, A2 ~13%. Tests in
+  faint band = seed coverage, solid fill = mastered). Tests in
   `tests/coverage.test.ts` re-verify every shipped mapping.
+- **Gap content pass (done):** the 596 most FREQUENT missing exam words
+  (150/exam by corpus rank, A2 minus A1 overlap, N4 minus N5) authored as
+  full reviewed entries via the gen-gap-entries pipeline and appended as
+  `data/{jlpt_n5,jlpt_n4,goethe_a1,goethe_a2}_gap.json` — NEW LEVELS in
+  `lib/seed.ts` LEVELS (labels reuse the exam tag, files pre-sorted by
+  freqRank). They sit AFTER the original levels: inserting into an existing
+  level would shift every later seedIndex (pointer/audio/sentence corruption),
+  so exam-list fills always land in a trailing gap file, and the four scripts'
+  seed concatenations (gen-sentences/gen-audio/gen-frequency/audit) list the
+  same 4-file order. Four conjugation leaks (hatte/sollte/fühlt/setzt) were
+  removed from `scripts/wordlists/goethe_a2.csv` as extraction artifacts.
+  Honest coverage after the pass: N5 ~43%, N4 ~33%, A1 ~43%, A2 ~36%;
+  ja native audio grew to 306/506 words. Remaining ~1,950 missing words are
+  the low-frequency tail — fill via `npm run gen-gap-entries` (API) or more
+  authoring passes, same append flow.
 - **Frequency ranking (done):** corpus `freqRank` on every seed entry, written
   IN PLACE by `npm run gen-frequency` (`scripts/gen-frequency.mjs`; ja =
   Leipzig jpn_news 10K CC BY 4.0 — hermitdave's ja list is stem-segmented and

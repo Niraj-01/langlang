@@ -229,9 +229,15 @@ if (isMain && args.includes("--validate-only")) {
   process.exit(bad === 0 ? 0 : 1);
 } else if (isMain) {
   run().catch((err) => {
-    console.error(err.status === 401 || /api.?key|auth/i.test(String(err.message))
-      ? "Claude API auth failed — set ANTHROPIC_API_KEY in .env.local (see .env.local.example)."
-      : err);
+    const msg = String(err.message ?? err);
+    if (/credit balance/i.test(msg)) {
+      console.error("Claude API account has no credits — add some under console.anthropic.com");
+      console.error("→ Plans & Billing, then re-run (the run resumes where it left off).");
+    } else if (err.status === 401 || /api.?key|auth/i.test(msg)) {
+      console.error("Claude API auth failed — set ANTHROPIC_API_KEY in .env.local (see .env.local.example).");
+    } else {
+      console.error(err);
+    }
     process.exit(1);
   });
 }

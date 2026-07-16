@@ -1,0 +1,1430 @@
+[
+ {
+  "word": "出席",
+  "reading": "しゅっせき",
+  "meaning": "attendance",
+  "pos": "noun",
+  "example": "会議に出席する。",
+  "exampleReading": "かいぎにしゅっせきする。",
+  "exampleMeaning": "I attend the meeting.",
+  "tip": "出席する = to attend; opposite 欠席 (absence)."
+ },
+ {
+  "word": "小学校",
+  "reading": "しょうがっこう",
+  "meaning": "elementary school",
+  "pos": "noun",
+  "example": "娘は小学校に通う。",
+  "exampleReading": "むすめはしょうがっこうにかよう。",
+  "exampleMeaning": "My daughter attends elementary school."
+ },
+ {
+  "word": "市民",
+  "reading": "しみん",
+  "meaning": "citizen",
+  "pos": "noun",
+  "example": "市民のための図書館だ。",
+  "exampleReading": "しみんのためのとしょかんだ。",
+  "exampleMeaning": "It's a library for citizens."
+ },
+ {
+  "word": "指",
+  "reading": "ゆび",
+  "meaning": "finger",
+  "pos": "noun",
+  "example": "指を切ってしまった。",
+  "exampleReading": "ゆびをきってしまった。",
+  "exampleMeaning": "I cut my finger.",
+  "tip": "指輪 (ゆびわ) = ring."
+ },
+ {
+  "word": "途中",
+  "reading": "とちゅう",
+  "meaning": "on the way, midway",
+  "pos": "noun",
+  "example": "途中で雨が降ってきた。",
+  "exampleReading": "とちゅうであめがふってきた。",
+  "exampleMeaning": "It started raining on the way."
+ },
+ {
+  "word": "ケーキ",
+  "reading": "ケーキ",
+  "meaning": "cake",
+  "pos": "noun",
+  "example": "誕生日にケーキを焼く。",
+  "exampleReading": "たんじょうびにケーキをやく。",
+  "exampleMeaning": "I bake a cake for the birthday."
+ },
+ {
+  "word": "動く",
+  "reading": "うごく",
+  "meaning": "to move",
+  "pos": "verb",
+  "example": "ロボットが動く。",
+  "exampleReading": "ロボットがうごく。",
+  "exampleMeaning": "The robot moves.",
+  "tip": "Intransitive; the transitive pair is 動かす."
+ },
+ {
+  "word": "毛",
+  "reading": "け",
+  "meaning": "hair, fur",
+  "pos": "noun",
+  "example": "猫の毛が服についた。",
+  "exampleReading": "ねこのけがふくについた。",
+  "exampleMeaning": "Cat fur got on my clothes.",
+  "tip": "Body/animal hair; hair on the head is 髪 (かみ)."
+ },
+ {
+  "word": "高校生",
+  "reading": "こうこうせい",
+  "meaning": "high school student",
+  "pos": "noun",
+  "example": "弟は高校生です。",
+  "exampleReading": "おとうとはこうこうせいです。",
+  "exampleMeaning": "My little brother is a high schooler."
+ },
+ {
+  "word": "漬ける",
+  "reading": "つける",
+  "meaning": "to soak; to pickle",
+  "pos": "verb",
+  "example": "野菜を漬ける。",
+  "exampleReading": "やさいをつける。",
+  "exampleMeaning": "I pickle vegetables.",
+  "tip": "Same sound as つける (turn on) — the kanji 漬 marks the pickling one."
+ },
+ {
+  "word": "はっきり",
+  "reading": "はっきり",
+  "meaning": "clearly",
+  "pos": "adverb",
+  "example": "はっきり言ってください。",
+  "exampleReading": "はっきりいってください。",
+  "exampleMeaning": "Please say it clearly."
+ },
+ {
+  "word": "コンサート",
+  "reading": "コンサート",
+  "meaning": "concert",
+  "pos": "noun",
+  "example": "コンサートの切符を買った。",
+  "exampleReading": "コンサートのきっぷをかった。",
+  "exampleMeaning": "I bought concert tickets."
+ },
+ {
+  "word": "スクリーン",
+  "reading": "スクリーン",
+  "meaning": "screen",
+  "pos": "noun",
+  "example": "大きなスクリーンで見る。",
+  "exampleReading": "おおきなスクリーンでみる。",
+  "exampleMeaning": "We watch it on a big screen."
+ },
+ {
+  "word": "交通",
+  "reading": "こうつう",
+  "meaning": "traffic, transportation",
+  "pos": "noun",
+  "example": "ここは交通が便利だ。",
+  "exampleReading": "ここはこうつうがべんりだ。",
+  "exampleMeaning": "Transportation is convenient here.",
+  "tip": "交通事故 = traffic accident."
+ },
+ {
+  "word": "君",
+  "reading": "くん",
+  "meaning": "(casual name suffix)",
+  "pos": "suffix",
+  "example": "田中君はもう帰った。",
+  "exampleReading": "たなかくんはもうかえった。",
+  "exampleMeaning": "Tanaka has already gone home.",
+  "tip": "Mostly for boys/juniors. Read きみ it's a casual 'you'."
+ },
+ {
+  "word": "季節",
+  "reading": "きせつ",
+  "meaning": "season",
+  "pos": "noun",
+  "example": "どの季節が好きですか。",
+  "exampleReading": "どのきせつがすきですか。",
+  "exampleMeaning": "Which season do you like?"
+ },
+ {
+  "word": "彼ら",
+  "reading": "かれら",
+  "meaning": "they",
+  "pos": "pronoun",
+  "example": "彼らは学生です。",
+  "exampleReading": "かれらはがくせいです。",
+  "exampleMeaning": "They are students."
+ },
+ {
+  "word": "昔",
+  "reading": "むかし",
+  "meaning": "old times, long ago",
+  "pos": "noun",
+  "example": "昔ここは海だった。",
+  "exampleReading": "むかしここはうみだった。",
+  "exampleMeaning": "Long ago this was the sea.",
+  "tip": "昔々 (むかしむかし) = once upon a time."
+ },
+ {
+  "word": "決して",
+  "reading": "けっして",
+  "meaning": "never (+ negative)",
+  "pos": "adverb",
+  "example": "決して忘れない。",
+  "exampleReading": "けっしてわすれない。",
+  "exampleMeaning": "I will never forget.",
+  "tip": "Always pairs with a negative."
+ },
+ {
+  "word": "送る",
+  "reading": "おくる",
+  "meaning": "to send; to see off",
+  "pos": "verb",
+  "example": "荷物を送る。",
+  "exampleReading": "にもつをおくる。",
+  "exampleMeaning": "I send a package.",
+  "tip": "Also escort: 駅まで送るよ = I'll walk you to the station."
+ },
+ {
+  "word": "テニス",
+  "reading": "テニス",
+  "meaning": "tennis",
+  "pos": "noun",
+  "example": "日曜日にテニスをする。",
+  "exampleReading": "にちようびにテニスをする。",
+  "exampleMeaning": "I play tennis on Sundays."
+ },
+ {
+  "word": "人口",
+  "reading": "じんこう",
+  "meaning": "population",
+  "pos": "noun",
+  "example": "この町の人口は少ない。",
+  "exampleReading": "このまちのじんこうはすくない。",
+  "exampleMeaning": "This town's population is small."
+ },
+ {
+  "word": "会話",
+  "reading": "かいわ",
+  "meaning": "conversation",
+  "pos": "noun",
+  "example": "英語で会話する。",
+  "exampleReading": "えいごでかいわする。",
+  "exampleMeaning": "We converse in English."
+ },
+ {
+  "word": "伝える",
+  "reading": "つたえる",
+  "meaning": "to convey, to tell",
+  "pos": "verb",
+  "example": "皆によろしく伝える。",
+  "exampleReading": "みなによろしくつたえる。",
+  "exampleMeaning": "I'll pass on your regards to everyone."
+ },
+ {
+  "word": "住所",
+  "reading": "じゅうしょ",
+  "meaning": "address",
+  "pos": "noun",
+  "example": "ここに住所を書いて。",
+  "exampleReading": "ここにじゅうしょをかいて。",
+  "exampleMeaning": "Write your address here."
+ },
+ {
+  "word": "医学",
+  "reading": "いがく",
+  "meaning": "medicine (field)",
+  "pos": "noun",
+  "example": "大学で医学を学ぶ。",
+  "exampleReading": "だいがくでいがくをまなぶ。",
+  "exampleMeaning": "I study medicine at university."
+ },
+ {
+  "word": "周り",
+  "reading": "まわり",
+  "meaning": "surroundings",
+  "pos": "noun",
+  "example": "家の周りを散歩する。",
+  "exampleReading": "いえのまわりをさんぽする。",
+  "exampleMeaning": "I walk around the neighborhood.",
+  "tip": "周りの人 = the people around you."
+ },
+ {
+  "word": "変わる",
+  "reading": "かわる",
+  "meaning": "to change (by itself)",
+  "pos": "verb",
+  "example": "信号が青に変わる。",
+  "exampleReading": "しんごうがあおにかわる。",
+  "exampleMeaning": "The light changes to green.",
+  "tip": "Intransitive; the transitive pair is 変える."
+ },
+ {
+  "word": "帰り",
+  "reading": "かえり",
+  "meaning": "the way home, return",
+  "pos": "noun",
+  "example": "帰りに牛乳を買って。",
+  "exampleReading": "かえりにぎゅうにゅうをかって。",
+  "exampleMeaning": "Buy milk on your way home."
+ },
+ {
+  "word": "残る",
+  "reading": "のこる",
+  "meaning": "to remain",
+  "pos": "verb",
+  "example": "ご飯が少し残る。",
+  "exampleReading": "ごはんがすこしのこる。",
+  "exampleMeaning": "A little rice is left over.",
+  "tip": "Intransitive; the transitive pair is 残す."
+ },
+ {
+  "word": "気分",
+  "reading": "きぶん",
+  "meaning": "mood, feeling",
+  "pos": "noun",
+  "example": "今日は気分がいい。",
+  "exampleReading": "きょうはきぶんがいい。",
+  "exampleMeaning": "I'm in a good mood today.",
+  "tip": "気分が悪い = feeling unwell."
+ },
+ {
+  "word": "法律",
+  "reading": "ほうりつ",
+  "meaning": "law",
+  "pos": "noun",
+  "example": "新しい法律ができた。",
+  "exampleReading": "あたらしいほうりつができた。",
+  "exampleMeaning": "A new law was made."
+ },
+ {
+  "word": "漫画",
+  "reading": "まんが",
+  "meaning": "manga, comic",
+  "pos": "noun",
+  "example": "漫画を読むのが好きだ。",
+  "exampleReading": "まんがをよむのがすきだ。",
+  "exampleMeaning": "I like reading manga."
+ },
+ {
+  "word": "確か",
+  "reading": "たしか",
+  "meaning": "certain; if I remember right",
+  "pos": "na-adjective",
+  "example": "確かな話ですか。",
+  "exampleReading": "たしかなはなしですか。",
+  "exampleMeaning": "Is that reliable information?",
+  "tip": "確かに = certainly; 確か+sentence = 'I believe...'."
+ },
+ {
+  "word": "血",
+  "reading": "ち",
+  "meaning": "blood",
+  "pos": "noun",
+  "example": "指から血が出ている。",
+  "exampleReading": "ゆびからちがでている。",
+  "exampleMeaning": "My finger is bleeding."
+ },
+ {
+  "word": "親",
+  "reading": "おや",
+  "meaning": "parent",
+  "pos": "noun",
+  "example": "親に相談した。",
+  "exampleReading": "おやにそうだんした。",
+  "exampleMeaning": "I talked it over with my parents.",
+  "tip": "両親 = both parents; 親 can be one or both."
+ },
+ {
+  "word": "輸入",
+  "reading": "ゆにゅう",
+  "meaning": "import",
+  "pos": "noun",
+  "example": "コーヒーを輸入する。",
+  "exampleReading": "コーヒーをゆにゅうする。",
+  "exampleMeaning": "They import coffee.",
+  "tip": "Opposite of 輸出 (export)."
+ },
+ {
+  "word": "道具",
+  "reading": "どうぐ",
+  "meaning": "tool",
+  "pos": "noun",
+  "example": "料理の道具をそろえる。",
+  "exampleReading": "りょうりのどうぐをそろえる。",
+  "exampleMeaning": "I collect cooking tools."
+ },
+ {
+  "word": "鏡",
+  "reading": "かがみ",
+  "meaning": "mirror",
+  "pos": "noun",
+  "example": "鏡を見て驚いた。",
+  "exampleReading": "かがみをみておどろいた。",
+  "exampleMeaning": "I looked in the mirror and was surprised."
+ },
+ {
+  "word": "一度",
+  "reading": "いちど",
+  "meaning": "once, one time",
+  "pos": "noun",
+  "example": "もう一度言ってください。",
+  "exampleReading": "もういちどいってください。",
+  "exampleMeaning": "Please say it once more.",
+  "tip": "もう一度 = one more time — essential classroom phrase."
+ },
+ {
+  "word": "公務員",
+  "reading": "こうむいん",
+  "meaning": "civil servant",
+  "pos": "noun",
+  "example": "兄は公務員になった。",
+  "exampleReading": "あにはこうむいんになった。",
+  "exampleMeaning": "My brother became a civil servant."
+ },
+ {
+  "word": "出発",
+  "reading": "しゅっぱつ",
+  "meaning": "departure",
+  "pos": "noun",
+  "example": "朝六時に出発する。",
+  "exampleReading": "あさろくじにしゅっぱつする。",
+  "exampleMeaning": "We depart at six in the morning.",
+  "tip": "出発する = to depart; opposite 到着 (arrival)."
+ },
+ {
+  "word": "向かう",
+  "reading": "むかう",
+  "meaning": "to head toward",
+  "pos": "verb",
+  "example": "空港に向かう。",
+  "exampleReading": "くうこうにむかう。",
+  "exampleMeaning": "I head to the airport."
+ },
+ {
+  "word": "戦争",
+  "reading": "せんそう",
+  "meaning": "war",
+  "pos": "noun",
+  "example": "戦争のない世界がいい。",
+  "exampleReading": "せんそうのないせかいがいい。",
+  "exampleMeaning": "A world without war would be good."
+ },
+ {
+  "word": "林",
+  "reading": "はやし",
+  "meaning": "woods, grove",
+  "pos": "noun",
+  "example": "林の中を歩く。",
+  "exampleReading": "はやしのなかをあるく。",
+  "exampleMeaning": "I walk through the woods.",
+  "tip": "林 = small woods; 森 = deeper forest. The kanji stack trees: 木→林→森."
+ },
+ {
+  "word": "港",
+  "reading": "みなと",
+  "meaning": "harbor, port",
+  "pos": "noun",
+  "example": "港に船が着いた。",
+  "exampleReading": "みなとにふねがついた。",
+  "exampleMeaning": "The ship arrived at the harbor."
+ },
+ {
+  "word": "翻訳",
+  "reading": "ほんやく",
+  "meaning": "translation",
+  "pos": "noun",
+  "example": "小説を日本語に翻訳する。",
+  "exampleReading": "しょうせつをにほんごにほんやくする。",
+  "exampleMeaning": "I translate the novel into Japanese.",
+  "tip": "Written translation; interpreting speech is 通訳."
+ },
+ {
+  "word": "あいさつ",
+  "reading": "あいさつ",
+  "meaning": "greeting",
+  "pos": "noun",
+  "example": "朝のあいさつをする。",
+  "exampleReading": "あさのあいさつをする。",
+  "exampleMeaning": "I say the morning greeting.",
+  "tip": "あいさつする = to greet."
+ },
+ {
+  "word": "すると",
+  "reading": "すると",
+  "meaning": "and then, thereupon",
+  "pos": "conjunction",
+  "example": "すると、雨がやんだ。",
+  "exampleReading": "すると、あめがやんだ。",
+  "exampleMeaning": "And then the rain stopped.",
+  "tip": "Connects a result that immediately followed."
+ },
+ {
+  "word": "なるべく",
+  "reading": "なるべく",
+  "meaning": "as much as possible",
+  "pos": "adverb",
+  "example": "なるべく早く来てね。",
+  "exampleReading": "なるべくはやくきてね。",
+  "exampleMeaning": "Come as early as you can."
+ },
+ {
+  "word": "スーツ",
+  "reading": "スーツ",
+  "meaning": "suit",
+  "pos": "noun",
+  "example": "面接にスーツを着る。",
+  "exampleReading": "めんせつにスーツをきる。",
+  "exampleMeaning": "I wear a suit to the interview."
+ },
+ {
+  "word": "丁寧",
+  "reading": "ていねい",
+  "meaning": "polite; careful",
+  "pos": "na-adjective",
+  "example": "丁寧に説明してくれた。",
+  "exampleReading": "ていねいにせつめいしてくれた。",
+  "exampleMeaning": "They explained it to me carefully."
+ },
+ {
+  "word": "正しい",
+  "reading": "ただしい",
+  "meaning": "correct, right",
+  "pos": "i-adjective",
+  "example": "正しい答えを選ぶ。",
+  "exampleReading": "ただしいこたえをえらぶ。",
+  "exampleMeaning": "Choose the correct answer."
+ },
+ {
+  "word": "深い",
+  "reading": "ふかい",
+  "meaning": "deep",
+  "pos": "i-adjective",
+  "example": "この川は深い。",
+  "exampleReading": "このかわはふかい。",
+  "exampleMeaning": "This river is deep."
+ },
+ {
+  "word": "済む",
+  "reading": "すむ",
+  "meaning": "to be finished",
+  "pos": "verb",
+  "example": "宿題が済む。",
+  "exampleReading": "しゅくだいがすむ。",
+  "exampleMeaning": "The homework is finished.",
+  "tip": "すみません comes from this verb."
+ },
+ {
+  "word": "細かい",
+  "reading": "こまかい",
+  "meaning": "fine, detailed; small",
+  "pos": "i-adjective",
+  "example": "細かい字が読めない。",
+  "exampleReading": "こまかいじがよめない。",
+  "exampleMeaning": "I can't read the fine print.",
+  "tip": "細かいお金 = small change."
+ },
+ {
+  "word": "訳",
+  "reading": "わけ",
+  "meaning": "reason; meaning",
+  "pos": "noun",
+  "example": "泣いている訳を聞いた。",
+  "exampleReading": "ないているわけをきいた。",
+  "exampleMeaning": "I asked why they were crying.",
+  "tip": "訳が分からない = it makes no sense."
+ },
+ {
+  "word": "迎える",
+  "reading": "むかえる",
+  "meaning": "to welcome, to pick up",
+  "pos": "verb",
+  "example": "駅で客を迎える。",
+  "exampleReading": "えきできゃくをむかえる。",
+  "exampleMeaning": "I meet the guest at the station.",
+  "tip": "迎えに行く/来る = go/come to pick someone up."
+ },
+ {
+  "word": "しばらく",
+  "reading": "しばらく",
+  "meaning": "for a while",
+  "pos": "adverb",
+  "example": "しばらく待ってください。",
+  "exampleReading": "しばらくまってください。",
+  "exampleMeaning": "Please wait a moment.",
+  "tip": "しばらくですね = long time no see."
+ },
+ {
+  "word": "仕方",
+  "reading": "しかた",
+  "meaning": "way, method",
+  "pos": "noun",
+  "example": "使い方の仕方を教えて。",
+  "exampleReading": "つかいかたのしかたをおしえて。",
+  "exampleMeaning": "Show me how to use it.",
+  "tip": "仕方がない = it can't be helped — a core phrase."
+ },
+ {
+  "word": "付く",
+  "reading": "つく",
+  "meaning": "to be attached; to stick",
+  "pos": "verb",
+  "example": "服に泥が付く。",
+  "exampleReading": "ふくにどろがつく。",
+  "exampleMeaning": "Mud gets on my clothes.",
+  "tip": "Intransitive; the transitive pair is 付ける. 気が付く = to notice."
+ },
+ {
+  "word": "合う",
+  "reading": "あう",
+  "meaning": "to match, to fit",
+  "pos": "verb",
+  "example": "この靴は足に合う。",
+  "exampleReading": "このくつはあしにあう。",
+  "exampleMeaning": "These shoes fit my feet.",
+  "tip": "Verb stem + 合う = do together: 話し合う (discuss)."
+ },
+ {
+  "word": "大分",
+  "reading": "だいぶ",
+  "meaning": "considerably, quite",
+  "pos": "adverb",
+  "example": "大分よくなりました。",
+  "exampleReading": "だいぶよくなりました。",
+  "exampleMeaning": "I've gotten quite a bit better.",
+  "tip": "Often written in kana だいぶ."
+ },
+ {
+  "word": "寺",
+  "reading": "てら",
+  "meaning": "(Buddhist) temple",
+  "pos": "noun",
+  "example": "京都の寺を回る。",
+  "exampleReading": "きょうとのてらをまわる。",
+  "exampleMeaning": "I tour the temples of Kyoto.",
+  "tip": "寺 = Buddhist temple; 神社 = Shinto shrine. Often お寺."
+ },
+ {
+  "word": "払う",
+  "reading": "はらう",
+  "meaning": "to pay",
+  "pos": "verb",
+  "example": "現金で払う。",
+  "exampleReading": "げんきんではらう。",
+  "exampleMeaning": "I pay in cash."
+ },
+ {
+  "word": "森",
+  "reading": "もり",
+  "meaning": "forest",
+  "pos": "noun",
+  "example": "森の中は涼しい。",
+  "exampleReading": "もりのなかはすずしい。",
+  "exampleMeaning": "It's cool inside the forest."
+ },
+ {
+  "word": "湯",
+  "reading": "ゆ",
+  "meaning": "hot water",
+  "pos": "noun",
+  "example": "お湯を沸かす。",
+  "exampleReading": "おゆをわかす。",
+  "exampleMeaning": "I boil water.",
+  "tip": "Almost always お湯. Cold water is 水 — Japanese splits the two."
+ },
+ {
+  "word": "終わり",
+  "reading": "おわり",
+  "meaning": "the end",
+  "pos": "noun",
+  "example": "映画の終わりが良かった。",
+  "exampleReading": "えいがのおわりがよかった。",
+  "exampleMeaning": "The end of the movie was good."
+ },
+ {
+  "word": "習慣",
+  "reading": "しゅうかん",
+  "meaning": "habit, custom",
+  "pos": "noun",
+  "example": "早起きの習慣がある。",
+  "exampleReading": "はやおきのしゅうかんがある。",
+  "exampleMeaning": "I'm in the habit of getting up early."
+ },
+ {
+  "word": "裏",
+  "reading": "うら",
+  "meaning": "back, reverse side",
+  "pos": "noun",
+  "example": "紙の裏に書いて。",
+  "exampleReading": "かみのうらにかいて。",
+  "exampleMeaning": "Write on the back of the paper.",
+  "tip": "Opposite of 表 (おもて)."
+ },
+ {
+  "word": "見つける",
+  "reading": "みつける",
+  "meaning": "to find",
+  "pos": "verb",
+  "example": "いい店を見つける。",
+  "exampleReading": "いいみせをみつける。",
+  "exampleMeaning": "I find a good shop.",
+  "tip": "Transitive; 見つかる = to be found."
+ },
+ {
+  "word": "遠慮",
+  "reading": "えんりょ",
+  "meaning": "restraint, holding back",
+  "pos": "noun",
+  "example": "遠慮しないで食べて。",
+  "exampleReading": "えんりょしないでたべて。",
+  "exampleMeaning": "Don't hold back — eat!",
+  "tip": "遠慮する = to hold back out of politeness — a key cultural word."
+ },
+ {
+  "word": "あ",
+  "reading": "あ",
+  "meaning": "ah!, oh!",
+  "pos": "expression",
+  "example": "あ、財布を忘れた！",
+  "exampleReading": "あ、さいふをわすれた！",
+  "exampleMeaning": "Ah, I forgot my wallet!"
+ },
+ {
+  "word": "おもちゃ",
+  "reading": "おもちゃ",
+  "meaning": "toy",
+  "pos": "noun",
+  "example": "子供におもちゃを買う。",
+  "exampleReading": "こどもにおもちゃをかう。",
+  "exampleMeaning": "I buy the child a toy."
+ },
+ {
+  "word": "きっと",
+  "reading": "きっと",
+  "meaning": "surely, certainly",
+  "pos": "adverb",
+  "example": "きっとうまくいくよ。",
+  "exampleReading": "きっとうまくいくよ。",
+  "exampleMeaning": "It will surely go well."
+ },
+ {
+  "word": "そんなに",
+  "reading": "そんなに",
+  "meaning": "that much, so",
+  "pos": "adverb",
+  "example": "そんなに急がないで。",
+  "exampleReading": "そんなにいそがないで。",
+  "exampleMeaning": "Don't rush so much."
+ },
+ {
+  "word": "できるだけ",
+  "reading": "できるだけ",
+  "meaning": "as much as possible",
+  "pos": "adverb",
+  "example": "できるだけ早く来て。",
+  "exampleReading": "できるだけはやくきて。",
+  "exampleMeaning": "Come as soon as you can."
+ },
+ {
+  "word": "アナウンサー",
+  "reading": "アナウンサー",
+  "meaning": "announcer",
+  "pos": "noun",
+  "example": "彼女はアナウンサーだ。",
+  "exampleReading": "かのじょはアナウンサーだ。",
+  "exampleMeaning": "She is an announcer."
+ },
+ {
+  "word": "ステレオ",
+  "reading": "ステレオ",
+  "meaning": "stereo",
+  "pos": "noun",
+  "example": "ステレオで音楽を聞く。",
+  "exampleReading": "ステレオでおんがくをきく。",
+  "exampleMeaning": "I listen to music on the stereo."
+ },
+ {
+  "word": "久しぶり",
+  "reading": "ひさしぶり",
+  "meaning": "after a long time",
+  "pos": "na-adjective",
+  "example": "久しぶりに友達に会った。",
+  "exampleReading": "ひさしぶりにともだちにあった。",
+  "exampleMeaning": "I met a friend after a long time.",
+  "tip": "お久しぶりです = long time no see."
+ },
+ {
+  "word": "入学",
+  "reading": "にゅうがく",
+  "meaning": "school admission",
+  "pos": "noun",
+  "example": "四月に大学に入学する。",
+  "exampleReading": "しがつにだいがくににゅうがくする。",
+  "exampleMeaning": "I enter university in April.",
+  "tip": "入学する = to enroll; opposite 卒業 (graduation)."
+ },
+ {
+  "word": "建てる",
+  "reading": "たてる",
+  "meaning": "to build",
+  "pos": "verb",
+  "example": "家を建てる。",
+  "exampleReading": "いえをたてる。",
+  "exampleMeaning": "I build a house.",
+  "tip": "Transitive; 建つ (たつ) = something stands built."
+ },
+ {
+  "word": "招待",
+  "reading": "しょうたい",
+  "meaning": "invitation",
+  "pos": "noun",
+  "example": "パーティーに招待する。",
+  "exampleReading": "パーティーにしょうたいする。",
+  "exampleMeaning": "I invite them to the party.",
+  "tip": "招待する = to invite (formally)."
+ },
+ {
+  "word": "無理",
+  "reading": "むり",
+  "meaning": "impossible; unreasonable",
+  "pos": "na-adjective",
+  "example": "それは無理だ。",
+  "exampleReading": "それはむりだ。",
+  "exampleMeaning": "That's impossible.",
+  "tip": "無理しないで = don't overdo it."
+ },
+ {
+  "word": "特急",
+  "reading": "とっきゅう",
+  "meaning": "limited express (train)",
+  "pos": "noun",
+  "example": "特急で東京へ行く。",
+  "exampleReading": "とっきゅうでとうきょうへいく。",
+  "exampleMeaning": "I take the express to Tokyo.",
+  "tip": "Faster than 急行; fewer stops."
+ },
+ {
+  "word": "生きる",
+  "reading": "いきる",
+  "meaning": "to live, to be alive",
+  "pos": "verb",
+  "example": "百歳まで生きる。",
+  "exampleReading": "ひゃくさいまでいきる。",
+  "exampleMeaning": "To live to a hundred.",
+  "tip": "生きる = be alive; 住む = reside; 生活する = live daily life."
+ },
+ {
+  "word": "知らせる",
+  "reading": "しらせる",
+  "meaning": "to inform, to notify",
+  "pos": "verb",
+  "example": "結果を知らせる。",
+  "exampleReading": "けっかをしらせる。",
+  "exampleMeaning": "I'll inform you of the result.",
+  "tip": "お知らせ = a notice/announcement."
+ },
+ {
+  "word": "石",
+  "reading": "いし",
+  "meaning": "stone",
+  "pos": "noun",
+  "example": "川で石を拾う。",
+  "exampleReading": "かわでいしをひろう。",
+  "exampleMeaning": "I pick up stones by the river."
+ },
+ {
+  "word": "砂",
+  "reading": "すな",
+  "meaning": "sand",
+  "pos": "noun",
+  "example": "砂の上を歩く。",
+  "exampleReading": "すなのうえをあるく。",
+  "exampleMeaning": "I walk on the sand."
+ },
+ {
+  "word": "祖父",
+  "reading": "そふ",
+  "meaning": "grandfather",
+  "pos": "noun",
+  "example": "祖父は八十歳だ。",
+  "exampleReading": "そふははちじゅっさいだ。",
+  "exampleMeaning": "My grandfather is eighty.",
+  "tip": "Own grandfather; someone else's is おじいさん."
+ },
+ {
+  "word": "背中",
+  "reading": "せなか",
+  "meaning": "back (of the body)",
+  "pos": "noun",
+  "example": "背中が痛い。",
+  "exampleReading": "せなかがいたい。",
+  "exampleMeaning": "My back hurts."
+ },
+ {
+  "word": "腕",
+  "reading": "うで",
+  "meaning": "arm",
+  "pos": "noun",
+  "example": "腕を組んで待つ。",
+  "exampleReading": "うでをくんでまつ。",
+  "exampleMeaning": "I wait with my arms folded.",
+  "tip": "腕がいい = skilled (lit. good arms)."
+ },
+ {
+  "word": "趣味",
+  "reading": "しゅみ",
+  "meaning": "hobby",
+  "pos": "noun",
+  "example": "趣味は写真です。",
+  "exampleReading": "しゅみはしゃしんです。",
+  "exampleMeaning": "My hobby is photography."
+ },
+ {
+  "word": "込む",
+  "reading": "こむ",
+  "meaning": "to be crowded",
+  "pos": "verb",
+  "example": "夕方は電車が込む。",
+  "exampleReading": "ゆうがたはでんしゃがこむ。",
+  "exampleMeaning": "Trains get crowded in the evening.",
+  "tip": "Usually 込んでいる. Verb-stem+込む = do thoroughly (申し込む)."
+ },
+ {
+  "word": "都合",
+  "reading": "つごう",
+  "meaning": "convenience, circumstances",
+  "pos": "noun",
+  "example": "明日は都合が悪い。",
+  "exampleReading": "あしたはつごうがわるい。",
+  "exampleMeaning": "Tomorrow is inconvenient for me.",
+  "tip": "都合がいい/悪い = convenient/inconvenient."
+ },
+ {
+  "word": "おかげ",
+  "reading": "おかげ",
+  "meaning": "thanks to",
+  "pos": "noun",
+  "example": "あなたのおかげで助かった。",
+  "exampleReading": "あなたのおかげでたすかった。",
+  "exampleMeaning": "Thanks to you, I was saved.",
+  "tip": "おかげさまで = thanks (to you), I'm fine."
+ },
+ {
+  "word": "けが",
+  "reading": "けが",
+  "meaning": "injury",
+  "pos": "noun",
+  "example": "転んでけがをした。",
+  "exampleReading": "ころんでけがをした。",
+  "exampleMeaning": "I fell and got injured.",
+  "tip": "けがをする = to get hurt."
+ },
+ {
+  "word": "中学校",
+  "reading": "ちゅうがっこう",
+  "meaning": "middle school",
+  "pos": "noun",
+  "example": "息子は中学校に入った。",
+  "exampleReading": "むすこはちゅうがっこうにはいった。",
+  "exampleMeaning": "My son started middle school."
+ },
+ {
+  "word": "今度",
+  "reading": "こんど",
+  "meaning": "this time; next time",
+  "pos": "noun",
+  "example": "今度一緒に行こう。",
+  "exampleReading": "こんどいっしょにいこう。",
+  "exampleMeaning": "Let's go together next time.",
+  "tip": "Means both 'this time' and 'next time' — context decides."
+ },
+ {
+  "word": "具合",
+  "reading": "ぐあい",
+  "meaning": "condition, state (of health)",
+  "pos": "noun",
+  "example": "体の具合が悪い。",
+  "exampleReading": "からだのぐあいがわるい。",
+  "exampleMeaning": "I'm not feeling well."
+ },
+ {
+  "word": "変",
+  "reading": "へん",
+  "meaning": "strange, odd",
+  "pos": "na-adjective",
+  "example": "変な音がする。",
+  "exampleReading": "へんなおとがする。",
+  "exampleMeaning": "There's a strange noise."
+ },
+ {
+  "word": "役に立つ",
+  "reading": "やくにたつ",
+  "meaning": "to be useful",
+  "pos": "verb",
+  "example": "この本は役に立つ。",
+  "exampleReading": "このほんはやくにたつ。",
+  "exampleMeaning": "This book is useful."
+ },
+ {
+  "word": "故障",
+  "reading": "こしょう",
+  "meaning": "breakdown, malfunction",
+  "pos": "noun",
+  "example": "車が故障した。",
+  "exampleReading": "くるまがこしょうした。",
+  "exampleMeaning": "The car broke down.",
+  "tip": "故障する = to break down (machines)."
+ },
+ {
+  "word": "棚",
+  "reading": "たな",
+  "meaning": "shelf",
+  "pos": "noun",
+  "example": "本を棚に戻す。",
+  "exampleReading": "ほんをたなにもどす。",
+  "exampleMeaning": "I put the book back on the shelf.",
+  "tip": "本棚 = bookshelf."
+ },
+ {
+  "word": "為",
+  "reading": "ため",
+  "meaning": "for the sake of; because of",
+  "pos": "noun",
+  "example": "健康の為に走る。",
+  "exampleReading": "けんこうのためにはしる。",
+  "exampleMeaning": "I run for my health.",
+  "tip": "Usually kana ため. 〜のために = for the sake of / in order to."
+ },
+ {
+  "word": "美術館",
+  "reading": "びじゅつかん",
+  "meaning": "art museum",
+  "pos": "noun",
+  "example": "美術館で絵を見た。",
+  "exampleReading": "びじゅつかんでえをみた。",
+  "exampleMeaning": "I saw paintings at the art museum."
+ },
+ {
+  "word": "近所",
+  "reading": "きんじょ",
+  "meaning": "neighborhood",
+  "pos": "noun",
+  "example": "近所に新しい店ができた。",
+  "exampleReading": "きんじょにあたらしいみせができた。",
+  "exampleMeaning": "A new shop opened in the neighborhood."
+ },
+ {
+  "word": "遊び",
+  "reading": "あそび",
+  "meaning": "play, fun",
+  "pos": "noun",
+  "example": "遊びに来てください。",
+  "exampleReading": "あそびにきてください。",
+  "exampleMeaning": "Please come over.",
+  "tip": "遊びに行く/来る = to visit (for fun)."
+ },
+ {
+  "word": "首",
+  "reading": "くび",
+  "meaning": "neck",
+  "pos": "noun",
+  "example": "首が痛い。",
+  "exampleReading": "くびがいたい。",
+  "exampleMeaning": "My neck hurts.",
+  "tip": "首になる = to get fired (lit. become a neck)."
+ },
+ {
+  "word": "あげる",
+  "reading": "あげる",
+  "meaning": "to give (to others)",
+  "pos": "verb",
+  "example": "友達に本をあげる。",
+  "exampleReading": "ともだちにほんをあげる。",
+  "exampleMeaning": "I give my friend a book.",
+  "tip": "あげる = give to others; くれる = give to me. て-form+あげる = do a favor."
+ },
+ {
+  "word": "いらっしゃる",
+  "reading": "いらっしゃる",
+  "meaning": "to be/come/go (honorific)",
+  "pos": "verb",
+  "example": "先生がいらっしゃる。",
+  "exampleReading": "せんせいがいらっしゃる。",
+  "exampleMeaning": "The teacher is here/coming.",
+  "tip": "Respectful for いる/来る/行く. Polite form is いらっしゃいます."
+ },
+ {
+  "word": "すっかり",
+  "reading": "すっかり",
+  "meaning": "completely",
+  "pos": "adverb",
+  "example": "すっかり忘れていた。",
+  "exampleReading": "すっかりわすれていた。",
+  "exampleMeaning": "I had completely forgotten."
+ },
+ {
+  "word": "それに",
+  "reading": "それに",
+  "meaning": "besides, moreover",
+  "pos": "conjunction",
+  "example": "安い。それに美味しい。",
+  "exampleReading": "やすい。それにおいしい。",
+  "exampleMeaning": "It's cheap. And tasty too."
+ },
+ {
+  "word": "そろそろ",
+  "reading": "そろそろ",
+  "meaning": "soon, about time",
+  "pos": "adverb",
+  "example": "そろそろ帰ろうか。",
+  "exampleReading": "そろそろかえろうか。",
+  "exampleMeaning": "Shall we head home soon?"
+ },
+ {
+  "word": "たまに",
+  "reading": "たまに",
+  "meaning": "occasionally",
+  "pos": "adverb",
+  "example": "たまに外で食べる。",
+  "exampleReading": "たまにそとでたべる。",
+  "exampleMeaning": "I occasionally eat out."
+ },
+ {
+  "word": "だめ",
+  "reading": "だめ",
+  "meaning": "no good, not allowed",
+  "pos": "na-adjective",
+  "example": "ここで遊んではだめだ。",
+  "exampleReading": "ここであそんではだめだ。",
+  "exampleMeaning": "You mustn't play here.",
+  "tip": "だめ on its own is an emphatic 'no' or 'stop'."
+ },
+ {
+  "word": "やっと",
+  "reading": "やっと",
+  "meaning": "at last, finally",
+  "pos": "adverb",
+  "example": "やっと終わった。",
+  "exampleReading": "やっとおわった。",
+  "exampleMeaning": "It's finally over.",
+  "tip": "Implies relief after effort — warmer than ついに."
+ },
+ {
+  "word": "アクセサリー",
+  "reading": "アクセサリー",
+  "meaning": "accessory, jewelry",
+  "pos": "noun",
+  "example": "アクセサリーを付ける。",
+  "exampleReading": "アクセサリーをつける。",
+  "exampleMeaning": "I put on jewelry."
+ },
+ {
+  "word": "アルバイト",
+  "reading": "アルバイト",
+  "meaning": "part-time job",
+  "pos": "noun",
+  "example": "カフェでアルバイトをする。",
+  "exampleReading": "カフェでアルバイトをする。",
+  "exampleMeaning": "I work part-time at a café.",
+  "tip": "Often shortened to バイト."
+ },
+ {
+  "word": "サラダ",
+  "reading": "サラダ",
+  "meaning": "salad",
+  "pos": "noun",
+  "example": "野菜のサラダを作る。",
+  "exampleReading": "やさいのサラダをつくる。",
+  "exampleMeaning": "I make a vegetable salad."
+ },
+ {
+  "word": "ピアノ",
+  "reading": "ピアノ",
+  "meaning": "piano",
+  "pos": "noun",
+  "example": "妹はピアノを弾く。",
+  "exampleReading": "いもうとはピアノをひく。",
+  "exampleMeaning": "My sister plays the piano."
+ },
+ {
+  "word": "下げる",
+  "reading": "さげる",
+  "meaning": "to lower; to take away",
+  "pos": "verb",
+  "example": "温度を下げる。",
+  "exampleReading": "おんどをさげる。",
+  "exampleMeaning": "I lower the temperature.",
+  "tip": "Transitive; 下がる (さがる) = to drop by itself."
+ },
+ {
+  "word": "下着",
+  "reading": "したぎ",
+  "meaning": "underwear",
+  "pos": "noun",
+  "example": "下着を洗濯する。",
+  "exampleReading": "したぎをせんたくする。",
+  "exampleMeaning": "I wash the underwear."
+ },
+ {
+  "word": "先輩",
+  "reading": "せんぱい",
+  "meaning": "senior (colleague/student)",
+  "pos": "noun",
+  "example": "先輩に教えてもらう。",
+  "exampleReading": "せんぱいにおしえてもらう。",
+  "exampleMeaning": "A senior teaches me.",
+  "tip": "Opposite 後輩 (こうはい). A key social-hierarchy word."
+ },
+ {
+  "word": "冷房",
+  "reading": "れいぼう",
+  "meaning": "air conditioning (cooling)",
+  "pos": "noun",
+  "example": "冷房をつけてください。",
+  "exampleReading": "れいぼうをつけてください。",
+  "exampleMeaning": "Please turn on the AC.",
+  "tip": "冷房 = cooling; 暖房 = heating."
+ },
+ {
+  "word": "台風",
+  "reading": "たいふう",
+  "meaning": "typhoon",
+  "pos": "noun",
+  "example": "台風が近づいている。",
+  "exampleReading": "たいふうがちかづいている。",
+  "exampleMeaning": "A typhoon is approaching."
+ },
+ {
+  "word": "店員",
+  "reading": "てんいん",
+  "meaning": "shop clerk",
+  "pos": "noun",
+  "example": "店員に道を聞く。",
+  "exampleReading": "てんいんにみちをきく。",
+  "exampleMeaning": "I ask the clerk for directions."
+ },
+ {
+  "word": "引き出す",
+  "reading": "ひきだす",
+  "meaning": "to withdraw; to draw out",
+  "pos": "verb",
+  "example": "銀行でお金を引き出す。",
+  "exampleReading": "ぎんこうでおかねをひきだす。",
+  "exampleMeaning": "I withdraw money at the bank."
+ },
+ {
+  "word": "戻る",
+  "reading": "もどる",
+  "meaning": "to return, to go back",
+  "pos": "verb",
+  "example": "席に戻る。",
+  "exampleReading": "せきにもどる。",
+  "exampleMeaning": "I return to my seat.",
+  "tip": "Intransitive; 戻す (もどす) = to put back."
+ },
+ {
+  "word": "揺れる",
+  "reading": "ゆれる",
+  "meaning": "to shake, to sway",
+  "pos": "verb",
+  "example": "地震で家が揺れる。",
+  "exampleReading": "じしんでいえがゆれる。",
+  "exampleMeaning": "The house shakes in the earthquake."
+ },
+ {
+  "word": "日記",
+  "reading": "にっき",
+  "meaning": "diary",
+  "pos": "noun",
+  "example": "毎晩日記を書く。",
+  "exampleReading": "まいばんにっきをかく。",
+  "exampleMeaning": "I write in my diary every night."
+ },
+ {
+  "word": "柔らかい",
+  "reading": "やわらかい",
+  "meaning": "soft",
+  "pos": "i-adjective",
+  "example": "この肉は柔らかい。",
+  "exampleReading": "このにくはやわらかい。",
+  "exampleMeaning": "This meat is tender.",
+  "tip": "Opposite of 硬い (かたい)."
+ },
+ {
+  "word": "皆",
+  "reading": "みな",
+  "meaning": "everyone, all",
+  "pos": "noun",
+  "example": "皆で写真を撮る。",
+  "exampleReading": "みなでしゃしんをとる。",
+  "exampleMeaning": "We all take a photo.",
+  "tip": "皆 read みな is a touch more formal than みんな."
+ },
+ {
+  "word": "花見",
+  "reading": "はなみ",
+  "meaning": "cherry-blossom viewing",
+  "pos": "noun",
+  "example": "公園で花見をする。",
+  "exampleReading": "こうえんではなみをする。",
+  "exampleMeaning": "We do hanami in the park.",
+  "tip": "The spring tradition of viewing 桜 (cherry blossoms)."
+ },
+ {
+  "word": "見つかる",
+  "reading": "みつかる",
+  "meaning": "to be found",
+  "pos": "verb",
+  "example": "なくした鍵が見つかる。",
+  "exampleReading": "なくしたかぎがみつかる。",
+  "exampleMeaning": "The lost key is found.",
+  "tip": "Intransitive; 見つける = to find (transitive)."
+ },
+ {
+  "word": "貿易",
+  "reading": "ぼうえき",
+  "meaning": "trade (commerce)",
+  "pos": "noun",
+  "example": "貿易の仕事をしている。",
+  "exampleReading": "ぼうえきのしごとをしている。",
+  "exampleMeaning": "I work in trade."
+ },
+ {
+  "word": "遠く",
+  "reading": "とおく",
+  "meaning": "far away, distance",
+  "pos": "noun",
+  "example": "遠くに山が見える。",
+  "exampleReading": "とおくにやまがみえる。",
+  "exampleMeaning": "I can see mountains in the distance.",
+  "tip": "Opposite: 近く (nearby)."
+ },
+ {
+  "word": "あんな",
+  "reading": "あんな",
+  "meaning": "that kind of",
+  "pos": "prenominal",
+  "example": "あんな店には行かない。",
+  "exampleReading": "あんなみせにはいかない。",
+  "exampleMeaning": "I won't go to a shop like that.",
+  "tip": "こんな (this kind), そんな (that kind), あんな (that kind, distant)."
+ },
+ {
+  "word": "お祝い",
+  "reading": "おいわい",
+  "meaning": "celebration, congratulations",
+  "pos": "noun",
+  "example": "合格のお祝いをする。",
+  "exampleReading": "ごうかくのおいわいをする。",
+  "exampleMeaning": "We celebrate passing the exam.",
+  "tip": "お祝いする = to celebrate."
+ },
+ {
+  "word": "くださる",
+  "reading": "くださる",
+  "meaning": "to give (honorific, to me)",
+  "pos": "verb",
+  "example": "先生が本をくださる。",
+  "exampleReading": "せんせいがほんをくださる。",
+  "exampleMeaning": "The teacher gives me a book.",
+  "tip": "Respectful くれる. Polite form is くださいます."
+ },
+ {
+  "word": "ご存じ",
+  "reading": "ごぞんじ",
+  "meaning": "knowing (honorific)",
+  "pos": "noun",
+  "example": "あの店をご存じですか。",
+  "exampleReading": "あのみせをごぞんじですか。",
+  "exampleMeaning": "Do you know that shop?",
+  "tip": "Respectful form of 知っている, used about the listener."
+ },
+ {
+  "word": "たいてい",
+  "reading": "たいてい",
+  "meaning": "usually, mostly",
+  "pos": "adverb",
+  "example": "朝はたいていパンを食べる。",
+  "exampleReading": "あさはたいていパンをたべる。",
+  "exampleMeaning": "I usually eat bread in the morning."
+ },
+ {
+  "word": "亡くなる",
+  "reading": "なくなる",
+  "meaning": "to pass away",
+  "pos": "verb",
+  "example": "有名な人が亡くなる。",
+  "exampleReading": "ゆうめいなひとがなくなる。",
+  "exampleMeaning": "A famous person passes away.",
+  "tip": "Polite way to say 死ぬ about people."
+ },
+ {
+  "word": "アルコール",
+  "reading": "アルコール",
+  "meaning": "alcohol",
+  "pos": "noun",
+  "example": "アルコールは飲めない。",
+  "exampleReading": "アルコールはのめない。",
+  "exampleMeaning": "I can't drink alcohol."
+ },
+ {
+  "word": "上る",
+  "reading": "のぼる",
+  "meaning": "to climb, to go up",
+  "pos": "verb",
+  "example": "坂を上る。",
+  "exampleReading": "さかをのぼる。",
+  "exampleMeaning": "I go up the hill.",
+  "tip": "上る = go up a slope/stairs; 上がる (あがる) = rise/step up."
+ },
+ {
+  "word": "光る",
+  "reading": "ひかる",
+  "meaning": "to shine, to glitter",
+  "pos": "verb",
+  "example": "星が光る。",
+  "exampleReading": "ほしがひかる。",
+  "exampleMeaning": "The stars shine."
+ },
+ {
+  "word": "写す",
+  "reading": "うつす",
+  "meaning": "to copy; to photograph",
+  "pos": "verb",
+  "example": "ノートを写す。",
+  "exampleReading": "ノートをうつす。",
+  "exampleMeaning": "I copy the notes.",
+  "tip": "写真を写す = to take a photo (also 撮る)."
+ },
+ {
+  "word": "包む",
+  "reading": "つつむ",
+  "meaning": "to wrap",
+  "pos": "verb",
+  "example": "プレゼントを包む。",
+  "exampleReading": "プレゼントをつつむ。",
+  "exampleMeaning": "I wrap the present."
+ },
+ {
+  "word": "坂",
+  "reading": "さか",
+  "meaning": "slope, hill",
+  "pos": "noun",
+  "example": "急な坂を上る。",
+  "exampleReading": "きゅうなさかをのぼる。",
+  "exampleMeaning": "I climb a steep slope."
+ },
+ {
+  "word": "布団",
+  "reading": "ふとん",
+  "meaning": "futon, bedding",
+  "pos": "noun",
+  "example": "布団を敷いて寝る。",
+  "exampleReading": "ふとんをしいてねる。",
+  "exampleMeaning": "I lay out the futon and sleep."
+ }
+]

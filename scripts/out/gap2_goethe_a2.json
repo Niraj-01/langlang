@@ -1,0 +1,1267 @@
+[
+ {
+  "word": "Wald",
+  "article": "der",
+  "plural": "Wälder",
+  "meaning": "forest, woods",
+  "pos": "noun",
+  "example": "Wir gehen im Wald spazieren.",
+  "exampleMeaning": "We go for a walk in the forest."
+ },
+ {
+  "word": "Kleid",
+  "article": "das",
+  "plural": "Kleider",
+  "meaning": "dress",
+  "pos": "noun",
+  "example": "Sie trägt ein rotes Kleid.",
+  "exampleMeaning": "She's wearing a red dress.",
+  "tip": "Plural Kleider can also mean 'clothes' in general."
+ },
+ {
+  "word": "Band",
+  "article": "die",
+  "plural": "Bands",
+  "meaning": "band (music)",
+  "pos": "noun",
+  "example": "Meine Schwester spielt in einer Band.",
+  "exampleMeaning": "My sister plays in a band.",
+  "tip": "die Band = music group; das Band = ribbon/tape (different gender)."
+ },
+ {
+  "word": "furchtbar",
+  "meaning": "terrible, awful",
+  "pos": "adjective",
+  "example": "Das Wetter ist furchtbar.",
+  "exampleMeaning": "The weather is awful.",
+  "tip": "Also intensifier: furchtbar müde = terribly tired."
+ },
+ {
+  "word": "drinnen",
+  "meaning": "inside",
+  "pos": "adverb",
+  "example": "Bei Regen bleiben wir drinnen.",
+  "exampleMeaning": "When it rains we stay inside.",
+  "tip": "Opposite of draußen."
+ },
+ {
+  "word": "Schwein",
+  "article": "das",
+  "plural": "Schweine",
+  "meaning": "pig; pork",
+  "pos": "noun",
+  "example": "Ich esse kein Schwein.",
+  "exampleMeaning": "I don't eat pork.",
+  "tip": "Schwein haben = to be lucky (idiom)."
+ },
+ {
+  "word": "vorne",
+  "meaning": "at the front",
+  "pos": "adverb",
+  "example": "Wir sitzen ganz vorne.",
+  "exampleMeaning": "We're sitting right at the front.",
+  "tip": "Opposite of hinten. vorn is the same word."
+ },
+ {
+  "word": "Messer",
+  "article": "das",
+  "plural": "Messer",
+  "meaning": "knife",
+  "pos": "noun",
+  "example": "Das Messer ist sehr scharf.",
+  "exampleMeaning": "The knife is very sharp."
+ },
+ {
+  "word": "gesund",
+  "meaning": "healthy",
+  "pos": "adjective",
+  "example": "Obst ist gesund.",
+  "exampleMeaning": "Fruit is healthy.",
+  "tip": "Opposite of krank. Comparative: gesünder."
+ },
+ {
+  "word": "pro",
+  "meaning": "per",
+  "pos": "preposition",
+  "example": "Es kostet zwei Euro pro Stück.",
+  "exampleMeaning": "It costs two euros per piece.",
+  "tip": "einmal pro Woche = once a week."
+ },
+ {
+  "word": "Ball",
+  "article": "der",
+  "plural": "Bälle",
+  "meaning": "ball",
+  "pos": "noun",
+  "example": "Die Kinder spielen mit dem Ball.",
+  "exampleMeaning": "The children are playing with the ball."
+ },
+ {
+  "word": "schwanger",
+  "meaning": "pregnant",
+  "pos": "adjective",
+  "example": "Meine Schwester ist schwanger.",
+  "exampleMeaning": "My sister is pregnant."
+ },
+ {
+  "word": "Eis",
+  "article": "das",
+  "plural": "Eis",
+  "meaning": "ice; ice cream",
+  "pos": "noun",
+  "example": "Im Sommer essen wir viel Eis.",
+  "exampleMeaning": "In summer we eat a lot of ice cream.",
+  "tip": "Both ice and ice cream."
+ },
+ {
+  "word": "Schmerz",
+  "article": "der",
+  "plural": "Schmerzen",
+  "meaning": "pain",
+  "pos": "noun",
+  "example": "Ich habe Schmerzen im Rücken.",
+  "exampleMeaning": "I have pain in my back.",
+  "tip": "Usually plural Schmerzen for bodily pain."
+ },
+ {
+  "word": "schwierig",
+  "meaning": "difficult",
+  "pos": "adjective",
+  "example": "Die Prüfung war sehr schwierig.",
+  "exampleMeaning": "The exam was very difficult.",
+  "tip": "≈ schwer (in the 'hard' sense)."
+ },
+ {
+  "word": "Ring",
+  "article": "der",
+  "plural": "Ringe",
+  "meaning": "ring",
+  "pos": "noun",
+  "example": "Sie trägt einen goldenen Ring.",
+  "exampleMeaning": "She wears a gold ring."
+ },
+ {
+  "word": "fantastisch",
+  "meaning": "fantastic",
+  "pos": "adjective",
+  "example": "Das Essen war fantastisch.",
+  "exampleMeaning": "The food was fantastic."
+ },
+ {
+  "word": "Insel",
+  "article": "die",
+  "plural": "Inseln",
+  "meaning": "island",
+  "pos": "noun",
+  "example": "Wir machen Urlaub auf einer Insel.",
+  "exampleMeaning": "We're vacationing on an island."
+ },
+ {
+  "word": "einverstanden",
+  "meaning": "in agreement, okay",
+  "pos": "adjective",
+  "example": "Bist du einverstanden?",
+  "exampleMeaning": "Do you agree?",
+  "tip": "einverstanden sein mit + dative = to agree with."
+ },
+ {
+  "word": "bauen",
+  "meaning": "to build",
+  "pos": "verb",
+  "example": "Sie bauen ein neues Haus.",
+  "exampleMeaning": "They're building a new house."
+ },
+ {
+  "word": "hängen",
+  "meaning": "to hang",
+  "pos": "verb",
+  "example": "Bilder hängen an der Wand.",
+  "exampleMeaning": "Pictures hang on the wall.",
+  "tip": "Same form for hanging (state) and hanging up (action)."
+ },
+ {
+  "word": "unternehmen",
+  "meaning": "to do, to undertake",
+  "pos": "verb",
+  "example": "Was wollen wir heute unternehmen?",
+  "exampleMeaning": "What shall we do today?",
+  "tip": "For activities/outings: etwas unternehmen = to do something."
+ },
+ {
+  "word": "unterhalten",
+  "meaning": "to converse; to entertain",
+  "pos": "verb",
+  "example": "Wir unterhalten uns gern.",
+  "exampleMeaning": "We enjoy chatting.",
+  "tip": "sich unterhalten = to have a conversation."
+ },
+ {
+  "word": "beenden",
+  "meaning": "to finish, to end",
+  "pos": "verb",
+  "example": "Wir müssen das Projekt beenden.",
+  "exampleMeaning": "We have to finish the project.",
+  "tip": "Transitive; enden is intransitive (to end by itself)."
+ },
+ {
+  "word": "Park",
+  "article": "der",
+  "plural": "Parks",
+  "meaning": "park",
+  "pos": "noun",
+  "example": "Wir joggen im Park.",
+  "exampleMeaning": "We jog in the park."
+ },
+ {
+  "word": "Unterschied",
+  "article": "der",
+  "plural": "Unterschiede",
+  "meaning": "difference",
+  "pos": "noun",
+  "example": "Was ist der Unterschied?",
+  "exampleMeaning": "What's the difference?"
+ },
+ {
+  "word": "Interesse",
+  "article": "das",
+  "plural": "Interessen",
+  "meaning": "interest",
+  "pos": "noun",
+  "example": "Ich habe kein Interesse daran.",
+  "exampleMeaning": "I have no interest in it.",
+  "tip": "Interesse haben an + dative = to be interested in."
+ },
+ {
+  "word": "blöd",
+  "meaning": "stupid, silly",
+  "pos": "adjective",
+  "example": "Das war eine blöde Idee.",
+  "exampleMeaning": "That was a stupid idea.",
+  "tip": "Colloquial; ≈ dumm."
+ },
+ {
+  "word": "aufpassen",
+  "meaning": "to pay attention; to watch out",
+  "pos": "verb",
+  "example": "Du musst besser aufpassen.",
+  "exampleMeaning": "You have to pay closer attention.",
+  "tip": "Separable: ich passe auf. aufpassen auf + accusative = look after."
+ },
+ {
+  "word": "Lüge",
+  "article": "die",
+  "plural": "Lügen",
+  "meaning": "lie",
+  "pos": "noun",
+  "example": "Das ist eine Lüge!",
+  "exampleMeaning": "That's a lie!",
+  "tip": "From lügen (to lie)."
+ },
+ {
+  "word": "Brücke",
+  "article": "die",
+  "plural": "Brücken",
+  "meaning": "bridge",
+  "pos": "noun",
+  "example": "Wir gehen über die Brücke.",
+  "exampleMeaning": "We walk across the bridge."
+ },
+ {
+  "word": "leer",
+  "meaning": "empty",
+  "pos": "adjective",
+  "example": "Die Flasche ist leer.",
+  "exampleMeaning": "The bottle is empty.",
+  "tip": "Opposite of voll."
+ },
+ {
+  "word": "Keller",
+  "article": "der",
+  "plural": "Keller",
+  "meaning": "cellar, basement",
+  "pos": "noun",
+  "example": "Der Wein ist im Keller.",
+  "exampleMeaning": "The wine is in the cellar."
+ },
+ {
+  "word": "weinen",
+  "meaning": "to cry",
+  "pos": "verb",
+  "example": "Warum weinen die Kinder?",
+  "exampleMeaning": "Why are the children crying?"
+ },
+ {
+  "word": "wünschen",
+  "meaning": "to wish",
+  "pos": "verb",
+  "example": "Wir wünschen dir alles Gute.",
+  "exampleMeaning": "We wish you all the best.",
+  "tip": "sich etwas wünschen = to wish for something."
+ },
+ {
+  "word": "Schloss",
+  "article": "das",
+  "plural": "Schlösser",
+  "meaning": "castle; lock",
+  "pos": "noun",
+  "example": "Wir besuchen ein altes Schloss.",
+  "exampleMeaning": "We're visiting an old castle.",
+  "tip": "Both castle and door lock."
+ },
+ {
+  "word": "Tier",
+  "article": "das",
+  "plural": "Tiere",
+  "meaning": "animal",
+  "pos": "noun",
+  "example": "Welches Tier magst du?",
+  "exampleMeaning": "Which animal do you like?"
+ },
+ {
+  "word": "Rose",
+  "article": "die",
+  "plural": "Rosen",
+  "meaning": "rose",
+  "pos": "noun",
+  "example": "Er schenkt ihr rote Rosen.",
+  "exampleMeaning": "He gives her red roses."
+ },
+ {
+  "word": "Club",
+  "article": "der",
+  "plural": "Clubs",
+  "meaning": "club",
+  "pos": "noun",
+  "example": "Wir tanzen im Club.",
+  "exampleMeaning": "We dance at the club."
+ },
+ {
+  "word": "vorwärts",
+  "meaning": "forward",
+  "pos": "adverb",
+  "example": "Bitte gehen Sie vorwärts.",
+  "exampleMeaning": "Please move forward.",
+  "tip": "Opposite of rückwärts."
+ },
+ {
+  "word": "hoffen",
+  "meaning": "to hope",
+  "pos": "verb",
+  "example": "Wir hoffen auf gutes Wetter.",
+  "exampleMeaning": "We hope for good weather.",
+  "tip": "hoffen auf + accusative = to hope for."
+ },
+ {
+  "word": "dringend",
+  "meaning": "urgent",
+  "pos": "adjective",
+  "example": "Ich muss dringend mit dir reden.",
+  "exampleMeaning": "I urgently need to talk to you."
+ },
+ {
+  "word": "stören",
+  "meaning": "to disturb, to bother",
+  "pos": "verb",
+  "example": "Darf ich Sie kurz stören?",
+  "exampleMeaning": "May I bother you for a moment?",
+  "tip": "Stört es dich, wenn...? = does it bother you if...?"
+ },
+ {
+  "word": "Hose",
+  "article": "die",
+  "plural": "Hosen",
+  "meaning": "trousers, pants",
+  "pos": "noun",
+  "example": "Die Hose ist zu eng.",
+  "exampleMeaning": "The trousers are too tight.",
+  "tip": "Singular in German: eine Hose = one pair of pants."
+ },
+ {
+  "word": "Natur",
+  "article": "die",
+  "plural": "Naturen",
+  "meaning": "nature",
+  "pos": "noun",
+  "example": "Ich bin gern in der Natur.",
+  "exampleMeaning": "I like being in nature."
+ },
+ {
+  "word": "Flug",
+  "article": "der",
+  "plural": "Flüge",
+  "meaning": "flight",
+  "pos": "noun",
+  "example": "Der Flug dauert zwei Stunden.",
+  "exampleMeaning": "The flight lasts two hours."
+ },
+ {
+  "word": "mindestens",
+  "meaning": "at least",
+  "pos": "adverb",
+  "example": "Es kostet mindestens zwanzig Euro.",
+  "exampleMeaning": "It costs at least twenty euros."
+ },
+ {
+  "word": "Wunsch",
+  "article": "der",
+  "plural": "Wünsche",
+  "meaning": "wish",
+  "pos": "noun",
+  "example": "Hast du einen besonderen Wunsch?",
+  "exampleMeaning": "Do you have a special wish?",
+  "tip": "auf Wunsch = on request."
+ },
+ {
+  "word": "Reihe",
+  "article": "die",
+  "plural": "Reihen",
+  "meaning": "row; series",
+  "pos": "noun",
+  "example": "Wir sitzen in der ersten Reihe.",
+  "exampleMeaning": "We're sitting in the first row.",
+  "tip": "Ich bin an der Reihe = it's my turn."
+ },
+ {
+  "word": "Vogel",
+  "article": "der",
+  "plural": "Vögel",
+  "meaning": "bird",
+  "pos": "noun",
+  "example": "Ein Vogel singt im Baum.",
+  "exampleMeaning": "A bird sings in the tree."
+ },
+ {
+  "word": "Strand",
+  "article": "der",
+  "plural": "Strände",
+  "meaning": "beach",
+  "pos": "noun",
+  "example": "Wir liegen am Strand.",
+  "exampleMeaning": "We're lying on the beach."
+ },
+ {
+  "word": "langweilig",
+  "meaning": "boring",
+  "pos": "adjective",
+  "example": "Der Film war langweilig.",
+  "exampleMeaning": "The film was boring.",
+  "tip": "sich langweilen = to be bored."
+ },
+ {
+  "word": "Gang",
+  "article": "der",
+  "plural": "Gänge",
+  "meaning": "corridor; gear; course",
+  "pos": "noun",
+  "example": "Die Toilette ist am Ende des Gangs.",
+  "exampleMeaning": "The toilet is at the end of the corridor.",
+  "tip": "Also a gear (im ersten Gang) or a course of a meal."
+ },
+ {
+  "word": "Radio",
+  "article": "das",
+  "plural": "Radios",
+  "meaning": "radio",
+  "pos": "noun",
+  "example": "Ich höre morgens Radio.",
+  "exampleMeaning": "I listen to the radio in the mornings."
+ },
+ {
+  "word": "Fluss",
+  "article": "der",
+  "plural": "Flüsse",
+  "meaning": "river",
+  "pos": "noun",
+  "example": "Der Fluss ist sehr breit.",
+  "exampleMeaning": "The river is very wide."
+ },
+ {
+  "word": "beeilen",
+  "meaning": "to hurry",
+  "pos": "verb",
+  "example": "Wir müssen uns beeilen.",
+  "exampleMeaning": "We have to hurry.",
+  "tip": "Always reflexive: sich beeilen."
+ },
+ {
+  "word": "klug",
+  "meaning": "clever, smart",
+  "pos": "adjective",
+  "example": "Sie ist ein kluges Kind.",
+  "exampleMeaning": "She is a clever child.",
+  "tip": "≈ intelligent. Comparative: klüger."
+ },
+ {
+  "word": "außerhalb",
+  "meaning": "outside of",
+  "pos": "preposition",
+  "example": "Sie wohnt außerhalb der Stadt.",
+  "exampleMeaning": "She lives outside the city.",
+  "tip": "Takes the genitive: außerhalb der Stadt."
+ },
+ {
+  "word": "schwach",
+  "meaning": "weak",
+  "pos": "adjective",
+  "example": "Nach der Krankheit war er schwach.",
+  "exampleMeaning": "After the illness he was weak.",
+  "tip": "Opposite of stark. Comparative: schwächer."
+ },
+ {
+  "word": "merken",
+  "meaning": "to notice; to remember",
+  "pos": "verb",
+  "example": "Ich kann mir das nicht merken.",
+  "exampleMeaning": "I can't remember that.",
+  "tip": "sich etwas merken = to memorize; merken alone = to notice."
+ },
+ {
+  "word": "warm",
+  "meaning": "warm",
+  "pos": "adjective",
+  "example": "Das Wasser ist schön warm.",
+  "exampleMeaning": "The water is nice and warm.",
+  "tip": "Irregular comparative: warm → wärmer."
+ },
+ {
+  "word": "raten",
+  "meaning": "to guess; to advise",
+  "pos": "verb",
+  "example": "Kannst du raten, wie alt ich bin?",
+  "exampleMeaning": "Can you guess how old I am?",
+  "tip": "Irregular: du rätst. Also advise: Ich rate dir zu warten."
+ },
+ {
+  "word": "Kunst",
+  "article": "die",
+  "plural": "Künste",
+  "meaning": "art",
+  "pos": "noun",
+  "example": "Sie studiert Kunst.",
+  "exampleMeaning": "She studies art."
+ },
+ {
+  "word": "Krankheit",
+  "article": "die",
+  "plural": "Krankheiten",
+  "meaning": "illness, disease",
+  "pos": "noun",
+  "example": "Er hat eine schwere Krankheit.",
+  "exampleMeaning": "He has a serious illness.",
+  "tip": "From krank (sick)."
+ },
+ {
+  "word": "Anzug",
+  "article": "der",
+  "plural": "Anzüge",
+  "meaning": "suit",
+  "pos": "noun",
+  "example": "Zur Hochzeit trägt er einen Anzug.",
+  "exampleMeaning": "He wears a suit to the wedding."
+ },
+ {
+  "word": "dunkel",
+  "meaning": "dark",
+  "pos": "adjective",
+  "example": "Draußen ist es schon dunkel.",
+  "exampleMeaning": "It's already dark outside.",
+  "tip": "Drops the e with endings: ein dunkler Raum. Opposite: hell."
+ },
+ {
+  "word": "gezogen",
+  "meaning": "pulled; moved",
+  "pos": "adjective",
+  "example": "Wir sind letztes Jahr nach Berlin gezogen.",
+  "exampleMeaning": "We moved to Berlin last year.",
+  "tip": "Past participle of ziehen; umziehen = to move house."
+ },
+ {
+  "word": "kontrollieren",
+  "meaning": "to check, to control",
+  "pos": "verb",
+  "example": "Die Polizei kontrolliert die Pässe.",
+  "exampleMeaning": "The police check the passports."
+ },
+ {
+  "word": "Programm",
+  "article": "das",
+  "plural": "Programme",
+  "meaning": "program",
+  "pos": "noun",
+  "example": "Was ist heute im Programm?",
+  "exampleMeaning": "What's on the program today?"
+ },
+ {
+  "word": "freundlich",
+  "meaning": "friendly, kind",
+  "pos": "adjective",
+  "example": "Die Verkäuferin war sehr freundlich.",
+  "exampleMeaning": "The saleswoman was very friendly.",
+  "tip": "Mit freundlichen Grüßen = kind regards (letter closing)."
+ },
+ {
+  "word": "dick",
+  "meaning": "thick; fat",
+  "pos": "adjective",
+  "example": "Das Buch ist sehr dick.",
+  "exampleMeaning": "The book is very thick.",
+  "tip": "Opposite of dünn."
+ },
+ {
+  "word": "ausgehen",
+  "meaning": "to go out",
+  "pos": "verb",
+  "example": "Wir wollen heute Abend ausgehen.",
+  "exampleMeaning": "We want to go out this evening.",
+  "tip": "Separable: ich gehe aus. Perfect with sein."
+ },
+ {
+  "word": "wählen",
+  "meaning": "to choose; to vote; to dial",
+  "pos": "verb",
+  "example": "Sie können frei wählen.",
+  "exampleMeaning": "You can choose freely.",
+  "tip": "Also to vote in elections and to dial a number."
+ },
+ {
+  "word": "Theater",
+  "article": "das",
+  "plural": "Theater",
+  "meaning": "theater",
+  "pos": "noun",
+  "example": "Wir gehen heute ins Theater.",
+  "exampleMeaning": "We're going to the theater today."
+ },
+ {
+  "word": "streiten",
+  "meaning": "to argue, to quarrel",
+  "pos": "verb",
+  "example": "Die Brüder streiten oft.",
+  "exampleMeaning": "The brothers argue often.",
+  "tip": "sich streiten mit + dative = to quarrel with."
+ },
+ {
+  "word": "Star",
+  "article": "der",
+  "plural": "Stars",
+  "meaning": "star (celebrity)",
+  "pos": "noun",
+  "example": "Sie ist ein großer Star.",
+  "exampleMeaning": "She's a big star."
+ },
+ {
+  "word": "weitermachen",
+  "meaning": "to carry on, to continue",
+  "pos": "verb",
+  "example": "Wir müssen weitermachen.",
+  "exampleMeaning": "We have to keep going.",
+  "tip": "Separable: ich mache weiter."
+ },
+ {
+  "word": "zurückkommen",
+  "meaning": "to come back",
+  "pos": "verb",
+  "example": "Wann wirst du zurückkommen?",
+  "exampleMeaning": "When will you come back?",
+  "tip": "Separable: ich komme zurück. Perfect with sein."
+ },
+ {
+  "word": "untersuchen",
+  "meaning": "to examine",
+  "pos": "verb",
+  "example": "Der Arzt will mich untersuchen.",
+  "exampleMeaning": "The doctor wants to examine me.",
+  "tip": "Inseparable, so no ge- in the participle: hat untersucht."
+ },
+ {
+  "word": "Gegenteil",
+  "article": "das",
+  "plural": "Gegenteile",
+  "meaning": "opposite",
+  "pos": "noun",
+  "example": "Das Gegenteil von groß ist klein.",
+  "exampleMeaning": "The opposite of big is small.",
+  "tip": "im Gegenteil = on the contrary."
+ },
+ {
+  "word": "scharf",
+  "meaning": "sharp; spicy",
+  "pos": "adjective",
+  "example": "Das Curry ist sehr scharf.",
+  "exampleMeaning": "The curry is very spicy.",
+  "tip": "Both sharp (knife) and spicy (food). Comparative: schärfer."
+ },
+ {
+  "word": "Projekt",
+  "article": "das",
+  "plural": "Projekte",
+  "meaning": "project",
+  "pos": "noun",
+  "example": "Wir arbeiten an einem neuen Projekt.",
+  "exampleMeaning": "We're working on a new project."
+ },
+ {
+  "word": "zuletzt",
+  "meaning": "last, finally",
+  "pos": "adverb",
+  "example": "Wann warst du zuletzt hier?",
+  "exampleMeaning": "When were you last here?"
+ },
+ {
+  "word": "Ohr",
+  "article": "das",
+  "plural": "Ohren",
+  "meaning": "ear",
+  "pos": "noun",
+  "example": "Mir tut das Ohr weh.",
+  "exampleMeaning": "My ear hurts."
+ },
+ {
+  "word": "frisch",
+  "meaning": "fresh",
+  "pos": "adjective",
+  "example": "Das Brot ist ganz frisch.",
+  "exampleMeaning": "The bread is very fresh."
+ },
+ {
+  "word": "Artikel",
+  "article": "der",
+  "plural": "Artikel",
+  "meaning": "article",
+  "pos": "noun",
+  "example": "Ich lese einen Artikel in der Zeitung.",
+  "exampleMeaning": "I'm reading an article in the newspaper.",
+  "tip": "Newspaper article, product item, or grammatical article."
+ },
+ {
+  "word": "probieren",
+  "meaning": "to try, to taste",
+  "pos": "verb",
+  "example": "Willst du den Kuchen probieren?",
+  "exampleMeaning": "Do you want to try the cake?",
+  "tip": "≈ versuchen, but probieren often means 'taste/sample'."
+ },
+ {
+  "word": "vorn",
+  "meaning": "at the front",
+  "pos": "adverb",
+  "example": "Der Fahrer sitzt vorn.",
+  "exampleMeaning": "The driver sits at the front.",
+  "tip": "Same as vorne. Opposite: hinten."
+ },
+ {
+  "word": "aufmachen",
+  "meaning": "to open",
+  "pos": "verb",
+  "example": "Kannst du die Tür aufmachen?",
+  "exampleMeaning": "Can you open the door?",
+  "tip": "Separable: ich mache auf. Everyday word for öffnen."
+ },
+ {
+  "word": "Erlaubnis",
+  "article": "die",
+  "plural": "Erlaubnisse",
+  "meaning": "permission",
+  "pos": "noun",
+  "example": "Ich brauche die Erlaubnis meiner Eltern.",
+  "exampleMeaning": "I need my parents' permission.",
+  "tip": "From erlauben (to allow)."
+ },
+ {
+  "word": "packen",
+  "meaning": "to pack",
+  "pos": "verb",
+  "example": "Ich muss meinen Koffer packen.",
+  "exampleMeaning": "I have to pack my suitcase.",
+  "tip": "Opposite: auspacken (to unpack)."
+ },
+ {
+  "word": "Motor",
+  "article": "der",
+  "plural": "Motoren",
+  "meaning": "engine, motor",
+  "pos": "noun",
+  "example": "Der Motor ist kaputt.",
+  "exampleMeaning": "The engine is broken."
+ },
+ {
+  "word": "Berg",
+  "article": "der",
+  "plural": "Berge",
+  "meaning": "mountain",
+  "pos": "noun",
+  "example": "Im Winter fahren wir in die Berge.",
+  "exampleMeaning": "In winter we go to the mountains."
+ },
+ {
+  "word": "tschüs",
+  "meaning": "bye",
+  "pos": "expression",
+  "example": "Tschüs, bis morgen!",
+  "exampleMeaning": "Bye, see you tomorrow!",
+  "tip": "Casual goodbye; also spelled tschüss."
+ },
+ {
+  "word": "wehtun",
+  "meaning": "to hurt",
+  "pos": "verb",
+  "example": "Die neuen Schuhe können wehtun.",
+  "exampleMeaning": "The new shoes can hurt.",
+  "tip": "Often written weh tun. The body part takes dative: Der Kopf tut mir weh."
+ },
+ {
+  "word": "Gerät",
+  "article": "das",
+  "plural": "Geräte",
+  "meaning": "device, appliance",
+  "pos": "noun",
+  "example": "Das Gerät funktioniert nicht.",
+  "exampleMeaning": "The device isn't working."
+ },
+ {
+  "word": "interessieren",
+  "meaning": "to interest",
+  "pos": "verb",
+  "example": "Sport könnte dich interessieren.",
+  "exampleMeaning": "Sport might interest you.",
+  "tip": "sich interessieren für + accusative = to be interested in."
+ },
+ {
+  "word": "zuhören",
+  "meaning": "to listen",
+  "pos": "verb",
+  "example": "Bitte gut zuhören!",
+  "exampleMeaning": "Please listen carefully!",
+  "tip": "Separable: ich höre zu. The speaker takes dative: jemandem zuhören."
+ },
+ {
+  "word": "Schlafzimmer",
+  "article": "das",
+  "plural": "Schlafzimmer",
+  "meaning": "bedroom",
+  "pos": "noun",
+  "example": "Das Schlafzimmer ist oben.",
+  "exampleMeaning": "The bedroom is upstairs."
+ },
+ {
+  "word": "Vorschlag",
+  "article": "der",
+  "plural": "Vorschläge",
+  "meaning": "suggestion, proposal",
+  "pos": "noun",
+  "example": "Ich habe einen guten Vorschlag.",
+  "exampleMeaning": "I have a good suggestion.",
+  "tip": "einen Vorschlag machen = to make a suggestion."
+ },
+ {
+  "word": "beantworten",
+  "meaning": "to answer",
+  "pos": "verb",
+  "example": "Kannst du die Frage beantworten?",
+  "exampleMeaning": "Can you answer the question?",
+  "tip": "Takes a direct object (die Frage); antworten takes auf + accusative."
+ },
+ {
+  "word": "träumen",
+  "meaning": "to dream",
+  "pos": "verb",
+  "example": "Nachts träumen wir oft.",
+  "exampleMeaning": "We often dream at night.",
+  "tip": "träumen von + dative = to dream of."
+ },
+ {
+  "word": "Müll",
+  "article": "der",
+  "plural": "Müll",
+  "meaning": "garbage, trash",
+  "pos": "noun",
+  "example": "Bring bitte den Müll raus!",
+  "exampleMeaning": "Please take out the trash!"
+ },
+ {
+  "word": "Rock",
+  "article": "der",
+  "plural": "Röcke",
+  "meaning": "skirt",
+  "pos": "noun",
+  "example": "Sie trägt einen langen Rock.",
+  "exampleMeaning": "She's wearing a long skirt.",
+  "tip": "False friend: a skirt, not a rock (that's Stein)."
+ },
+ {
+  "word": "Hemd",
+  "article": "das",
+  "plural": "Hemden",
+  "meaning": "shirt",
+  "pos": "noun",
+  "example": "Er bügelt sein weißes Hemd.",
+  "exampleMeaning": "He's ironing his white shirt."
+ },
+ {
+  "word": "praktisch",
+  "meaning": "practical; handy",
+  "pos": "adjective",
+  "example": "Diese Tasche ist sehr praktisch.",
+  "exampleMeaning": "This bag is very practical."
+ },
+ {
+  "word": "Fernseher",
+  "article": "der",
+  "plural": "Fernseher",
+  "meaning": "TV set",
+  "pos": "noun",
+  "example": "Der Fernseher ist im Wohnzimmer.",
+  "exampleMeaning": "The TV is in the living room.",
+  "tip": "The device; the activity is fernsehen."
+ },
+ {
+  "word": "wechseln",
+  "meaning": "to change; to exchange",
+  "pos": "verb",
+  "example": "Ich möchte Geld wechseln.",
+  "exampleMeaning": "I'd like to exchange money.",
+  "tip": "Money, clothes, jobs — a broad 'change/swap'."
+ },
+ {
+  "word": "streng",
+  "meaning": "strict",
+  "pos": "adjective",
+  "example": "Unser Lehrer ist sehr streng.",
+  "exampleMeaning": "Our teacher is very strict."
+ },
+ {
+  "word": "Sendung",
+  "article": "die",
+  "plural": "Sendungen",
+  "meaning": "(TV/radio) program; shipment",
+  "pos": "noun",
+  "example": "Diese Sendung sehe ich gern.",
+  "exampleMeaning": "I like watching this program."
+ },
+ {
+  "word": "Pizza",
+  "article": "die",
+  "plural": "Pizzas",
+  "meaning": "pizza",
+  "pos": "noun",
+  "example": "Wir bestellen eine Pizza.",
+  "exampleMeaning": "We're ordering a pizza."
+ },
+ {
+  "word": "Mantel",
+  "article": "der",
+  "plural": "Mäntel",
+  "meaning": "coat",
+  "pos": "noun",
+  "example": "Zieh deinen Mantel an, es ist kalt.",
+  "exampleMeaning": "Put on your coat, it's cold."
+ },
+ {
+  "word": "reiten",
+  "meaning": "to ride (a horse)",
+  "pos": "verb",
+  "example": "Sie kann sehr gut reiten.",
+  "exampleMeaning": "She can ride very well.",
+  "tip": "Perfect usually with sein: ist geritten."
+ },
+ {
+  "word": "Mittel",
+  "article": "das",
+  "plural": "Mittel",
+  "meaning": "means; remedy",
+  "pos": "noun",
+  "example": "Ich brauche ein Mittel gegen Kopfschmerzen.",
+  "exampleMeaning": "I need something for a headache.",
+  "tip": "ein Mittel gegen = a remedy for."
+ },
+ {
+  "word": "aufregend",
+  "meaning": "exciting",
+  "pos": "adjective",
+  "example": "Die Reise war sehr aufregend.",
+  "exampleMeaning": "The trip was very exciting.",
+  "tip": "sich aufregen = to get worked up."
+ },
+ {
+  "word": "Schnee",
+  "article": "der",
+  "plural": "Schnee",
+  "meaning": "snow",
+  "pos": "noun",
+  "example": "Der Schnee liegt auf den Bergen.",
+  "exampleMeaning": "The snow lies on the mountains.",
+  "tip": "From schneien (to snow)."
+ },
+ {
+  "word": "Brille",
+  "article": "die",
+  "plural": "Brillen",
+  "meaning": "glasses, spectacles",
+  "pos": "noun",
+  "example": "Ich brauche eine neue Brille.",
+  "exampleMeaning": "I need new glasses.",
+  "tip": "Singular in German: eine Brille = one pair of glasses."
+ },
+ {
+  "word": "bestätigen",
+  "meaning": "to confirm",
+  "pos": "verb",
+  "example": "Können Sie den Termin bestätigen?",
+  "exampleMeaning": "Can you confirm the appointment?"
+ },
+ {
+  "word": "meistens",
+  "meaning": "mostly, usually",
+  "pos": "adverb",
+  "example": "Meistens bleibe ich am Wochenende zu Hause.",
+  "exampleMeaning": "I usually stay home on weekends."
+ },
+ {
+  "word": "Stress",
+  "article": "der",
+  "plural": "Stress",
+  "meaning": "stress",
+  "pos": "noun",
+  "example": "Ich habe viel Stress bei der Arbeit.",
+  "exampleMeaning": "I have a lot of stress at work."
+ },
+ {
+  "word": "fett",
+  "meaning": "fatty, greasy; bold",
+  "pos": "adjective",
+  "example": "Das Essen war mir zu fett.",
+  "exampleMeaning": "The food was too greasy for me.",
+  "tip": "Also 'bold' for text: fett gedruckt."
+ },
+ {
+  "word": "freiwillig",
+  "meaning": "voluntary",
+  "pos": "adjective",
+  "example": "Sie hilft ganz freiwillig.",
+  "exampleMeaning": "She helps entirely voluntarily."
+ },
+ {
+  "word": "Reifen",
+  "article": "der",
+  "plural": "Reifen",
+  "meaning": "tire",
+  "pos": "noun",
+  "example": "Der Reifen ist platt.",
+  "exampleMeaning": "The tire is flat."
+ },
+ {
+  "word": "schenken",
+  "meaning": "to give (as a gift)",
+  "pos": "verb",
+  "example": "Was sollen wir ihr schenken?",
+  "exampleMeaning": "What should we give her?",
+  "tip": "Specifically to give as a present; from Geschenk."
+ },
+ {
+  "word": "liefern",
+  "meaning": "to deliver",
+  "pos": "verb",
+  "example": "Wir liefern die Möbel morgen.",
+  "exampleMeaning": "We'll deliver the furniture tomorrow.",
+  "tip": "die Lieferung = the delivery."
+ },
+ {
+  "word": "berichten",
+  "meaning": "to report",
+  "pos": "verb",
+  "example": "Die Zeitung wird darüber berichten.",
+  "exampleMeaning": "The newspaper will report on it.",
+  "tip": "berichten über + accusative = to report on."
+ },
+ {
+  "word": "vorbereiten",
+  "meaning": "to prepare",
+  "pos": "verb",
+  "example": "Ich muss das Essen vorbereiten.",
+  "exampleMeaning": "I have to prepare the meal.",
+  "tip": "Separable: ich bereite vor. sich vorbereiten auf = prepare for."
+ },
+ {
+  "word": "Zucker",
+  "article": "der",
+  "plural": "Zucker",
+  "meaning": "sugar",
+  "pos": "noun",
+  "example": "Nimmst du Zucker in den Kaffee?",
+  "exampleMeaning": "Do you take sugar in your coffee?"
+ },
+ {
+  "word": "Tasse",
+  "article": "die",
+  "plural": "Tassen",
+  "meaning": "cup",
+  "pos": "noun",
+  "example": "Möchtest du eine Tasse Tee?",
+  "exampleMeaning": "Would you like a cup of tea?"
+ },
+ {
+  "word": "Magen",
+  "article": "der",
+  "plural": "Mägen",
+  "meaning": "stomach",
+  "pos": "noun",
+  "example": "Mir tut der Magen weh.",
+  "exampleMeaning": "My stomach hurts."
+ },
+ {
+  "word": "Markt",
+  "article": "der",
+  "plural": "Märkte",
+  "meaning": "market",
+  "pos": "noun",
+  "example": "Samstags gehen wir auf den Markt.",
+  "exampleMeaning": "On Saturdays we go to the market."
+ },
+ {
+  "word": "schneiden",
+  "meaning": "to cut",
+  "pos": "verb",
+  "example": "Kannst du das Brot schneiden?",
+  "exampleMeaning": "Can you cut the bread?",
+  "tip": "Irregular perfect: hat geschnitten."
+ },
+ {
+  "word": "sammeln",
+  "meaning": "to collect",
+  "pos": "verb",
+  "example": "Kinder sammeln gern Steine.",
+  "exampleMeaning": "Children like collecting stones."
+ },
+ {
+  "word": "Titel",
+  "article": "der",
+  "plural": "Titel",
+  "meaning": "title",
+  "pos": "noun",
+  "example": "Wie ist der Titel des Buches?",
+  "exampleMeaning": "What is the title of the book?"
+ },
+ {
+  "word": "sparen",
+  "meaning": "to save (money)",
+  "pos": "verb",
+  "example": "Wir sparen für ein neues Auto.",
+  "exampleMeaning": "We're saving for a new car.",
+  "tip": "sparen für/auf = to save up for."
+ },
+ {
+  "word": "prüfen",
+  "meaning": "to check, to test",
+  "pos": "verb",
+  "example": "Bitte prüfen Sie die Rechnung.",
+  "exampleMeaning": "Please check the bill.",
+  "tip": "die Prüfung = the exam/test."
+ },
+ {
+  "word": "Training",
+  "article": "das",
+  "plural": "Trainings",
+  "meaning": "training, practice",
+  "pos": "noun",
+  "example": "Das Training beginnt um sechs.",
+  "exampleMeaning": "The training starts at six."
+ },
+ {
+  "word": "Suppe",
+  "article": "die",
+  "plural": "Suppen",
+  "meaning": "soup",
+  "pos": "noun",
+  "example": "Die Suppe ist heiß.",
+  "exampleMeaning": "The soup is hot."
+ },
+ {
+  "word": "Tour",
+  "article": "die",
+  "plural": "Touren",
+  "meaning": "tour, trip",
+  "pos": "noun",
+  "example": "Wir machen eine Tour durch die Stadt.",
+  "exampleMeaning": "We're taking a tour through the city."
+ },
+ {
+  "word": "bestehen",
+  "meaning": "to pass (an exam); to exist",
+  "pos": "verb",
+  "example": "Ich will die Prüfung bestehen.",
+  "exampleMeaning": "I want to pass the exam.",
+  "tip": "bestehen aus + dative = to consist of."
+ },
+ {
+  "word": "hässlich",
+  "meaning": "ugly",
+  "pos": "adjective",
+  "example": "Das Gebäude ist ziemlich hässlich.",
+  "exampleMeaning": "The building is quite ugly.",
+  "tip": "Opposite of schön."
+ },
+ {
+  "word": "ausruhen",
+  "meaning": "to rest",
+  "pos": "verb",
+  "example": "Ich muss mich kurz ausruhen.",
+  "exampleMeaning": "I need to rest for a bit.",
+  "tip": "Reflexive and separable: sich ausruhen."
+ },
+ {
+  "word": "eng",
+  "meaning": "tight; narrow",
+  "pos": "adjective",
+  "example": "Die Schuhe sind zu eng.",
+  "exampleMeaning": "The shoes are too tight.",
+  "tip": "Opposite of weit (loose/wide)."
+ },
+ {
+  "word": "üben",
+  "meaning": "to practice",
+  "pos": "verb",
+  "example": "Wir üben jeden Tag Deutsch.",
+  "exampleMeaning": "We practice German every day."
+ },
+ {
+  "word": "Mitarbeiter",
+  "article": "der",
+  "plural": "Mitarbeiter",
+  "meaning": "employee, colleague",
+  "pos": "noun",
+  "example": "Unsere Firma hat fünfzig Mitarbeiter.",
+  "exampleMeaning": "Our company has fifty employees."
+ },
+ {
+  "word": "rund",
+  "meaning": "round; about",
+  "pos": "adjective",
+  "example": "Der Tisch ist rund.",
+  "exampleMeaning": "The table is round.",
+  "tip": "Also 'about': rund hundert Leute = about a hundred people."
+ },
+ {
+  "word": "nebenan",
+  "meaning": "next door",
+  "pos": "adverb",
+  "example": "Meine Freundin wohnt nebenan.",
+  "exampleMeaning": "My friend lives next door."
+ },
+ {
+  "word": "planen",
+  "meaning": "to plan",
+  "pos": "verb",
+  "example": "Wir planen eine Reise nach Italien.",
+  "exampleMeaning": "We're planning a trip to Italy."
+ },
+ {
+  "word": "Zahl",
+  "article": "die",
+  "plural": "Zahlen",
+  "meaning": "number, figure",
+  "pos": "noun",
+  "example": "Schreib die Zahl an die Tafel.",
+  "exampleMeaning": "Write the number on the board.",
+  "tip": "die Zahl = numeric value; die Nummer = an ID number (phone, house)."
+ }
+]

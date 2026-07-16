@@ -54,12 +54,16 @@ const seedJa = [
   ...JSON.parse(readFileSync(path.join(ROOT, "data/jlpt_n4.json"), "utf8")),
   ...JSON.parse(readFileSync(path.join(ROOT, "data/jlpt_n5_gap.json"), "utf8")),
   ...JSON.parse(readFileSync(path.join(ROOT, "data/jlpt_n4_gap.json"), "utf8")),
+  ...JSON.parse(readFileSync(path.join(ROOT, "data/jlpt_n5_gap2.json"), "utf8")),
+  ...JSON.parse(readFileSync(path.join(ROOT, "data/jlpt_n4_gap2.json"), "utf8")),
 ];
 const seedDe = [
   ...JSON.parse(readFileSync(path.join(ROOT, "data/goethe_a1.json"), "utf8")),
   ...JSON.parse(readFileSync(path.join(ROOT, "data/goethe_a2.json"), "utf8")),
   ...JSON.parse(readFileSync(path.join(ROOT, "data/goethe_a1_gap.json"), "utf8")),
   ...JSON.parse(readFileSync(path.join(ROOT, "data/goethe_a2_gap.json"), "utf8")),
+  ...JSON.parse(readFileSync(path.join(ROOT, "data/goethe_a1_gap2.json"), "utf8")),
+  ...JSON.parse(readFileSync(path.join(ROOT, "data/goethe_a2_gap2.json"), "utf8")),
 ];
 
 // ---------------------------------------------------------------- download

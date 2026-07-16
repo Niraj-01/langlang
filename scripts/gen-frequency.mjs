@@ -36,8 +36,8 @@ const SOURCES = {
 };
 
 const SEED_FILES = {
-  ja: ["data/jlpt_n5.json", "data/jlpt_n4.json", "data/jlpt_n5_gap.json", "data/jlpt_n4_gap.json"],
-  de: ["data/goethe_a1.json", "data/goethe_a2.json", "data/goethe_a1_gap.json", "data/goethe_a2_gap.json"],
+  ja: ["data/jlpt_n5.json", "data/jlpt_n4.json", "data/jlpt_n5_gap.json", "data/jlpt_n4_gap.json", "data/jlpt_n5_gap2.json", "data/jlpt_n4_gap2.json"],
+  de: ["data/goethe_a1.json", "data/goethe_a2.json", "data/goethe_a1_gap.json", "data/goethe_a2_gap.json", "data/goethe_a1_gap2.json", "data/goethe_a2_gap2.json"],
 };
 
 // ---------------------------------------------------------------- download

@@ -13,22 +13,9 @@
   "raw": "abgeben"
  },
  {
-  "word": "abholen",
-  "raw": "abholen"
- },
- {
   "word": "Absender",
   "article": "der",
   "raw": "der Absender"
- },
- {
-  "word": "Achtung",
-  "raw": "Achtung"
- },
- {
-  "word": "Adresse",
-  "article": "die",
-  "raw": "die Adresse,-en"
  },
  {
   "word": "all-",
@@ -39,22 +26,8 @@
   "raw": "anbieten"
  },
  {
-  "word": "Angebot",
-  "article": "das",
-  "raw": "das Angebot, -e"
- },
- {
   "word": "ander-",
   "raw": "ander-"
- },
- {
-  "word": "anfangen",
-  "raw": "anfangen"
- },
- {
-  "word": "Anfang",
-  "article": "der",
-  "raw": "der Anfang"
  },
  {
   "word": "anklicken",
@@ -87,11 +60,6 @@
   "raw": "die Anrede"
  },
  {
-  "word": "Anruf",
-  "article": "der",
-  "raw": "der Anruf, -e"
- },
- {
   "word": "Anruf-",
   "article": "der",
   "raw": "der Anruf-"
@@ -113,10 +81,6 @@
  {
   "word": "an sein",
   "raw": "an sein"
- },
- {
-  "word": "antworten",
-  "raw": "antworten"
  },
  {
   "word": "Anzeige",
@@ -145,20 +109,6 @@
   "word": "Arbeitsplatz",
   "article": "der",
   "raw": "der Arbeitsplatz, -ä, e"
- },
- {
-  "word": "Arm",
-  "article": "der",
-  "raw": "der Arm, -e"
- },
- {
-  "word": "Aufgabe",
-  "article": "die",
-  "raw": "die Aufgabe, -n"
- },
- {
-  "word": "aufhören",
-  "raw": "aufhören"
  },
  {
   "word": "auf sein",
@@ -197,15 +147,6 @@
   "raw": "ausmachen"
  },
  {
-  "word": "Aussage",
-  "article": "die",
-  "raw": "die Aussage, -n"
- },
- {
-  "word": "aussehen",
-  "raw": "aussehen"
- },
- {
   "word": "aus sein",
   "raw": "aus sein"
  },
@@ -237,11 +178,6 @@
   "raw": "automatisch"
  },
  {
-  "word": "Bad",
-  "article": "das",
-  "raw": "das Bad"
- },
- {
   "word": "baden",
   "raw": "baden"
  },
@@ -266,23 +202,9 @@
   "raw": "die Banane, -n"
  },
  {
-  "word": "Bank",
-  "article": "die",
-  "raw": "die Bank"
- },
- {
-  "word": "bar",
-  "raw": "bar"
- },
- {
   "word": "Bauch",
   "article": "der",
   "raw": "der Bauch"
- },
- {
-  "word": "Baum",
-  "article": "der",
-  "raw": "der Baum, -ä, e"
  },
  {
   "word": "Beamte",
@@ -290,39 +212,13 @@
   "raw": "der Beamte, -n"
  },
  {
-  "word": "bedeuten",
-  "raw": "bedeuten"
- },
- {
-  "word": "beginnen",
-  "raw": "beginnen"
- },
- {
-  "word": "Bein",
-  "article": "das",
-  "raw": "das Bein, -e"
- },
- {
-  "word": "Beispiel",
-  "article": "das",
-  "raw": "das Beispiel, -e"
- },
- {
   "word": "zum Beispiel/z. B.",
   "raw": "zum Beispiel/z. B."
- },
- {
-  "word": "bekannt",
-  "raw": "bekannt"
  },
  {
   "word": "Bekannte",
   "article": "der/die",
   "raw": "der/die Bekannte, -n"
- },
- {
-  "word": "benutzen",
-  "raw": "benutzen"
  },
  {
   "word": "Beruf",
@@ -342,22 +238,9 @@
   "raw": "bestellen"
  },
  {
-  "word": "besuchen",
-  "raw": "besuchen"
- },
- {
-  "word": "Bild",
-  "article": "das",
-  "raw": "das Bild, -er"
- },
- {
   "word": "Birne",
   "article": "die",
   "raw": "die Birne, -n"
- },
- {
-  "word": "bitten",
-  "raw": "bitten"
  },
  {
   "word": "bitter",
@@ -367,11 +250,6 @@
   "word": "Bleistift",
   "article": "der",
   "raw": "der Bleistift, -e"
- },
- {
-  "word": "Blick",
-  "article": "der",
-  "raw": "der Blick"
  },
  {
   "word": "Blume",
@@ -384,17 +262,8 @@
   "raw": "der Bogen"
  },
  {
-  "word": "böse",
-  "raw": "böse"
- },
- {
   "word": "breit",
   "raw": "breit"
- },
- {
-  "word": "Brief",
-  "article": "der",
-  "raw": "der Brief, -e"
  },
  {
   "word": "Briefmarke",
@@ -426,40 +295,17 @@
   "raw": "die CD, -s"
  },
  {
-  "word": "Chef",
-  "article": "der",
-  "raw": "der Chef"
- },
- {
   "word": "circa/ca.",
   "raw": "circa/ca."
- },
- {
-  "word": "Computer",
-  "article": "der",
-  "raw": "der Computer, –"
- },
- {
-  "word": "Dame",
-  "article": "die",
-  "raw": "die Dame, -n"
  },
  {
   "word": "daneben",
   "raw": "daneben"
  },
  {
-  "word": "danken",
-  "raw": "danken"
- },
- {
   "word": "Datum",
   "article": "das",
   "raw": "das Datum"
- },
- {
-  "word": "dauern",
-  "raw": "dauern"
  },
  {
   "word": "dein-",
@@ -475,19 +321,9 @@
   "raw": "die Disco"
  },
  {
-  "word": "Doktor",
-  "article": "der",
-  "raw": "der Doktor"
- },
- {
   "word": "Doppelzimmer",
   "article": "das",
   "raw": "das Doppelzimmer"
- },
- {
-  "word": "Dorf",
-  "article": "das",
-  "raw": "das Dorf, -ö, er"
  },
  {
   "word": "drucken",
@@ -520,11 +356,6 @@
   "word": "Dusche",
   "article": "die",
   "raw": "die Dusche"
- },
- {
-  "word": "Ecke",
-  "article": "die",
-  "raw": "die Ecke, -n"
  },
  {
   "word": "Ehefrau",
@@ -583,27 +414,14 @@
   "raw": "der Empfänger, –"
  },
  {
-  "word": "enden",
-  "raw": "enden"
- },
- {
   "word": "Ergebnis",
   "article": "das",
   "raw": "das Ergebnis, -se"
  },
  {
-  "word": "erlauben",
-  "raw": "erlauben"
- },
- {
   "word": "Erwachsene",
   "article": "der",
   "raw": "der Erwachsene, -n"
- },
- {
-  "word": "Fahrer",
-  "article": "der",
-  "raw": "der Fahrer"
  },
  {
   "word": "Fahrkarte",
@@ -621,11 +439,6 @@
   "raw": "der Familienstand"
  },
  {
-  "word": "Farbe",
-  "article": "die",
-  "raw": "die Farbe, -n"
- },
- {
   "word": "Fax",
   "article": "das",
   "raw": "das Fax, -e"
@@ -635,50 +448,9 @@
   "raw": "Feier-"
  },
  {
-  "word": "feiern",
-  "raw": "feiern"
- },
- {
-  "word": "fehlen",
-  "raw": "fehlen"
- },
- {
-  "word": "fernsehen",
-  "raw": "fernsehen"
- },
- {
-  "word": "Feuer",
-  "article": "das",
-  "raw": "das Feuer"
- },
- {
   "word": "Fieber",
   "article": "das",
   "raw": "das Fieber"
- },
- {
-  "word": "Firma",
-  "article": "die",
-  "raw": "die Firma"
- },
- {
-  "word": "Fisch",
-  "article": "der",
-  "raw": "der Fisch, -e"
- },
- {
-  "word": "Flasche",
-  "article": "die",
-  "raw": "die Flasche, -n"
- },
- {
-  "word": "Fleisch",
-  "article": "das",
-  "raw": "das Fleisch"
- },
- {
-  "word": "fliegen",
-  "raw": "fliegen"
  },
  {
   "word": "abfliegen",
@@ -690,19 +462,9 @@
   "raw": "der Abflug"
  },
  {
-  "word": "Flugzeug",
-  "article": "das",
-  "raw": "das Flugzeug"
- },
- {
   "word": "Formular",
   "article": "das",
   "raw": "das Formular, -e"
- },
- {
-  "word": "Foto",
-  "article": "das",
-  "raw": "das Foto, -s"
  },
  {
   "word": "Freizeit",
@@ -714,10 +476,6 @@
   "raw": "fremd"
  },
  {
-  "word": "freuen",
-  "raw": "(sich) freuen"
- },
- {
   "word": "frühstücken",
   "raw": "frühstücken"
  },
@@ -727,28 +485,9 @@
   "raw": "die Führung"
  },
  {
-  "word": "Fuß",
-  "article": "der",
-  "raw": "der Fuß, -ü, e"
- },
- {
   "word": "Fußball",
   "article": "der",
   "raw": "der Fußball"
- },
- {
-  "word": "Garten",
-  "article": "der",
-  "raw": "der Garten"
- },
- {
-  "word": "Gast",
-  "article": "der",
-  "raw": "der Gast, -ä, e"
- },
- {
-  "word": "geboren",
-  "raw": "geboren"
  },
  {
   "word": "Geburtsjahr",
@@ -761,37 +500,14 @@
   "raw": "der Geburtsort"
  },
  {
-  "word": "Geburtstag",
-  "article": "der",
-  "raw": "der Geburtstag"
- },
- {
-  "word": "gehören",
-  "raw": "gehören"
- },
- {
   "word": "Gepäck",
   "article": "das",
   "raw": "das Gepäck"
  },
  {
-  "word": "Geschenk",
-  "article": "das",
-  "raw": "das Geschenk, -e"
- },
- {
   "word": "Geschwister",
   "article": "die",
   "raw": "die Geschwister (pl.)"
- },
- {
-  "word": "Gespräch",
-  "article": "das",
-  "raw": "das Gespräch, -e"
- },
- {
-  "word": "gestorben",
-  "raw": "gestorben"
  },
  {
   "word": "Getränk",
@@ -804,27 +520,9 @@
   "raw": "das Gewicht"
  },
  {
-  "word": "gewinnen",
-  "raw": "gewinnen"
- },
- {
-  "word": "Glas",
-  "article": "das",
-  "raw": "das Glas, -ä, er"
- },
- {
   "word": "Gleis",
   "article": "das",
   "raw": "das Gleis, -e"
- },
- {
-  "word": "Glückwunsch",
-  "article": "der",
-  "raw": "der Glückwunsch"
- },
- {
-  "word": "Grad",
-  "raw": "Grad (Celsius)"
  },
  {
   "word": "gratulieren",
@@ -845,21 +543,6 @@
   "raw": "die Großeltern (pl.)"
  },
  {
-  "word": "Großmutter",
-  "article": "die",
-  "raw": "die Großmutter"
- },
- {
-  "word": "Großvater",
-  "article": "der",
-  "raw": "der Großvater"
- },
- {
-  "word": "Gruppe",
-  "article": "die",
-  "raw": "die Gruppe, -n"
- },
- {
   "word": "Gruß",
   "article": "der",
   "raw": "der Gruß, -ü, e"
@@ -871,11 +554,6 @@
  {
   "word": "günstig",
   "raw": "günstig"
- },
- {
-  "word": "Haar",
-  "article": "das",
-  "raw": "das Haar, -e"
  },
  {
   "word": "Hähnchen",
@@ -898,11 +576,6 @@
   "raw": "die Haltestelle"
  },
  {
-  "word": "Handy",
-  "article": "das",
-  "raw": "das Handy, -s"
- },
- {
   "word": "Hausaufgabe",
   "article": "die",
   "raw": "die Hausaufgabe,-n"
@@ -918,10 +591,6 @@
   "raw": "die Heimat"
  },
  {
-  "word": "heiraten",
-  "raw": "heiraten"
- },
- {
   "word": "hell",
   "raw": "hell"
  },
@@ -935,23 +604,9 @@
   "raw": "herzlich"
  },
  {
-  "word": "hinten",
-  "raw": "hinten"
- },
- {
   "word": "Hobby",
   "article": "das",
   "raw": "das Hobby, -s"
- },
- {
-  "word": "Hochzeit",
-  "article": "die",
-  "raw": "die Hochzeit"
- },
- {
-  "word": "Hotel",
-  "article": "das",
-  "raw": "das Hotel, -s"
  },
  {
   "word": "ihr/ihm/ihn",
@@ -984,19 +639,6 @@
   "word": "Jugendliche",
   "article": "der",
   "raw": "der Jugendliche, -n"
- },
- {
-  "word": "jung",
-  "raw": "jung"
- },
- {
-  "word": "kaputt",
-  "raw": "kaputt"
- },
- {
-  "word": "Karte",
-  "article": "die",
-  "raw": "die Karte, -n"
  },
  {
   "word": "-Karte",
@@ -1036,23 +678,9 @@
   "raw": "der Kiosk"
  },
  {
-  "word": "Klasse",
-  "article": "die",
-  "raw": "die Klasse"
- },
- {
   "word": "Kleidung",
   "article": "die",
   "raw": "die Kleidung"
- },
- {
-  "word": "kochen",
-  "raw": "kochen"
- },
- {
-  "word": "Koffer",
-  "article": "der",
-  "raw": "der Koffer, –"
  },
  {
   "word": "Kollege",
@@ -1063,16 +691,6 @@
   "word": "Konto",
   "article": "das",
   "raw": "das Konto"
- },
- {
-  "word": "Küche",
-  "article": "die",
-  "raw": "die Küche"
- },
- {
-  "word": "Kuchen",
-  "article": "der",
-  "raw": "der Kuchen"
  },
  {
   "word": "Kugelschreiber",
@@ -1098,32 +716,6 @@
   "raw": "der Kunde, -n"
  },
  {
-  "word": "Kurs",
-  "article": "der",
-  "raw": "der Kurs, -e"
- },
- {
-  "word": "lachen",
-  "raw": "lachen"
- },
- {
-  "word": "Laden",
-  "article": "der",
-  "raw": "der Laden, -ä"
- },
- {
-  "word": "langsam",
-  "raw": "langsam"
- },
- {
-  "word": "laufen",
-  "raw": "laufen"
- },
- {
-  "word": "laut",
-  "raw": "laut"
- },
- {
   "word": "Lebensmittel",
   "article": "die",
   "raw": "die Lebensmittel (pl.)"
@@ -1133,50 +725,16 @@
   "raw": "ledig"
  },
  {
-  "word": "legen",
-  "raw": "legen"
- },
- {
-  "word": "leicht",
-  "raw": "leicht"
- },
- {
-  "word": "leider",
-  "raw": "leider"
- },
- {
-  "word": "leise",
-  "raw": "leise"
- },
- {
   "word": "letztdie Leute",
   "raw": "letztdie Leute (pl.)"
- },
- {
-  "word": "Licht",
-  "article": "das",
-  "raw": "das Licht"
  },
  {
   "word": "lieb-",
   "raw": "lieb-"
  },
  {
-  "word": "lieben",
-  "raw": "lieben"
- },
- {
   "word": "Lieblings-",
   "raw": "Lieblings-"
- },
- {
-  "word": "Lied",
-  "article": "das",
-  "raw": "das Lied, -er"
- },
- {
-  "word": "liegen",
-  "raw": "liegen"
  },
  {
   "word": "Lkw",
@@ -1189,27 +747,8 @@
   "raw": "das Lokal"
  },
  {
-  "word": "Lösung",
-  "article": "die",
-  "raw": "die Lösung, -en"
- },
- {
-  "word": "lustig",
-  "raw": "lustig"
- },
- {
   "word": "männlich",
   "raw": "männlich"
- },
- {
-  "word": "Maschine",
-  "article": "die",
-  "raw": "die Maschine, -n"
- },
- {
-  "word": "Meer",
-  "article": "das",
-  "raw": "das Meer"
  },
  {
   "word": "meist-",
@@ -1224,16 +763,8 @@
   "raw": "mitbringen"
  },
  {
-  "word": "mitkommen",
-  "raw": "mitkommen"
- },
- {
   "word": "mitmachen",
   "raw": "mitmachen"
- },
- {
-  "word": "mitnehmen",
-  "raw": "mitnehmen"
  },
  {
   "word": "Mitte",
@@ -1246,29 +777,8 @@
   "raw": "die Möbel (pl.)"
  },
  {
-  "word": "möchten",
-  "raw": "möchten"
- },
- {
-  "word": "mögen",
-  "raw": "mögen"
- },
- {
-  "word": "Mund",
-  "article": "der",
-  "raw": "der Mund"
- },
- {
   "word": "nächst-",
   "raw": "nächst-"
- },
- {
-  "word": "normal",
-  "raw": "normal"
- },
- {
-  "word": "öffnen",
-  "raw": "öffnen"
  },
  {
   "word": "geöffnet",
@@ -1278,16 +788,6 @@
   "word": "Öl",
   "article": "das",
   "raw": "das Öl"
- },
- {
-  "word": "Oma",
-  "article": "die",
-  "raw": "die Oma, -s"
- },
- {
-  "word": "Opa",
-  "article": "der",
-  "raw": "der Opa, -s"
  },
  {
   "word": "Papier",
@@ -1300,29 +800,9 @@
   "raw": "die Papiere (pl.)"
  },
  {
-  "word": "Partner",
-  "article": "der",
-  "raw": "der Partner, -/die Partnerin, -nen"
- },
- {
-  "word": "Party",
-  "article": "die",
-  "raw": "die Party"
- },
- {
-  "word": "Pause",
-  "article": "die",
-  "raw": "die Pause, -n"
- },
- {
   "word": "Pommes frites",
   "article": "die",
   "raw": "die Pommes frites (pl.)"
- },
- {
-  "word": "Post",
-  "article": "die",
-  "raw": "die Post"
  },
  {
   "word": "Postleitzahl",
@@ -1340,11 +820,6 @@
   "raw": "die Praxis"
  },
  {
-  "word": "Preis",
-  "article": "der",
-  "raw": "der Preis, -e"
- },
- {
   "word": "Prospekt",
   "article": "der",
   "raw": "der Prospekt, -e"
@@ -1354,36 +829,13 @@
   "raw": "Rad fahren"
  },
  {
-  "word": "rauchen",
-  "raw": "rauchen"
- },
- {
-  "word": "Raum",
-  "article": "der",
-  "raw": "der Raum, -ä, e"
- },
- {
   "word": "regnen",
   "raw": "regnen"
- },
- {
-  "word": "Regen",
-  "article": "der",
-  "raw": "der Regen"
  },
  {
   "word": "Reis",
   "article": "der",
   "raw": "der Reis"
- },
- {
-  "word": "reisen",
-  "raw": "reisen"
- },
- {
-  "word": "Reise",
-  "article": "die",
-  "raw": "die Reise"
  },
  {
   "word": "Reisebüro",
@@ -1403,11 +855,6 @@
   "word": "Reparatur",
   "article": "die",
   "raw": "die Reparatur"
- },
- {
-  "word": "Restaurant",
-  "article": "das",
-  "raw": "das Restaurant, -s"
  },
  {
   "word": "Rezeption",
@@ -1443,14 +890,6 @@
   "raw": "der Schalter"
  },
  {
-  "word": "scheinen",
-  "raw": "scheinen"
- },
- {
-  "word": "schicken",
-  "raw": "schicken"
- },
- {
   "word": "Schild",
   "article": "das",
   "raw": "das Schild, -er"
@@ -1459,24 +898,6 @@
   "word": "Schinken",
   "article": "der",
   "raw": "der Schinken, –"
- },
- {
-  "word": "schließen",
-  "raw": "schließen"
- },
- {
-  "word": "geschlossen",
-  "raw": "geschlossen"
- },
- {
-  "word": "Schluss",
-  "article": "der",
-  "raw": "der Schluss"
- },
- {
-  "word": "Schlüssel",
-  "article": "der",
-  "raw": "der Schlüssel, –"
  },
  {
   "word": "schmecken",
@@ -1507,11 +928,6 @@
   "raw": "das Schwimmbad"
  },
  {
-  "word": "See",
-  "article": "der",
-  "raw": "der See"
- },
- {
   "word": "Sehenswürdigkeit",
   "article": "die",
   "raw": "die Sehenswürdigkeit,"
@@ -1529,18 +945,9 @@
   "raw": "selbstständig"
  },
  {
-  "word": "sitzen",
-  "raw": "sitzen"
- },
- {
   "word": "Sofa",
   "article": "das",
   "raw": "das Sofa"
- },
- {
-  "word": "Sonne",
-  "article": "die",
-  "raw": "die Sonne"
  },
  {
   "word": "Speisekarte",
@@ -1551,11 +958,6 @@
   "word": "Sport",
   "article": "der",
   "raw": "der Sport"
- },
- {
-  "word": "Stock",
-  "article": "der",
-  "raw": "der Stock"
  },
  {
   "word": "Straßenbahn",
@@ -1577,32 +979,8 @@
   "raw": "der Student, -en"
  },
  {
-  "word": "Stunde",
-  "article": "die",
-  "raw": "die Stunde, -n"
- },
- {
-  "word": "tanzen",
-  "raw": "tanzen"
- },
- {
-  "word": "Tasche",
-  "article": "die",
-  "raw": "die Tasche, -n"
- },
- {
-  "word": "Taxi",
-  "article": "das",
-  "raw": "das Taxi, -s"
- },
- {
   "word": "telefonieren",
   "raw": "telefonieren"
- },
- {
-  "word": "Test",
-  "article": "der",
-  "raw": "der Test"
  },
  {
   "word": "Text",
@@ -1610,19 +988,9 @@
   "raw": "der Text, -e"
  },
  {
-  "word": "Thema",
-  "article": "das",
-  "raw": "das Thema"
- },
- {
   "word": "Ticket",
   "article": "das",
   "raw": "das Ticket, -s"
- },
- {
-  "word": "Toilette",
-  "article": "die",
-  "raw": "die Toilette, -en"
  },
  {
   "word": "Tomate",
@@ -1661,30 +1029,9 @@
   "raw": "die Unterschrift"
  },
  {
-  "word": "Urlaub",
-  "article": "der",
-  "raw": "der Urlaub"
- },
- {
-  "word": "verboten",
-  "raw": "verboten"
- },
- {
-  "word": "verdienen",
-  "raw": "verdienen"
- },
- {
   "word": "Verein",
   "article": "der",
   "raw": "der Verein"
- },
- {
-  "word": "verheiratet",
-  "raw": "verheiratet"
- },
- {
-  "word": "verkaufen",
-  "raw": "verkaufen"
  },
  {
   "word": "Verkäufer",
@@ -1709,15 +1056,6 @@
   "word": "Vorname",
   "article": "der",
   "raw": "der Vorname, -n"
- },
- {
-  "word": "Vorsicht",
-  "article": "die",
-  "raw": "die Vorsicht"
- },
- {
-  "word": "vorstellen",
-  "raw": "(sich) vorstellen"
  },
  {
   "word": "Vorwahl",
@@ -1745,11 +1083,6 @@
   "raw": "weiblich"
  },
  {
-  "word": "Wein",
-  "article": "der",
-  "raw": "der Wein"
- },
- {
   "word": "welch-",
   "raw": "welch-"
  },
@@ -1763,26 +1096,8 @@
   "raw": "wie viel"
  },
  {
-  "word": "Wind",
-  "article": "der",
-  "raw": "der Wind"
- },
- {
-  "word": "wunderbar",
-  "raw": "wunderbar"
- },
- {
-  "word": "zahlen",
-  "raw": "zahlen"
- },
- {
   "word": "zurzeit",
   "raw": "zurzeit"
- },
- {
-  "word": "Zeitung",
-  "article": "die",
-  "raw": "die Zeitung, -en"
  },
  {
   "word": "Zigarette",

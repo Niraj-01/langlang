@@ -188,6 +188,17 @@ words, quizzes) is a card in one infinite vertical snap feed ("the Doomscroll").
   ja native audio grew to 306/506 words. Remaining ~1,950 missing words are
   the low-frequency tail — fill via `npm run gen-gap-entries` (API) or more
   authoring passes, same append flow.
+- **Gap content pass 2 (done):** the NEXT 599 most-frequent missing words
+  (150/exam, 149 for A2) authored the same way and appended as
+  `data/{...}_gap2.json` — SEPARATE trailing levels (gap2 must never merge
+  into gap, or seedIndexes shift). Each gap PASS is its own level pair in
+  `lib/seed.ts` LEVELS; the four scripts list all six files per language in
+  the same order. One A2 artifact removed (`trifft`, a conjugation of
+  covered `treffen`); three lowercase-artifact nouns (Wunsch/Zahl/Gang)
+  authored capitalized. Coverage after pass 2: N5 ~66%, N4 ~57%, A1 ~65%,
+  A2 ~60%; seeds now ja 806 / de 805; ja native audio 483/806 words
+  (124 multi-voice, ~4.7MB). Remaining tail is lower-frequency; same append
+  flow for future passes.
 - **Frequency ranking (done):** corpus `freqRank` on every seed entry, written
   IN PLACE by `npm run gen-frequency` (`scripts/gen-frequency.mjs`; ja =
   Leipzig jpn_news 10K CC BY 4.0 — hermitdave's ja list is stem-segmented and

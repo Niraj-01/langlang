@@ -1,33 +1,13 @@
 [
  {
-  "word": "青",
-  "reading": "あお",
-  "meaning": "blue"
- },
- {
-  "word": "赤",
-  "reading": "あか",
-  "meaning": "red"
- },
- {
   "word": "明い",
   "reading": "あかるい",
   "meaning": "bright"
  },
  {
-  "word": "開く",
-  "reading": "あく",
-  "meaning": "to open,to become open"
- },
- {
   "word": "開ける",
   "reading": "あける",
   "meaning": "to open"
- },
- {
-  "word": "上げる",
-  "reading": "あげる",
-  "meaning": "to give"
  },
  {
   "word": "朝御飯",
@@ -43,11 +23,6 @@
   "meaning": "over there"
  },
  {
-  "word": "遊ぶ",
-  "reading": "あそぶ",
-  "meaning": "to play,to make a visit"
- },
- {
   "word": "暖かい",
   "reading": "あたたかい",
   "meaning": "warm"
@@ -55,11 +30,6 @@
  {
   "word": "あちら",
   "meaning": "there"
- },
- {
-  "word": "熱い",
-  "reading": "あつい",
-  "meaning": "hot to the touch"
  },
  {
   "word": "厚い",
@@ -76,19 +46,6 @@
   "meaning": "(humble) older brother"
  },
  {
-  "word": "姉",
-  "reading": "あね",
-  "meaning": "(humble) older sister"
- },
- {
-  "word": "あの",
-  "meaning": "um..."
- },
- {
-  "word": "アパート",
-  "meaning": "apartment"
- },
- {
   "word": "あびる",
   "meaning": "to bathe,to shower"
  },
@@ -96,11 +53,6 @@
   "word": "危ない",
   "reading": "あぶない",
   "meaning": "dangerous"
- },
- {
-  "word": "甘い",
-  "reading": "あまい",
-  "meaning": "sweet"
  },
  {
   "word": "飴",
@@ -119,14 +71,6 @@
  {
   "word": "いいえ",
   "meaning": "no"
- },
- {
-  "word": "いかが",
-  "meaning": "how"
- },
- {
-  "word": "いくら",
-  "meaning": "how much?"
  },
  {
   "word": "池",
@@ -152,19 +96,9 @@
   "meaning": "best,first"
  },
  {
-  "word": "五日",
-  "reading": "いつか",
-  "meaning": "five days, fifth day"
- },
- {
   "word": "五つ",
   "reading": "いつつ",
   "meaning": "five"
- },
- {
-  "word": "妹",
-  "reading": "いもうと",
-  "meaning": "(humble) younger sister"
  },
  {
   "word": "嫌",
@@ -172,34 +106,9 @@
   "meaning": "unpleasant"
  },
  {
-  "word": "入口",
-  "reading": "いりぐち",
-  "meaning": "entrance"
- },
- {
-  "word": "薄い",
-  "reading": "うすい",
-  "meaning": "thin,weak"
- },
- {
-  "word": "歌",
-  "reading": "うた",
-  "meaning": "song"
- },
- {
-  "word": "歌う",
-  "reading": "うたう",
-  "meaning": "to sing"
- },
- {
   "word": "生まれる",
   "reading": "うまれる",
   "meaning": "to be born"
- },
- {
-  "word": "売る",
-  "reading": "うる",
-  "meaning": "to sell"
  },
  {
   "word": "煩い",
@@ -212,11 +121,6 @@
   "meaning": "jacket"
  },
  {
-  "word": "絵",
-  "reading": "え",
-  "meaning": "picture"
- },
- {
   "word": "映画館",
   "reading": "えいがかん",
   "meaning": "cinema"
@@ -226,33 +130,9 @@
   "meaning": "yes"
  },
  {
-  "word": "エレベーター",
-  "meaning": "elevator"
- },
- {
   "word": "鉛筆",
   "reading": "えんぴつ",
   "meaning": "pencil"
- },
- {
-  "word": "大勢",
-  "reading": "おおぜい",
-  "meaning": "great number of people"
- },
- {
-  "word": "お母さん",
-  "reading": "おかあさん",
-  "meaning": "(honorable) mother"
- },
- {
-  "word": "お菓子",
-  "reading": "おかし",
-  "meaning": "sweets, candy"
- },
- {
-  "word": "置く",
-  "reading": "おく",
-  "meaning": "to put"
  },
  {
   "word": "奥さん",
@@ -275,11 +155,6 @@
   "meaning": "uncle,middle aged gentleman"
  },
  {
-  "word": "押す",
-  "reading": "おす",
-  "meaning": "to push, to stamp something"
- },
- {
   "word": "遅い",
   "reading": "おそい",
   "meaning": "late,slow"
@@ -290,29 +165,14 @@
   "meaning": "bathroom"
  },
  {
-  "word": "お父さん",
-  "reading": "おとうさん",
-  "meaning": "(honorable) father"
- },
- {
   "word": "弟",
   "reading": "おとうと",
   "meaning": "younger brother"
  },
  {
-  "word": "男の子",
-  "reading": "おとこのこ",
-  "meaning": "boy"
- },
- {
   "word": "一昨日",
   "reading": "おととい",
   "meaning": "day before yesterday"
- },
- {
-  "word": "一昨年",
-  "reading": "おととし",
-  "meaning": "year before last"
  },
  {
   "word": "おなか",
@@ -352,19 +212,9 @@
   "meaning": "friendly term for policeman"
  },
  {
-  "word": "重い",
-  "reading": "おもい",
-  "meaning": "heavy"
- },
- {
   "word": "降りる",
   "reading": "おりる",
   "meaning": "to get off, to descend"
- },
- {
-  "word": "女",
-  "reading": "おんな",
-  "meaning": "woman"
  },
  {
   "word": "外国人",
@@ -375,11 +225,6 @@
   "word": "階段",
   "reading": "かいだん",
   "meaning": "stairs"
- },
- {
-  "word": "買い物",
-  "reading": "かいもの",
-  "meaning": "shopping"
  },
  {
   "word": "返す",
@@ -399,11 +244,6 @@
   "word": "貸す",
   "reading": "かす",
   "meaning": "to lend"
- },
- {
-  "word": "角",
-  "reading": "かど",
-  "meaning": "a corner"
  },
  {
   "word": "かばん",
@@ -430,27 +270,9 @@
   "meaning": "to borrow"
  },
  {
-  "word": "軽い",
-  "reading": "かるい",
-  "meaning": "light"
- },
- {
-  "word": "カレー",
-  "meaning": "curry"
- },
- {
-  "word": "かわいい",
-  "meaning": "cute"
- },
- {
   "word": "漢字",
   "reading": "かんじ",
   "meaning": "Chinese character"
- },
- {
-  "word": "黄色",
-  "reading": "きいろ",
-  "meaning": "yellow"
  },
  {
   "word": "黄色い",
@@ -461,15 +283,6 @@
   "word": "消える",
   "reading": "きえる",
   "meaning": "to disappear"
- },
- {
-  "word": "北",
-  "reading": "きた",
-  "meaning": "north"
- },
- {
-  "word": "ギター",
-  "meaning": "guitar"
  },
  {
   "word": "汚い",
@@ -492,48 +305,9 @@
   "meaning": "ticket"
  },
  {
-  "word": "九",
-  "reading": "きゅう / く",
-  "meaning": "nine"
- },
- {
-  "word": "牛肉",
-  "reading": "ぎゅうにく",
-  "meaning": "beef"
- },
- {
-  "word": "牛乳",
-  "reading": "ぎゅうにゅう",
-  "meaning": "milk"
- },
- {
-  "word": "教室",
-  "reading": "きょうしつ",
-  "meaning": "classroom"
- },
- {
-  "word": "兄弟",
-  "reading": "きょうだい",
-  "meaning": "(humble) siblings"
- },
- {
   "word": "嫌い",
   "reading": "きらい",
   "meaning": "hate"
- },
- {
-  "word": "切る",
-  "reading": "きる",
-  "meaning": "to cut"
- },
- {
-  "word": "着る",
-  "reading": "きる",
-  "meaning": "to put on from the shoulders down"
- },
- {
-  "word": "きれい",
-  "meaning": "pretty,clean"
  },
  {
   "word": "キロ/キログラム",
@@ -547,16 +321,6 @@
   "word": "金曜日",
   "reading": "きんようび",
   "meaning": "Friday"
- },
- {
-  "word": "果物",
-  "reading": "くだもの",
-  "meaning": "fruit"
- },
- {
-  "word": "靴",
-  "reading": "くつ",
-  "meaning": "shoes"
  },
  {
   "word": "靴下",
@@ -598,52 +362,14 @@
   "meaning": "to erase,to turn off power"
  },
  {
-  "word": "結構",
-  "reading": "けっこう",
-  "meaning": "splendid,enough"
- },
- {
   "word": "月曜日",
   "reading": "げつようび",
   "meaning": "Monday"
  },
  {
-  "word": "玄関",
-  "reading": "げんかん",
-  "meaning": "entry hall"
- },
- {
-  "word": "五",
-  "reading": "ご",
-  "meaning": "five"
- },
- {
-  "word": "公園",
-  "reading": "こうえん",
-  "meaning": "park"
- },
- {
   "word": "交差点",
   "reading": "こうさてん",
   "meaning": "intersection"
- },
- {
-  "word": "紅茶",
-  "reading": "こうちゃ",
-  "meaning": "black tea"
- },
- {
-  "word": "交番",
-  "reading": "こうばん",
-  "meaning": "police box"
- },
- {
-  "word": "コート",
-  "meaning": "coat,tennis court"
- },
- {
-  "word": "コーヒー",
-  "meaning": "coffee"
  },
  {
   "word": "九日",
@@ -654,11 +380,6 @@
   "word": "九つ",
   "reading": "ここのつ",
   "meaning": "nine"
- },
- {
-  "word": "答える",
-  "reading": "こたえる",
-  "meaning": "to answer"
  },
  {
   "word": "こっち",
@@ -678,16 +399,6 @@
   "meaning": "well…"
  },
  {
-  "word": "財布",
-  "reading": "さいふ",
-  "meaning": "wallet"
- },
- {
-  "word": "咲く",
-  "reading": "さく",
-  "meaning": "to bloom"
- },
- {
   "word": "作文",
   "reading": "さくぶん",
   "meaning": "composition,writing"
@@ -698,11 +409,6 @@
   "meaning": "to stretch out hands,to raise an umbrella"
  },
  {
-  "word": "砂糖",
-  "reading": "さとう",
-  "meaning": "sugar"
- },
- {
   "word": "さ来年",
   "reading": "さらいねん",
   "meaning": "year after next"
@@ -711,31 +417,6 @@
   "word": "散歩",
   "reading": "さんぽする",
   "meaning": "to stroll"
- },
- {
-  "word": "四",
-  "reading": "し / よん",
-  "meaning": "four"
- },
- {
-  "word": "塩",
-  "reading": "しお",
-  "meaning": "salt"
- },
- {
-  "word": "辞書",
-  "reading": "じしょ",
-  "meaning": "dictionary"
- },
- {
-  "word": "静か",
-  "reading": "しずか",
-  "meaning": "quiet"
- },
- {
-  "word": "七",
-  "reading": "しち / なな",
-  "meaning": "seven"
  },
  {
   "word": "死ぬ",
@@ -767,22 +448,8 @@
   "meaning": "well then…"
  },
  {
-  "word": "シャツ",
-  "meaning": "shirt"
- },
- {
   "word": "シャワー",
   "meaning": "shower"
- },
- {
-  "word": "宿題",
-  "reading": "しゅくだい",
-  "meaning": "homework"
- },
- {
-  "word": "上手",
-  "reading": "じょうず",
-  "meaning": "skillful"
  },
  {
   "word": "丈夫",
@@ -809,10 +476,6 @@
   "meaning": "to smoke,to suck"
  },
  {
-  "word": "スカート",
-  "meaning": "skirt"
- },
- {
   "word": "すぐに",
   "meaning": "instantly"
  },
@@ -832,11 +495,6 @@
  {
   "word": "ズボン",
   "meaning": "trousers"
- },
- {
-  "word": "住む",
-  "reading": "すむ",
-  "meaning": "to live in"
  },
  {
   "word": "スリッパ",
@@ -866,25 +524,6 @@
   "meaning": "narrow"
  },
  {
-  "word": "ゼロ",
-  "meaning": "zero"
- },
- {
-  "word": "先月",
-  "reading": "せんげつ",
-  "meaning": "last month"
- },
- {
-  "word": "洗濯",
-  "reading": "せんたく",
-  "meaning": "washing"
- },
- {
-  "word": "全部",
-  "reading": "ぜんぶ",
-  "meaning": "all"
- },
- {
   "word": "そうして/そして",
   "meaning": "and"
  },
@@ -897,31 +536,9 @@
   "meaning": "over there"
  },
  {
-  "word": "そば",
-  "meaning": "near,beside"
- },
- {
-  "word": "それから",
-  "meaning": "after that"
- },
- {
-  "word": "それでは",
-  "meaning": "in that situation"
- },
- {
   "word": "大使館",
   "reading": "たいしかん",
   "meaning": "embassy"
- },
- {
-  "word": "大丈夫",
-  "reading": "だいじょうぶ",
-  "meaning": "all right"
- },
- {
-  "word": "大好き",
-  "reading": "だいすき",
-  "meaning": "to be very likeable"
  },
  {
   "word": "台所",
@@ -931,15 +548,6 @@
  {
   "word": "たいへん",
   "meaning": "difficult situation"
- },
- {
-  "word": "立つ",
-  "reading": "たつ",
-  "meaning": "to stand"
- },
- {
-  "word": "たて",
-  "meaning": "length,height"
  },
  {
   "word": "頼む",
@@ -955,11 +563,6 @@
   "meaning": "probably"
  },
  {
-  "word": "卵",
-  "reading": "たまご",
-  "meaning": "egg"
- },
- {
   "word": "誕生日",
   "reading": "たんじょうび",
   "meaning": "birthday"
@@ -967,16 +570,6 @@
  {
   "word": "だんだん",
   "meaning": "gradually"
- },
- {
-  "word": "小さな",
-  "reading": "ちいさな",
-  "meaning": "little"
- },
- {
-  "word": "地下鉄",
-  "reading": "ちかてつ",
-  "meaning": "underground train"
  },
  {
   "word": "茶色",
@@ -988,22 +581,9 @@
   "meaning": "rice bowl"
  },
  {
-  "word": "ちょうど",
-  "meaning": "exactly"
- },
- {
   "word": "着く",
   "reading": "つく",
   "meaning": "to arrive at"
- },
- {
-  "word": "机",
-  "reading": "つくえ",
-  "meaning": "desk"
- },
- {
-  "word": "つける",
-  "meaning": "to turn on"
  },
  {
   "word": "勤める",
@@ -1020,14 +600,6 @@
   "meaning": "cold to the touch"
  },
  {
-  "word": "テープ",
-  "meaning": "tape"
- },
- {
-  "word": "テーブル",
-  "meaning": "table"
- },
- {
   "word": "テープレコーダー",
   "meaning": "tape recorder"
  },
@@ -1037,39 +609,9 @@
   "meaning": "to go out"
  },
  {
-  "word": "手紙",
-  "reading": "てがみ",
-  "meaning": "letter"
- },
- {
   "word": "出口",
   "reading": "でぐち",
   "meaning": "exit"
- },
- {
-  "word": "デパート",
-  "meaning": "department store"
- },
- {
-  "word": "戸",
-  "reading": "と",
-  "meaning": "Japanese style door"
- },
- {
-  "word": "ドア",
-  "meaning": "Western style door"
- },
- {
-  "word": "トイレ",
-  "meaning": "toilet"
- },
- {
-  "word": "どうして",
-  "meaning": "for what reason"
- },
- {
-  "word": "どうぞ",
-  "meaning": "please"
  },
  {
   "word": "どうも",
@@ -1086,27 +628,8 @@
   "meaning": "ten days,the tenth day"
  },
  {
-  "word": "時々",
-  "reading": "ときどき",
-  "meaning": "sometimes"
- },
- {
-  "word": "図書館",
-  "reading": "としょかん",
-  "meaning": "library"
- },
- {
   "word": "どっち",
   "meaning": "which"
- },
- {
-  "word": "どなた",
-  "meaning": "who"
- },
- {
-  "word": "隣",
-  "reading": "となり",
-  "meaning": "next door to"
  },
  {
   "word": "飛ぶ",
@@ -1122,11 +645,6 @@
   "word": "土曜日",
   "reading": "どようび",
   "meaning": "Saturday"
- },
- {
-  "word": "鳥",
-  "reading": "とり",
-  "meaning": "bird"
  },
  {
   "word": "とり肉",
@@ -1153,11 +671,6 @@
   "meaning": "to lose something"
  },
  {
-  "word": "夏休み",
-  "reading": "なつやすみ",
-  "meaning": "summer holiday"
- },
- {
   "word": "七つ",
   "reading": "ななつ",
   "meaning": "seven"
@@ -1173,11 +686,6 @@
   "meaning": "to learn"
  },
  {
-  "word": "並ぶ",
-  "reading": "ならぶ",
-  "meaning": "to line up,to stand in a line"
- },
- {
   "word": "並べる",
   "reading": "ならべる",
   "meaning": "to line up,to set up"
@@ -1188,24 +696,9 @@
   "meaning": "bustling,busy"
  },
  {
-  "word": "西",
-  "reading": "にし",
-  "meaning": "west"
- },
- {
   "word": "日曜日",
   "reading": "にちようび",
   "meaning": "Sunday"
- },
- {
-  "word": "荷物",
-  "reading": "にもつ",
-  "meaning": "luggage"
- },
- {
-  "word": "庭",
-  "reading": "にわ",
-  "meaning": "garden"
  },
  {
   "word": "脱ぐ",
@@ -1232,15 +725,6 @@
   "meaning": "to get on,to ride"
  },
  {
-  "word": "歯",
-  "reading": "は",
-  "meaning": "tooth"
- },
- {
-  "word": "パーティー",
-  "meaning": "party"
- },
- {
   "word": "はい",
   "meaning": "yes"
  },
@@ -1250,41 +734,13 @@
   "meaning": "ashtray"
  },
  {
-  "word": "葉書",
-  "reading": "はがき",
-  "meaning": "postcard"
- },
- {
   "word": "はく",
   "meaning": "to wear,to put on trousers"
- },
- {
-  "word": "橋",
-  "reading": "はし",
-  "meaning": "bridge"
- },
- {
-  "word": "はし",
-  "meaning": "chopsticks"
- },
- {
-  "word": "バター",
-  "meaning": "butter"
  },
  {
   "word": "二十歳",
   "reading": "はたち",
   "meaning": "20 years old,20th year"
- },
- {
-  "word": "働く",
-  "reading": "はたらく",
-  "meaning": "to work"
- },
- {
-  "word": "八",
-  "reading": "はち",
-  "meaning": "eight"
  },
  {
   "word": "二十日",
@@ -1295,11 +751,6 @@
   "word": "鼻",
   "reading": "はな",
   "meaning": "nose"
- },
- {
-  "word": "速い",
-  "reading": "はやい",
-  "meaning": "quick"
  },
  {
   "word": "貼る",
@@ -1331,11 +782,6 @@
   "meaning": "evening meal"
  },
  {
-  "word": "半分",
-  "reading": "はんぶん",
-  "meaning": "half minute"
- },
- {
   "word": "引く",
   "reading": "ひく",
   "meaning": "to pull"
@@ -1346,19 +792,9 @@
   "meaning": "to play an instrument with strings, including piano"
  },
  {
-  "word": "飛行機",
-  "reading": "ひこうき",
-  "meaning": "aeroplane"
- },
- {
   "word": "一月",
   "reading": "ひとつき",
   "meaning": "one month"
- },
- {
-  "word": "一人",
-  "reading": "ひとり",
-  "meaning": "one person"
  },
  {
   "word": "暇",
@@ -1366,32 +802,14 @@
   "meaning": "free time"
  },
  {
-  "word": "昼",
-  "reading": "ひる",
-  "meaning": "noon, daytime"
- },
- {
   "word": "昼御飯",
   "reading": "ひるごはん",
   "meaning": "midday meal"
  },
  {
-  "word": "広い",
-  "reading": "ひろい",
-  "meaning": "spacious,wide"
- },
- {
-  "word": "フィルム",
-  "meaning": "roll of film"
- },
- {
   "word": "封筒",
   "reading": "ふうとう",
   "meaning": "envelope"
- },
- {
-  "word": "プール",
-  "meaning": "swimming pool"
  },
  {
   "word": "フォーク",
@@ -1403,24 +821,9 @@
   "meaning": "to blow"
  },
  {
-  "word": "服",
-  "reading": "ふく",
-  "meaning": "clothes"
- },
- {
-  "word": "二つ",
-  "reading": "ふたつ",
-  "meaning": "two"
- },
- {
   "word": "豚肉",
   "reading": "ぶたにく",
   "meaning": "pork"
- },
- {
-  "word": "二人",
-  "reading": "ふたり",
-  "meaning": "two people"
  },
  {
   "word": "二日",
@@ -1442,31 +845,14 @@
   "meaning": "bath"
  },
  {
-  "word": "文章",
-  "reading": "ぶんしょう",
-  "meaning": "sentence,text"
- },
- {
   "word": "下手",
   "reading": "へた",
   "meaning": "unskillful"
  },
  {
-  "word": "ベッド",
-  "meaning": "bed"
- },
- {
-  "word": "ペット",
-  "meaning": "pet"
- },
- {
   "word": "辺",
   "reading": "へん",
   "meaning": "area"
- },
- {
-  "word": "ペン",
-  "meaning": "pen"
  },
  {
   "word": "帽子",
@@ -1505,11 +891,6 @@
   "meaning": "every morning"
  },
  {
-  "word": "毎週",
-  "reading": "まいしゅう",
-  "meaning": "every week"
- },
- {
   "word": "毎晩",
   "reading": "まいばん",
   "meaning": "every night"
@@ -1528,15 +909,6 @@
   "meaning": "straight ahead,direct"
  },
  {
-  "word": "マッチ",
-  "meaning": "match"
- },
- {
-  "word": "窓",
-  "reading": "まど",
-  "meaning": "window"
- },
- {
   "word": "丸い/円い",
   "reading": "まるい",
   "meaning": "round,circular"
@@ -1550,16 +922,6 @@
   "word": "磨く",
   "reading": "みがく",
   "meaning": "to brush teeth, to polish"
- },
- {
-  "word": "短い",
-  "reading": "みじかい",
-  "meaning": "short"
- },
- {
-  "word": "見せる",
-  "reading": "みせる",
-  "meaning": "to show"
  },
  {
   "word": "三日",
@@ -1577,19 +939,9 @@
   "meaning": "green"
  },
  {
-  "word": "耳",
-  "reading": "みみ",
-  "meaning": "ear"
- },
- {
   "word": "六日",
   "reading": "むいか",
   "meaning": "six days, sixth day of the month"
- },
- {
-  "word": "向こう",
-  "reading": "むこう",
-  "meaning": "over there"
  },
  {
   "word": "六つ",
@@ -1612,33 +964,14 @@
   "meaning": "Thursday"
  },
  {
-  "word": "門",
-  "reading": "もん",
-  "meaning": "gate"
- },
- {
   "word": "八百屋",
   "reading": "やおや",
   "meaning": "greengrocer"
  },
  {
-  "word": "易しい",
-  "reading": "やさしい",
-  "meaning": "easy, simple"
- },
- {
   "word": "八つ",
   "reading": "やっつ",
   "meaning": "eight"
- },
- {
-  "word": "やる",
-  "meaning": "to do"
- },
- {
-  "word": "夕方",
-  "reading": "ゆうがた",
-  "meaning": "evening"
  },
  {
   "word": "夕飯",
@@ -1654,16 +987,6 @@
   "word": "昨夜",
   "reading": "ゆうべ",
   "meaning": "last night"
- },
- {
-  "word": "有名",
-  "reading": "ゆうめい",
-  "meaning": "famous"
- },
- {
-  "word": "雪",
-  "reading": "ゆき",
-  "meaning": "snow"
  },
  {
   "word": "ゆっくりと",
@@ -1690,16 +1013,6 @@
   "meaning": "four"
  },
  {
-  "word": "呼ぶ",
-  "reading": "よぶ",
-  "meaning": "to call out,to invite"
- },
- {
-  "word": "弱い",
-  "reading": "よわい",
-  "meaning": "weak"
- },
- {
   "word": "来月",
   "reading": "らいげつ",
   "meaning": "next month"
@@ -1718,28 +1031,9 @@
   "meaning": "overseas student"
  },
  {
-  "word": "両親",
-  "reading": "りょうしん",
-  "meaning": "both parents"
- },
- {
   "word": "零",
   "reading": "れい",
   "meaning": "zero"
- },
- {
-  "word": "冷蔵庫",
-  "reading": "れいぞうこ",
-  "meaning": "refrigerator"
- },
- {
-  "word": "レコード",
-  "meaning": "record"
- },
- {
-  "word": "練習",
-  "reading": "れんしゅうする",
-  "meaning": "to practice"
  },
  {
   "word": "廊下",
@@ -1747,18 +1041,8 @@
   "meaning": "corridor"
  },
  {
-  "word": "六",
-  "reading": "ろく",
-  "meaning": "six"
- },
- {
   "word": "ワイシャツ",
   "meaning": "business shirt"
- },
- {
-  "word": "若い",
-  "reading": "わかい",
-  "meaning": "young"
  },
  {
   "word": "渡す",

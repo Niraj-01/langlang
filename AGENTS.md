@@ -155,6 +155,32 @@ words, quizzes) is a card in one infinite vertical snap feed ("the Doomscroll").
   `lib/feed.ts`, `pair` on the listen FeedItem). ja: 167/206 words covered
   (33 multi-voice, ~1MB total); de stays TTS until a Common Voice run.
   Attribution in Profile → Credits; integrity tests in `tests/audio.test.ts`.
+- **Image layer (done, icon tier):** an illustration per seed word,
+  absent-by-default (a word without an image renders exactly as before — same
+  universal-fallback contract as native audio/TTS). Two-tier source model in
+  `scripts/gen-images.mjs` (`npm run gen-images`):
+  - *tabler (FREE, default):* `@tabler/icons` outline SVGs (MIT, devDependency)
+    matched via `data/word_icons.json` (hand-authored normalized-English-gloss →
+    icon-name map, ~410 entries; `lang:index` keys override a gloss; edit map →
+    re-run, self-cleaning). Recolored to the language accent, inner margin via
+    viewBox, ~0.4KB each → currently ja 306/806 + de 316/805 words (~250KB
+    total). Fits the Phase-9 monochrome line-icon design system.
+  - *openai / gemini (PAID, explicit `--provider` only):* AI flat illustrations,
+    gpt-image-1 (`OPENAI_API_KEY` ≈ $0.011/img) or gemini-3.1-flash-lite-image
+    (`GEMINI_API_KEY`, Interactions API `POST /v1beta/interactions` — the 3.x
+    image models 404 on generateContent; ≈ $0.034/img, NO Gemini free tier,
+    billing required). Most-frequent-first; raw output cached in
+    `.cache/images/` (never re-bills); ffmpeg → 512×512 webp ≤ 64KB. AI images
+    UPGRADE over tabler entries (same word regenerates, stale svg unlinked).
+  Both skip unpicturable pos (particles, articles, …). Output:
+  `public/images/{lang}/{index}.webp|svg` + `data/image_manifest.json`
+  (seedIndex-keyed, bundled). Runtime: `lib/wordImage.ts`
+  (`wordImage`/`wordImageFor`); renders on new-word cards and the review card's
+  ANSWER side only (front would leak the meaning). SW caches `/images/`
+  cache-first with `/audio/`. Integrity tests `tests/images.test.ts`. Feed
+  scroll also gained `snap-always` (one card per swipe, no momentum skips).
+  Tabler credit line in Profile → Credits. Future: picture-quiz card ("pick the
+  image") — coverage is now real enough.
 - **Coverage audit (done):** honest exam coverage against real wordlists.
   `scripts/wordlists/` holds the four lists (tanos.co.uk JLPT N5/N4 CC BY;
   official Goethe A1/A2 Wortliste PDFs extracted by geometry — see the README

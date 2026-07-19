@@ -22,6 +22,7 @@ import { Icon, type IconName } from "./Icon";
 import { CosmeticGlyph } from "./CosmeticGlyph";
 import { VoicePicker } from "./VoicePicker";
 import { fireRoast, notifyPermission, requestNotify } from "@/lib/notify";
+import { imageCount } from "@/lib/wordImage";
 import { Pet } from "./Pet";
 import { PackOpen } from "./PackOpen";
 import { StreakPanel } from "./StreakPanel";
@@ -409,6 +410,15 @@ export function Profile() {
             </a>{" "}
             — CC0
           </div>
+          {imageCount("ja") + imageCount("de") > 0 && (
+            <div>
+              Word icons:{" "}
+              <a href="https://tabler.io/icons" target="_blank" rel="noreferrer" className="underline hover:text-(--accent)">
+                Tabler Icons
+              </a>{" "}
+              — MIT
+            </div>
+          )}
           <div>
             Frequency data:{" "}
             <a href="https://wortschatz.uni-leipzig.de" target="_blank" rel="noreferrer" className="underline hover:text-(--accent)">

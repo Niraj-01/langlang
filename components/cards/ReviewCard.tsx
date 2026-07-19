@@ -9,6 +9,7 @@ import type { Card, Rating } from "@/lib/types";
 import { rateCard } from "@/lib/store";
 import { sfxFlip, sfxCorrect, sfxWrong } from "@/lib/audio";
 import { playWord } from "@/lib/nativeAudio";
+import { wordImageFor } from "@/lib/wordImage";
 import { burst } from "@/lib/confetti";
 import { JaWord, DeNoun, DePlural, Example } from "@/components/Lex";
 import { Icon } from "@/components/Icon";
@@ -77,17 +78,32 @@ export function ReviewCard({
         </div>
 
         <div className="flex flex-1 flex-col items-center justify-center text-center">
-          {card.lang === "ja" ? (
-            <JaWord
-              word={card.word}
-              furigana={false}
-              className="glyph-float block text-8xl font-bold leading-none"
-            />
-          ) : (
-            <div className="text-6xl font-bold">
-              {revealed ? <DeNoun entry={card} /> : card.word}
-            </div>
-          )}
+          {/* illustration only on the answer side (the front would give the
+              meaning away), as a ghost watermark behind the glyph — zero
+              layout height, so it can never push the grade buttons off-screen */}
+          <div className="relative isolate">
+            {revealed && wordImageFor(card.word, card.lang) && (
+              <motion.img
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 0.2 }}
+                src={wordImageFor(card.word, card.lang)!}
+                alt=""
+                draggable={false}
+                className="pointer-events-none absolute left-1/2 top-1/2 -z-10 h-44 w-44 -translate-x-1/2 -translate-y-1/2"
+              />
+            )}
+            {card.lang === "ja" ? (
+              <JaWord
+                word={card.word}
+                furigana={false}
+                className="glyph-float block text-8xl font-bold leading-none"
+              />
+            ) : (
+              <div className="text-6xl font-bold">
+                {revealed ? <DeNoun entry={card} /> : card.word}
+              </div>
+            )}
+          </div>
           {/* reading revealed on flip, as a blue line (design), honoring furigana */}
           {card.lang === "ja" && revealed && furigana && card.reading && card.reading !== card.word && (
             <div className="mt-3.5 text-lg tracking-[0.2em] text-[#4aa8ff]">{card.reading}</div>

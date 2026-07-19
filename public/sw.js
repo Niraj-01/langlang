@@ -77,14 +77,14 @@ self.addEventListener("fetch", (event) => {
     return;
   }
 
-  // native pronunciation clips: cache-first, so once a word has been heard
-  // ONCE its replays work offline forever. <audio> elements fetch with a
-  // Range header and get a 206 back, which the Cache API refuses to store —
-  // so normalize: key by pathname, refetch WITHOUT the range, and answer the
-  // media element with the full 200 body (fine for ~7KB clips; every browser
-  // accepts a full response to a ranged media request). The manifest itself
-  // needs no precache — it's imported into the JS bundle the shell covers.
-  if (url.pathname.startsWith("/audio/")) {
+  // native pronunciation clips + word illustrations: cache-first, so once a
+  // word has been heard/seen ONCE it works offline forever. <audio> elements
+  // fetch with a Range header and get a 206 back, which the Cache API refuses
+  // to store — so normalize: key by pathname, refetch WITHOUT the range, and
+  // answer the media element with the full 200 body (fine for ~7KB clips;
+  // every browser accepts a full response to a ranged media request). The
+  // manifests need no precache — they're imported into the JS bundle.
+  if (url.pathname.startsWith("/audio/") || url.pathname.startsWith("/images/")) {
     event.respondWith(
       caches.match(url.pathname).then(
         (cached) =>

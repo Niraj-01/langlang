@@ -166,7 +166,7 @@ export function Feed() {
         className="h-dvh snap-y snap-mandatory overflow-y-auto overscroll-contain bg-bg"
       >
         {items.map((item) => (
-          <section key={item.id} className="h-dvh snap-start">
+          <section key={item.id} className="h-dvh snap-start snap-always">
             <FeedCard
               item={item}
               combo={combo}

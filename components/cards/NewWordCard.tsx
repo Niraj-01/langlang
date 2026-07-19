@@ -10,6 +10,7 @@ import { SEED, seedLevelLabel, freqTier } from "@/lib/seed";
 import { addNewWord, skipNewWord } from "@/lib/store";
 import { sfxAdd } from "@/lib/audio";
 import { play, playWord } from "@/lib/nativeAudio";
+import { wordImage } from "@/lib/wordImage";
 import { burst } from "@/lib/confetti";
 import { JaWord, DeNoun, DePlural, Example } from "@/components/Lex";
 import { PitchAccent } from "@/components/PitchAccent";
@@ -35,6 +36,7 @@ export function NewWordCard({
   const holdTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   if (!entry) return null;
+  const img = wordImage(lang, entryIndex);
   const say = () => playWord(entry.example ?? entry.word, lang);
 
   const add = (e?: { clientX: number; clientY: number }) => {
@@ -75,12 +77,23 @@ export function NewWordCard({
 
         <div className="flex flex-1 flex-col items-center justify-center text-center">
           <button
-            className="group"
+            className="group relative isolate"
             onClick={(e) => {
               e.stopPropagation();
               play(lang, entryIndex);
             }}
           >
+            {/* illustration as a ghost watermark behind the glyph — zero
+                layout height, so dense cards (pitch + example + tip) can
+                never overflow because of it */}
+            {img && (
+              <img
+                src={img}
+                alt=""
+                draggable={false}
+                className="pointer-events-none absolute left-1/2 top-1/2 -z-10 h-44 w-44 -translate-x-1/2 -translate-y-1/2 opacity-20"
+              />
+            )}
             {lang === "ja" ? (
               <JaWord
                 word={entry.word}

@@ -45,7 +45,9 @@ words, quizzes) is a card in one infinite vertical snap feed ("the Doomscroll").
   layout), `AuthButton.tsx` (chip on landing header, panel in Profile).
   Sync is layered ON TOP of localStorage — the review path still never
   touches the network. Google provider must be enabled in the Supabase
-  dashboard (needs Google OAuth client ID/secret).
+  dashboard (needs Google OAuth client ID/secret). Free tier pauses the
+  project after ~7 idle days, so a daily Vercel cron (`vercel.json`) hits
+  `/api/keepalive` (one RLS-empty read of `user_state`).
 - **Phase 7 (done):** Duolingo/Kanji-Study parity — lessons (`/lesson`,
   `lib/lesson.ts` + `components/Lesson.tsx`: 5 hearts, MC / reverse-MC /
   type-the-meaning / match-pairs, end screen with XP·accuracy·time;

@@ -11,7 +11,8 @@ export async function GET() {
   const db = supabase();
   if (!db) return NextResponse.json({ ok: false, error: "no_supabase_env" }, { status: 503 });
 
-  const { error } = await db.from("user_state").select("user_id", { head: true, count: "exact" }).limit(1);
-  if (error) return NextResponse.json({ ok: false, error: error.message }, { status: 502 });
+  const { error, status } = await db.from("user_state").select("user_id", { head: true, count: "exact" }).limit(1);
+  // head requests carry no body, so a failure can arrive with an empty message
+  if (error) return NextResponse.json({ ok: false, error: error.message || `http_${status}` }, { status: 502 });
   return NextResponse.json({ ok: true, at: new Date().toISOString() });
 }

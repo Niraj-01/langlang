@@ -1,0 +1,367 @@
+[
+  {
+    "id": "desu",
+    "title": "です・じゃありません",
+    "romaji": "desu · ja arimasen",
+    "name": "Is / is not",
+    "tag": "です",
+    "pattern": "A は B です",
+    "explain": "です after a noun makes a polite statement, so A は B です means A is B. The negative is じゃありません and the past is でした.",
+    "forms": [
+      { "label": "is", "ja": "学生[がくせい]です", "romaji": "gakusei desu", "en": "am / is a student" },
+      { "label": "is not", "ja": "学生[がくせい]じゃありません", "romaji": "gakusei ja arimasen", "en": "is not a student" },
+      { "label": "was", "ja": "学生[がくせい]でした", "romaji": "gakusei deshita", "en": "was a student" },
+      { "label": "was not", "ja": "学生[がくせい]じゃありませんでした", "romaji": "gakusei ja arimasen deshita", "en": "was not a student" }
+    ],
+    "examples": [
+      { "ja": "私[わたし]は学生[がくせい]です。", "romaji": "watashi wa gakusei desu.", "en": "I am a student." },
+      { "ja": "田中[たなか]さんは先生[せんせい]じゃありません。", "romaji": "Tanaka-san wa sensei ja arimasen.", "en": "Tanaka-san is not a teacher." },
+      { "ja": "きのうは日曜日[にちようび]でした。", "romaji": "kinō wa nichiyōbi deshita.", "en": "Yesterday was Sunday." }
+    ]
+  },
+  {
+    "id": "wa-no-mo-ka",
+    "title": "は・の・も・か",
+    "romaji": "wa · no · mo · ka",
+    "name": "Topic, of, also, question",
+    "tag": "は・の・も・か",
+    "pattern": "A は B の C です か",
+    "explain": "は (read wa) marks the topic, の links two nouns like 's, and も replaces は to mean also. End a sentence with か to turn it into a question.",
+    "forms": [
+      { "label": "topic", "ja": "私[わたし]は", "romaji": "watashi wa", "en": "as for me" },
+      { "label": "of / 's", "ja": "私[わたし]の本[ほん]", "romaji": "watashi no hon", "en": "my book" },
+      { "label": "also", "ja": "私[わたし]も", "romaji": "watashi mo", "en": "me too" },
+      { "label": "question", "ja": "学生[がくせい]ですか", "romaji": "gakusei desu ka", "en": "are you a student?" }
+    ],
+    "examples": [
+      { "ja": "これは私[わたし]のかさです。", "romaji": "kore wa watashi no kasa desu.", "en": "This is my umbrella." },
+      { "ja": "田中[たなか]さんも日本人[にほんじん]です。", "romaji": "Tanaka-san mo nihonjin desu.", "en": "Tanaka-san is Japanese too." },
+      { "ja": "あの人[ひと]は先生[せんせい]ですか。", "romaji": "ano hito wa sensei desu ka.", "en": "Is that person a teacher?" }
+    ]
+  },
+  {
+    "id": "wo-ni-de-e",
+    "title": "を・に・で・へ",
+    "romaji": "o · ni · de · e",
+    "name": "Object, time, place, direction",
+    "tag": "を・に・で・へ",
+    "pattern": "time に · place で · thing を · verb",
+    "explain": "を (read o) marks the object, に marks a clock time or a destination, and へ (read e) marks the direction you head in. で marks where an action happens or the means you use, like バスで, by bus.",
+    "forms": [
+      { "label": "object", "ja": "パンを食[た]べます", "romaji": "pan o tabemasu", "en": "eat bread" },
+      { "label": "time", "ja": "七時[しちじ]に起[お]きます", "romaji": "shichi-ji ni okimasu", "en": "get up at seven" },
+      { "label": "destination", "ja": "学校[がっこう]へ行[い]きます", "romaji": "gakkō e ikimasu", "en": "go to school" },
+      { "label": "place of action", "ja": "家[いえ]で勉強[べんきょう]します", "romaji": "ie de benkyō shimasu", "en": "study at home" },
+      { "label": "means", "ja": "バスで行[い]きます", "romaji": "basu de ikimasu", "en": "go by bus" }
+    ],
+    "examples": [
+      { "ja": "毎朝[まいあさ]、コーヒーを飲[の]みます。", "romaji": "maiasa, kōhī o nomimasu.", "en": "I drink coffee every morning." },
+      { "ja": "日曜日[にちようび]に東京[とうきょう]へ行[い]きます。", "romaji": "nichiyōbi ni Tōkyō e ikimasu.", "en": "I'm going to Tokyo on Sunday." },
+      { "ja": "図書館[としょかん]で日本語[にほんご]を勉強[べんきょう]します。", "romaji": "toshokan de nihongo o benkyō shimasu.", "en": "I study Japanese at the library." }
+    ]
+  },
+  {
+    "id": "masu",
+    "title": "ます・ません・ました・ませんでした",
+    "romaji": "masu · masen · mashita · masen deshita",
+    "name": "Polite verbs",
+    "tag": "ます",
+    "pattern": "verb stem + ます",
+    "explain": "Polite verbs end in ます, and only that ending changes: ません (don't), ました (did), ませんでした (didn't). There is no future tense, so 行[い]きます means both I go and I will go.",
+    "forms": [
+      { "label": "do / will", "ja": "食[た]べます", "romaji": "tabemasu", "en": "eat, will eat" },
+      { "label": "don't", "ja": "食[た]べません", "romaji": "tabemasen", "en": "don't eat" },
+      { "label": "did", "ja": "食[た]べました", "romaji": "tabemashita", "en": "ate" },
+      { "label": "didn't", "ja": "食[た]べませんでした", "romaji": "tabemasen deshita", "en": "didn't eat" }
+    ],
+    "examples": [
+      { "ja": "明日[あした]、映画[えいが]を見[み]ます。", "romaji": "ashita, eiga o mimasu.", "en": "I'll watch a movie tomorrow." },
+      { "ja": "きのう、友[とも]だちに会[あ]いました。", "romaji": "kinō, tomodachi ni aimashita.", "en": "I met a friend yesterday." },
+      { "ja": "けさは朝[あさ]ごはんを食[た]べませんでした。", "romaji": "kesa wa asagohan o tabemasen deshita.", "en": "I didn't eat breakfast this morning." }
+    ]
+  },
+  {
+    "id": "i-adjectives",
+    "title": "い形容詞[けいようし]",
+    "romaji": "i-keiyōshi",
+    "name": "い-adjectives",
+    "tag": "い-adjective",
+    "pattern": "～い → ～くない · ～かった · ～くなかった",
+    "explain": "い-adjectives conjugate by themselves: drop the last い and add くない (not), かった (was), or くなかった (wasn't), plus です to be polite. The one irregular is いい (good), which becomes よくない and よかった.",
+    "forms": [
+      { "label": "is", "ja": "高[たか]いです", "romaji": "takai desu", "en": "is expensive" },
+      { "label": "is not", "ja": "高[たか]くないです", "romaji": "takaku nai desu", "en": "isn't expensive" },
+      { "label": "was", "ja": "高[たか]かったです", "romaji": "takakatta desu", "en": "was expensive" },
+      { "label": "was not", "ja": "高[たか]くなかったです", "romaji": "takaku nakatta desu", "en": "wasn't expensive" },
+      { "label": "+ noun", "ja": "高[たか]いかばん", "romaji": "takai kaban", "en": "an expensive bag" }
+    ],
+    "examples": [
+      { "ja": "この本[ほん]はおもしろいです。", "romaji": "kono hon wa omoshiroi desu.", "en": "This book is interesting." },
+      { "ja": "きのうは寒[さむ]かったです。", "romaji": "kinō wa samukatta desu.", "en": "It was cold yesterday." },
+      { "ja": "このラーメンはあまりおいしくないです。", "romaji": "kono rāmen wa amari oishiku nai desu.", "en": "This ramen isn't very good." }
+    ]
+  },
+  {
+    "id": "na-adjectives",
+    "title": "な形容詞[けいようし]",
+    "romaji": "na-keiyōshi",
+    "name": "な-adjectives",
+    "tag": "な-adjective",
+    "pattern": "～な + noun · ～です · ～じゃありません · ～でした",
+    "explain": "な-adjectives need な before a noun, but otherwise conjugate like nouns: です, じゃありません, でした. Watch out for きれい and 有名[ゆうめい], which end in an い sound but are な-adjectives.",
+    "forms": [
+      { "label": "+ noun", "ja": "静[しず]かな町[まち]", "romaji": "shizuka na machi", "en": "a quiet town" },
+      { "label": "is", "ja": "静[しず]かです", "romaji": "shizuka desu", "en": "is quiet" },
+      { "label": "is not", "ja": "静[しず]かじゃありません", "romaji": "shizuka ja arimasen", "en": "isn't quiet" },
+      { "label": "was", "ja": "静[しず]かでした", "romaji": "shizuka deshita", "en": "was quiet" },
+      { "label": "was not", "ja": "静[しず]かじゃありませんでした", "romaji": "shizuka ja arimasen deshita", "en": "wasn't quiet" }
+    ],
+    "examples": [
+      { "ja": "京都[きょうと]はきれいな町[まち]です。", "romaji": "Kyōto wa kirei na machi desu.", "en": "Kyoto is a beautiful city." },
+      { "ja": "私[わたし]はテニスが好[す]きです。", "romaji": "watashi wa tenisu ga suki desu.", "en": "I like tennis." },
+      { "ja": "きのうはひまじゃありませんでした。", "romaji": "kinō wa hima ja arimasen deshita.", "en": "I wasn't free yesterday." }
+    ]
+  },
+  {
+    "id": "aru-iru",
+    "title": "あります・います",
+    "romaji": "arimasu · imasu",
+    "name": "There is / to have",
+    "tag": "ある・いる",
+    "pattern": "place に · thing が あります / person が います",
+    "explain": "Both mean there is: います for people and animals, あります for things, plants, and events. Mark the place with に and the thing that exists with が.",
+    "forms": [
+      { "label": "things", "ja": "あります", "romaji": "arimasu", "en": "there is (objects)" },
+      { "label": "living", "ja": "います", "romaji": "imasu", "en": "there is (people, animals)" },
+      { "label": "not · things", "ja": "ありません", "romaji": "arimasen", "en": "there isn't" },
+      { "label": "not · living", "ja": "いません", "romaji": "imasen", "en": "there isn't anyone" }
+    ],
+    "examples": [
+      { "ja": "机[つくえ]の上[うえ]に本[ほん]があります。", "romaji": "tsukue no ue ni hon ga arimasu.", "en": "There's a book on the desk." },
+      { "ja": "公園[こうえん]に子[こ]どもがいます。", "romaji": "kōen ni kodomo ga imasu.", "en": "There are children in the park." },
+      { "ja": "私[わたし]は兄弟[きょうだい]がいません。", "romaji": "watashi wa kyōdai ga imasen.", "en": "I don't have any siblings." }
+    ]
+  },
+  {
+    "id": "ga-to-kara-made",
+    "title": "が・と・から・まで",
+    "romaji": "ga · to · kara · made",
+    "name": "Subject, with, from, until",
+    "tag": "が・と・から・まで",
+    "pattern": "A と B · C から D まで",
+    "explain": "が marks the subject, especially with ある・いる, 好[す]き, and question words like だれが. と means and or together with, and から … まで means from … until, for both time and place.",
+    "forms": [
+      { "label": "subject", "ja": "猫[ねこ]が好[す]きです", "romaji": "neko ga suki desu", "en": "I like cats" },
+      { "label": "and", "ja": "パンと卵[たまご]", "romaji": "pan to tamago", "en": "bread and eggs" },
+      { "label": "with", "ja": "友[とも]だちと", "romaji": "tomodachi to", "en": "with a friend" },
+      { "label": "from … until", "ja": "九時[くじ]から五時[ごじ]まで", "romaji": "ku-ji kara go-ji made", "en": "from nine until five" }
+    ],
+    "examples": [
+      { "ja": "だれが来[き]ましたか。", "romaji": "dare ga kimashita ka.", "en": "Who came?" },
+      { "ja": "家族[かぞく]と京都[きょうと]へ行[い]きました。", "romaji": "kazoku to Kyōto e ikimashita.", "en": "I went to Kyoto with my family." },
+      { "ja": "駅[えき]から学校[がっこう]まで歩[ある]きます。", "romaji": "eki kara gakkō made arukimasu.", "en": "I walk from the station to school." }
+    ]
+  },
+  {
+    "id": "numbers-time",
+    "title": "数字[すうじ]と時間[じかん]",
+    "romaji": "sūji to jikan",
+    "name": "Numbers & time",
+    "tag": "numbers & time",
+    "pattern": "number + 時[じ] + 分[ふん]",
+    "explain": "Every number is built from 1 to 10, so 十一[じゅういち] is ten-one and 二十[にじゅう] is two-ten. Add 時[じ] for o'clock and 分[ふん] for minutes, but learn the odd hours: 四時[よじ], 七時[しちじ], 九時[くじ].",
+    "forms": [
+      { "label": "1–5", "ja": "一[いち]・二[に]・三[さん]・四[よん]・五[ご]", "romaji": "ichi · ni · san · yon · go", "en": "one to five" },
+      { "label": "6–10", "ja": "六[ろく]・七[なな]・八[はち]・九[きゅう]・十[じゅう]", "romaji": "roku · nana · hachi · kyū · jū", "en": "six to ten" },
+      { "label": "big", "ja": "百[ひゃく]・千[せん]・万[まん]", "romaji": "hyaku · sen · man", "en": "100 · 1,000 · 10,000" },
+      { "label": "odd hours", "ja": "四時[よじ]・七時[しちじ]・九時[くじ]", "romaji": "yo-ji · shichi-ji · ku-ji", "en": "4, 7 and 9 o'clock" },
+      { "label": "half past", "ja": "三時半[さんじはん]", "romaji": "san-ji han", "en": "3:30" }
+    ],
+    "examples": [
+      { "ja": "今[いま]、何時[なんじ]ですか。", "romaji": "ima, nan-ji desu ka.", "en": "What time is it now?" },
+      { "ja": "毎朝[まいあさ]、六時半[ろくじはん]に起[お]きます。", "romaji": "maiasa, roku-ji han ni okimasu.", "en": "I get up at 6:30 every morning." },
+      { "ja": "このかばんは三千[さんぜん]円[えん]です。", "romaji": "kono kaban wa sanzen en desu.", "en": "This bag is 3,000 yen." }
+    ]
+  },
+  {
+    "id": "counters",
+    "title": "助数詞[じょすうし]",
+    "romaji": "josūshi",
+    "name": "Counters",
+    "tag": "counters",
+    "pattern": "thing を · number + counter · verb",
+    "explain": "Japanese adds a counter to the number: ～つ for general things, ～人[にん] for people, ～枚[まい] for flat things, ～本[ほん] for long things. The count usually sits right before the verb, as in りんごを三[みっ]つ買[か]います.",
+    "forms": [
+      { "label": "things", "ja": "一[ひと]つ・二[ふた]つ・三[みっ]つ", "romaji": "hitotsu · futatsu · mittsu", "en": "one, two, three (things)" },
+      { "label": "people", "ja": "一人[ひとり]・二人[ふたり]・三人[さんにん]", "romaji": "hitori · futari · sannin", "en": "one, two, three people" },
+      { "label": "flat", "ja": "一枚[いちまい]・二枚[にまい]", "romaji": "ichimai · nimai", "en": "one, two sheets" },
+      { "label": "long", "ja": "一本[いっぽん]・二本[にほん]・三本[さんぼん]", "romaji": "ippon · nihon · sanbon", "en": "one, two, three (pens, bottles)" }
+    ],
+    "examples": [
+      { "ja": "りんごを二[ふた]つください。", "romaji": "ringo o futatsu kudasai.", "en": "Two apples, please." },
+      { "ja": "家族[かぞく]は四人[よにん]です。", "romaji": "kazoku wa yonin desu.", "en": "There are four people in my family." },
+      { "ja": "切手[きって]を三枚[さんまい]買[か]いました。", "romaji": "kitte o sanmai kaimashita.", "en": "I bought three stamps." }
+    ]
+  },
+  {
+    "id": "dictionary-form",
+    "title": "辞書形[じしょけい]",
+    "romaji": "jisho-kei",
+    "name": "Dictionary form & verb groups",
+    "tag": "verb groups",
+    "pattern": "Group 1 u → i · Group 2 drop る · Group 3 する, 来[く]る",
+    "explain": "The dictionary form is the plain verb you look up, like 食[た]べる or 行[い]く, and it's what casual speech uses. Verbs fall into three groups that decide every conjugation: Group 1 shifts the last u to i before ます, Group 2 drops る, and する and 来[く]る are irregular.",
+    "forms": [
+      { "label": "Group 1", "ja": "書[か]く → 書[か]きます", "romaji": "kaku → kakimasu", "en": "write" },
+      { "label": "Group 1", "ja": "飲[の]む → 飲[の]みます", "romaji": "nomu → nomimasu", "en": "drink" },
+      { "label": "Group 2", "ja": "食[た]べる → 食[た]べます", "romaji": "taberu → tabemasu", "en": "eat" },
+      { "label": "Group 2", "ja": "見[み]る → 見[み]ます", "romaji": "miru → mimasu", "en": "see" },
+      { "label": "Group 3", "ja": "する → します", "romaji": "suru → shimasu", "en": "do" },
+      { "label": "Group 3", "ja": "来[く]る → 来[き]ます", "romaji": "kuru → kimasu", "en": "come" },
+      { "label": "trap", "ja": "帰[かえ]る → 帰[かえ]ります", "romaji": "kaeru → kaerimasu", "en": "go home (ends in る, but Group 1)" }
+    ],
+    "examples": [
+      { "ja": "毎晩[まいばん]、本[ほん]を読[よ]む。", "romaji": "maiban, hon o yomu.", "en": "I read a book every night." },
+      { "ja": "明日[あした]、友[とも]だちが来[く]る。", "romaji": "ashita, tomodachi ga kuru.", "en": "A friend is coming tomorrow." },
+      { "ja": "夜[よる]はテレビを見[み]る。", "romaji": "yoru wa terebi o miru.", "en": "I watch TV at night." }
+    ]
+  },
+  {
+    "id": "te-form",
+    "title": "て形[けい]",
+    "romaji": "te-kei",
+    "name": "The て-form",
+    "tag": "て-form",
+    "pattern": "verb-て、verb",
+    "explain": "The て-form links actions in order (do this, and then that) and powers patterns like てください. Group 2 swaps る for て; Group 1 changes by ending (く→いて, ぐ→いで, む・ぶ・ぬ→んで, う・つ・る→って, す→して), and 行[い]く is the exception: 行[い]って.",
+    "forms": [
+      { "label": "る → て", "ja": "食[た]べる → 食[た]べて", "romaji": "taberu → tabete", "en": "eat" },
+      { "label": "く → いて", "ja": "書[か]く → 書[か]いて", "romaji": "kaku → kaite", "en": "write" },
+      { "label": "ぐ → いで", "ja": "泳[およ]ぐ → 泳[およ]いで", "romaji": "oyogu → oyoide", "en": "swim" },
+      { "label": "む・ぶ・ぬ → んで", "ja": "飲[の]む → 飲[の]んで", "romaji": "nomu → nonde", "en": "drink" },
+      { "label": "う・つ・る → って", "ja": "買[か]う → 買[か]って", "romaji": "kau → katte", "en": "buy" },
+      { "label": "す → して", "ja": "話[はな]す → 話[はな]して", "romaji": "hanasu → hanashite", "en": "speak" },
+      { "label": "exception", "ja": "行[い]く → 行[い]って", "romaji": "iku → itte", "en": "go" },
+      { "label": "irregular", "ja": "する → して・来[く]る → 来[き]て", "romaji": "suru → shite · kuru → kite", "en": "do · come" }
+    ],
+    "examples": [
+      { "ja": "朝[あさ]起[お]きて、シャワーを浴[あ]びます。", "romaji": "asa okite, shawā o abimasu.", "en": "I get up in the morning and take a shower." },
+      { "ja": "デパートへ行[い]って、くつを買[か]いました。", "romaji": "depāto e itte, kutsu o kaimashita.", "en": "I went to the department store and bought shoes." },
+      { "ja": "手[て]を洗[あら]って、ご飯[はん]を食[た]べます。", "romaji": "te o aratte, gohan o tabemasu.", "en": "I wash my hands, then eat." }
+    ]
+  },
+  {
+    "id": "te-kudasai",
+    "title": "～てください",
+    "romaji": "~te kudasai",
+    "name": "Please do …",
+    "tag": "てください",
+    "pattern": "verb-て + ください",
+    "explain": "The て-form plus ください makes a polite request: please do it. To ask someone not to do something, use the ない form plus でください, as in 見[み]ないでください.",
+    "forms": [
+      { "label": "please", "ja": "待[ま]ってください", "romaji": "matte kudasai", "en": "please wait" },
+      { "label": "please", "ja": "書[か]いてください", "romaji": "kaite kudasai", "en": "please write" },
+      { "label": "please don't", "ja": "見[み]ないでください", "romaji": "minaide kudasai", "en": "please don't look" }
+    ],
+    "examples": [
+      { "ja": "ちょっと待[ま]ってください。", "romaji": "chotto matte kudasai.", "en": "Please wait a moment." },
+      { "ja": "ここに名前[なまえ]を書[か]いてください。", "romaji": "koko ni namae o kaite kudasai.", "en": "Please write your name here." },
+      { "ja": "もう一度[いちど]言[い]ってください。", "romaji": "mō ichido itte kudasai.", "en": "Please say it once more." }
+    ]
+  },
+  {
+    "id": "te-mo-ii",
+    "title": "～てもいいです",
+    "romaji": "~te mo ii desu",
+    "name": "It's OK to … / May I …?",
+    "tag": "てもいい",
+    "pattern": "verb-て + もいいです(か)",
+    "explain": "The て-form plus もいいです gives permission: it's OK to do it. Add か to ask for permission, as in 入[はい]ってもいいですか, may I come in?",
+    "forms": [
+      { "label": "may", "ja": "座[すわ]ってもいいです", "romaji": "suwatte mo ii desu", "en": "you may sit" },
+      { "label": "may I?", "ja": "座[すわ]ってもいいですか", "romaji": "suwatte mo ii desu ka", "en": "may I sit?" },
+      { "label": "reply", "ja": "はい、どうぞ", "romaji": "hai, dōzo", "en": "yes, go ahead" }
+    ],
+    "examples": [
+      { "ja": "ここに座[すわ]ってもいいですか。", "romaji": "koko ni suwatte mo ii desu ka.", "en": "May I sit here?" },
+      { "ja": "写真[しゃしん]をとってもいいですか。", "romaji": "shashin o totte mo ii desu ka.", "en": "May I take a photo?" },
+      { "ja": "辞書[じしょ]を使[つか]ってもいいです。", "romaji": "jisho o tsukatte mo ii desu.", "en": "You may use a dictionary." }
+    ]
+  },
+  {
+    "id": "te-wa-ikemasen",
+    "title": "～てはいけません",
+    "romaji": "~te wa ikemasen",
+    "name": "You must not …",
+    "tag": "てはいけません",
+    "pattern": "verb-て + はいけません",
+    "explain": "The て-form plus はいけません means you must not do it, the flip side of てもいいです. It sounds strict, so you'll meet it mostly in rules and on signs.",
+    "forms": [
+      { "label": "must not", "ja": "入[はい]ってはいけません", "romaji": "haitte wa ikemasen", "en": "you must not enter" },
+      { "label": "opposite", "ja": "入[はい]ってもいいです", "romaji": "haitte mo ii desu", "en": "you may enter" }
+    ],
+    "examples": [
+      { "ja": "ここでたばこを吸[す]ってはいけません。", "romaji": "koko de tabako o sutte wa ikemasen.", "en": "You must not smoke here." },
+      { "ja": "図書館[としょかん]で話[はな]してはいけません。", "romaji": "toshokan de hanashite wa ikemasen.", "en": "You must not talk in the library." },
+      { "ja": "テストのとき、辞書[じしょ]を見[み]てはいけません。", "romaji": "tesuto no toki, jisho o mite wa ikemasen.", "en": "You must not look at a dictionary during the test." }
+    ]
+  },
+  {
+    "id": "tai",
+    "title": "～たい",
+    "romaji": "~tai",
+    "name": "I want to …",
+    "tag": "たい",
+    "pattern": "verb stem + たいです",
+    "explain": "Swap ます for たい to say what you want to do: 行[い]きます becomes 行[い]きたい. たい conjugates like an い-adjective (たくない, たかった) and is for your own wishes, not other people's.",
+    "forms": [
+      { "label": "want", "ja": "行[い]きたいです", "romaji": "ikitai desu", "en": "want to go" },
+      { "label": "don't want", "ja": "行[い]きたくないです", "romaji": "ikitaku nai desu", "en": "don't want to go" },
+      { "label": "wanted", "ja": "行[い]きたかったです", "romaji": "ikitakatta desu", "en": "wanted to go" }
+    ],
+    "examples": [
+      { "ja": "日本[にほん]へ行[い]きたいです。", "romaji": "Nihon e ikitai desu.", "en": "I want to go to Japan." },
+      { "ja": "今日[きょう]は何[なに]も食[た]べたくないです。", "romaji": "kyō wa nani mo tabetaku nai desu.", "en": "I don't want to eat anything today." },
+      { "ja": "何[なに]が飲[の]みたいですか。", "romaji": "nani ga nomitai desu ka.", "en": "What would you like to drink?" }
+    ]
+  },
+  {
+    "id": "mashou",
+    "title": "～ましょう・～ませんか",
+    "romaji": "~mashō · ~masen ka",
+    "name": "Let's … / Won't you …?",
+    "tag": "ましょう",
+    "pattern": "verb stem + ましょう / ませんか",
+    "explain": "Swap ます for ましょう to say let's, or ましょうか to offer: shall I? Swap ます for ませんか for a gentle invitation: won't you join me?",
+    "forms": [
+      { "label": "let's", "ja": "行[い]きましょう", "romaji": "ikimashō", "en": "let's go" },
+      { "label": "shall we?", "ja": "行[い]きましょうか", "romaji": "ikimashō ka", "en": "shall we go?" },
+      { "label": "won't you?", "ja": "行[い]きませんか", "romaji": "ikimasen ka", "en": "won't you come along?" }
+    ],
+    "examples": [
+      { "ja": "いっしょに昼[ひる]ごはんを食[た]べませんか。", "romaji": "issho ni hirugohan o tabemasen ka.", "en": "Would you like to have lunch together?" },
+      { "ja": "ええ、食[た]べましょう。", "romaji": "ē, tabemashō.", "en": "Sure, let's eat." },
+      { "ja": "荷物[にもつ]を持[も]ちましょうか。", "romaji": "nimotsu o mochimashō ka.", "en": "Shall I carry your bags?" }
+    ]
+  },
+  {
+    "id": "comparison",
+    "title": "より・のほうが",
+    "romaji": "yori · no hō ga",
+    "name": "Comparisons",
+    "tag": "より・のほうが",
+    "pattern": "A は B より … · B より A のほうが …",
+    "explain": "A は B より plus an adjective means A is more … than B, and A のほうが puts the spotlight on the winner. For the top of a whole group, use いちばん: the most.",
+    "forms": [
+      { "label": "than", "ja": "電車[でんしゃ]はバスより速[はや]いです", "romaji": "densha wa basu yori hayai desu", "en": "the train is faster than the bus" },
+      { "label": "rather", "ja": "バスより電車[でんしゃ]のほうが速[はや]いです", "romaji": "basu yori densha no hō ga hayai desu", "en": "the train is the faster one" },
+      { "label": "which?", "ja": "肉[にく]と魚[さかな]とどちらが好[す]きですか", "romaji": "niku to sakana to dochira ga suki desu ka", "en": "which do you like more, meat or fish?" },
+      { "label": "the most", "ja": "一年[いちねん]で夏[なつ]がいちばん好[す]きです", "romaji": "ichinen de natsu ga ichiban suki desu", "en": "I like summer best of the year" }
+    ],
+    "examples": [
+      { "ja": "東京[とうきょう]は大阪[おおさか]より大[おお]きいです。", "romaji": "Tōkyō wa Ōsaka yori ōkii desu.", "en": "Tokyo is bigger than Osaka." },
+      { "ja": "肉[にく]より魚[さかな]のほうが好[す]きです。", "romaji": "niku yori sakana no hō ga suki desu.", "en": "I like fish more than meat." },
+      { "ja": "家族[かぞく]の中[なか]で父[ちち]がいちばん背[せ]が高[たか]いです。", "romaji": "kazoku no naka de chichi ga ichiban se ga takai desu.", "en": "My father is the tallest in my family." }
+    ]
+  }
+]

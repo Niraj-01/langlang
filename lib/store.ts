@@ -115,7 +115,15 @@ export function replaceState(next: AppState) {
   emit();
 }
 
-const serverSnapshot = defaultState();
+// Static pages render this at BUILD time and the client replays it during
+// hydration on whatever day the page is opened, so it must carry nothing
+// date-derived (today, daily quests) — or the two renders disagree (#418).
+const serverSnapshot: AppState = {
+  ...defaultState(),
+  today: { date: "", reviews: 0, correct: 0, newWords: 0, xp: 0 },
+  quests: [],
+  questDate: "",
+};
 
 export function useApp(): AppState {
   return useSyncExternalStore(

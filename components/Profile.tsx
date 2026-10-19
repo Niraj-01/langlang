@@ -6,6 +6,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { useMounted } from "@/lib/useMounted";
 import {
   useApp,
   petMood,
@@ -35,6 +36,10 @@ export function Profile() {
   const [roasting, setRoasting] = useState(false);
   const [editing, setEditing] = useState(false);
   const [nameDraft, setNameDraft] = useState("");
+  const mounted = useMounted();
+  // streak week, daily quests and "today" XP are date/localStorage-dependent —
+  // client-only, or a static build from another day mismatches on hydration
+  if (!mounted) return <div className="lang-ja min-h-dvh bg-bg" />;
 
   const accent = state.lang === "ja" ? "lang-ja" : "lang-de";
   const mood = petMood(state);

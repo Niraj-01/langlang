@@ -12,6 +12,7 @@ import { sfxCorrect, sfxWrong } from "@/lib/audio";
 import { playWord } from "@/lib/nativeAudio";
 import { burst } from "@/lib/confetti";
 import { Icon } from "@/components/Icon";
+import { fillReading, grammarTag } from "@/lib/grammar";
 import { XpPop } from "./XpPop";
 
 const BLANK = "＿";
@@ -62,7 +63,7 @@ export function GrammarCard({
         transition={{ duration: 0.4 }}
       >
         <div className="tag">
-          GRAMMAR <span className="opacity-50">· {item.lang === "ja" ? "particle" : "article"}</span>
+          GRAMMAR <span className="opacity-50">· {grammarTag(item)}</span>
         </div>
 
         <div className="flex flex-1 flex-col items-center justify-center text-center">
@@ -71,9 +72,7 @@ export function GrammarCard({
           </div>
           {item.lang === "ja" && furigana && item.promptReading && (
             <div className="mt-2 text-lg opacity-60">
-              {picked !== null
-                ? item.promptReading.replace(BLANK, item.options[picked])
-                : item.promptReading.replace(BLANK, "▢")}
+              {fillReading(item, picked)}
             </div>
           )}
           <div className="mt-4 text-sm opacity-50">{item.translation}</div>

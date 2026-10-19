@@ -18,6 +18,7 @@ import { SEED, dealIndexAt, seedFreqRankByWord, freqTier } from "@/lib/seed";
 import grammarJa from "@/data/grammar_ja.json";
 import grammarDe from "@/data/grammar_de.json";
 import type { GrammarItem } from "@/lib/types";
+import { fillReading, grammarTag } from "@/lib/grammar";
 import {
   useApp,
   addNewWord,
@@ -536,12 +537,12 @@ function GrammarEx({ ex, lang, furigana, onChecked, onNext }: ExProps & { ex: Ex
 
   return (
     <>
-      <Kicker>Grammar · {item.lang === "ja" ? "particle" : "article"}</Kicker>
+      <Kicker>Grammar · {grammarTag(item)}</Kicker>
       <Heading>Fill the blank</Heading>
       <div className={`mb-2 font-bold ${item.lang === "ja" ? "text-2xl" : "text-xl"}`}>{shown(null)}</div>
       {item.lang === "ja" && furigana && item.promptReading && (
         <div className="mb-2 text-base" style={{ color: C.blue }}>
-          {item.promptReading.replace(BLANK, picked !== null ? item.options[picked] : "▢")}
+          {fillReading(item, picked)}
         </div>
       )}
       <div className="mb-5 text-sm" style={{ color: C.muted }}>{item.translation}</div>

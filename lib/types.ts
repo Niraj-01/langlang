@@ -186,9 +186,41 @@ export interface GrammarItem {
   prompt: string;
   promptReading?: string; // kana version (ja)
   options: string[];
+  optionReadings?: string[]; // kana per option, when options contain kanji (ja)
   answer: number;
   note: string; // why — max 2 sentences
   translation: string;
+  pattern?: string; // GrammarPoint id (data/grammar_points_ja.json)
+}
+
+// ---- Japanese grammar reference (/grammar) ----
+// Japanese strings use ruby notation: 漢字[かんじ] — a kanji run followed by
+// its reading in brackets (see parseRuby in lib/grammar.ts).
+
+export interface GrammarForm {
+  label: string;
+  ja: string;
+  romaji: string;
+  en: string;
+}
+
+export interface GrammarExample {
+  ja: string;
+  romaji: string;
+  en: string;
+}
+
+/** One JLPT N5 pattern, in teaching order. */
+export interface GrammarPoint {
+  id: string;
+  title: string;
+  romaji: string;
+  name: string; // English name
+  tag: string; // short kicker on feed/lesson drills
+  pattern: string; // structure formula
+  explain: string; // max 2 sentences
+  forms: GrammarForm[];
+  examples: GrammarExample[];
 }
 
 // ---- i+1 sentences (Tatoeba, CC BY 2.0 FR — built by scripts/gen-sentences.mjs) ----

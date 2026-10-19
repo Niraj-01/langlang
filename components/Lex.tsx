@@ -4,6 +4,7 @@
 // color-coded articles for German nouns (der=blue, die=red, das=green — always).
 
 import type { Card, VocabEntry } from "@/lib/types";
+import { parseRuby } from "@/lib/grammar";
 
 export const ARTICLE_COLOR: Record<string, string> = {
   der: "text-der",
@@ -31,6 +32,32 @@ export function JaWord({
     );
   }
   return <span className={`font-jp ${className}`}>{word}</span>;
+}
+
+/** Text in 漢字[かんじ] ruby notation — readings shown over kanji when furigana is on. */
+export function RubyText({
+  text,
+  furigana,
+  className = "",
+}: {
+  text: string;
+  furigana: boolean;
+  className?: string;
+}) {
+  return (
+    <span className={className}>
+      {parseRuby(text).map((s, i) =>
+        s.ruby && furigana ? (
+          <ruby key={i}>
+            {s.base}
+            <rt className="text-[0.5em] font-normal text-muted">{s.ruby}</rt>
+          </ruby>
+        ) : (
+          <span key={i}>{s.base}</span>
+        )
+      )}
+    </span>
+  );
 }
 
 export function DeNoun({

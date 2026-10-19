@@ -78,8 +78,10 @@ function hashDate(date: string): number {
   return h >>> 0;
 }
 
-/** Deterministic 3 quests for the given day. */
-export function dailyQuests(date: string): Quest[] {
+/** Deterministic 3 quests for the given day. `newCap` (the daily new-word
+ *  quota, null = unlimited) caps the "learn N new words" target so the quest
+ *  stays winnable from the feed, which stops dealing new words at the quota. */
+export function dailyQuests(date: string, newCap?: number | null): Quest[] {
   const h = hashDate(date);
   const ordered = POOL.map((def, i) => ({
     def,
@@ -91,7 +93,8 @@ export function dailyQuests(date: string): Quest[] {
   return ordered.slice(0, 3).map((def, i) => {
     // >>> keeps the hash unsigned — a signed shift can go negative and index
     // targets[-1], yielding "Learn undefined new words" quests
-    const target = def.targets[(h >>> (i * 4)) % def.targets.length];
+    let target = def.targets[(h >>> (i * 4)) % def.targets.length];
+    if (def.key === "newwords" && newCap != null) target = Math.max(1, Math.min(target, newCap));
     return {
       key: def.key,
       label: def.label(target),

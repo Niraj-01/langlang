@@ -58,6 +58,10 @@ export function Feed() {
         if (it.kind === "review") queuedCardIds.add(it.cardId);
         if (it.kind === "new") queuedNewCount++;
       }
+      // unanswered new cards from the active one onward still hold a quota slot
+      const upcomingNewCount = queue.filter(
+        (it, i) => it.kind === "new" && i >= activeIndex.current && !answered.current.has(it.id)
+      ).length;
       let sinceStatus = queue.length;
       for (let i = queue.length - 1; i >= 0; i--) {
         if (queue[i].kind === "status") {
@@ -69,8 +73,10 @@ export function Feed() {
         recentKinds: queue.slice(-2).map((it) => it.kind),
         queuedCardIds,
         queuedNewCount,
+        upcomingNewCount,
         lastWasFail: lastWasFail.current,
         sinceStatus,
+        newDoneShown: queue.some((it) => it.kind === "status" && it.note === "new-done"),
       };
     },
     []
@@ -292,6 +298,6 @@ function FeedCard({
         />
       );
     case "status":
-      return <StatusCard state={state} />;
+      return <StatusCard state={state} note={item.note} />;
   }
 }

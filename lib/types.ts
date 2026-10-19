@@ -150,6 +150,10 @@ export interface AppState {
   favorites: string[]; // e.g. "kanji:食", "phrase:こんにちは", "ja:水"
   mistakeLog: MistakeEntry[]; // most recent first, capped
   dailyGoal: number; // XP target per day
+  // New words the FEED may deal per day, per language (null = unlimited).
+  // Every word that enters the deck today counts toward it (lessons, packs,
+  // mining too), but only the feed is gated — see newWordsLeft in lib/derive.ts.
+  newPerDay: number | null;
   onboarding: OnboardingState;
   // League identity. Both are read by the OPTIONAL supabase `leaderboard` view;
   // shareLeaderboard defaults to false, so a user is never listed without
@@ -169,7 +173,7 @@ export type FeedItem =
   | { kind: "sentence"; id: string; sentenceIdx: number; unknownSeedIndex: number }
   | { kind: "speak"; id: string; target: SpeakTarget }
   | { kind: "meme"; id: string; word: string; reading?: string; meaning: string }
-  | { kind: "status"; id: string };
+  | { kind: "status"; id: string; note?: "new-done" };
 
 // "Same word, different voice?" listen drill — two native clips back to back.
 // Only built when a word has 2+ recorded voices (see data/audio_manifest.json).

@@ -1,14 +1,19 @@
 "use client";
 
 // Mid-scroll status pulse: streak, today's numbers, what's still due.
+// note="new-done" is the one-off card dealt when today's new-word quota runs
+// out — it leads with that instead of the streak flame.
 
 import type { AppState } from "@/lib/types";
-import { dueCards, levelFromXp } from "@/lib/store";
+import { dueCards, levelFromXp, newWordsToday } from "@/lib/store";
 import { SEED_LABEL } from "@/lib/seed";
 import { Icon } from "@/components/Icon";
 
-export function StatusCard({ state }: { state: AppState }) {
+export function StatusCard({ state, note }: { state: AppState; note?: "new-done" }) {
   const due = dueCards(state, state.lang).length;
+  const added = newWordsToday(state, state.lang);
+  const cap = state.newPerDay;
+  const newDone = note === "new-done";
   const { level, into, span } = levelFromXp(state.xp);
   const acc =
     state.today.reviews > 0
@@ -20,27 +25,46 @@ export function StatusCard({ state }: { state: AppState }) {
   return (
     <div className="card-shell">
       <div className="card-panel items-center justify-center gap-6 text-center">
-        <div className="tag self-stretch">STATUS CHECK</div>
-
-        <Icon
-          name="flame"
-          size={flameSize}
-          strokeWidth={1.5}
-          className={state.streak.current > 0 ? "animate-flame text-(--accent)" : "opacity-40"}
-        />
-        <div>
-          <div className="font-display text-6xl text-(--accent)">
-            {state.streak.current}
-          </div>
-          <div className="text-xs uppercase tracking-[0.3em] opacity-50">
-            day streak · best {state.streak.longest}
-          </div>
+        <div className="tag self-stretch">
+          {newDone ? "NEW WORDS · DONE FOR TODAY" : "STATUS CHECK"}
         </div>
+
+        {newDone ? (
+          <>
+            <Icon name="check" size={72} strokeWidth={1.5} className="text-good" />
+            <div>
+              <div className="font-display text-6xl text-(--accent)">
+                {added}/{cap ?? added}
+              </div>
+              <div className="mx-auto mt-2 max-w-[30ch] text-sm leading-snug opacity-70">
+                That&apos;s today&apos;s new words — reviews, quizzes and drills keep coming.
+                Change the limit in Profile.
+              </div>
+            </div>
+          </>
+        ) : (
+          <>
+            <Icon
+              name="flame"
+              size={flameSize}
+              strokeWidth={1.5}
+              className={state.streak.current > 0 ? "animate-flame text-(--accent)" : "opacity-40"}
+            />
+            <div>
+              <div className="font-display text-6xl text-(--accent)">
+                {state.streak.current}
+              </div>
+              <div className="text-xs uppercase tracking-[0.3em] opacity-50">
+                day streak · best {state.streak.longest}
+              </div>
+            </div>
+          </>
+        )}
 
         <div className="grid w-full grid-cols-3 gap-3">
           <Stat label="reviews today" value={state.today.reviews} />
           <Stat label="accuracy" value={acc === null ? "—" : `${acc}%`} />
-          <Stat label="new words" value={state.today.newWords} />
+          <Stat label="new words" value={cap == null ? added : `${added}/${cap}`} />
         </div>
 
         <div className="w-full">

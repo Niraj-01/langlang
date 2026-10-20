@@ -3,7 +3,7 @@
 // cached the app is fully usable offline. API routes are never cached (they
 // need the network; the app already degrades gracefully without them).
 
-const CACHE = "langlang-cfe7bc46";
+const CACHE = "langlang-caf686b7";
 const SHELL = [
   "/",
   "/alphabet",
@@ -12,6 +12,7 @@ const SHELL = [
   "/dojo",
   "/draw",
   "/focus",
+  "/grammar",
   "/grammar-de",
   "/hiragana",
   "/kanji",

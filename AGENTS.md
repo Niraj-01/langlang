@@ -258,6 +258,20 @@ words, quizzes) is a card in one infinite vertical snap feed ("the Doomscroll").
   a slot; skipped or scrolled-past ones give it back. The "learn N new words"
   quest target is clamped to the quota (`dailyQuests(date, newCap)`, re-fitted
   on rollover and on `setNewPerDay`). Tests: `tests/newcap.test.ts`.
+- **Japanese grammar reference (done):** `/grammar` in the Learn zone (Nav tab
+  文, Home tile) — 18 JLPT N5 patterns in teaching order
+  (`data/grammar_points_ja.json`: です → は/の/も/か → を/に/で/へ → ます → い/な
+  adjectives → あります/います → が/と/から/まで → numbers/time → counters →
+  dictionary form → て-form → てください → てもいい → てはいけません → たい →
+  ましょう → より/のほうが). Each: ≤2-sentence rule, forms table, 2–3 examples
+  in ruby notation `漢字[かんじ]` (`parseRuby` in `lib/grammar.ts`, rendered by
+  `RubyText` in `Lex.tsx`, follows the furigana toggle; a test fails on any
+  kanji without a reading), and a practice run of the drills in
+  `grammar_ja.json` tagged with that `pattern` id — the same drills the feed and
+  lessons deal, now labeled by `grammarTag` (e.g. "GRAMMAR · て-form").
+  Conjugation drills carry `optionReadings` so the kana line stays kana
+  (`fillReading`). `components/GrammarGuide.tsx` is the accordion
+  (`/grammar#te-form` deep-links). Tests: `tests/grammarPoints.test.ts`.
 
 ## Architecture
 

@@ -4,13 +4,14 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Icon } from "./Icon";
 
-// `short` keeps eight tabs legible at 390px; the full label returns on sm+.
+// `short` keeps nine tabs legible at 375px; the full label returns on sm+.
 const TABS = [
   { href: "/learn", label: "Home", short: "Home", jp: "ホ" },
   { href: "/hiragana", label: "Hiragana", short: "Hira", jp: "あ" },
   { href: "/katakana", label: "Katakana", short: "Kata", jp: "ア" },
   { href: "/kanji", label: "Kanji", short: "Kanji", jp: "水" },
   { href: "/phrases", label: "Phrases", short: "Phrase", jp: "話" },
+  { href: "/grammar", label: "Grammar", short: "Gram", jp: "文" },
   { href: "/draw", label: "Draw", short: "Draw", jp: "筆" },
   { href: "/translate", label: "Translate", short: "Trans", jp: "訳" },
 ];

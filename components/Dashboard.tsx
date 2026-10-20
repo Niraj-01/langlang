@@ -245,6 +245,22 @@ export function Dashboard({
           </div>
           <div className="mt-2 text-[11px] text-muted">Trace with your finger</div>
         </Link>
+
+        {/* grammar */}
+        <Link
+          href="/grammar"
+          className={`${TILE} col-span-2 flex items-center gap-4 p-4 md:col-span-4 md:row-span-1 md:px-5`}
+        >
+          <span className="jp text-4xl font-bold text-accent">文</span>
+          <div className="min-w-0 flex-1">
+            <div className={LABEL}>Grammar</div>
+            <div className="mt-1 text-sm">
+              The core N5 patterns, from <span className="jp">です</span> to{" "}
+              <span className="jp">より</span>, in the order to learn them.
+            </div>
+          </div>
+          <Icon name="arrowRight" size={18} className="shrink-0 text-accent" />
+        </Link>
       </div>
     </div>
   );

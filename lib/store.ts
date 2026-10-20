@@ -21,6 +21,7 @@ import { COSMETICS, type Cosmetic, dailyQuests } from "./quests";
 import { todayStr, dueCards, levelFromXp } from "./derive";
 
 const KEY = "langlang.v1";
+const DEFAULT_NEW_PER_DAY = 10;
 
 function defaultState(): AppState {
   return {
@@ -34,7 +35,7 @@ function defaultState(): AppState {
     streak: { current: 0, longest: 0, freezes: 0, lastActive: "" },
     today: { date: todayStr(), reviews: 0, correct: 0, newWords: 0, xp: 0 },
     bestCombo: 0,
-    quests: dailyQuests(todayStr()),
+    quests: dailyQuests(todayStr(), DEFAULT_NEW_PER_DAY),
     questDate: todayStr(),
     packs: 0,
     pet: { name: "Mochi", cosmetics: [], equipped: [] },
@@ -45,6 +46,7 @@ function defaultState(): AppState {
     favorites: [],
     mistakeLog: [],
     dailyGoal: 20,
+    newPerDay: DEFAULT_NEW_PER_DAY,
     onboarding: { done: false },
     displayName: "",
     shareLeaderboard: false, // opt-in only — never list a user by default
@@ -160,8 +162,25 @@ function rolloverDay() {
   if (state.questDate !== today || state.quests.some((q) => !q.target)) {
     // fresh quests each day; also self-heal quests stored by the old signed-
     // shift bug (undefined targets). Unopened packs carry over.
-    state = { ...state, quests: dailyQuests(today), questDate: today };
+    state = { ...state, quests: dailyQuests(today, state.newPerDay), questDate: today };
   }
+  fitNewwordsQuest();
+}
+
+// Keep today's "learn N new words" quest reachable under the new-word quota
+// (quests rolled before the quota existed, or before the limit changed). A
+// lowered target the learner already met completes on the spot.
+function fitNewwordsQuest() {
+  const want = dailyQuests(state.questDate, state.newPerDay).find((q) => q.key === "newwords");
+  const cur = state.quests.find((q) => q.key === "newwords");
+  if (!want || !cur || cur.done || cur.target === want.target) return;
+  state = {
+    ...state,
+    quests: state.quests.map((q) =>
+      q === cur ? { ...q, target: want.target, label: want.label } : q
+    ),
+  };
+  applyQuest("newwords", 0);
 }
 
 function touchStreak() {
@@ -388,6 +407,13 @@ export function clearMistake(lang: Lang, word: string) {
 
 export function setDailyGoal(xp: number) {
   state = { ...state, dailyGoal: xp };
+  emit();
+}
+
+/** Daily new-word quota for the feed (null = unlimited). */
+export function setNewPerDay(n: number | null) {
+  state = { ...state, newPerDay: n };
+  fitNewwordsQuest();
   emit();
 }
 
@@ -691,4 +717,7 @@ export {
   hardestWord,
   paceForecast,
   levelFromXp,
+  newWordsToday,
+  newWordsLeft,
+  NEW_PER_DAY_OPTIONS,
 } from "./derive";

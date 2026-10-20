@@ -245,6 +245,20 @@ words, quizzes) is a card in one infinite vertical snap feed ("the Doomscroll").
   BEFORE appending (comment in seed.ts). Order-stability snapshot +
   permutation invariants in `tests/frequency.test.ts`.
 
+- **Daily new-word quota (done):** `newPerDay` in the store (5/10/15/20/null =
+  unlimited, default 10; picker in Profile under the daily XP goal; synced with
+  the rest of the state). Counted PER LANGUAGE from card birth times
+  (`newWordsToday`/`newWordsLeft` in `lib/derive.ts`). Every word that enters
+  the deck today counts (feed adds, Path lesson unit deals, packs, mining), but
+  ONLY the feed is gated: lessons/packs/mining are explicit choices and always
+  go through. Once spent, `nextFeedItem` stops dealing `new` cards and i+1
+  sentences that would introduce the current new word (`allowNew` in
+  `lib/sentences.ts`), and deals one `status` card with `note: "new-done"`
+  (never as the opening card). Queued new cards still ahead of the reader hold
+  a slot; skipped or scrolled-past ones give it back. The "learn N new words"
+  quest target is clamped to the quota (`dailyQuests(date, newCap)`, re-fitted
+  on rollover and on `setNewPerDay`). Tests: `tests/newcap.test.ts`.
+
 ## Architecture
 
 - `lib/fsrs.ts` — FSRS v5 scheduler (19 default weights, desired retention 0.9).

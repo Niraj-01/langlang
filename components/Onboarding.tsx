@@ -3,7 +3,9 @@
 // First-run onboarding — implements the "Onboarding & Lesson" design flow:
 // splash → welcome → why → level → daily goal → start point, one question per
 // screen, red progress + primary action, no streak pressure. Answers are saved
-// via completeOnboarding; "Start learning" drops straight into Unit 1.
+// via completeOnboarding; "Start learning" sends scratch learners to the
+// hiragana chart + self-check first (Unit 1 is written in kana), everyone
+// else straight into Unit 1.
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
@@ -74,14 +76,17 @@ export function Onboarding() {
   const [start, setStart] = useState(0);
 
   const finish = () => {
+    const choice = START[start].id;
     completeOnboarding({
       why: why != null ? WHY[why].id : undefined,
       level: lvl != null ? LEVEL[lvl].id : undefined,
       minutes: goal != null ? GOAL[goal].min : undefined,
-      start: START[start].id,
+      start: choice,
     });
-    // placement test is a later phase — both paths begin at Unit 1 for now
-    router.push("/lesson?unit=0");
+    // Unit 1 assumes kana, so "from scratch" reads hiragana first; its page
+    // shows the plan (chart → 20-character check → Path). The placement test
+    // is a later phase, so "find my level" begins at Unit 1 for now.
+    router.push(choice === "scratch" ? "/hiragana?start=scratch" : "/lesson?unit=0");
   };
 
   const next = () => (step + 1 >= STEPS ? finish() : setStep(step + 1));

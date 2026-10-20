@@ -2,16 +2,20 @@
 
 // Reusable kana chart — used for both hiragana and katakana. Renders the
 // classic gojūon grid (vowel columns × consonant rows), with Basic / Dakuten /
-// Combination tabs and a tap-to-open detail card.
+// Combination tabs and a tap-to-open detail card. A Chart / Quiz switch swaps
+// the grid for the recognition self-check (KanaQuiz).
 
-import { useMemo, useState } from "react";
+import { Suspense, useMemo, useState } from "react";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import type { Kana } from "@/lib/types";
 import { speakJa, canSpeak } from "@/lib/speak";
 import { Icon } from "./Icon";
 import { useMounted } from "@/lib/useMounted";
 import { Modal } from "./Modal";
+import { KanaQuiz } from "./KanaQuiz";
 
+type View = "chart" | "quiz";
 type Tab = "basic" | "dakuten" | "combos";
 
 const BASIC_ROWS = ["a", "k", "s", "t", "n", "h", "m", "y", "r", "w", "n2"];
@@ -36,6 +40,7 @@ export function KanaViewer({
   data: Kana[];
   note?: React.ReactNode;
 }) {
+  const [view, setView] = useState<View>("chart");
   const [tab, setTab] = useState<Tab>("basic");
   const [sel, setSel] = useState<Kana | null>(null);
   const speech = useMounted() && canSpeak();
@@ -55,63 +60,102 @@ export function KanaViewer({
 
   return (
     <div>
-      {/* tabs */}
-      <div className="rise mb-4 flex gap-2">
+      {view === "chart" && kind === "hiragana" && (
+        // reads ?start=scratch — its own boundary keeps the chart prerendered
+        <Suspense fallback={null}>
+          <StartHere
+            onQuiz={() => {
+              setView("quiz");
+              window.scrollTo({ top: 0 });
+            }}
+          />
+        </Suspense>
+      )}
+
+      {/* chart / quiz switch */}
+      <div className="rise mb-4 grid grid-cols-2 gap-1 rounded-xl border border-line bg-surface p-1">
         {(
           [
-            ["basic", "Basic", "46"],
-            ["dakuten", "Dakuten", "25"],
-            ["combos", "Combos", "33"],
-          ] as [Tab, string, string][]
-        ).map(([id, label, count]) => (
+            ["chart", "Chart", "grid"],
+            ["quiz", "Quiz", "target"],
+          ] as const
+        ).map(([id, label, icon]) => (
           <button
             key={id}
-            onClick={() => setTab(id)}
-            className={`press flex-1 rounded-lg border px-3 py-2 text-sm font-medium transition ${
-              tab === id
-                ? "border-accent bg-accent/10 text-accent shadow-[0_4px_16px_-6px] shadow-accent/40"
-                : "border-line bg-surface text-muted hover:-translate-y-0.5 hover:text-ink"
+            onClick={() => setView(id)}
+            aria-pressed={view === id}
+            className={`press flex min-h-10 items-center justify-center gap-1.5 rounded-lg text-sm font-semibold transition-colors ${
+              view === id ? "bg-accent/10 text-accent" : "text-muted hover:text-ink"
             }`}
           >
-            {label} <span className="opacity-50">{count}</span>
+            <Icon name={icon} size={15} /> {label}
           </button>
         ))}
       </div>
 
-      {/* grid — re-staggers on tab change so switching feels alive */}
-      <div key={tab} className="stagger space-y-2">
-        {grid.rows.map((row) => {
-          const cells = grid.get(row);
-          if (cells.every((c) => !c)) return null;
-          return (
-            <div
-              key={row}
-              className="grid gap-2"
-              style={{ gridTemplateColumns: `repeat(${grid.cols}, minmax(0, 1fr))` }}
-            >
-              {cells.map((k, i) =>
-                k ? (
-                  <button
-                    key={k.char}
-                    onClick={() => setSel(k)}
-                    className="group press flex flex-col items-center rounded-xl border border-line bg-surface py-2.5 transition hover:-translate-y-0.5 hover:border-accent hover:bg-surface2 hover:shadow-[0_8px_20px_-10px] hover:shadow-accent/40"
-                  >
-                    <span className="jp text-2xl leading-none transition-transform group-hover:scale-110 sm:text-3xl">{k.char}</span>
-                    <span className="romaji mt-1 text-[11px]">{k.romaji}</span>
-                  </button>
-                ) : (
-                  <div key={i} />
-                )
-              )}
-            </div>
-          );
-        })}
-      </div>
+      {view === "quiz" ? (
+        <KanaQuiz defaultScript={kind} />
+      ) : (
+        <>
+          {/* tabs */}
+          <div className="rise mb-4 flex gap-2">
+            {(
+              [
+                ["basic", "Basic", "46"],
+                ["dakuten", "Dakuten", "25"],
+                ["combos", "Combos", "33"],
+              ] as [Tab, string, string][]
+            ).map(([id, label, count]) => (
+              <button
+                key={id}
+                onClick={() => setTab(id)}
+                className={`press flex-1 rounded-lg border px-3 py-2 text-sm font-medium transition ${
+                  tab === id
+                    ? "border-accent bg-accent/10 text-accent shadow-[0_4px_16px_-6px] shadow-accent/40"
+                    : "border-line bg-surface text-muted hover:-translate-y-0.5 hover:text-ink"
+                }`}
+              >
+                {label} <span className="opacity-50">{count}</span>
+              </button>
+            ))}
+          </div>
 
-      {note && (
-        <div className="rise mt-6 rounded-xl border border-line bg-surface p-4 text-sm leading-relaxed text-muted" style={{ "--rise-delay": "0.3s" } as React.CSSProperties}>
-          {note}
-        </div>
+          {/* grid — re-staggers on tab change so switching feels alive */}
+          <div key={tab} className="stagger space-y-2">
+            {grid.rows.map((row) => {
+              const cells = grid.get(row);
+              if (cells.every((c) => !c)) return null;
+              return (
+                <div
+                  key={row}
+                  className="grid gap-2"
+                  style={{ gridTemplateColumns: `repeat(${grid.cols}, minmax(0, 1fr))` }}
+                >
+                  {cells.map((k, i) =>
+                    k ? (
+                      <button
+                        key={k.char}
+                        onClick={() => setSel(k)}
+                        className="group press flex flex-col items-center rounded-xl border border-line bg-surface py-2.5 transition hover:-translate-y-0.5 hover:border-accent hover:bg-surface2 hover:shadow-[0_8px_20px_-10px] hover:shadow-accent/40"
+                      >
+                        <span className="jp text-2xl leading-none transition-transform group-hover:scale-110 sm:text-3xl">{k.char}</span>
+                        <span className="romaji mt-1 text-[11px]">{k.romaji}</span>
+                      </button>
+                    ) : (
+                      <div key={i} />
+                    )
+                  )}
+                </div>
+              );
+            })}
+          </div>
+
+          {note && (
+            <div className="rise mt-6 rounded-xl border border-line bg-surface p-4 text-sm leading-relaxed text-muted" style={{ "--rise-delay": "0.3s" } as React.CSSProperties}>
+              {note}
+            </div>
+          )}
+        </>
       )}
 
       {/* detail modal */}
@@ -164,6 +208,48 @@ export function KanaViewer({
         )}
       </Modal>
     </div>
+  );
+}
+
+// Onboarding's "Start from scratch" lands on /hiragana?start=scratch: read the
+// chart, pass the 20-character check, then on to Unit 1 on the Path.
+function StartHere({ onQuiz }: { onQuiz: () => void }) {
+  const params = useSearchParams();
+  if (params.get("start") !== "scratch") return null;
+  const steps = [
+    "Learn the 46 basic characters, a row or two at a time",
+    "Pass the check: 20 random characters, 90% or better",
+    "Start Unit 1 on the Path",
+  ];
+  return (
+    <section className="rise mb-4 rounded-2xl border border-accent/40 bg-accent/5 p-4">
+      <div className="text-[11px] font-semibold uppercase tracking-widest text-accent">Start here</div>
+      <h2 className="mt-1 text-lg font-bold">Learn to read hiragana first</h2>
+      <p className="mt-1 text-sm text-muted">
+        Every lesson after this is written in it. Tap a character to hear it and see a word that uses it.
+      </p>
+      <ol className="mt-3 space-y-2 text-sm">
+        {steps.map((t, i) => (
+          <li key={t} className="flex items-start gap-2.5">
+            <span className="flex size-5 shrink-0 items-center justify-center rounded-full border border-line text-[11px] font-semibold text-muted">
+              {i + 1}
+            </span>
+            {t}
+          </li>
+        ))}
+      </ol>
+      <div className="mt-4 flex items-center gap-4">
+        <button
+          onClick={onQuiz}
+          className="press flex min-h-11 items-center gap-1.5 rounded-xl bg-accent px-4 text-sm font-semibold text-white"
+        >
+          <Icon name="target" size={15} /> Take the check
+        </button>
+        <Link href="/path" className="flex min-h-11 items-center gap-1 text-sm text-muted hover:text-ink">
+          Skip to the Path <Icon name="arrowRight" size={14} />
+        </Link>
+      </div>
+    </section>
   );
 }
 

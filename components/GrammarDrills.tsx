@@ -30,13 +30,16 @@ function shuffle<T>(arr: T[]): T[] {
 }
 
 export function GrammarDrills({ data }: { data: GrammarEntry[] }) {
-  const deck = useMemo(() => shuffle(data), [data]);
+  const mounted = useMounted();
+  // Shuffle only once mounted: Math.random() during SSR would hand the server
+  // and the client different first cards (hydration mismatch).
+  const deck = useMemo(() => (mounted ? shuffle(data) : data), [mounted, data]);
   const [idx, setIdx] = useState(0);
   const [phase, setPhase] = useState<Phase>("question");
   const [picked, setPicked] = useState<number | null>(null);
   const [score, setScore] = useState({ correct: 0, total: 0 });
   const [finished, setFinished] = useState(false);
-  const speech = useMounted() && canSpeak();
+  const speech = mounted && canSpeak();
 
   const current = deck[idx];
   const isCorrect = picked === current?.answer;
@@ -116,8 +119,8 @@ export function GrammarDrills({ data }: { data: GrammarEntry[] }) {
         </div>
       </div>
 
-      {/* card */}
-      <div className="rise rounded-2xl border border-line bg-surface p-6 text-center sm:p-8">
+      {/* card — hidden until the post-mount shuffle picks it */}
+      <div className={`rise rounded-2xl border border-line bg-surface p-6 text-center sm:p-8 ${mounted ? "" : "invisible"}`}>
         <div className="mb-1 text-[10px] font-bold uppercase tracking-[2px] text-muted">
           Fill in the blank
         </div>

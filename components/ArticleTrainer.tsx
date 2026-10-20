@@ -39,13 +39,16 @@ function shuffle<T>(arr: T[]): T[] {
 }
 
 export function ArticleTrainer({ nouns }: { nouns: NounEntry[] }) {
-  const deck = useMemo(() => shuffle(nouns), [nouns]);
+  const mounted = useMounted();
+  // Shuffle only once mounted: Math.random() during SSR would hand the server
+  // and the client different first cards (hydration mismatch).
+  const deck = useMemo(() => (mounted ? shuffle(nouns) : nouns), [mounted, nouns]);
   const [idx, setIdx] = useState(0);
   const [phase, setPhase] = useState<Phase>("quiz");
   const [picked, setPicked] = useState<string | null>(null);
   const [score, setScore] = useState({ correct: 0, total: 0 });
   const [showRules, setShowRules] = useState(false);
-  const speech = useMounted() && canSpeak();
+  const speech = mounted && canSpeak();
 
   const current = deck[idx % deck.length];
 
@@ -110,8 +113,8 @@ export function ArticleTrainer({ nouns }: { nouns: NounEntry[] }) {
         </div>
       )}
 
-      {/* card */}
-      <div className="rise rounded-2xl border border-line bg-surface p-8 text-center">
+      {/* card — hidden until the post-mount shuffle picks it */}
+      <div className={`rise rounded-2xl border border-line bg-surface p-8 text-center ${mounted ? "" : "invisible"}`}>
         <div className="mb-2 text-[10px] font-bold uppercase tracking-[2px] text-muted">
           What article?
         </div>

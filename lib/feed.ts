@@ -3,10 +3,12 @@
 //  - never more than 2 reviews (hard cards) in a row
 //  - after a fail, the next card must be an easy win
 //  - occasional status card mid-scroll
+//  - new words stop once today's quota (state.newPerDay) is used up; one
+//    "new words done" status card marks the moment, everything else continues
 
 import type { AppState, FeedItem, GrammarItem, Lang, ListenPair } from "./types";
 import { SEED, dealIndexAt } from "./seed";
-import { dueCards, pickSpeakTarget } from "./store";
+import { dueCards, newWordsLeft, pickSpeakTarget } from "./store";
 import { voiceCount } from "./nativeAudio";
 import { pickSentence } from "./sentences";
 import grammarJa from "@/data/grammar_ja.json";
@@ -43,8 +45,9 @@ function buildMeme(state: AppState, lang: Lang): FeedItem | null {
 }
 
 // i+1 reading: a real sentence where exactly one word isn't mastered yet.
-function buildSentence(state: AppState, lang: Lang): FeedItem | null {
-  const pick = pickSentence(state, lang);
+// `allowNew` false = the quota is spent, so the unknown must be a due card.
+function buildSentence(state: AppState, lang: Lang, allowNew: boolean): FeedItem | null {
+  const pick = pickSentence(state, lang, Date.now(), allowNew);
   if (!pick) return null;
   return { kind: "sentence", id: uid(), ...pick };
 }
@@ -120,17 +123,27 @@ export interface FeedContext {
   queuedCardIds: Set<string>;
   /** new-word items queued ahead of the persisted pointer */
   queuedNewCount: number;
+  /** the queued new-word items not yet scrolled past — what still holds a
+   *  slot in today's quota (defaults to queuedNewCount) */
+  upcomingNewCount?: number;
   /** last answered interaction was a fail */
   lastWasFail: boolean;
   /** items since the last status card */
   sinceStatus: number;
+  /** the "new words done for today" status card is already in the queue */
+  newDoneShown?: boolean;
 }
 
 export function nextFeedItem(state: AppState, ctx: FeedContext): FeedItem {
   const lang = state.lang;
   const due = dueCards(state, lang).filter((c) => !ctx.queuedCardIds.has(c.id));
   const nextNewIndex = state.newIndex[lang] + ctx.queuedNewCount;
-  const hasNew = nextNewIndex < SEED[lang].length;
+  // daily quota: words already added today + new cards still ahead of the
+  // reader (a skipped or scrolled-past word gives its slot back — only words
+  // that enter the deck count)
+  const quotaLeft = newWordsLeft(state, lang);
+  const upcomingNew = ctx.upcomingNewCount ?? ctx.queuedNewCount;
+  const hasNew = nextNewIndex < SEED[lang].length && quotaLeft - upcomingNew > 0;
   const recent = ctx.recentKinds.slice(-2);
   const reviewRun = recent.filter((k) => k === "review").length;
 
@@ -143,6 +156,11 @@ export function nextFeedItem(state: AppState, ctx: FeedContext): FeedItem {
   });
   const reviewItem = (): FeedItem => ({ kind: "review", id: uid(), cardId: due[0].id });
 
+  // quota just ran out: say so once (never as the opening card), then carry on
+  if (quotaLeft === 0 && !ctx.newDoneShown && ctx.recentKinds.length > 0) {
+    return { kind: "status", id: uid(), note: "new-done" };
+  }
+
   // status card roughly every 12 items
   if (ctx.sinceStatus >= 12 && Math.random() < 0.4) {
     return { kind: "status", id: uid() };
@@ -154,7 +172,9 @@ export function nextFeedItem(state: AppState, ctx: FeedContext): FeedItem {
     GRAMMAR[lang].length > 0 && !ctx.lastWasFail && !recent.includes("grammar");
   const listen = !ctx.lastWasFail && !recent.includes("listen") ? buildListen(state, lang) : null;
   const sentence =
-    !ctx.lastWasFail && !recent.includes("sentence") ? buildSentence(state, lang) : null;
+    !ctx.lastWasFail && !recent.includes("sentence")
+      ? buildSentence(state, lang, quotaLeft > 0)
+      : null;
   const speakTarget =
     !ctx.lastWasFail && !recent.includes("speak") ? pickSpeakTarget(state, lang) : null;
   const meme = !recent.includes("meme") ? buildMeme(state, lang) : null;
@@ -175,5 +195,7 @@ export function nextFeedItem(state: AppState, ctx: FeedContext): FeedItem {
   if (quiz) return quiz;
   if (meme) return meme;
   if (due.length > 0 && reviewRun < 2) return reviewItem();
+  // reachable once the new-word quota is spent (new used to catch everything)
+  if (canGrammar) return buildGrammar(lang);
   return { kind: "status", id: uid() };
 }

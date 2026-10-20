@@ -6,6 +6,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { useMounted } from "@/lib/useMounted";
 import {
   useApp,
   petMood,
@@ -14,7 +15,10 @@ import {
   renamePet,
   setMenace,
   setDailyGoal,
+  setNewPerDay,
   dueCards,
+  newWordsToday,
+  NEW_PER_DAY_OPTIONS,
 } from "@/lib/store";
 import { BADGES, DAILY_GOALS } from "@/lib/achievements";
 import { COSMETICS, petStageName, nextStageXp, petStage, PET_STAGES } from "@/lib/quests";
@@ -35,9 +39,15 @@ export function Profile() {
   const [roasting, setRoasting] = useState(false);
   const [editing, setEditing] = useState(false);
   const [nameDraft, setNameDraft] = useState("");
+  const mounted = useMounted();
+  // streak week, daily quests and "today" XP are date/localStorage-dependent —
+  // client-only, or a static build from another day mismatches on hydration
+  if (!mounted) return <div className="lang-ja min-h-dvh bg-bg" />;
 
   const accent = state.lang === "ja" ? "lang-ja" : "lang-de";
   const mood = petMood(state);
+  const newAdded = newWordsToday(state, state.lang);
+  const newCap = state.newPerDay;
   const { level, into, span } = levelFromXp(state.xp);
   const stage = petStage(state.xp);
   const next = nextStageXp(state.xp);
@@ -202,6 +212,52 @@ export function Profile() {
           <div className="mt-1 flex justify-between text-[10px] uppercase tracking-widest opacity-50">
             <span>{state.today.xp} XP today</span>
             <span>goal {state.dailyGoal}</span>
+          </div>
+        </div>
+
+        {/* new-word quota: the feed stops dealing new words once it's used up */}
+        <div className="mt-2 border-2 border-line bg-panel p-4">
+          <div className="mb-2 text-[10px] uppercase tracking-[0.3em] opacity-50">
+            new words / day · {state.lang === "ja" ? "japanese" : "german"}
+          </div>
+          <div className="flex items-center justify-between gap-3">
+            <div className="text-sm opacity-70">
+              {newCap == null ? (
+                "no daily limit"
+              ) : newAdded >= newCap ? (
+                <span className="inline-flex items-center gap-1 text-good">
+                  <Icon name="check" size={14} /> done — reviews keep going
+                </span>
+              ) : (
+                `${newCap - newAdded} left today`
+              )}
+            </div>
+            <div className="flex shrink-0 border-2 border-line">
+              {NEW_PER_DAY_OPTIONS.map((n) => (
+                <button
+                  key={n ?? "unlimited"}
+                  onClick={() => setNewPerDay(n)}
+                  aria-label={n == null ? "unlimited" : `${n} new words per day`}
+                  className={`px-2.5 py-1 font-display text-xs ${
+                    newCap === n ? "bg-(--accent) text-black" : "opacity-60"
+                  }`}
+                >
+                  {n ?? "∞"}
+                </button>
+              ))}
+            </div>
+          </div>
+          {newCap != null && (
+            <div className="mt-3 h-2 w-full border-2 border-line bg-black/40">
+              <div
+                className={`bar-anim h-full ${newAdded >= newCap ? "bg-good" : "bg-(--accent)"}`}
+                style={{ width: `${Math.min(100, (newAdded / newCap) * 100)}%` }}
+              />
+            </div>
+          )}
+          <div className="mt-1 flex justify-between text-[10px] uppercase tracking-widest opacity-50">
+            <span>{newAdded} added today</span>
+            <span>{newCap == null ? "unlimited" : `limit ${newCap}`}</span>
           </div>
         </div>
       </Section>

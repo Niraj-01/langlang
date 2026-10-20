@@ -35,13 +35,15 @@ export interface SentencePick {
  *  - THE unknown (at most one, distinct): its card is due now, or it is the
  *    current new word (state.newIndex[lang]) not yet in the deck
  * Anything else (unseen future words, learning-phase cards that aren't due)
- * disqualifies the sentence.
+ * disqualifies the sentence. `allowNew: false` (today's new-word quota is
+ * spent) drops the current-new-word option: grading one adds it to the deck.
  */
 export function qualifying(
   sentences: SentenceData[],
   state: Pick<AppState, "cards" | "newIndex">,
   lang: Lang,
-  now = Date.now()
+  now = Date.now(),
+  allowNew = true
 ): SentencePick[] {
   const byWord = new Map<string, Card>();
   for (const c of state.cards) if (c.lang === lang) byWord.set(c.word, c);
@@ -62,7 +64,7 @@ export function qualifying(
       const isDue = !!card && card.fsrs.due <= now;
       // the upcoming new word is the one DEALT at the pointer, which inside a
       // unit is frequency-ordered (lib/seed.ts DEAL_ORDER)
-      const isCurrentNew = !card && si === dealIndexAt(lang, newIdx);
+      const isCurrentNew = allowNew && !card && si === dealIndexAt(lang, newIdx);
       if ((isDue || isCurrentNew) && unknown === null) {
         unknown = si;
         continue;
@@ -79,9 +81,10 @@ export function qualifying(
 export function pickSentence(
   state: Pick<AppState, "cards" | "newIndex">,
   lang: Lang,
-  now = Date.now()
+  now = Date.now(),
+  allowNew = true
 ): SentencePick | null {
-  const q = qualifying(SENTENCES[lang], state, lang, now);
+  const q = qualifying(SENTENCES[lang], state, lang, now, allowNew);
   if (q.length === 0) return null;
   return q[Math.floor(Math.random() * q.length)];
 }

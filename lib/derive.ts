@@ -33,6 +33,37 @@ export function masteredCount(s: AppState, lang: Lang): number {
   return s.cards.filter((c) => c.lang === lang && c.fsrs.stability >= MASTERY_STABILITY_DAYS).length;
 }
 
+/** Profile picker for the daily new-word quota (null = unlimited). */
+export const NEW_PER_DAY_OPTIONS = [5, 10, 15, 20, null] as const;
+
+/** Words that entered `lang`'s deck since local midnight — feed adds, lesson
+ *  unit deals, pack pulls, mined words. Derived from card birth times (not
+ *  today.newWords) so it is per-language and survives cloud sync. Sentence
+ *  cards (Dojo mistakes, mined sentences) aren't words and don't count. */
+export function newWordsToday(s: Pick<AppState, "cards">, lang: Lang, now = Date.now()): number {
+  const midnight = new Date(now);
+  midnight.setHours(0, 0, 0, 0);
+  const since = midnight.getTime();
+  let n = 0;
+  for (const c of s.cards) {
+    if (c.lang === lang && c.type !== "sentence" && c.createdAt >= since) n++;
+  }
+  return n;
+}
+
+/** How many more new words the FEED may deal today (Infinity when unlimited).
+ *  Only the feed is gated: lessons, packs and mining are explicit choices and
+ *  always go through, but the words they add use up the quota. */
+export function newWordsLeft(
+  s: Pick<AppState, "cards" | "newPerDay">,
+  lang: Lang,
+  now = Date.now()
+): number {
+  const cap = s.newPerDay;
+  if (cap == null) return Infinity;
+  return Math.max(0, cap - newWordsToday(s, lang, now));
+}
+
 export function activeVocab(s: AppState, lang: Lang): number {
   return s.cards.filter((c) => c.lang === lang && c.type !== "sentence").length;
 }

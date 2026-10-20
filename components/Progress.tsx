@@ -15,6 +15,7 @@ import {
   paceForecast,
   logRange,
 } from "@/lib/store";
+import { useMounted } from "@/lib/useMounted";
 import { EXAMS_BY_LANG, EXAM_LABEL, EXAM_VOCAB_TOTAL } from "@/lib/exams";
 import { Heatmap } from "./Heatmap";
 import { Icon } from "./Icon";
@@ -41,6 +42,10 @@ export function Progress() {
   const [pickDate, setPickDate] = useState(
     target?.date ?? todayPlus(90)
   );
+  const mounted = useMounted();
+  // heatmap, 7-day bars and the default target date all read today's date —
+  // client-only, or a static build from another day mismatches on hydration
+  if (!mounted) return <div className="lang-ja min-h-dvh bg-bg" />;
 
   const week = logRange(state, 7);
   const maxXp = Math.max(1, ...week.map((d) => d.stats.xp));
